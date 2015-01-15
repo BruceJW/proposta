@@ -1,0 +1,238 @@
+http://www.jtwebs.net/wp-content/uploads/2013/04/idetc2013.pdf
+Em: 05mar2014
+
+http://www.seas.upenn.edu/~dmel/cubicstructures.pdf
+Em: 05mar2014
+
+http://www.flyingmachinearena.org/wp-content/uploads/2012/fma-publications/hehn_dandrea_trajectory_generation_control.pdf
+Em: 05mar2014
+
+http://www.seas.upenn.edu/~dmel/mellingerICRA11.pdf
+Em: 05mar2014
+
+http://acl.mit.edu/papers/2012-uber-conference-submitted.pdf
+Em: 05mar2014
+
+http://www.cmu.edu/me/hdr/koushils/Publications/ICRA2013.pdf
+Em: 05mar2014
+
+http://www.idsc.ethz.ch/people/staff/hehn-m/hehn_dandrea_trajectory_generation_control.pdf (2)
+Em: 05mar2014
+
+http://www.michigancmes.org/papers/roy7.pdf
+Em: 05mar2014
+
+http://marhes.ece.unm.edu/images/4/41/2012_ICRA_IPalunko_Swing_free.pdf
+Em: 05mar2014
+
+www.researchgate.net/publication/4362560_Trajectory_planning_for_a_quadrotor_helicopter/file/50463516d69ebe62ae.pdf
+Em: 05mar2014
+
+http://www.kumarrobotics.org/wp-content/uploads/2014/01/2013-multi-robot-coverage-exploration.pdf
+Em: 05mar2014
+
+http://i3a.unizar.es/datos/uploads/reports/AMI-009-10-TEC%20-%20A%20survey%20of%20multi-robot%20task%20allocation%20-%20A.%20Mosteo%20-%20Internal%20Report%20I3A.pdf
+Em: 05mar2014
+
+http://www.dis.uniroma1.it/~multirob/SRSOES/papers/ieee-mrs.pdf
+Em: 05mar2014
+
+http://homepages.laas.fr/felix/publis-pdf/car10.pdf
+Em: 05mar2014
+
+http://www.cc.gatech.edu/ai/robot-lab/online-publications/Wagner-icra04.pdf
+Em: 05mar2014
+
+http://aero.stanford.edu/reports/NigamIEEE2008.pdf
+Em: 05mar2014
+
+donwload(1).pdf
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.85.8516&rep=rep1&type=pdf
+Em: 05mar2014
+
+http://www.cs.cmu.edu/~maxim/files/planforspringloadeddoors_icra13.pdf
+Em: 05mar2014
+
+donwload(2).pdf
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.11.6621&rep=rep1&type=pdf
+Em: 05mar2014
+
+http://www.inl.gov/adaptiverobotics/dynamicautonomy/pubs/multi-robot-workshop.pdf
+Em: 05mar2014
+
+http://roboticsproceedings.org/rss09/p30.pdf
+Em: 05mar2014
+
+http://www.intechopen.com/download/get/type/pdfs/id/152
+Em: 05mar2014
+
+donwload(3).pdf
+www.researchgate.net/publication/3450178_Coordinated_multi-robot_exploration/file/79e4150c5d1b470aad.pdf
+Em: 05mar2014
+
+http://www.seas.upenn.edu/~mihailp/pub/pivtoraiko_mellinger_kumar_icra13.pdf
+Em: 05mar2014
+
+http://www.flyingmachinearena.org/wp-content/uploads/2012/fma-publications/ritz_hehn_lupashin_dandrea_benchmarking.pdf
+Em: 05mar2014
+
+http://www.math.ucsd.edu/~mleok/pdf/LeLeMc2010_complex.pdf
+Em: 05mar2014
+
+http://www.michaelvitus.net/pubs/GHVT_ISRR_09.pdf
+Em: 05mar2014
+
+http://www.mit.edu/~pratikac/pub/chaudhari.aggressive.maneuver.pdf
+Em: 05mar2014
+
+http://www.kumarrobotics.org/wp-content/uploads/2014/01/2013-vision-rotercraft.pdf
+Em: 05mar2014
+
+http://www.kumarrobotics.org/wp-content/uploads/2014/01/2013-vision-based.pdf
+Em: 05mar2014
+
+http://rahauav.com/Library/Multirotors/p28.pdf
+Em: 05mar2014
+
+http://www.seas.upenn.edu/sunfest/docs/papers/12-belatti.pdf
+Em: 05mar2014
+
+http://www.cs.unc.edu/~bn/robotics/BenNewtonRoboticsFinalProjectReport.pdf
+Em: 05mar2014
+
+http://www.araa.asn.au/acra/acra2013/papers/pap165s1-file1.pdf
+Em: 05mar2014
+
+http://uvs-info.com/phocadownload/02_2clh_Technical-Session-4_Vision/Visual_Quadrotor_Swarm_for_IMAV_2013_Indoor_Competition.pdf
+Em: 05mar2014
+
+http://repository.tudelft.nl/assets/uuid:78b4c204-0b59-4bf4-a5b6-1be4536d329c/deVries_2011.pdf
+Em: 05mar2014
+
+http://kimerius.com/app/download/5784131369/Aerodynamics+and+control+of+autonomous+quadrotor+helicopters+in+agressive+maneuvering.pdf
+Em: 05mar2014
+
+http://elib.dlr.de/68957/1/SingleUserControl_Lichtenstern_etal.pdf
+Em: 05mar2014
+
+http://www.aa.washington.edu/research/afsl/publications/melander_thesis.pdf
+Em: 05mar2014
+
+http://www.eecs.ucf.edu/seniordesign/fa2012sp2013/g04/Prop.pdf
+Em: 05mar2014
+
+http://research.sabanciuniv.edu/22642/1/PID2889005.pdf
+Em: 05mar2014
+
+http://www.aa.washington.edu/research/afsl/publications/anderson_thesis.pdf
+Em: 05mar2014
+
+http://infoscience.epfl.ch/record/111485/files/Roberts-MAV07.pdf
+Em: 05mar2014
+
+http://www.kyb.tuebingen.mpg.de/fileadmin/user_upload/files/publications/2013/2013j-GraRieBueRobFra-preprint.pdf
+Em: 05mar2014
+
+http://arvc.umh.es/documentos/articulos/ROBOT2013.pdf
+Em: 05mar2014
+
+http://infoscience.epfl.ch/record/176012/files/ICRA12_1165_FI.pdf
+Em: 05mar2014
+
+http://enu.kz/repository/2010/AIAA-2010-3416.pdf
+Em: 05mar2014
+
+http://www.irisa.fr/lagadic/pdf/2009_TRO_bourquardez.pdf
+Em: 05mar2014
+
+http://www.dis.uniroma1.it/~venditt/didattica/eir/01_Modeling.pdf
+Em: 05mar2014
+
+http://eprints.qut.edu.au/33767/1/33767.pdf
+Em: 05mar2014
+
+http://www.araa.asn.au/acra/acra2013/papers/pap108s1-file1.pdf
+Em: 05mar2014
+
+http://www.dei.unipd.it/~emg/downloads/SIMPAR08-nuovo/MiniAndMicroUAV/Lange.pdf
+Em: 05mar2014
+
+http://robot-chopper.googlecode.com/svn-history/r479/trunk/References/2009MIT.pdf
+Em: 05mar2014
+
+http://www2.engr.arizona.edu/~sprinkjm/research/c2wt/uploads/Main/paper1.pdf
+Em: 05mar2014
+
+http://prometheus4.com/share/quad-articles/balas_2007.pdf
+Em: 05mar2014
+
+http://cas.ensmp.fr/~petit/papers/ecc09/PJB.pdf
+Em: 05mar2014
+
+04564736.pdf
+http://www.researchgate.net/publication/224320669_Robust_neural_network_control_of_a_quadrotor_helicopter/file/9c960526b4e6010dc9.pdf
+Em: 05mar2014
+
+http://eprints.qut.edu.au/33833/1/33833.pdf
+Em: 05mar2014
+
+http://www.poli.br/~marcilio/Quadricopteros/Modeling%20and%20Control%20Simulation%20For%20Autonomous%20Quadrotor%20GN-070.pdf
+Em: 05mar2014
+
+http://www.researchgate.net/publication/230633819_Flight_PID_Controller_Design_for_a_UAV_Quadrotor/file/d912f511361f422fdd.pdf
+Em: 05mar2014
+
+
+
+Sites
+https://pixhawk.ethz.ch/micro_air_vehicle/quadrotor/start
+
+http://www.inf.ethz.ch/personal/lomeier/publications/pixhawk_auro2012.pdf
+http://www.inf.ethz.ch/personal/lomeier/publications/IROS_2012_autonomous_vision_exploration.pdf
+http://www.inf.ethz.ch/personal/lomeier/publications/IROS_2012_realtime_optical_flow_stereo.pdf
+http://www.inf.ethz.ch/personal/lomeier/publications/ICRA_2011_obstacle_avoidance.pdf
+https://pixhawk.ethz.ch/_media/publications/cogsys_2010_poster_pixhawk.pdf
+https://pixhawk.ethz.ch/_media/eth_only/modelling_estimation_florian_zurbriggen.pdf
+http://figment.csee.usf.edu/~sarkar/PDFs/Duminda_book_chapter.pdf
+Em: 05mar2014
+
+
+
+https://vision.in.tum.de/_media/spezial/bib/engel12iros.pdf
+Em: 07mar2014
+
+http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6696922
+Em: 07mar2014
+
+http://www.aerialroboticscompetition.org/2013SymposiumPapers/UniversityofMichigan.pdf
+Em: 07mar2014
+
+http://asrl.utias.utoronto.ca/~tdb/bib/collier_nato12.pdf
+Em: 07mar2014
+
+
+http://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=13&ved=0CEMQFjACOAo&url=http%3A%2F%2Fwww.springer.com%2Fcda%2Fcontent%2Fdocument%2Fcda_downloaddocument%2F9783642322167-c2.pdf%3FSGWID%3D0-0-45-1349134-p174669068&ei=wBcaU9mwBuy80AGWxYGwBA&usg=AFQjCNFrP6m0M0Rsi0N8sNoulMlP9ptf1A&sig2=QEN9haCXkxfq4iMsBbirVw&bvm=bv.62578216,d.dmQ
+Em: 07mar2014
+
+
+http://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=12&ved=0CDUQFjABOAo&url=http%3A%2F%2Fdspace.mit.edu%2Fopenaccess-disseminate%2F1721.1%2F53520&ei=wBcaU9mwBuy80AGWxYGwBA&usg=AFQjCNFG3PTI36AbUInHBQSAWAm9FLxQMQ&sig2=rnPFih0UXHVzQ69VMwGfBA&bvm=bv.62578216,d.dmQ
+Em: 07mar2014
+
+http://www.dis.uniroma1.it/~iocchi/publications/iocchi-simpar-muav08.pdf
+Em: 07mar2014
+
+http://www.di.ufpe.br/~if124/frame/turmas/turma_2013_1/artigos/kinect/1-s2.0-S1875952113000025-main.pdf
+Em: 07mar2014
+
+http://rpg.ifi.uzh.ch/docs/AURO12_michael.pdf
+Em: 07mar2014
+
+http://www.eecs.berkeley.edu/~tomlin/papers/conferences/whjt05_iros.pdf
+Em: 31ago2014
+
+http://www.das.ufsc.br/~raffo/SeminariosRobotica_DAS/21.Seminario_01.11.2012_M.DeLellis/seminario.pdf
+Em 01/09/2014
+
+http://dar.aucegypt.edu/bitstream/handle/10526/3965/Heba_ElKholy_Thesis_S2014.pdf?sequence=1
+Em 01/09/2014
+
