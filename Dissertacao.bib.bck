@@ -1,0 +1,41 @@
+@book{ogata2003engenharia,
+  title={Engenharia de controle moderno},
+  author={Ogata, Katsuhiko and Maya, Paulo {\'A}lvaro and Leonardi, Fabrizio},
+  year={2003},
+  publisher={Prentice Hall}
+}
+@article{gibiansky2010quadcopter,
+  title={Quadcopter Dynamics, Simulation, and Control},
+  author={Gibiansky, Andrew},
+  year={2010}
+}
+@article{grzonka2012fully,
+  title={A fully autonomous indoor quadrotor},
+  author={Grzonka, Slawomir and Grisetti, Giorgio and Burgard, Wolfram},
+  journal={Robotics, IEEE Transactions on},
+  volume={28},
+  number={1},
+  pages={90--100},
+  year={2012},
+  publisher={IEEE}
+}
+@article{mian2008modeling,
+  title={Modeling and backstepping-based nonlinear control strategy for a 6 DOF quadrotor helicopter},
+  author={Mian, Ashfaq Ahmad and Daobo, Wang},
+  journal={Chinese Journal of Aeronautics},
+  volume={21},
+  number={3},
+  pages={261--268},
+  year={2008},
+  publisher={Elsevier}
+}
+@article{salih2010flight,
+  title={Flight PID controller design for a UAV quadrotor},
+  author={Salih, Atheer L and Moghavvemi, M and Mohamed, Haider AF and Gaeid, Khalaf Sallom},
+  journal={Scientific Research and Essays},
+  volume={5},
+  number={23},
+  pages={3660--3667},
+  year={2010},
+  publisher={Academic Journals}
+}

@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{Gibiansky2010}
+A.~Gibiansky.
+\newblock Quadcopter dynamics, simulation, and control.
+\newblock 2010.
+
+\bibitem{Israelsen}
+J.~Israelsen, M.~Beall, D.~Bareiss, D.~Stuart, E.~Keeney, and J.~van~den Berg.
+\newblock Automatic collision avoidance for manually tele-operated unmanned
+  aerial vehicles.
+
+\bibitem{Adalberto2009}
+J.~A.~F. JUNIOR.
+\newblock SimulaÇÃo e implementaÇÃo em tempo real de sistemas de
+  navegaÇÃo inercial integrados ins/gps.
+\newblock Master's thesis, IME, 2009.
+
+\bibitem{Kingdom}
+R.~Kingdom.
+\newblock Pid controller tutorial for robots.
+
+\bibitem{Liang}
+O.~Liang.
+\newblock Quadcopter pid explained and tuning.
+
+\bibitem{Mian2008}
+A.~A. Mian and W.~Daobo.
+\newblock Modeling and backstepping-based nonlinear control strategy for a 6
+  dof quadrotor helicopter.
+\newblock {\em Chinese Journal of Aeronautics}, 21(3):261--268, 2008.
+
+\bibitem{Ogata2003}
+K.~Ogata, P.~{\'A}. Maya, and F.~Leonardi.
+\newblock {\em Engenharia de controle moderno}.
+\newblock Prentice Hall, 2003.
+
+\bibitem{Salih2010}
+A.~L. Salih, M.~Moghavvemi, H.~A. Mohamed, and K.~S. Gaeid.
+\newblock Flight pid controller design for a uav quadrotor.
+\newblock {\em Scientific Research and Essays}, 5(23):3660--3667, 2010.
+
+\end{thebibliography}

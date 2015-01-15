@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Dissertacao.aux
+The style file: abbrv.bst
+Database file #1: Dissertacao.bib
+Warning--entry type for "Kingdom" isn't style-file defined
+--line 94 of file Dissertacao.bib
+Warning--entry type for "Liang" isn't style-file defined
+--line 106 of file Dissertacao.bib
+Warning--empty journal in Gibiansky2010
+Warning--empty journal in Israelsen
+Warning--empty year in Israelsen
+You've used 8 entries,
+            2118 wiz_defined-function locations,
+            543 strings with 4819 characters,
+and the built_in function-call counts, 2190 in all, are:
+= -- 200
+> -- 115
+< -- 0
++ -- 46
+- -- 38
+* -- 139
+:= -- 389
+add.period$ -- 21
+call.type$ -- 8
+change.case$ -- 42
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 76
+empty$ -- 171
+format.name$ -- 38
+if$ -- 436
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 6
+newline$ -- 40
+num.names$ -- 16
+pop$ -- 56
+preamble$ -- 1
+purify$ -- 35
+quote$ -- 0
+skip$ -- 60
+stack$ -- 0
+substring$ -- 96
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 30
+warning$ -- 3
+while$ -- 20
+width$ -- 9
+write$ -- 75
+(There were 5 warnings)
