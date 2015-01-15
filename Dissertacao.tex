@@ -138,7 +138,7 @@ O aumento ou a diminuição da velocidade dos quatro rotores na mesma proporçã
 
 Navegação inercial é o processo pelo qual se adquirem informações sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial, utilizando informações fornecidas por sensores inerciais tais como acelerômetros e giroscópios. Medindo-se as acelerações e velocidades angulares de um corpo, torna-se possível calcular as mudanças de velocidade, posição e atitude através de sucessivas integrações numericas \cite{Adalberto2009}.
 
-A unidade de medida inercial, ou IMU, é o componente eletrônico onde são montados os sensores inerciais, sendo três acelerômetros, que fornecem as medidas das componentes da aceleração linear, e três giroscópios, sensores que fornecem as componentes da velocidade angular. Já a unidade de processamento é o componente responsável pelo processamento das medidas dos sensores inerciais. As velocidades lineares e as posições são obtidas a partir da integração dos sinais dos acelerômetros, enquanto que a integração dos sinais dos giroscópios fornece a atitude do veículo.  A Figura \ref{fig:imuStrap} ilustra a estrutura de um Sistema de Navegação Inercial acoplado a um veículo, composta por três giroscópios, três acelerômetros (x,y,z) e uma unidade de processamento (CPU).
+A unidade de medida inercial, ou IMU, é o componente eletrônico onde são montados os sensores inerciais, sendo três acelerômetros, que fornecem as medidas das componentes da aceleração linear (x,y,z), e três giroscópios, sensores que fornecem as componentes da velocidade angular (por exemplo, arfagem, rolagem e guinada). Já a unidade de processamento é o componente responsável pelo processamento das medidas dos sensores inerciais. As velocidades lineares e as posições são obtidas a partir da integração dos sinais dos acelerômetros, enquanto que a integração dos sinais dos giroscópios fornece a atitude do veículo.  A Figura \ref{fig:imuStrap} ilustra a estrutura de um Sistema de Navegação Inercial acoplado a um veículo, composta por três giroscópios, três acelerômetros (x,y,z) e uma unidade de processamento (CPU).
 
 \begin{figure}[h]
 	\centering
@@ -147,9 +147,20 @@ A unidade de medida inercial, ou IMU, é o componente eletrônico onde são mont
 	\label{fig:imuStrap}
 \end{figure}
 
+Magnetômetros podem ser incluídos em IMUs, permitindo uma melhor performance de cálculos de orientação em sistemas AHRS (do inglês, \textit{Attitude Heading Reference System}). Um sistema AHRS é composto de sensores que fornecem a orientação e atitude de uma aeronave. A principal diferença entre uma IMU e um AHRS é a adição de um sistema de processamento embarcado em um AHRS que fornece soluções de atitude e orientação, contra a IMU que apenas fornece os dados do sensor \cite{Angonese2013}.
+
+A Figura \ref{fig:imuVANTIME} demonstra o protótipo de uma IMU desenvolvida para o projeto VANT-IME. No hardware desenvolvido foram utilizados, um acelerômetro que mede a aceleração do veículo e um giroscópio de três eixos para complementar o acelerômetro, obtendo-se assim, informações de velocidade angular em altas frequências, o que se faz necessário para estabilização de aeronaves movendo-se em alta velocidade. Entretanto, devido a erros de deriva dos giroscópios, erros de integração e ao ruído, a utilização de um magnetômetro se faz necessária, pois permite a medição do campo magnético no qual está inserido. As informações de todos os sensores são lidas, filtradas e então processadas para a estimação da atitude da aeronave \cite{Paixao2011}. As Figuras \ref{fig:imuVANTIME}a,  \ref{fig:imuVANTIME}b,  \ref{fig:imuVANTIME}c ilustram as leituras dos sensores inerciais e a figura 3.2d demostra o gráfico resultante após a filtragem e processamento das leituras dos sensores individuais.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[scale=0.5]{img/imu_VANTIME.png}
+	\caption{Gráfico das medições dos sensores inerciais da IMU do VANT-IME. Fonte \cite{Paixao2011}}
+	\label{fig:imuVANTIME}
+\end{figure}
+
 \noindent\textbf{Acelerômetros e Giroscópios}
 
-Acelerômetros são sensores increpais que fornecem a medida e a força específica que atua no veículo, que é a resultante das ações da aceleração inercial e da aceleração da gravidade. Portanto, a partir da medida da força específica e do modelo do campo gravitacional da Terra, determina-se a aceleração linear, informação que é integrada para a determinação da velocidade e posição do veículo.
+Acelerômetros são sensores que fornecem a medida e a força específica que atua no veículo, que é a resultante das ações da aceleração inercial e da aceleração da gravidade. Portanto, a partir da medida da força específica e do modelo do campo gravitacional da Terra, determina-se a aceleração linear, informação que é integrada para a determinação da velocidade e posição do veículo.
 
 Giroscópios fornecem a medida da velocidade angular. Este dado é utilizado para a determinação da atitude do veículo. Já está na terceira geração. Esta, devido suas características de menor custo e volume, possibilitou sua utilização em grande escala em veículos de pequeno porte. Porém, sua exatidão é menor quando comparado às gerações anteriores. É formado por sensores baseados na tecnologia MEMS (\textit{Micro Electro Mechanical Systems}) que consistem em placas de cerâmicas vibrantes que utilizam Força de Coriolis para medir a taxa independente da aceleração \cite{Adalberto2009}. A Figura \ref{fig:imumems} mostra uma IMU tipo MEMS com acelerômetros e giroscópios embutidos. 
 

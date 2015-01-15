@@ -1,4 +1,16 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Angonese2013}
+A.~T. ANGONESE.
+\newblock Estação de controle em solo com funcionalidades de voo múltiplo.
+\newblock Master's thesis, IME, 2013.
+
+\bibitem{Paixao2011}
+R.~A. da~Paixao, P.~F.~F. Rosa, and J.~M.~M. Neto.
+\newblock An attitude heading and reference system: basic concepts and
+  prototype.
+\newblock In {\em Industrial Electronics (ISIE), 2011 IEEE International
+  Symposium on}, pages 2225--2230. IEEE, 2011.
 
 \bibitem{Gibiansky2010}
 A.~Gibiansky.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  14 JAN 2015 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  15 JAN 2015 17:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -411,88 +411,95 @@ Package pdftex.def Info: img/imuStrap.png used on input line 145.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8] <img/imumems.png, id=37, 436.63126pt x 354.32375pt>
+[8] [9 <./img/imuStrap.png>]
+<img/imu_VANTIME.png, id=41, 821.0675pt x 620.3175pt>
+File: img/imu_VANTIME.png Graphic file (type png)
+
+<use img/imu_VANTIME.png>
+Package pdftex.def Info: img/imu_VANTIME.png used on input line 156.
+(pdftex.def)             Requested size: 410.53275pt x 310.15799pt.
+
+Overfull \hbox (20.53275pt too wide) in paragraph at lines 156--157
+ [][] 
+ []
+
+[10 <./img/imu_VANTIME.png>]
+<img/imumems.png, id=46, 436.63126pt x 354.32375pt>
 File: img/imumems.png Graphic file (type png)
  <use img/imumems.png>
-Package pdftex.def Info: img/imumems.png used on input line 158.
+Package pdftex.def Info: img/imumems.png used on input line 169.
 (pdftex.def)             Requested size: 218.3151pt x 177.16144pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9 <./img/imuStrap.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 173.
+[11 <./img/imumems.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 184.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 173.
- [10 <./img/imumems.png>] <img/ganho_PID.png, id=47, 483.8075pt x 384.43625pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 184.
+ [12]
+<img/ganho_PID.png, id=57, 483.8075pt x 384.43625pt>
 File: img/ganho_PID.png Graphic file (type png)
-
-<use img/ganho_PID.png>
-Package pdftex.def Info: img/ganho_PID.png used on input line 192.
+ <use img/ganho_PID.png>
+Package pdftex.def Info: img/ganho_PID.png used on input line 203.
 (pdftex.def)             Requested size: 241.90315pt x 192.21765pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/PID_quad_geral.png, id=48, 605.26125pt x 339.2675pt>
+<img/PID_quad_geral.png, id=58, 605.26125pt x 339.2675pt>
 File: img/PID_quad_geral.png Graphic file (type png)
 
 <use img/PID_quad_geral.png>
-Package pdftex.def Info: img/PID_quad_geral.png used on input line 203.
+Package pdftex.def Info: img/PID_quad_geral.png used on input line 214.
 (pdftex.def)             Requested size: 363.15953pt x 203.56206pt.
- [11]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/PID_quad_axis.png, id=54, 599.23875pt x 240.9pt>
+<img/PID_quad_axis.png, id=59, 599.23875pt x 240.9pt>
 File: img/PID_quad_axis.png Graphic file (type png)
 
 <use img/PID_quad_axis.png>
-Package pdftex.def Info: img/PID_quad_axis.png used on input line 223.
+Package pdftex.def Info: img/PID_quad_axis.png used on input line 234.
 (pdftex.def)             Requested size: 359.54602pt x 144.5411pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12 <./img/ganho_PID.png>] [13 <./img/PID_quad_geral.png>] [14 <./img/PID_quad_
-axis.png>] <img/cronograma.pdf, id=68, 845.1575pt x 469.755pt>
+[13 <./img/ganho_PID.png>] [14 <./img/PID_quad_geral.png>] [15 <./img/PID_quad_
+axis.png>] <img/cronograma.pdf, id=73, 845.1575pt x 469.755pt>
 File: img/cronograma.pdf Graphic file (type pdf)
 
 <use img/cronograma.pdf>
-Package pdftex.def Info: img/cronograma.pdf used on input line 248.
+Package pdftex.def Info: img/cronograma.pdf used on input line 259.
 (pdftex.def)             Requested size: 338.057pt x 187.89867pt.
- [15 <./img/cronograma.pdf>] [16] [17] [18]
-(./Dissertacao.bbl) [19]
-Underfull \hbox (badness 10000) in paragraph at lines 297--304
+ [16 <./img/cronograma.pdf>] [17] [18] [19]
+(./Dissertacao.bbl [20]) [21]
+Underfull \hbox (badness 10000) in paragraph at lines 308--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--304
+Underfull \hbox (badness 10000) in paragraph at lines 308--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--304
+Underfull \hbox (badness 10000) in paragraph at lines 308--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--304
+Underfull \hbox (badness 10000) in paragraph at lines 308--315
 
  []
 
-[20] (./Dissertacao.aux) ) 
+[22] (./Dissertacao.aux) ) 
 Here is how much of TeX's memory you used:
- 2219 strings out of 493117
- 30419 string characters out of 6135434
- 96656 words of memory out of 5000000
- 5649 multiletter control sequences out of 15000+600000
+ 2227 strings out of 493117
+ 30571 string characters out of 6135434
+ 96674 words of memory out of 5000000
+ 5656 multiletter control sequences out of 15000+600000
  8541 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,7n,23p,1177b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -505,10 +512,10 @@ onts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti12.pfb>
-Output written on Dissertacao.pdf (20 pages, 949328 bytes).
+Output written on Dissertacao.pdf (22 pages, 1133764 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
