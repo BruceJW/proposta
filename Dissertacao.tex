@@ -115,7 +115,14 @@ o quadricóptero, que é a plataforma de vôo a ser aqui estudada, será descrit
 
 \subsection{O Quadricóptero}
 
-\cite{Salih2010} define o quadricóptero como um veículo voador com quatro rotores com decolagem e aterrissagem vertical. Por sua vez, \cite{Gibiansky2010} define quadricóptero como uma classe de helicópteros com quatro rotores girando rapidamente para empurrar o ar para baixo e criar uma força para mantê-lo elevado e posicionados nas extremidades de um corpo quadrado. 
+\cite{Salih2010} define o quadricóptero como um veículo voador com quatro rotores com decolagem e aterrissagem vertical. Por sua vez, \cite{Gibiansky2010} define quadricóptero como uma classe de helicópteros com quatro rotores girando rapidamente para empurrar o ar para baixo e criar uma força para mantê-lo elevado e posicionados nas extremidades de um corpo quadrado. A Figura \ref{fig:quad} ilustra a plataforma Parrot ArDrone 2.0, um quadricóptero bastante estudado e utilizado no meio científico.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[scale=0.4]{img/parrot_drone.jpg}
+	\caption{Plataforma Parrot Ardrone 2.0}
+	\label{fig:quad}
+\end{figure}
 
 \noindent\textbf{Dinâmica de vôo}
 
@@ -138,12 +145,12 @@ O aumento ou a diminuição da velocidade dos quatro rotores na mesma proporçã
 
 Navegação inercial é o processo pelo qual se adquirem informações sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial, utilizando informações fornecidas por sensores inerciais tais como acelerômetros e giroscópios. Medindo-se as acelerações e velocidades angulares de um corpo, torna-se possível calcular as mudanças de velocidade, posição e atitude através de sucessivas integrações numericas \cite{Adalberto2009}.
 
-A unidade de medida inercial, ou IMU, é o componente eletrônico onde são montados os sensores inerciais, sendo três acelerômetros, que fornecem as medidas das componentes da aceleração linear (x,y,z), e três giroscópios, sensores que fornecem as componentes da velocidade angular (por exemplo, arfagem, rolagem e guinada). Já a unidade de processamento é o componente responsável pelo processamento das medidas dos sensores inerciais. As velocidades lineares e as posições são obtidas a partir da integração dos sinais dos acelerômetros, enquanto que a integração dos sinais dos giroscópios fornece a atitude do veículo.  A Figura \ref{fig:imuStrap} ilustra a estrutura de um Sistema de Navegação Inercial acoplado a um veículo, composta por três giroscópios, três acelerômetros (x,y,z) e uma unidade de processamento (CPU).
+A unidade de medida inercial, ou IMU, é o componente eletrônico onde são montados os sensores inerciais, sendo três acelerômetros, que fornecem as medidas das componentes da aceleração linear (x,y,z), e três giroscópios, sensores que fornecem as componentes da velocidade angular (por exemplo, arfagem, rolagem e guinada). Já a unidade de processamento é o componente responsável pelo processamento das medidas dos sensores inerciais. As velocidades lineares e as posições são obtidas a partir da integração dos sinais dos acelerômetros, enquanto que a integração dos sinais dos giroscópios fornece a atitude do veículo.  A Figura \ref{fig:imuStrap} ilustra a estrutura de um Sistema de Navegação Inercial acoplado a um veículo, composta por três giroscópios, três acelerômetros (x,y,z) e uma unidade de processamento (CPU) à esquerda e os movimentos gerados no quadricóptero à direita.
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[scale=0.5]{img/imuStrap.png}
-	\caption{Estrutura do Sistema de Navegação acoplada ao veículo}
+		\includegraphics[scale=0.6]{img/imuStrap.png}
+	\caption{Estrutura do Sistema de Navegação acoplada ao veículo (esquerda) e os movimentos gerados no quadricóptero (direita) }
 	\label{fig:imuStrap}
 \end{figure}
 
@@ -166,7 +173,7 @@ Giroscópios fornecem a medida da velocidade angular. Este dado é utilizado par
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[scale=0.5]{img/imumems.png}
+		\includegraphics[scale=0.3]{img/imumems.png}
 	\caption{IMU tipo MEMS da \textit{Spark Fun Electronics} SEN-00842}
 	\label{fig:imumems}
 \end{figure}
