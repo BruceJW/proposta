@@ -83,7 +83,7 @@ Recentes avanços em processadores de baixo consumo de energia e na miniaturiza�
 
 \subsection{Objetivo}
 
-O propósito desse trabalho é controlar o desvio de obstáculos de um VTOL, um quadricóptero, de forma automática permitindo que sua operação mantenha o foco na missão global e evitar, assim, possíveis acidentes. Especificamente, propomos um método que consiste em estimar continuamente a trajetória futura do veículo, dada sua dinâmica, seu estado atual e o input de controle corrente. Além disso, através das medidas de sensores de distância embarcados, realizar uma comparação com a trajetória e identificar possíveis colisões. Se uma colisão é iminente, um novo controle é selecionado e oxs controle do operador é minimizado até que não exista possibilidade de colisão.
+O propósito desse trabalho é controlar o desvio de obstáculos de um VTOL, um quadricóptero, de forma automática permitindo que sua operação mantenha o foco na missão global e evitar, assim, possíveis acidentes. Especificamente, propomos um método que consiste em estimar continuamente a trajetória futura do veículo, dada sua dinâmica, seu estado atual e o input de controle corrente. Além disso, através das medidas de sensores de distância embarcados, realizar uma comparação com a trajetória e identificar possíveis colisões. Se uma colisão é iminente, um novo controle é selecionado e o controle do operador é minimizado até que não exista possibilidade de colisão.
 
 
 \subsection{Estrutura da Proposta}
@@ -103,7 +103,11 @@ Em seguida falar sobre técnicas de controle de voo para VTOL's
 
 Por fim, falar sobre desvio de obstáculos para VANT's em geral e depois VTOL's (citar o artigo de TER)
 
-Um trabalho semelhante foi realizado por \cite{Israelsen}, porém o ambiente e a posição dos obstáculos já eram previamente conhecidos e geometricamente pré-programados, não sendo utilizado sensores de distância. 
+Já no âmbito do desvio de obstáculos em tempo real, esse campo é bastante explorado em robótica. Para resolver essa questão, várias são as abordagens que vem sido adotadas. Dentre elas, os métodos baseados em campos potenciais artificiais,  onde sensores de distância são usados e suas medidas tratadas como vetores de repulsão de forças \cite{Bouktir2008}, \cite{Nieuwenhuisen2013} e \cite{Borenstein1989}; o método de janelas dinâmicas, que incorpora a dinâmica do robô ao problema de forma elegante através da redução do espaço de busca das possíveis velocidades alcançáveis em um curto período de tempo (janela dinâmica) \cite{Fox1997} \cite{Saranrittichai2013}; método de obstáculos com velocidade, que define um conjunto de velocidades possíveis que resultaria em uma colisão entre o robô e um obstáculo se movendo em uma certa velocidade \cite{Fiorini1998} \cite{Claes2012} \cite{Berg2012}; método de estados de colisões inevitáveis, considerado um estado em que uma colisão eventualmente irá ocorrer, independente da trajetória a ser estabecida e que leva em conta a dinâmica tanto do robô quanto dos obstáculos, fixos ou móveis \cite{Fraichard2004}; dentre outros.   
+
+Um trabalho semelhante ao aqui proposto foi realizado por \cite{Israelsen}, porém o ambiente e a posição dos obstáculos já eram previamente conhecidos e geometricamente pré-programados, não sendo utilizado sensores de distância. \cite{Grzonka2012} também desenvolveu um quadricóptero totalmente autônomo em ambiente \textit{indoor}, utilizando para o desvio de obstáculos o sensor de varredura a laser em miniatura Hokuyo-URG, considerado o menor e mais leve sensor a laser disponível comercialmente. Já \cite{Becker2012} utilizou cinco sensores ultra-sônicos para tal. Porém, tanto \cite{Grzonka2012} quanto \cite{Becker2012} utilizaram plataformas desenvolvidas e testadas previamente em laboratório por alguns anos, tendo em mãos modelagens dos veículos já bem definidas.
+
+
 
 \newpage
 

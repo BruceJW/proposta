@@ -5,6 +5,31 @@ A.~T. ANGONESE.
 \newblock Estação de controle em solo com funcionalidades de voo múltiplo.
 \newblock Master's thesis, IME, 2013.
 
+\bibitem{Becker2012}
+M.~Becker, R.~C.~B. Sampaio, S.~Bouabdallah, V.~d. Perrot, and R.~Siegwart.
+\newblock In-flight collision avoidance controller based only on os4 embedded
+  sensors.
+\newblock {\em Journal of the Brazilian Society of Mechanical Sciences and
+  Engineering}, 34(3):294--307, 2012.
+
+\bibitem{Borenstein1989}
+J.~Borenstein and Y.~Koren.
+\newblock Real-time obstacle avoidance for fast mobile robots.
+\newblock {\em Systems, Man and Cybernetics, IEEE Transactions on},
+  19(5):1179--1187, 1989.
+
+\bibitem{Bouktir2008}
+Y.~Bouktir, M.~Haddad, and T.~Chettibi.
+\newblock Trajectory planning for a quadrotor helicopter.
+\newblock In {\em Control and Automation, 2008 16th Mediterranean Conference
+  on}, pages 1258--1263. IEEE, 2008.
+
+\bibitem{Claes2012}
+D.~Claes, D.~Hennes, K.~Tuyls, and W.~Meeussen.
+\newblock Collision avoidance under bounded localization uncertainty.
+\newblock In {\em Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ
+  International Conference on}, pages 1192--1198. IEEE, 2012.
+
 \bibitem{Paixao2011}
 R.~A. da~Paixao, P.~F.~F. Rosa, and J.~M.~M. Neto.
 \newblock An attitude heading and reference system: basic concepts and
@@ -12,10 +37,31 @@ R.~A. da~Paixao, P.~F.~F. Rosa, and J.~M.~M. Neto.
 \newblock In {\em Industrial Electronics (ISIE), 2011 IEEE International
   Symposium on}, pages 2225--2230. IEEE, 2011.
 
+\bibitem{Fiorini1998}
+P.~Fiorini and Z.~Shiller.
+\newblock Motion planning in dynamic environments using velocity obstacles.
+\newblock {\em The International Journal of Robotics Research}, 17(7):760--772,
+  1998.
+
+\bibitem{Fox1997}
+D.~Fox, W.~Burgard, and S.~Thrun.
+\newblock The dynamic window approach to collision avoidance.
+\newblock {\em IEEE Robotics \& Automation Magazine}, 4(1):23--33, 1997.
+
+\bibitem{Fraichard2004}
+T.~Fraichard and H.~Asama.
+\newblock Inevitable collision statesóa step towards safer robots?
+\newblock {\em Advanced Robotics}, 18(10):1001--1024, 2004.
+
 \bibitem{Gibiansky2010}
 A.~Gibiansky.
 \newblock Quadcopter dynamics, simulation, and control.
 \newblock 2010.
+
+\bibitem{Grzonka2012}
+S.~Grzonka, G.~Grisetti, and W.~Burgard.
+\newblock A fully autonomous indoor quadrotor.
+\newblock {\em Robotics, IEEE Transactions on}, 28(1):90--100, 2012.
 
 \bibitem{Israelsen}
 J.~Israelsen, M.~Beall, D.~Bareiss, D.~Stuart, E.~Keeney, and J.~van~den Berg.
@@ -42,6 +88,13 @@ A.~A. Mian and W.~Daobo.
   dof quadrotor helicopter.
 \newblock {\em Chinese Journal of Aeronautics}, 21(3):261--268, 2008.
 
+\bibitem{Nieuwenhuisen2013}
+M.~Nieuwenhuisen, D.~Droeschel, J.~Schneider, D.~Holz, T.~Labe, and S.~Behnke.
+\newblock Multimodal obstacle detection and collision avoidance for micro
+  aerial vehicles.
+\newblock In {\em Mobile Robots (ECMR), 2013 European Conference on}, pages
+  7--12. IEEE, 2013.
+
 \bibitem{Ogata2003}
 K.~Ogata, P.~{\'A}. Maya, and F.~Leonardi.
 \newblock {\em Engenharia de controle moderno}.
@@ -51,5 +104,20 @@ K.~Ogata, P.~{\'A}. Maya, and F.~Leonardi.
 A.~L. Salih, M.~Moghavvemi, H.~A. Mohamed, and K.~S. Gaeid.
 \newblock Flight pid controller design for a uav quadrotor.
 \newblock {\em Scientific Research and Essays}, 5(23):3660--3667, 2010.
+
+\bibitem{Saranrittichai2013}
+P.~Saranrittichai, N.~Niparnan, and A.~Sudsang.
+\newblock Robust local obstacle avoidance for mobile robot based on dynamic
+  window approach.
+\newblock In {\em Electrical Engineering/Electronics, Computer,
+  Telecommunications and Information Technology (ECTI-CON), 2013 10th
+  International Conference on}, pages 1--4. IEEE, 2013.
+
+\bibitem{Berg2012}
+J.~van~den Berg, D.~Wilkie, S.~J. Guy, M.~Niethammer, and D.~Manocha.
+\newblock Lqg-obstacles: Feedback control with collision avoidance for mobile
+  robots with motion and sensing uncertainty.
+\newblock In {\em Robotics and Automation (ICRA), 2012 IEEE International
+  Conference on}, pages 346--353. IEEE, 2012.
 
 \end{thebibliography}
