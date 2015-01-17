@@ -2,6 +2,20 @@
 % Encoding: UTF8
 
 
+@InProceedings{Altug2002,
+  Title                    = {Control of a quadrotor helicopter using visual feedback},
+  Author                   = {Altug, Erdinc and Ostrowski, James P and Mahony, Robert},
+  Booktitle                = {Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE International Conference on},
+  Year                     = {2002},
+  Organization             = {IEEE},
+  Pages                    = {72--77},
+  Volume                   = {1},
+  Abstract                 = {We present control methods for an autonomous four-rotor helicopter, called a quadrotor, using visual feedback as the primary sensor. The vision system uses aground camera to estimate the pose (position and orientation) of the helicopter. Two methods of control are studied - one using a series of mode-based, feedback linearizing controllers, and the other using a backstepping-like control law. Various simulations of the model demonstrate the implementation of feedback linearization and the backstepping controllers. Finally,. we present initial flight experiments. where the helicopter is restricted to vertical and yaw motions},
+  File                     = {:refs/quadcopter/01013341.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.17}
+}
+
 @MastersThesis{Angonese2013,
   Title                    = {Estação de controle em solo com funcionalidades de voo múltiplo},
   Author                   = {ALBERTO TORRES ANGONESE},
@@ -51,8 +65,6 @@ Al ́em do trabalho de implementac ̧ ̃ao e valida ̧ca ̃o do software da ECS,
   Year                     = {2012},
   Organization             = {IEEE},
   Pages                    = {346--353},
-
-  __markedentry            = {[bsgiovanini:]},
   Abstract                 = {This paper presents LQG-Obstacles, a new concept that combines linear-quadratic feedback control of mobile robots with guaranteed avoidance of collisions with obstacles. Our approach generalizes the concept of Velocity Obstacles to any robotic system with a linear Gaussian dynamics model. We integrate a Kalman filter for state estimation and an LQR feedback controller into a closed-loop dynamics model of which a higher-level control objective is the “control input”. We then define the LQG-Obstacle as the set of control objectives that result in a collision with high probability. Selecting a control objective outside the LQG-Obstacle then produces collision free motion. We demonstrate the potential of LQG-Obstacles by safely and smoothly navigating a simulated quadrotor helicopter with complex non-linear dynamics and motion and sensing uncertainty through three-dimensional environments with obstacles and narrow passages},
   File                     = {:refs/collision avoidance/LQG-Obstacles.pdf:PDF},
   Owner                    = {bsgiovanini},
@@ -86,6 +98,20 @@ Al ́em do trabalho de implementac ̧ ̃ao e valida ̧ca ̃o do software da ECS,
   File                     = {:refs/collision avoidance/04602025.pdf:PDF},
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.01.12}
+}
+
+@InProceedings{Bristeau2011,
+  Title                    = {The navigation and control technology inside the ar. drone micro uav},
+  Author                   = {Bristeau, Pierre-Jean and Callou, Fran{\c{c}}ois and Vissi{\`e}re, David and Petit, Nicolas and others},
+  Booktitle                = {18th IFAC world congress},
+  Year                     = {2011},
+  Number                   = {1},
+  Pages                    = {1477--1484},
+  Volume                   = {18},
+  Abstract                 = {This paper exposes the Navigation and Control technology embedded in a recently com- mercialized micro Unmanned Aerial Vehicle (UAV), the AR.Drone, which cost and performance are unprecedented among any commercial product for mass markets. The system relies on state-of-the-art indoor navigation systems combining low-cost inertial sensors, computer vision techniques, sonar, and accounting for aerodynamics models},
+  File                     = {:refs/quadcopter/parrot/TheNavigationControltechnoloyinsidetheAR.Drone.microUAV.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.17}
 }
 
 @InProceedings{Claes2012,
@@ -131,15 +157,13 @@ The trajectory from start to goal can be computed by searching a tree of feasibl
 }
 
 @Article{Fraichard2004,
-  Title                    = {Inevitable collision statesóa step towards safer robots?},
+  Title                    = {Inevitable collision states - a step towards safer robots?},
   Author                   = {Fraichard, Thierry and Asama, Hajime},
   Journal                  = {Advanced Robotics},
   Year                     = {2004},
   Number                   = {10},
   Pages                    = {1001--1024},
   Volume                   = {18},
-
-  __markedentry            = {[bsgiovanini:6]},
   Abstract                 = {An inevitable collision state for a robotic system can be defined as a state for which, no matter what the future trajectory followed by the system is, a collision with an obstacle eventually occurs. An inevitable collision state takes into account the dynamics of both the system and the obstacles, fixed or moving. The main contribution of this paper is to lay down and explore this novel concept (and the companion concept of inevitable collision obstacle). Formal definitions of the inevitable collision states and obstacles are given. Properties fundamental for their characterisation are established. This concept is very general and can be useful both for navigation and motion planning purposes (for its own safety, a robotic system should never find itself in an inevitable collision state). To illustrate the interest of this concept, it is applied to a problem of safe motion planning for a robotic system subject to sensing constraints in a partially known environment (ie that may contain unexpected obstacles). In safe motion planning, the issue is to compute motions for which it is guaranteed that, no matter what happens at execution time, the robotic system never finds itself in a situation where there is no way for it to avoid collision with an unexpected obstacle},
   File                     = {:refs/collision avoidance/fraichard-asama-rsjar-04.pdf:PDF},
   Owner                    = {bsgiovanini},
@@ -231,6 +255,15 @@ DE NAVEGAÇÃO INERCIAL INTEGRADOS INS/GPS},
   Urldate                  = {http://blog.oscarliang.net/quadcopter-pid-explained-tuning/}
 }
 
+@Article{Lopes,
+  Title                    = {MODELAGEM E VALIDACAO DE UM QUADRIMOTOR ARDRONE PARROT},
+  Author                   = {Lopes, Leonardo L and Brandao, Alexandre S and Sarcinelli Filho, M{\'a}rio and Carelli, Ricardo},
+  Abstract                 = {Este trabalho tem como objetivo comparar e validar experimentalmente os modelos caixa branca, apresentado previamente, e caixa preta para um quadrimotor ArDrone Parrot. Mais especificamente, o trabalho visa validar os parˆametros do modelo caixa branca obtidos da literatura de referˆencia e ajustados de forma emp ́ırica, atrav ́es da compara ̧c ̃ao dos dados de entrada e sa ́ıda obtidos com um ve ́ıculo real. Em seguida, um modelo caixa preta ARX  ́e obtido, a fim de verificar a possibilidade de modelagem do quadrimotor atrav ́es de sistemas desacoplados, executando uma manobra acoplada. As respostas dos modelos e as correspondentes excita ̧c ̃oes s ̃ao apresentadas, validando ambas as propostas de modelagem},
+  File                     = {:refs/quadcopter/parrot/5682.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.17}
+}
+
 @Article{Mian2008,
   Title                    = {Modeling and backstepping-based nonlinear control strategy for a 6 DOF quadrotor helicopter},
   Author                   = {Mian, Ashfaq Ahmad and Daobo, Wang},
@@ -287,6 +320,17 @@ Matlab e Simulink},
   Timestamp                = {2015.01.15}
 }
 
+@Article{ParraMunoz2013,
+  Title                    = {Modelagem matemática e controle de um quadrimotor},
+  Author                   = {Parra Muñoz, Miguel Enrique},
+  Year                     = {2013},
+  Abstract                 = {Este documento mostra a modelagem matemática de um quadrimotor, onde foram feitas as seguintes considerações do sistema: é analisando como um corpo sólido o qual gira em 3D, o sistema foi modelado mediante a segunda lei de Newton e as equações de Euler- Lagrange, obtendo assim o sistema em função da geometria do quadrimotor e os ângulos de Euler nos eixos correspondentes. O método de controle é feito por planejamento de trajetórias e controle estocástico, com objetivo de controlar a não linearidade do sistema, fazendo assim que o sistema seja comportado de forma desejada em malha aberta. O desenvolvimento do projeto é baseado na construção e na simulação de trajetória desenhadas em MATLAB e SIMULINK, tendo condições iniciais definidas, com objetivo de obter os dados das simulações para a realização dos testes no quadrimotor. Como equipamento de trabalho foi disponibilizado um quadrimotor (Parrot Ar Drone), o qual tem desenvolvido um programa na plataforma de Java para sua comunicação.
+A parte final do trabalho é fundamentada na análise estocástica do sistema em relação aos parâmetros do controle PID e PD, o qual permitiu a identificação do controlador que for projetado para a realização dos testes. Finalmente com o controlador projetado foram realizadas as provas e posteriormente foram processados e analisados os dados obtidos experimentalmente, para ser comparados com os dados teóricos enviados ao quadrimotor, com a finalidade de analisar o comportamento do controlador projetado no sistema real.},
+  File                     = {:refs/quadcopter/parrot/2012_MiguelEnriqueParraMunoz.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.17}
+}
+
 @Article{Salih2010,
   Title                    = {Flight PID controller design for a UAV quadrotor},
   Author                   = {Salih, Atheer L and Moghavvemi, M and Mohamed, Haider AF and Gaeid, Khalaf Sallom},
@@ -303,6 +347,21 @@ Matlab e Simulink},
   Timestamp                = {2015.01.12}
 }
 
+@InProceedings{Santana2014,
+  Title                    = {A trajectory tracking and 3D positioning controller for the AR. Drone quadrotor},
+  Author                   = {Santana, Lucas Vago and Brandao, Alexandre Santos and Sarcinelli-Filho, Mario and Carelli, Ricardo},
+  Booktitle                = {Unmanned Aircraft Systems (ICUAS), 2014 International Conference on},
+  Year                     = {2014},
+  Organization             = {IEEE},
+  Pages                    = {756--767},
+
+  __markedentry            = {[bsgiovanini:]},
+  Abstract                 = {In this paper a complete framework is proposed, to deal with trajectory tracking and positioning with an AR.Drone Parrot quadrotor flying in indoor environments. The system runs in a centralized way, in a computer installed in a ground station, and is based on two main structures,namely a Kalman Filter (KF) to track the 3D position of the vehicle and a nonlinear controller to guide it in the accomplishment of its flight missions. The KF is designed aiming at estimating the states of the vehicle, fusing inertial and visual data. The nonlinear controller is designed with basis on a dynamic model of the AR.Drone, with the closed-loop stability proven using the theory of Lyapunov. Finally, experimental results are presented, which demonstrate the effectiveness of the proposed framework},
+  File                     = {:refs/quadcopter/parrot/06842321.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.17}
+}
+
 @InProceedings{Saranrittichai2013,
   Title                    = {Robust local obstacle avoidance for mobile robot based on Dynamic Window approach},
   Author                   = {Saranrittichai, Piyapat and Niparnan, Nattee and Sudsang, Attawith},
@@ -312,6 +371,21 @@ Matlab e Simulink},
   Pages                    = {1--4},
   Abstract                 = {To travel within the real world safely, an autonomous mobile robot has to perform obstacle avoidance. One of the most popular approaches to solve local obstacle avoidance is Dynamic Window approach. This approach is to search optimal control command of the robot in velocity space directly. The command which maximizes objective function is then selected as output command. In the original Dynamic Window approach, in order to avoid obstacles, it concerns only obstacles on robot’s trajectory. Therefore, the robot might crash with some obstacles which are near the trajectory but not on the trajectory. Therefore, in this work, we propose field Dynamic Window approach (F-DWA) which objective function is modified to consider the obstacles near the trajectory as well. This can be done by the use of histogram grid representation of obstacles to estimate the crashing probability of the trajectory. The objective function of Dynamic Window approach also depends on the crashing probability as well as other traditional factors. To test the robustness of proposed algorithm, experiment in real world is conducted. The result is the robot can travel safer when it concerns near-trajectory obstacles},
   File                     = {:refs/collision avoidance/06559615.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.17}
+}
+
+@InProceedings{Ye2006,
+  Title                    = {Equational dynamic modeling and adaptive control of UAV},
+  Author                   = {Ye, Zhengmao and Bhattacharya, Pradeep and Mohamadian, Habib and Majlesein, Hamid and Ye, Yongmao},
+  Booktitle                = {System of Systems Engineering, 2006 IEEE/SMC International Conference on},
+  Year                     = {2006},
+  Organization             = {IEEE},
+  Pages                    = {5--pp},
+
+  __markedentry            = {[bsgiovanini:6]},
+  Abstract                 = {Unmanned aerial vehicle (UAV) is an auto-piloted and remote-controlled vehicle sustained by the aerodynamic lift over its whole flight profile. It has many applications such as weather forecast, terrain surveying, environment surveillance, hazardous cleanup, military defense, and so on. In this paper, a simplified nonlinear equational modeling of UAV dynamics is conducted and then linearization and adaptive control approaches are designed. The objective is to apply aerodynamic theory and adaptive control theory on accurate UAV explicit modeling to enhance capabilities of UAV navigation and prediction against various severe conditions},
+  File                     = {:refs/quadcopter/01652318.pdf:PDF},
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.01.17}
 }
@@ -332,11 +406,17 @@ Matlab e Simulink},
 
 @comment{jabref-meta: groupstree:
 0 AllEntriesGroup:;
-1 ExplicitGroup:Flight Control\;0\;Adalberto2009\;Angonese2013\;Kingdo
-m\;Liang\;Mian2008\;Ogata2003\;Paixao2011\;Salih2010\;Zhang2014\;;
+1 ExplicitGroup:Flight Control\;0\;Adalberto2009\;Altug2002\;Angonese2
+013\;Gibiansky2010\;Kingdom\;Liang\;Mian2008\;Ogata2003\;Paixao2011\;P
+arraMunoz2013\;Salih2010\;Zhang2014\;;
 1 ExplicitGroup:Collision avoidance\;0\;Becker2012\;Becker2012a\;Berg2
 012\;Borenstein1989\;Bouktir2008\;Claes2012\;Fiorini1998\;Fox1997\;Fra
 ichard2004\;Israelsen\;Khatib1990\;Nieuwenhuisen2013\;Saranrittichai20
 13\;;
+1 ExplicitGroup:Quadricoptero\;0\;Altug2002\;Bouktir2008\;Bristeau2011
+\;Gibiansky2010\;Grzonka2012\;Liang\;Lopes\;Mian2008\;ParraMunoz2013\;
+Salih2010\;Santana2014\;Zhang2014\;;
+1 ExplicitGroup:Parrot\;0\;Bristeau2011\;Lopes\;ParraMunoz2013\;Santan
+a2014\;;
 }
 

@@ -4,51 +4,51 @@ The top-level auxiliary file: Dissertacao.aux
 The style file: abbrv.bst
 Database file #1: Dissertacao.bib
 Warning--entry type for "Kingdom" isn't style-file defined
---line 210 of file Dissertacao.bib
+--line 234 of file Dissertacao.bib
 Warning--entry type for "Liang" isn't style-file defined
---line 222 of file Dissertacao.bib
+--line 246 of file Dissertacao.bib
 Warning--empty journal in Gibiansky2010
 Warning--empty journal in Israelsen
 Warning--empty year in Israelsen
-You've used 21 entries,
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            637 strings with 7694 characters,
-and the built_in function-call counts, 7687 in all, are:
-= -- 774
-> -- 363
-< -- 6
-+ -- 146
-- -- 122
-* -- 529
-:= -- 1246
-add.period$ -- 66
-call.type$ -- 21
-change.case$ -- 123
+            658 strings with 8363 characters,
+and the built_in function-call counts, 9008 in all, are:
+= -- 906
+> -- 432
+< -- 10
++ -- 174
+- -- 146
+* -- 621
+:= -- 1452
+add.period$ -- 78
+call.type$ -- 24
+change.case$ -- 144
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 286
-empty$ -- 592
-format.name$ -- 122
-if$ -- 1627
+cite$ -- 27
+duplicate$ -- 340
+empty$ -- 694
+format.name$ -- 146
+if$ -- 1919
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 18
-newline$ -- 105
-num.names$ -- 42
-pop$ -- 142
+int.to.str$ -- 24
+missing$ -- 21
+newline$ -- 120
+num.names$ -- 48
+pop$ -- 171
 preamble$ -- 1
-purify$ -- 103
+purify$ -- 121
 quote$ -- 0
-skip$ -- 215
+skip$ -- 249
 stack$ -- 0
-substring$ -- 504
-swap$ -- 75
-text.length$ -- 6
+substring$ -- 563
+swap$ -- 95
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
+type$ -- 94
 warning$ -- 3
-while$ -- 76
-width$ -- 23
-write$ -- 224
+while$ -- 88
+width$ -- 26
+write$ -- 261
 (There were 5 warnings)

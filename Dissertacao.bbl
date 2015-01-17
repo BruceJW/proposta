@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Altug2002}
+E.~Altug, J.~P. Ostrowski, and R.~Mahony.
+\newblock Control of a quadrotor helicopter using visual feedback.
+\newblock In {\em Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
+  International Conference on}, volume~1, pages 72--77. IEEE, 2002.
+
 \bibitem{Angonese2013}
 A.~T. ANGONESE.
 \newblock Estação de controle em solo com funcionalidades de voo múltiplo.
@@ -50,7 +56,7 @@ D.~Fox, W.~Burgard, and S.~Thrun.
 
 \bibitem{Fraichard2004}
 T.~Fraichard and H.~Asama.
-\newblock Inevitable collision statesóa step towards safer robots?
+\newblock Inevitable collision states - a step towards safer robots?
 \newblock {\em Advanced Robotics}, 18(10):1001--1024, 2004.
 
 \bibitem{Gibiansky2010}
@@ -119,5 +125,17 @@ J.~van~den Berg, D.~Wilkie, S.~J. Guy, M.~Niethammer, and D.~Manocha.
   robots with motion and sensing uncertainty.
 \newblock In {\em Robotics and Automation (ICRA), 2012 IEEE International
   Conference on}, pages 346--353. IEEE, 2012.
+
+\bibitem{Ye2006}
+Z.~Ye, P.~Bhattacharya, H.~Mohamadian, H.~Majlesein, and Y.~Ye.
+\newblock Equational dynamic modeling and adaptive control of uav.
+\newblock In {\em System of Systems Engineering, 2006 IEEE/SMC International
+  Conference on}, pages 5--pp. IEEE, 2006.
+
+\bibitem{Zhang2014}
+X.~Zhang, X.~Li, K.~Wang, and Y.~Lu.
+\newblock A survey of modelling and identification of quadrotor robot.
+\newblock In {\em Abstract and Applied Analysis}, volume 2014. Hindawi
+  Publishing Corporation, 2014.
 
 \end{thebibliography}
