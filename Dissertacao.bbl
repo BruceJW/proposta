@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Achtelik2009}
+M.~Achtelik, A.~Bachrach, R.~He, S.~Prentice, and N.~Roy.
+\newblock Autonomous navigation and exploration of a quadrotor helicopter in
+  gps-denied indoor environments.
+\newblock In {\em First Symposium on Indoor Flight}, number 2009, 2009.
+
 \bibitem{Altug2002}
 E.~Altug, J.~P. Ostrowski, and R.~Mahony.
 \newblock Control of a quadrotor helicopter using visual feedback.
@@ -17,6 +23,12 @@ M.~Becker, R.~C.~B. Sampaio, S.~Bouabdallah, V.~d. Perrot, and R.~Siegwart.
   sensors.
 \newblock {\em Journal of the Brazilian Society of Mechanical Sciences and
   Engineering}, 34(3):294--307, 2012.
+
+\bibitem{Blosch2010}
+M.~Blosch, S.~Weiss, D.~Scaramuzza, and R.~Siegwart.
+\newblock Vision based mav navigation in unknown and unstructured environments.
+\newblock In {\em Robotics and automation (ICRA), 2010 IEEE international
+  conference on}, pages 21--28. IEEE, 2010.
 
 \bibitem{Borenstein1989}
 J.~Borenstein and Y.~Koren.
@@ -69,6 +81,14 @@ S.~Grzonka, G.~Grisetti, and W.~Burgard.
 \newblock A fully autonomous indoor quadrotor.
 \newblock {\em Robotics, IEEE Transactions on}, 28(1):90--100, 2012.
 
+\bibitem{Hoffmann2004}
+G.~Hoffmann, D.~G. Rajnarayan, S.~L. Waslander, D.~Dostal, J.~S. Jang, and
+  C.~J. Tomlin.
+\newblock The stanford testbed of autonomous rotorcraft for multi agent control
+  (starmac).
+\newblock In {\em Digital Avionics Systems Conference, 2004. DASC 04. The
+  23rd}, volume~2, pages 12--E. IEEE, 2004.
+
 \bibitem{Israelsen}
 J.~Israelsen, M.~Beall, D.~Bareiss, D.~Stuart, E.~Keeney, and J.~van~den Berg.
 \newblock Automatic collision avoidance for manually tele-operated unmanned
@@ -94,6 +114,12 @@ A.~A. Mian and W.~Daobo.
   dof quadrotor helicopter.
 \newblock {\em Chinese Journal of Aeronautics}, 21(3):261--268, 2008.
 
+\bibitem{Nicol2008}
+C.~Nicol, C.~Macnab, and A.~Ramirez-Serrano.
+\newblock Robust neural network control of a quadrotor helicopter.
+\newblock In {\em Proceedings of the Canadian Conference on Electrical and
+  Computer Engineering}, pages 1233--1237, 2008.
+
 \bibitem{Nieuwenhuisen2013}
 M.~Nieuwenhuisen, D.~Droeschel, J.~Schneider, D.~Holz, T.~Labe, and S.~Behnke.
 \newblock Multimodal obstacle detection and collision avoidance for micro
@@ -105,6 +131,12 @@ M.~Nieuwenhuisen, D.~Droeschel, J.~Schneider, D.~Holz, T.~Labe, and S.~Behnke.
 K.~Ogata, P.~{\'A}. Maya, and F.~Leonardi.
 \newblock {\em Engenharia de controle moderno}.
 \newblock Prentice Hall, 2003.
+
+\bibitem{Roberts2007}
+J.~Roberts, T.~Stirling, J.-C. Zufferey, and D.~Floreano.
+\newblock Quadrotor using minimal sensing for autonomous indoor flight.
+\newblock In {\em Proceedings of the European Micro Air Vehicle Conference and
+  Flight Competition (EMAV2007)}, 2007.
 
 \bibitem{Salih2010}
 A.~L. Salih, M.~Moghavvemi, H.~A. Mohamed, and K.~S. Gaeid.
@@ -119,12 +151,31 @@ P.~Saranrittichai, N.~Niparnan, and A.~Sudsang.
   Telecommunications and Information Technology (ECTI-CON), 2013 10th
   International Conference on}, pages 1--4. IEEE, 2013.
 
+\bibitem{Shen2013}
+S.~Shen, Y.~Mulgaonkar, N.~Michael, and V.~Kumar.
+\newblock Vision-based state estimation and trajectory control towards
+  high-speed flight with a quadrotor.
+\newblock In {\em Robotics: Science and Systems}. Citeseer, 2013.
+
+\bibitem{Shen2013a}
+S.~Shen, Y.~Mulgaonkar, N.~Michael, and V.~Kumar.
+\newblock Vision-based state estimation for autonomous rotorcraft mavs in
+  complex environments.
+\newblock In {\em Robotics and Automation (ICRA), 2013 IEEE International
+  Conference on}, pages 1758--1764. IEEE, 2013.
+
 \bibitem{Berg2012}
 J.~van~den Berg, D.~Wilkie, S.~J. Guy, M.~Niethammer, and D.~Manocha.
 \newblock Lqg-obstacles: Feedback control with collision avoidance for mobile
   robots with motion and sensing uncertainty.
 \newblock In {\em Robotics and Automation (ICRA), 2012 IEEE International
   Conference on}, pages 346--353. IEEE, 2012.
+
+\bibitem{Wendel2006}
+J.~Wendel, O.~Meister, C.~Schlaile, and G.~F. Trommer.
+\newblock An integrated gps/mems-imu navigation system for an autonomous
+  helicopter.
+\newblock {\em Aerospace Science and Technology}, 10(6):527--533, 2006.
 
 \bibitem{Ye2006}
 Z.~Ye, P.~Bhattacharya, H.~Mohamadian, H.~Majlesein, and Y.~Ye.

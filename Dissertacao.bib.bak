@@ -2,6 +2,18 @@
 % Encoding: UTF8
 
 
+@InProceedings{Achtelik2009,
+  Title                    = {Autonomous navigation and exploration of a quadrotor helicopter in GPS-denied indoor environments},
+  Author                   = {Achtelik, Markus and Bachrach, Abraham and He, Ruijie and Prentice, Samuel and Roy, Nicholas},
+  Booktitle                = {First Symposium on Indoor Flight},
+  Year                     = {2009},
+  Number                   = {2009},
+  Abstract                 = {This paper presents our solution for enabling a quadrotor helicopter to autonomously navigate, explore and locate objects of interest in unstructured and unknown indoor environments. We describe the de- sign and operation of our quadrotor helicopter, before presenting the software architecture and individual algorithms necessary for executing the mission. Experimental results are presented demonstrating the quadrotor’s ability to operate autonomously in indoor environments. Finally, we address some of the logistical and risk management issues pertaining to our entry in the competition},
+  File                     = {:refs/quadcopter/2009MIT.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.18}
+}
+
 @InProceedings{Altug2002,
   Title                    = {Control of a quadrotor helicopter using visual feedback},
   Author                   = {Altug, Erdinc and Ostrowski, James P and Mahony, Robert},
@@ -71,6 +83,19 @@ Al ́em do trabalho de implementac ̧ ̃ao e valida ̧ca ̃o do software da ECS,
   Timestamp                = {2015.01.17}
 }
 
+@InProceedings{Blosch2010,
+  Title                    = {Vision based MAV navigation in unknown and unstructured environments},
+  Author                   = {Blosch, Michael and Weiss, Stephan and Scaramuzza, Davide and Siegwart, Roland},
+  Booktitle                = {Robotics and automation (ICRA), 2010 IEEE international conference on},
+  Year                     = {2010},
+  Organization             = {IEEE},
+  Pages                    = {21--28},
+  Abstract                 = {Within the research on Micro Aerial Vehicles (MAVs), the field on flight control and autonomous mission execution is one of the most active. A crucial point is the localization of the vehicle, which is especially difficult in unknown, GPS-denied environments. This paper presents a novel vision based approach, where the vehicle is localized using a downward looking monocular camera. A state-of-the-art visual SLAM algorithm tracks the pose of the camera, while, simultaneously, building an incremental map of the surrounding region. Based on this pose estimation a LQG/LTR based controller stabilizes the vehicle at a desired setpoint, making simple maneuvers possible like take-off, hovering, setpoint following or landing. Experimental data show that this approach efficiently controls a helicopter while navigating through an unknown and unstructured environment. To the best of our knowledge, this is the first work describing a micro aerial vehicle able to navigate through an unexplored environment (independently of any external aid like GPS or artificial beacons), which uses a single camera as only exteroceptive sensor.},
+  File                     = {:refs/quadcopter/05509920.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.18}
+}
+
 @Article{Borenstein1989,
   Title                    = {Real-time obstacle avoidance for fast mobile robots},
   Author                   = {Borenstein, Johann and Koren, Yoram},
@@ -100,6 +125,20 @@ Al ́em do trabalho de implementac ̧ ̃ao e valida ̧ca ̃o do software da ECS,
   Timestamp                = {2015.01.12}
 }
 
+@InProceedings{Brandt2010,
+  Title                    = {Haptic collision avoidance for a remotely operated quadrotor uav in indoor environments},
+  Author                   = {Brandt, Adam M and Colton, Mark B},
+  Booktitle                = {Systems Man and Cybernetics (SMC), 2010 IEEE International Conference on},
+  Year                     = {2010},
+  Organization             = {IEEE},
+  Pages                    = {2724--2731},
+
+  __markedentry            = {[bsgiovanini:]},
+  Abstract                 = {Quadrotors are well-suited for indoor flight because of their ability to hover and maneuver in confined spaces. However, remote operation of these vehicles is challenging because of the loss sensory perception. This paper presents methods for using force feedback exerted by the command input device on the hand of the pilot to assist in avoiding collisions while navigating in a 3D indoor environment. Three algorithms for calculating the feedback forces are presented and tested in simulation-based user studies. The force feedback and control system is demonstrated by piloting a physical quadrotor in an indoor environment.},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.18}
+}
+
 @InProceedings{Bristeau2011,
   Title                    = {The navigation and control technology inside the ar. drone micro uav},
   Author                   = {Bristeau, Pierre-Jean and Callou, Fran{\c{c}}ois and Vissi{\`e}re, David and Petit, Nicolas and others},
@@ -108,8 +147,6 @@ Al ́em do trabalho de implementac ̧ ̃ao e valida ̧ca ̃o do software da ECS,
   Number                   = {1},
   Pages                    = {1477--1484},
   Volume                   = {18},
-
-  __markedentry            = {[bsgiovanini:]},
   Abstract                 = {This paper exposes the Navigation and Control technology embedded in a recently com- mercialized micro Unmanned Aerial Vehicle (UAV), the AR.Drone, which cost and performance are unprecedented among any commercial product for mass markets. The system relies on state-of-the-art indoor navigation systems combining low-cost inertial sensors, computer vision techniques, sonar, and accounting for aerodynamics models},
   File                     = {:refs/quadcopter/parrot/TheNavigationControltechnoloyinsidetheAR.Drone.microUAV.pdf:PDF},
   Owner                    = {bsgiovanini},
@@ -173,6 +210,19 @@ The trajectory from start to goal can be computed by searching a tree of feasibl
   Timestamp                = {2015.01.17}
 }
 
+@Article{Gageik2012,
+  Title                    = {Obstacle Detection And Collision Avoidance Using Ultrasonic Distance Sensors For An Autonomous Quadrocopter},
+  Author                   = {Gageik, Nils and M{\"u}ller, Thilo and Montenegro, Sergio},
+  Journal                  = {University Of Wurzburg, Aerospace Information Technology (Germany) Wurzburg September},
+  Year                     = {2012},
+
+  __markedentry            = {[bsgiovanini:6]},
+  Abstract                 = {A simple approach for obstacle detection and collision avoidance of an autonomous flying quadrocopter using low-cost ultrasonic sensors and simple data fusion is presented here. The approach has been implemented and tested in a self-developed quadrocopter (Figure 1) and its evaluation shows the general realizability as well as the drawbacks of this approach. The presented approach is intended to be used as part of the AQopterI8 project at the department of Aerospace Information Technology (University of Würzburg), which aims to develop an autonomous flying quadrocopter for indoor application},
+  File                     = {:refs/collision avoidance/Gageik_Mueller_Montenegro_2012_OBSTACLE_DETECTION_AND_COLLISION_AVOIDANCE_USING_ULTRASONIC_DISTANCE_SENSORS_FOR_AN_AUTONOMOUS_QUADROCOPTER.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.18}
+}
+
 @Article{Gibiansky2010,
   Title                    = {Quadcopter Dynamics, Simulation, and Control},
   Author                   = {Gibiansky, Andrew},
@@ -197,6 +247,20 @@ The trajectory from start to goal can be computed by searching a tree of feasibl
   Owner                    = {bsgiovanini},
   Publisher                = {IEEE},
   Timestamp                = {2015.01.12}
+}
+
+@InProceedings{Hoffmann2004,
+  Title                    = {The Stanford testbed of autonomous rotorcraft for multi agent control (STARMAC)},
+  Author                   = {Hoffmann, Gabe and Rajnarayan, Dev Gorur and Waslander, Steven L and Dostal, David and Jang, Jung Soon and Tomlin, Claire J},
+  Booktitle                = {Digital Avionics Systems Conference, 2004. DASC 04. The 23rd},
+  Year                     = {2004},
+  Organization             = {IEEE},
+  Pages                    = {12--E},
+  Volume                   = {2},
+  Abstract                 = {As an alternative to cumbersome aerial vehicles with considerable maintenance requirements and flight envelope restrictions, the X4 flyer is chosen as the basis for the Stanford testbed of autonomous rotorcraft for multi-agent control (STARMAC). This paper outlines the design and development of a miniature autonomous waypoint tracker flight control system, and the creation of a multi-vehicle platform for experimentation and validation of multi-agent control algorithms. This testbed development paves the way for real-world implementation of recent work in the fields of autonomous collision and obstacle avoidance, task assignment formation flight, using both centralized and decentralized techniques},
+  File                     = {:refs/quadcopter/01390847.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.18}
 }
 
 @Article{Israelsen,
@@ -333,6 +397,28 @@ A parte final do trabalho é fundamentada na análise estocástica do sistema em
   Timestamp                = {2015.01.17}
 }
 
+@InProceedings{Pradel2007,
+  Title                    = {Modeling and development of a quadrotor UAV},
+  Author                   = {Pradel, Gilbert and Benzemrane, Khadidja and Damm, Gilney and Azouz, Naoufel and others},
+  Booktitle                = {3rd US-European Competition and Workshop on Micro Air Vehicle Systems (MAV07) \& European Micro Air Vehicle Conference and Flight Competition (EMAV2007)},
+  Year                     = {2007},
+  Abstract                 = {This paper presents the conception and construction of a mini quadrotor helicopter for indoor and outdoor applications. This Unmanned Aerial Vehicle (UAV), named XSF, has a very manoeuvrable platform and is indicated to work in inaccessible spaces. Its main advantage with respect to classical 4-rotors helicopters is the ability of flipping two motors in order to obtain two more control inputs. We present its hardware architectures as well as the dynamical model used to control the UAV stabilization. The tasks scheduled by the on-board real time operating system are also introduced as well as the navigator scheme current under development.},
+  File                     = {:refs/quadcopter/Pradel.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.18}
+}
+
+@InProceedings{Roberts2007,
+  Title                    = {Quadrotor using minimal sensing for autonomous indoor flight},
+  Author                   = {Roberts, J and Stirling, Timothy and Zufferey, Jean-Christophe and Floreano, Dario},
+  Booktitle                = {Proceedings of the European Micro Air Vehicle Conference and Flight Competition (EMAV2007)},
+  Year                     = {2007},
+  Abstract                 = {This paper presents a Miniature Aerial Vehicle (MAV) capable of hands- off autonomous operation within indoor environments. Our prototype is a Quadrotor weighing approximately 600g, with a diameter of 550mm, which carries the necessary electronics for stability control, altitude control, collision avoidance and anti-drift control. This MAV is equipped with three rate gyroscopes, three accelerometers, one ultrasonic sensor, four infrared sensors, a high-speed motor controller and a flight computer. Autonomous flight tests have been carried out in a 7x6-m room.},
+  File                     = {:refs/quadcopter/Roberts-MAV07.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.18}
+}
+
 @Article{Salih2010,
   Title                    = {Flight PID controller design for a UAV quadrotor},
   Author                   = {Salih, Atheer L and Moghavvemi, M and Mohamed, Haider AF and Gaeid, Khalaf Sallom},
@@ -356,8 +442,6 @@ A parte final do trabalho é fundamentada na análise estocástica do sistema em
   Year                     = {2014},
   Organization             = {IEEE},
   Pages                    = {756--767},
-
-  __markedentry            = {[bsgiovanini:6]},
   Abstract                 = {In this paper a complete framework is proposed, to deal with trajectory tracking and positioning with an AR.Drone Parrot quadrotor flying in indoor environments. The system runs in a centralized way, in a computer installed in a ground station, and is based on two main structures,namely a Kalman Filter (KF) to track the 3D position of the vehicle and a nonlinear controller to guide it in the accomplishment of its flight missions. The KF is designed aiming at estimating the states of the vehicle, fusing inertial and visual data. The nonlinear controller is designed with basis on a dynamic model of the AR.Drone, with the closed-loop stability proven using the theory of Lyapunov. Finally, experimental results are presented, which demonstrate the effectiveness of the proposed framework},
   File                     = {:refs/quadcopter/parrot/06842321.pdf:PDF},
   Owner                    = {bsgiovanini},
@@ -373,6 +457,61 @@ A parte final do trabalho é fundamentada na análise estocástica do sistema em
   Pages                    = {1--4},
   Abstract                 = {To travel within the real world safely, an autonomous mobile robot has to perform obstacle avoidance. One of the most popular approaches to solve local obstacle avoidance is Dynamic Window approach. This approach is to search optimal control command of the robot in velocity space directly. The command which maximizes objective function is then selected as output command. In the original Dynamic Window approach, in order to avoid obstacles, it concerns only obstacles on robot’s trajectory. Therefore, the robot might crash with some obstacles which are near the trajectory but not on the trajectory. Therefore, in this work, we propose field Dynamic Window approach (F-DWA) which objective function is modified to consider the obstacles near the trajectory as well. This can be done by the use of histogram grid representation of obstacles to estimate the crashing probability of the trajectory. The objective function of Dynamic Window approach also depends on the crashing probability as well as other traditional factors. To test the robustness of proposed algorithm, experiment in real world is conducted. The result is the robot can travel safer when it concerns near-trajectory obstacles},
   File                     = {:refs/collision avoidance/06559615.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.17}
+}
+
+@InProceedings{Shen2013,
+  Title                    = {Vision-Based State Estimation and Trajectory Control Towards High-Speed Flight with a Quadrotor.},
+  Author                   = {Shen, Shaojie and Mulgaonkar, Yash and Michael, Nathan and Kumar, Vijay},
+  Booktitle                = {Robotics: Science and Systems},
+  Year                     = {2013},
+  Organization             = {Citeseer},
+  Abstract                 = {This paper addresses the development of a light- weight autonomous quadrotor that uses cameras and an inex- pensive IMU as its only sensors and onboard processors for estimation and control. We describe a fully-functional, integrated system with a focus on robust visual-inertial state estimation, and demonstrate the quadrotor’s ability to autonomously travel at speeds up to 4 m/s and roll and pitch angles exceeding 20◦. The performance of the proposed system is demonstrated via chal- lenging experiments in three dimensional indoor environments},
+  File                     = {:refs/quadcopter/2013-vision-based.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.18}
+}
+
+@InProceedings{Shen2013a,
+  Title                    = {Vision-based state estimation for autonomous rotorcraft mavs in complex environments},
+  Author                   = {Shen, Shaojie and Mulgaonkar, Yash and Michael, Nathan and Kumar, Vijay},
+  Booktitle                = {Robotics and Automation (ICRA), 2013 IEEE International Conference on},
+  Year                     = {2013},
+  Organization             = {IEEE},
+  Pages                    = {1758--1764},
+  Abstract                 = {In this paper, we consider the development of a rotorcraft micro aerial vehicle (MAV) system capable of vision- based state estimation in complex environments. We pursue a systems solution for the hardware and software to enable autonomous flight with a small rotorcraft in complex indoor and outdoor environments using only onboard vision and inertial sensors. As rotorcrafts frequently operate in hover or near- hover conditions, we propose a vision-based state estimation ap- proach that does not drift when the vehicle remains stationary. The vision-based estimation approach combines the advantages of monocular vision (range, faster processing) with that of stereo vision (availability of scale and depth information), while overcoming several disadvantages of both. Specifically, our system relies on fisheye camera images at 25Hz and imagery from a second camera at a much lower frequency for metric scale initialization and failure recovery. This estimate is fused with IMU information to yield state estimates at 100 Hz for feedback control. We show indoor experimental results with performance benchmarking and illustrate the autonomous operation of the system in challenging indoor and outdoor environments},
+  File                     = {:refs/quadcopter/2013-vision-rotercraft.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.18}
+}
+
+@Article{Wendel2006,
+  Title                    = {An integrated GPS/MEMS-IMU navigation system for an autonomous helicopter},
+  Author                   = {Wendel, Jan and Meister, Oliver and Schlaile, Christian and Trommer, Gert F},
+  Journal                  = {Aerospace Science and Technology},
+  Year                     = {2006},
+  Number                   = {6},
+  Pages                    = {527--533},
+  Volume                   = {10},
+  Abstract                 = {During the last years, there is an increasing demand for cheap and easy to operate platforms for surveillance and reconnaissance purposes. Therefore, the development of micro aerial vehicles is receiving an increasing attention. However, VTOL-MAVs often show an inherent instability that makes at least an automatic stabilization necessary, because otherwise the operator would not be able to keep these vehicles airborne. This requires the availability of navigation information, especially the vehicle's attitude has to be known.
+
+This paper addresses the development of an integrated navigation system based on MEMS inertial sensors and GPS for a VTOL-MAV. Special attention is paid to the handling of GPS outages. While usually periods without GPS aiding can be bridged using the unaided strapdown solution, the poor quality of the MEMS inertial sensors prohibits this approach here. Therefore, during GPS outages the accelerometer data is interpreted as approximate measurements of the local gravity vector. Additionally, the usage of a magnetometer providing measurements of the Earth's magnetic field is motivated and discussed. Finally, flight test results illustrate the performance of the resulting system, proving that the achieved attitude accuracy is sufficient for the automatic control of the MAV. This holds in situations with permanent GPS loss and dynamic maneuvering, too.},
+  File                     = {:refs/quadcopter/1-s2.0-S1270963806000484-main.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Publisher                = {Elsevier},
+  Timestamp                = {2015.01.18}
+}
+
+@InProceedings{Ye2006,
+  Title                    = {Equational dynamic modeling and adaptive control of UAV},
+  Author                   = {Ye, Zhengmao and Bhattacharya, Pradeep and Mohamadian, Habib and Majlesein, Hamid and Ye, Yongmao},
+  Booktitle                = {System of Systems Engineering, 2006 IEEE/SMC International Conference on},
+  Year                     = {2006},
+  Organization             = {IEEE},
+  Pages                    = {5--pp},
+  Abstract                 = {Unmanned aerial vehicle (UAV) is an auto-piloted and remote-controlled vehicle sustained by the aerodynamic lift over its whole flight profile. It has many applications such as weather forecast, terrain surveying, environment surveillance, hazardous cleanup, military defense, and so on. In this paper, a simplified nonlinear equational modeling of UAV dynamics is conducted and then linearization and adaptive control approaches are designed. The objective is to apply aerodynamic theory and adaptive control theory on accurate UAV explicit modeling to enhance capabilities of UAV navigation and prediction against various severe conditions},
+  File                     = {:refs/quadcopter/01652318.pdf:PDF},
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.01.17}
 }
@@ -397,12 +536,14 @@ A parte final do trabalho é fundamentada na análise estocástica do sistema em
 013\;Gibiansky2010\;Kingdom\;Liang\;Mian2008\;Ogata2003\;Paixao2011\;P
 arraMunoz2013\;Salih2010\;Zhang2014\;;
 1 ExplicitGroup:Collision avoidance\;0\;Becker2012\;Becker2012a\;Berg2
-012\;Borenstein1989\;Bouktir2008\;Claes2012\;Fiorini1998\;Fox1997\;Fra
-ichard2004\;Israelsen\;Khatib1990\;Nieuwenhuisen2013\;Saranrittichai20
-13\;;
-1 ExplicitGroup:Quadricoptero\;0\;Altug2002\;Bouktir2008\;Bristeau2011
-\;Gibiansky2010\;Grzonka2012\;Liang\;Lopes\;Mian2008\;ParraMunoz2013\;
-Salih2010\;Santana2014\;Zhang2014\;;
+012\;Borenstein1989\;Bouktir2008\;Brandt2010\;Claes2012\;Fiorini1998\;
+Fox1997\;Fraichard2004\;Gageik2012\;Israelsen\;Khatib1990\;Nieuwenhuis
+en2013\;Saranrittichai2013\;;
+1 ExplicitGroup:Quadricoptero\;0\;Achtelik2009\;Altug2002\;Blosch2010\
+;Bouktir2008\;Bristeau2011\;Coates2008\;Gibiansky2010\;Grzonka2012\;Ho
+ffmann2004\;Liang\;Lopes\;Mian2008\;ParraMunoz2013\;Pradel2007\;Robert
+s2007\;Salih2010\;Santana2014\;Shen2013\;Shen2013a\;Wendel2006\;Zhang2
+014\;;
 1 ExplicitGroup:Parrot\;0\;Bristeau2011\;Lopes\;ParraMunoz2013\;Santan
 a2014\;;
 }

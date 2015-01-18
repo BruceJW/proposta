@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  17 JAN 2015 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  18 JAN 2015 14:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -386,25 +386,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
-[2] [3] [4] [5] [6] <img/parrot_drone.jpg, id=25, 722.7pt x 381.425pt>
+[2] [3] [4]
+Overfull \hbox (4.26952pt too wide) in paragraph at lines 98--99
+\OT1/cmr/m/n/12 Nos ^^Sultimos anos, ve^^S^^Pculos a^^Sereos n~ao tri-pu-la-dos
+ re-ce-be-ram uma maior aten^^Xc~ao
+ []
+
+[5] [6] <img/parrot_drone.jpg, id=25, 722.7pt x 381.425pt>
 File: img/parrot_drone.jpg Graphic file (type jpg)
 
 <use img/parrot_drone.jpg>
-Package pdftex.def Info: img/parrot_drone.jpg used on input line 129.
+Package pdftex.def Info: img/parrot_drone.jpg used on input line 124.
 (pdftex.def)             Requested size: 289.07487pt x 152.56729pt.
  [7 <./img/parrot_drone.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 138.
+(Font)              <12> on input line 133.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 138.
+(Font)              <8> on input line 133.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 138.
+(Font)              <6> on input line 133.
 
 <img/diagrama_quadricoptero.png, id=30, 315.1775pt x 209.78375pt>
 File: img/diagrama_quadricoptero.png Graphic file (type png)
 
 <use img/diagrama_quadricoptero.png>
-Package pdftex.def Info: img/diagrama_quadricoptero.png used on input line 144.
+Package pdftex.def Info: img/diagrama_quadricoptero.png used on input line 139.
 
 (pdftex.def)             Requested size: 252.14233pt x 167.82721pt.
 
@@ -415,10 +421,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <img/imuStrap.png, id=40, 662.475pt x 243.91125pt>
 File: img/imuStrap.png Graphic file (type png)
  <use img/imuStrap.png>
-Package pdftex.def Info: img/imuStrap.png used on input line 159.
+Package pdftex.def Info: img/imuStrap.png used on input line 154.
 (pdftex.def)             Requested size: 397.48807pt x 146.34787pt.
 
-Overfull \hbox (7.48807pt too wide) in paragraph at lines 159--160
+Overfull \hbox (7.48807pt too wide) in paragraph at lines 154--155
  [][] 
  []
 
@@ -427,10 +433,10 @@ Overfull \hbox (7.48807pt too wide) in paragraph at lines 159--160
 File: img/imu_VANTIME.png Graphic file (type png)
 
 <use img/imu_VANTIME.png>
-Package pdftex.def Info: img/imu_VANTIME.png used on input line 170.
+Package pdftex.def Info: img/imu_VANTIME.png used on input line 165.
 (pdftex.def)             Requested size: 410.53275pt x 310.15799pt.
 
-Overfull \hbox (20.53275pt too wide) in paragraph at lines 170--171
+Overfull \hbox (20.53275pt too wide) in paragraph at lines 165--166
  [][] 
  []
 
@@ -440,40 +446,40 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [11] <img/imumems.png, id=49, 436.63126pt x 354.32375pt>
 File: img/imumems.png Graphic file (type png)
  <use img/imumems.png>
-Package pdftex.def Info: img/imumems.png used on input line 183.
+Package pdftex.def Info: img/imumems.png used on input line 178.
 (pdftex.def)             Requested size: 130.99039pt x 106.29794pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12 <./img/imu_VANTIME.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 198.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 193.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 198.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
  [13 <./img/imumems.png>] <img/ganho_PID.png, id=61, 483.8075pt x 384.43625pt>
 File: img/ganho_PID.png Graphic file (type png)
 
 <use img/ganho_PID.png>
-Package pdftex.def Info: img/ganho_PID.png used on input line 217.
+Package pdftex.def Info: img/ganho_PID.png used on input line 212.
 (pdftex.def)             Requested size: 241.90315pt x 192.21765pt.
  [14 <./img/ganho_PID.png>]
 <img/PID_quad_geral.png, id=67, 605.26125pt x 339.2675pt>
 File: img/PID_quad_geral.png Graphic file (type png)
 
 <use img/PID_quad_geral.png>
-Package pdftex.def Info: img/PID_quad_geral.png used on input line 228.
+Package pdftex.def Info: img/PID_quad_geral.png used on input line 223.
 (pdftex.def)             Requested size: 363.15953pt x 203.56206pt.
 
 <img/PID_quad_axis.png, id=68, 566.115pt x 223.83624pt>
 File: img/PID_quad_axis.png Graphic file (type png)
 
 <use img/PID_quad_axis.png>
-Package pdftex.def Info: img/PID_quad_axis.png used on input line 248.
+Package pdftex.def Info: img/PID_quad_axis.png used on input line 243.
 (pdftex.def)             Requested size: 339.67162pt x 134.30278pt.
 
 
@@ -483,39 +489,39 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <img/cronograma.pdf, id=80, 845.1575pt x 469.755pt>
 File: img/cronograma.pdf Graphic file (type pdf)
  <use img/cronograma.pdf>
-Package pdftex.def Info: img/cronograma.pdf used on input line 273.
+Package pdftex.def Info: img/cronograma.pdf used on input line 268.
 (pdftex.def)             Requested size: 338.057pt x 187.89867pt.
 
 [18 <./img/cronograma.pdf>] [19] [20] [21] (./Dissertacao.bbl [22] [23]
-[24]) [25]
-Underfull \hbox (badness 10000) in paragraph at lines 322--329
+[24] [25]) [26]
+Underfull \hbox (badness 10000) in paragraph at lines 317--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--329
+Underfull \hbox (badness 10000) in paragraph at lines 317--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--329
+Underfull \hbox (badness 10000) in paragraph at lines 317--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--329
+Underfull \hbox (badness 10000) in paragraph at lines 317--324
 
  []
 
-[26] (./Dissertacao.aux) ) 
+[27] (./Dissertacao.aux) ) 
 Here is how much of TeX's memory you used:
- 2248 strings out of 493117
- 30881 string characters out of 6135434
- 96753 words of memory out of 5000000
- 5675 multiletter control sequences out of 15000+600000
+ 2256 strings out of 493117
+ 30978 string characters out of 6135434
+ 96793 words of memory out of 5000000
+ 5683 multiletter control sequences out of 15000+600000
  8541 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,23p,1254b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,23p,1273b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
@@ -525,10 +531,10 @@ onts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti12.pfb>
-Output written on Dissertacao.pdf (26 pages, 1164592 bytes).
+Output written on Dissertacao.pdf (27 pages, 1168507 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 141 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
