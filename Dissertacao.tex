@@ -254,9 +254,11 @@ Geralmente, segundo \cite{Liang}, existem ao todo três controles PID's, um para
 \label{sec:prob}
 \noindent\textbf{Segurança em voo para quadricoptero}
 
-Com o aumento na utilização de quadricópteros para uma grande variedade de propósitos, tanto quando falamos de tarefas totalmente autônomas quanto de tarefas tele-operadas, traz a tona a necessidade de mecanismos que tornem essas tarefas mais fáceis e seguras. A operação desta plataforma não é uma tarefa simples e exige muito treinamento e prática para uma operação segura sem nenhum tipo de colisão. Daí a importância de um sistema de desvio de obstáculos automático. 
+Em linhas gerais, o problema a ser tratado é evitar que o quadricóptero se choque durante sua navegação. A operação desta plataforma não é uma tarefa simples e exige muito treinamento e prática para uma operação segura sem colisões. Daí a importância de um sistema de desvio de obstáculos automático. 
 
-Considerando um quadricóptero com uma dinâmica não linear genérica em um espaço arbitrário. Seja $\mathcal{X} \subset R^{n}$ o espaço de estados do robô e seja $\mathcal{U} \subset R^{n}$ o espaço do input de controle do robô. Em tempo contínuo, a dinâmica do robô é uma função em $\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times R \rightarrow R^{n}$ e é dada pela relação \ref{eq:equacaoDinProb}:
+\noindent\textbf{Formulação do Problema}
+
+Considerando um quadricóptero como um robô com uma dinâmica não linear genérica em um espaço arbitrário, $\mathcal{X} \subset R^{n}$ o seu espaço de estados e $\mathcal{U} \subset R^{n}$ o espaço do input de controle. Em tempo contínuo, a dinâmica do robô é uma função em $\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times R \rightarrow R^{n}$ e é dada pela relação \ref{eq:equacaoDinProb}:
 
 \begin{equation}
 \centering
@@ -275,18 +277,19 @@ Considerando um quadricóptero com uma dinâmica não linear genérica em um esp
 
 \noindent onde $\mathbf{g} \in \mathcal{X} \times \mathcal{U} \times R \rightarrow \mathcal{X}$ representa a solução da equação diferencial \ref{eq:equacaoDinProb}.
 
-Porém, quando se considera um ambiente repleto de obstáculos, o espaço de estados do robô se restringe à posições não ocupadas por eles. Define-se então $\mathcal{O} \subset R^3$, que é a subárea do espaço $R^3$ de movimentos possíveis do robô ocupada por obstáculos e, além disso, aquelas regiões que estão escondidas pelos obstáculos quando vistas pelo estado corrente do robô. Além disso, $\mathcal{R}(x)$, como a subárea ocupada pelo robô no estado $x \in \mathcal{X}$. Assim, o problema passa a ser definido como identificar a menor variação possível  $\Delta\mathbf{u} \in \mathcal{U}$ sobre o controle de operação $\mathbf{u}$, dado o atual estado $\mathbf{x}$ do robô, a fim de que se evite uma colisão com algum obstáculo num horizonte de tempo $\tau \in R$ conforme a relação \ref{eq:equacaoProb}:
+Porém, quando se considera um ambiente repleto de obstáculos, o espaço de estados do robô se restringe à posições não ocupadas por eles. Define-se então $\mathcal{O} \subset R^3$, como a subárea do espaço $R^n$ de movimentos possíveis do robô ocupada por obstáculos e as regiões que estão escondidas por eles quando vistas pelo estado corrente do robô. Além disso, $\mathcal{R}(x)$, como a subárea ocupada pelo robô no estado $x \in \mathcal{X}$. Assim, o problema passa a ser definido como identificar a menor variação necessária  $\Delta\mathbf{u} \in \mathcal{U}$ sobre o controle de operação $\mathbf{u}$, dado o atual estado $\mathbf{x}$ do robô, a fim de que se evite uma colisão com algum obstáculo em qualquer momento até se alcançar um período previamente definido $\tau \in R$ conforme a relação \ref{eq:equacaoProb}:
 
 \begin{equation}
 \begin{aligned}
-\text{min: }& \Delta\mathbf{x}T\mathbf{x} \\
+\text{min: }& \Delta\mathbf{u} \\
 \text{Sujeito a: }& \forall t \in [0,\tau], \mathcal{R}(\mathbf{g}(\mathbf{x}, \mathbf{u}+\Delta\mathbf{u}, t)) \cap \mathcal{O} = \emptyset
 \end{aligned}
 \label{eq:equacaoProb}
 \end{equation}
 
+%\Delta\mathbf{u^T}T\mathbf{u}
 
-\noindent onde $T \in R^{m \times m}$ é uma matriz positiva de pesos.
+%\noindent onde $T \in R^{m \times m}$ é uma matriz positiva de pesos.
 
 \newpage
 
