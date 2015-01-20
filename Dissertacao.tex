@@ -296,6 +296,15 @@ Porém, quando se considera um ambiente repleto de obstáculos, o espaço de est
 \section{Metodologia}
 \label{sec:meto}
 
+A Figura \ref{fig:etapasMetodo} ilustra as etapas envolvidas no método desta proposta. As caixas em azul indicam os responsáveis pela aquisição dos dados necessários Sensores ultra-sônicos, os comandos de controle e a os sensores da IMU. Em verde, estão os processos de tratamento dos dados a fim de se obter medidas confiáveis para os módulos. Já em amarelo estão os módulos centrais de detecção de obstáculos e para evitar colisões. Eles estão separados para serem independentes e passíveis de substituição sem interferência no funcionamento do outro. Por fim, em vermelho está o controle de atitude, que é um dos processos do controle de vôo, e que receberá comandos e os transformarão em algum comportamento do quadricóptero.   
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{img/etapasMetodo.png}
+	\caption{Etapas do método}
+	\label{fig:etapasMetodo}
+\end{figure}
+
 \newpage
 
 \section{Cronograma} 
