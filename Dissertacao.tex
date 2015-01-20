@@ -1,6 +1,7 @@
 % !TEX encoding = UTF-8 Unicode
 \documentclass[a4paper, 12pt]{article}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 
@@ -220,7 +221,7 @@ A maioria dos quadricópteros utilizam PID para estabilização e permitem que o
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[scale=0.6]{img/PID_quad_geral.png}
+		\includegraphics[scale=0.5]{img/PID_quad_geral.png}
 	\caption{Controle PID de um quadricóptero.}
 	\label{fig:PIDquad}
 \end{figure}
@@ -251,7 +252,41 @@ Geralmente, segundo \cite{Liang}, existem ao todo três controles PID's, um para
 
 \section{O Problema:}
 \label{sec:prob}
-\textbf{Segurança em voo para quadricoptero}
+\noindent\textbf{Segurança em voo para quadricoptero}
+
+Com o aumento na utilização de quadricópteros para uma grande variedade de propósitos, tanto quando falamos de tarefas totalmente autônomas quanto de tarefas tele-operadas, traz a tona a necessidade de mecanismos que tornem essas tarefas mais fáceis e seguras. A operação desta plataforma não é uma tarefa simples e exige muito treinamento e prática para uma operação segura sem nenhum tipo de colisão. Daí a importância de um sistema de desvio de obstáculos automático. 
+
+Considerando um quadricóptero com uma dinâmica não linear genérica em um espaço arbitrário. Seja $\mathcal{X} \subset R^{n}$ o espaço de estados do robô e seja $\mathcal{U} \subset R^{n}$ o espaço do input de controle do robô. Em tempo contínuo, a dinâmica do robô é uma função em $\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times R \rightarrow R^{n}$ e é dada pela relação \ref{eq:equacaoDinProb}:
+
+\begin{equation}
+\centering
+\dot{\mathbf{x}} = \mathbf{f}(\mathbf{x}(t),\mathbf{u}(t),t)  
+\label{eq:equacaoDinProb}
+\end{equation}
+
+\noindent onde $t$ é o tempo, $\mathbf{x}(t)$ é o estado do robô no tempo $t$ e $\mathbf{u}(t)$ é o input de operação no tempo $t$. Consequentemente, dado um estado inicial $\mathbf{x_0} = \mathbf{x}(0)$ e uma constante de input de operação $\mathbf{u}$, o estado do robô em um instante $t > 0$ é dado pela relação \ref{eq:equacaoPosProb}:
+ 
+
+\begin{equation}
+\centering
+\mathbf{x} = \mathbf{g}(\mathbf{x},\mathbf{u},t)  
+\label{eq:equacaoPosProb}
+\end{equation}
+
+\noindent onde $\mathbf{g} \in \mathcal{X} \times \mathcal{U} \times R \rightarrow \mathcal{X}$ representa a solução da equação diferencial \ref{eq:equacaoDinProb}.
+
+Porém, quando se considera um ambiente repleto de obstáculos, o espaço de estados do robô se restringe à posições não ocupadas por eles. Define-se então $\mathcal{O} \subset R^3$, que é a subárea do espaço $R^3$ de movimentos possíveis do robô ocupada por obstáculos e, além disso, aquelas regiões que estão escondidas pelos obstáculos quando vistas pelo estado corrente do robô. Além disso, $\mathcal{R}(x)$, como a subárea ocupada pelo robô no estado $x \in \mathcal{X}$. Assim, o problema passa a ser definido como identificar a menor variação possível  $\Delta\mathbf{u} \in \mathcal{U}$ sobre o controle de operação $\mathbf{u}$, dado o atual estado $\mathbf{x}$ do robô, a fim de que se evite uma colisão com algum obstáculo num horizonte de tempo $\tau \in R$ conforme a relação \ref{eq:equacaoProb}:
+
+\begin{equation}
+\begin{aligned}
+\text{min: }& \Delta\mathbf{x}T\mathbf{x} \\
+\text{Sujeito a: }& \forall t \in [0,\tau], \mathcal{R}(\mathbf{g}(\mathbf{x}, \mathbf{u}+\Delta\mathbf{u}, t)) \cap \mathcal{O} = \emptyset
+\end{aligned}
+\label{eq:equacaoProb}
+\end{equation}
+
+
+\noindent onde $T \in R^{m \times m}$ é uma matriz positiva de pesos.
 
 \newpage
 
