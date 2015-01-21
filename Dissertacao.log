@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  20 JAN 2015 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  21 JAN 2015 19:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,42 +536,70 @@ sMetodo.png, id=81, 827.09pt x 498.86375pt>
 File: img/etapasMetodo.png Graphic file (type png)
 
 <use img/etapasMetodo.png>
-Package pdftex.def Info: img/etapasMetodo.png used on input line 303.
+Package pdftex.def Info: img/etapasMetodo.png used on input line 309.
 (pdftex.def)             Requested size: 330.83012pt x 199.54196pt.
- [18 <./img/etapasMetodo.png>]
-<img/cronograma.pdf, id=86, 845.1575pt x 469.755pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18] [19 <./img/etapasMetodo.png>]
+Overfull \hbox (5.8709pt too wide) in paragraph at lines 355--357
+[]\OT1/cmr/m/n/12 Estudar e im-ple-men-tar o m^^Setodo para con-trole de co-lis
+~ao ja-nela din^amica
+ []
+
+
+Overfull \hbox (1.04039pt too wide) in paragraph at lines 372--373
+[]\OT1/cmr/m/n/12 Embarcado na pla-ta-forma, al^^Sem dos sen-so-res ul-trass^on
+icos, ser^^Sa ne-cess^^Sario
+ []
+
+[20] <img/fluxo.png, id=93, 596.2275pt x 549.05125pt>
+File: img/fluxo.png Graphic file (type png)
+ <use img/fluxo.png>
+Package pdftex.def Info: img/fluxo.png used on input line 386.
+(pdftex.def)             Requested size: 298.11302pt x 274.52495pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21] <img/cronograma.pdf, id=97, 845.1575pt x 469.755pt>
 File: img/cronograma.pdf Graphic file (type pdf)
- <use img/cronograma.pdf>
-Package pdftex.def Info: img/cronograma.pdf used on input line 315.
+
+<use img/cronograma.pdf>
+Package pdftex.def Info: img/cronograma.pdf used on input line 399.
 (pdftex.def)             Requested size: 338.057pt x 187.89867pt.
 
-[19 <./img/cronograma.pdf>] [20] [21] [22] (./Dissertacao.bbl [23] [24]
-[25] [26]) [27]
-Underfull \hbox (badness 10000) in paragraph at lines 364--371
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22 <./img/fluxo.png>] [23 <./img/cronograma.pdf>] [24] [25] (./Dissertacao.bbl
+[26] [27] [28] [29]) [30]
+Underfull \hbox (badness 10000) in paragraph at lines 448--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--371
+Underfull \hbox (badness 10000) in paragraph at lines 448--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--371
+Underfull \hbox (badness 10000) in paragraph at lines 448--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--371
+Underfull \hbox (badness 10000) in paragraph at lines 448--455
 
  []
 
-[28] (./Dissertacao.aux) ) 
+[31] (./Dissertacao.aux) ) 
 Here is how much of TeX's memory you used:
- 2871 strings out of 493117
- 38039 string characters out of 6135434
- 107307 words of memory out of 5000000
- 6277 multiletter control sequences out of 15000+600000
+ 2880 strings out of 493117
+ 38179 string characters out of 6135434
+ 107350 words of memory out of 5000000
+ 6285 multiletter control sequences out of 15000+600000
  9836 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,9n,23p,1273b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -585,10 +613,10 @@ ts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmti12.pfb>
-Output written on Dissertacao.pdf (28 pages, 1311484 bytes).
+Output written on Dissertacao.pdf (31 pages, 1506863 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 162 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

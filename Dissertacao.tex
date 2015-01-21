@@ -78,7 +78,7 @@ Tecnologias para Tratamento e Transmissão da Informação\\
 
 A utilização de robôs voadores tanto em aplicações militares quanto civis vem aumentando e os desafios envolvidos em seu desenvolvimento estão atraindo as comunidades científica e industrial. Graças a isso, os veículos aéreos não tripulados (VANTs) têm se tornado cada vez mais populares. Tarefas como monitoramento de áreas alagadas, resgates em regiões de difícil acesso e inspeção de equipamentos perigosos, são aplicações que tornam os VANT's cada vez mais presentes no nosso cotidiano. 
 
-Recentes avanços em processadores de baixo consumo de energia e na miniaturização dos componentes eletrônicos e sensores estão expandindo o campo de utilização para ambientes mais restritos. Veículos aéreos não tripulados de menor escala com decolagem e aterrissagem vertical, também chamados de Mini-VTOL (\textit{Mini vertical taking-off and landing}), apresentam muitas vantagens em ambientes desse tipo, devido sua flexibilidade e agilidade quando em movimento. Essas habilidades tornam possível sua utilização em tarefas como busca e resgate em prédios e inspeção de áreas fechadas sem colocar outras vidas em risco. Porém, áreas restritas aumentam o risco do choque entre o robô e os itens ali contidos, dado o espaço limitado para sobrevoo. Nesse contexto, um mecanismo de controle que evite colisões contra obstáculos se torna importante para aumentar a segurança do vôo e é o objeto dessa proposta. Acredita-se que, essa solução irá expandir o número dos possíveis campos de atuação de VTOL's para tarefas ainda consideradas perigosas, como sobrevoo em áreas com equipamentos críticos e sensíveis.
+Recentes avanços em processadores de baixo consumo de energia e na miniaturização dos componentes eletrônicos e sensores estão expandindo o campo de utilização para ambientes mais restritos. Veículos aéreos não tripulados de menor escala com decolagem e aterrissagem vertical, também chamados de Mini-VTOL (\textit{Mini vertical taking-off and landing}), apresentam muitas vantagens em ambientes desse tipo, devido sua flexibilidade e agilidade quando em movimento. Essas habilidades tornam possível sua utilização em tarefas como busca e resgate em prédios e inspeção de áreas fechadas sem colocar outras vidas em risco. Porém, áreas restritas aumentam o risco do choque entre o robô e os itens ali contidos, dado o espaço limitado para sobrevoo. Nesse contexto, um mecanismo de controle que evite colisões contra obstáculos se torna importante para aumentar a segurança do voo e é o objeto dessa proposta. Acredita-se que, essa solução irá expandir o número dos possíveis campos de atuação de VTOL's para tarefas ainda consideradas perigosas, como sobrevoo em áreas com equipamentos críticos e sensíveis.
 
 
 
@@ -96,7 +96,7 @@ A continuidade desta proposta está estruturada como segue. Inicialmente é disc
 \section{Revisão de Literatura}
 \label{sec:rev}
 
-Nos últimos anos, veículos aéreos não tripulados receberam uma maior atenção da comunidade científica. Muitos autores focaram na modelagem e no controle destes veículos \cite{Ye2006},  com especial destaque para os quadricópteros \cite{Altug2002}. Nesse contexto, estudos abrangentes sobre a configuração da plataforma, metodologias de modelagem, modelagem compreensiva não linear, os efeitos aerodinâmicos, identificação e simulação de um quadricóptero foram realizados \cite{Zhang2014} \cite{Gibiansky2010}. Por ser considerado um sistema complexo não linear, técnicas para controle de quadricópteros são também amplamente estudadas. \cite{Salih2010} desenvolveu um controle PID para um quadricóptero para obter estabilidade em vôo. Por outro lado, \cite{Nicol2008}, propôs uma rede neural adaptativa para estabilizar o quadricóptero levando em consideração erros de modelagem e distúrbios do vento.
+Nos últimos anos, veículos aéreos não tripulados receberam uma maior atenção da comunidade científica. Muitos autores focaram na modelagem e no controle destes veículos \cite{Ye2006},  com especial destaque para os quadricópteros \cite{Altug2002}. Nesse contexto, estudos abrangentes sobre a configuração da plataforma, metodologias de modelagem, modelagem compreensiva não linear, os efeitos aerodinâmicos, identificação e simulação de um quadricóptero foram realizados \cite{Zhang2014} \cite{Gibiansky2010}. Por ser considerado um sistema complexo não linear, técnicas para controle de quadricópteros são também amplamente estudadas. \cite{Salih2010} desenvolveu um controle PID para um quadricóptero para obter estabilidade em voo. Por outro lado, \cite{Nicol2008}, propôs uma rede neural adaptativa para estabilizar o quadricóptero levando em consideração erros de modelagem e distúrbios do vento.
 
 A partir de um modelo conhecido, diversas são as aplicações em estudo. Para a maioria, como navegação autônoma, tarefas multiagentes e desvio de obstáculos, a estimação do estado do veículo é considerado um grande desafio \cite{Achtelik2009}. Quando se trata de ambientes \textit{indoors}, a visão computacional, que utiliza-se de câmeras e processamento de imagem para estimação, é uma das linhas de pesquisa sobre o problema \cite{Shen2013} \cite{Blosch2010} \cite{Shen2013a}. Outra linha utiliza-se de sensores estereoceptivos para tal tarefa, como ultra-som \cite{Roberts2007} e laser \cite{Grzonka2012}. Já para ambientes \textit{outdoors}, torna-se possível a utilização do Sistema de Posicionamento Global (GPS) e alguns trabalhos que utilizam essa tecnologia foram desenvolvidos, como  \cite{Hoffmann2004} e \cite{Wendel2006}.
 
@@ -114,7 +114,7 @@ Um trabalho semelhante ao aqui proposto foi realizado por \cite{Israelsen}, por�
 \label{sec:tutoriais}
 
 Nessa seção serão abordados os principais aspectos teóricos envolvidos nessa proposta. Inicialmente, 
-o quadricóptero, que é a plataforma de vôo a ser aqui estudada, será descrita juntamente com sua dinâmica de vôo. Após, os dispositivos embarcados e suas contribuições para o controle do vôo e, por fim, o controle PID e sua utilização para o controle de quadricópteros.
+o quadricóptero, que é a plataforma de voo a ser aqui estudada, será descrita juntamente com sua dinâmica de voo. Após, os dispositivos embarcados e suas contribuições para o controle do voo e, por fim, o controle PID e sua utilização para o controle de quadricópteros.
 
 \subsection{O Quadricóptero}
 
@@ -127,9 +127,9 @@ o quadricóptero, que é a plataforma de vôo a ser aqui estudada, será descrit
 	\label{fig:quad}
 \end{figure}
 
-\noindent\textbf{Dinâmica de vôo}
+\noindent\textbf{Dinâmica de voo}
 
-O objetivo da dinâmica de vôo é manter a estabilidade do eixo central do quadricóptero,  controlando os quatro rotores que trabalham de forma independente. Esse processo é considerado complexo e precisa de apoio eletrônico para a execução \cite{Gibiansky2010}. A controladora de vôo é responsável por controlar a intensidade das rotações individualmente, de acordo com o movimento preterido. Um dos possíveis controles realizados pela controladora de vôo é o PID que será abordado em outra seção.
+O objetivo da dinâmica de voo é manter a estabilidade do eixo central do quadricóptero,  controlando os quatro rotores que trabalham de forma independente. Esse processo é considerado complexo e precisa de apoio eletrônico para a execução \cite{Gibiansky2010}. A controladora de voo é responsável por controlar a intensidade das rotações individualmente, de acordo com o movimento preterido. Um dos possíveis controles realizados pela controladora de voo é o PID que será abordado em outra seção.
 
 O quadricóptero é um sistema não linear, fortemente acoplado com seis graus de liberdade, onde três são movimentos lineares (x,y,z) e os outros três angulares ($\phi$,$\theta$,$\psi$). Porém, possui apenas quatro atuadores, sendo considerado então um sistema \textit{underactuated}, com dois movimentos lineares (x,y) dependentes dos movimentos angulares ($\phi$,$\theta$). As forças e momentos atuando no quadricóptero são produzidos pelas hélices ligadas aos rotores. Dois rotores rodam no sentido horário e dois no sentido anti-horário dispostos de forma à balancear o torque total do sistema \cite{Mian2008}. A Figura \ref{fig:diag quad} mostra o diagrama do corpo e os eixos de um quadricóptero.
 
@@ -296,7 +296,13 @@ Porém, quando se considera um ambiente repleto de obstáculos, o espaço de est
 \section{Metodologia}
 \label{sec:meto}
 
-A Figura \ref{fig:etapasMetodo} ilustra as etapas envolvidas no método desta proposta. As caixas em azul indicam os responsáveis pela aquisição dos dados necessários Sensores ultra-sônicos, os comandos de controle e a os sensores da IMU. Em verde, estão os processos de tratamento dos dados a fim de se obter medidas confiáveis para os módulos. Já em amarelo estão os módulos centrais de detecção de obstáculos e para evitar colisões. Eles estão separados para serem independentes e passíveis de substituição sem interferência no funcionamento do outro. Por fim, em vermelho está o controle de atitude, que é um dos processos do controle de vôo, e que receberá comandos e os transformarão em algum comportamento do quadricóptero.   
+Para resolver este problema, esta proposta consiste em um método para obter medidas de distâncias a partir de sensores ultrassônicos em tempo real, filtrá-los e fundi-los a fim de que se detecte obstáculos. Em seguida, confronta-os com os dados, já filtrados, da atitude do quadricóptero obtidos da IMU para identificar colisões iminentes em uma janela de tempo pré-determinada. Em caso positivo, intercepta o comportamento gerando a menor mudança de comando possível que seja suficiente para evitar uma colisão naquela janela de tempo.    
+
+\subsection{Etapas do trabalho}
+
+\label{subsec:etapas}
+
+A Figura \ref{fig:etapasMetodo} ilustra as etapas envolvidas no método, onde cada cor representa um tipo de atuação e as setas indicam suas dependências. Em azul estão os responsáveis pela aquisição dos dados necessários: sensores ultrassônicos, os comandos de controle e a os sensores da IMU. Em verde, estão os processos de tratamento dos dados a fim de se obter medidas confiáveis para os módulos. Já em amarelo estão os módulos centrais para detecção de obstáculos e para identificação de colisões. Por fim, em vermelho está o controle de atitude, processo integrante da controladora de voo, que receberá comandos e transformará em comportamentos do quadricóptero.   
 
 \begin{figure}[h]
 	\centering
@@ -305,7 +311,85 @@ A Figura \ref{fig:etapasMetodo} ilustra as etapas envolvidas no método desta pr
 	\label{fig:etapasMetodo}
 \end{figure}
 
+A seguir estão detalhadas as etapas e quais serão os passos necessários para galgá-las no trabalho proposto:
+
+\noindent\textbf{Sensores ultrassônicos} 
+\begin{itemize}
+	\item
+	Definir o modelo e a quantidade de sensores ultrassônicos a serem utilizados e como dispô-los de forma a obter uma região de cobertura adequada.  
+\end{itemize}
+
+\noindent\textbf{Fusão e Filtragem dos Sensores} 
+\begin{itemize}
+	\item
+	Definir e estudar o método que será utilizado para fusão dos sensores ultrassônicos.
+\end{itemize}
+
+\noindent\textbf{Comandos e Controle} 
+\begin{itemize}
+	\item
+	Estudar o SDK de controle da plataforma Parrot Ar Drone 2.  
+\end{itemize}
+
+\noindent\textbf{Sensores IMU} 
+\begin{itemize}
+	\item
+	Verificar como obter os dados da IMU da plataforma Parrot Ar Drone 2 através de sua SDK.
+\end{itemize}
+
+\noindent\textbf{Fusão e Filtragem da IMU} 
+\begin{itemize}
+	\item
+	Estudar a utilização dos dados já filtrados pela plataforma Parrot Ar Drone 2.  
+\end{itemize}
+
+\noindent\textbf{Detecção de Obstáculos} 
+\begin{itemize}
+	\item
+	Estudar e implementar o mapeamento dos obstáculos visíveis a partir das medidas obtidas dos sensores em um dado momento.  
+\end{itemize}
+
+\noindent\textbf{Identificação de Colisão} 
+\begin{itemize}
+	\item
+	Estudar e implementar o método para controle de colisão janela dinâmica (ou obstáculos de velocidade) que será utilizado para detecção de colisão com os obstáculos mapeados. 
+	\item
+	Estudar a dinâmica de voo da plataforma Parrot Ar Drone 2 e implementar a extrapolação de sua posição em um dado período de tempo.  
+\end{itemize}
+
+\noindent\textbf{Controle de Atitude} 
+\begin{itemize}
+	\item
+	Verificar o padrão de troca de comandos entre os comandos de controle e a controladora de voo para implementação através da SDK.  
+\end{itemize}
+
+\subsection{Hardware necessário}
+
+\label{subsec:hardware}
+
+A plataforma de voo (quadricóptero) que será utilizada nesse trabalho será a Parrot AR Drone 2. Esta é uma plataforma que vem sendo bastante utilizada no meio científico e seu modelo já está bem desenvolvido. Além disso, seu controle é realizado por WiFi e possui uma SDK (\textit{software development kit}) de código livre, o que facilita o desenvolvimento de algoritmos para seu controle.
+
+Embarcado na plataforma, além dos sensores ultrassônicos, será necessário um minicomputador, que será responsável por colher e filtrar os dados dos sensores ultrassônicos, rodar o algoritmo para detecção de obstáculos, obter os comandos de controle, identificar possíveis colisões e enviar comando para o controle de altitude. Será utilizado o Raspberry PI. 
+
+\subsection{Software necessário}
+
+\label{subsec:software}
+
+Inicialmente, o trabalho será desenvolvido em um ambiente simulado MATLAB Simulink, para então ser testado no quadricóptero. Para simular a plataforma de voo, será utilizado o AR Drone Simulink Development-Kit para Matlab, que permite a simulação e o controle em tempo real do Parrot AR Drone 2. Já a obtenção de dados dos sensores e o desenvolvimento dos algoritmos serão realizados com o apoio do Raspberry Pi Support from MATLAB, que provê acesso aos periféricos através do Raspberry Pi, permitindo adquirir dados dos sensores conectados em tempo real.   
+
+\subsection{Fluxo de trabalho}
+
+Baseado nas etapas descritas na seção \ref{subsec:etapas} e os itens de hardware e software descritos nas seções \ref{subsec:hardware} e \ref{subsec:software}, o fluxo de trabalho proposto está ilustrado na Figura \ref{fig:Fluxo}. A fase de estudos envolve o aprofundamento sobre os aspectos teóricos descritos na seção \ref{subsec:etapas}. Em paralelo, o ambiente para simulação será montado enquanto as aquisições necessárias serão realizadas. Após, a implementação da solução será realizada de forma incremental, com o primeiro ciclo utilizando apenas um sensor ultrassônico para validação dos algoritmos de detecção de obstáculo e identificação de colisão. Em seguida, serão adicionado outros sensores na solução em um segundo ciclo. Por fim, a plataforma então será utilizada, para realização de testes em campo e o embarque da solução completa.  
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{img/fluxo.png}
+	\caption{Fluxo de trabalho}
+	\label{fig:Fluxo}
+\end{figure}
+
 \newpage
+
 
 \section{Cronograma} 
 \label{sec:crono}
@@ -326,7 +410,7 @@ Para facilitar a compreensão do projeto, optou-se por dividir o projeto em mód
 
 \section{Resultados Esperados}
 \label{sec:resultados}
-
+ desvio de obstáculos na plataforma 
 \newpage
 
 \section{Conclusão}
