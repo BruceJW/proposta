@@ -296,7 +296,7 @@ Porém, quando se considera um ambiente repleto de obstáculos, o espaço de est
 \section{Metodologia}
 \label{sec:meto}
 
-Para resolver este problema, esta proposta consiste em um método para obter medidas de distâncias a partir de sensores ultrassônicos em tempo real, filtrá-los e fundi-los a fim de que se detecte obstáculos. Em seguida, confronta-os com os dados, já filtrados, da atitude do quadricóptero obtidos da IMU para identificar colisões iminentes em uma janela de tempo pré-determinada. Em caso positivo, intercepta o comportamento gerando a menor mudança de comando possível que seja suficiente para evitar uma colisão naquela janela de tempo.    
+Para resolver este problema, esta proposta consiste em um método para obter medidas de distâncias a partir de sensores ultrassônicos em tempo real, filtrá-los e fundi-los a fim de que se detecte obstáculos. Em seguida, confronta-os com os dados, já filtrados, da atitude do quadricóptero obtidos da IMU para identificar colisões iminentes em uma janela de tempo pré-determinada. Em caso positivo, intercepta o comportamento gerando a menor mudança de comando possível que seja suficiente para evitar uma colisão naquela janela de tempo.   
 
 \subsection{Etapas do trabalho}
 
@@ -396,7 +396,7 @@ Baseado nas etapas descritas na seção \ref{subsec:etapas} e os itens de hardwa
 Para facilitar a compreensão do projeto, optou-se por dividir o projeto em módulos que seguirão o cronograma abaixo.
 \begin{figure}[h]
 	\centering
-		\includegraphics[scale=0.4]{img/cronograma.pdf}
+		\includegraphics[scale=0.4]{img/cronograma.png}
 	\caption{Cronograma físico.}
 	\label{fig:cronograma}
 \end{figure}
@@ -410,11 +410,48 @@ Para facilitar a compreensão do projeto, optou-se por dividir o projeto em mód
 
 \section{Resultados Esperados}
 \label{sec:resultados}
- desvio de obstáculos na plataforma 
+ Para avaliação do método, foram estipuladas três missões que o quadricóptero deverá ser capaz de realizar. Em todas, ele deverá evitar a colisão, mantendo uma distância segura dos obstáculos. Cada missão avalia o método em diferentes situações e estão descritas a seguir.
+ 
+ \noindent\textbf{Missão 1: Manter sua posição enquanto estabilizado e sem saída}
+ 
+ O quadricóptero será estabilizado e cercado, não tendo caminho possível de ser realizado enquanto o piloto executa comandos de controle. O \textit{input} do controle será ignorado, ou seja, qualquer comando realizado pelo piloto será desprezado e a plataforma manterá sua posição. Um esboço da situação pode ser visualizado na Figura \ref{fig:missao1}. Esta missão irá avaliar se o método consegue evitar os obstáculos em todas direções $(x,y)$.
+ 
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[scale=0.5]{img/missao1.png}
+ 	\caption{Missão 1. Veículo cercado e estabilizado}
+ 	\label{fig:missao1}
+ \end{figure}  
+ 
+ \noindent\textbf{Missão 2: Desviar de um obstáculo estático a frente}
+ 
+ Nesta missão, o quadricóptero será conduzido a uma velocidade de aproximadamente $1m/s$ em uma trajetória retilínea em um ambiente \textit{indoor} enquanto depara-se com um obstáculo a frente. Ele irá realizar um desvio pela lateral do obstáculo. Será escolhido o lado que exija o menor desvio possível (Figura \ref{fig:missao2}). Esta missão irá avaliar se o método consegue desviar a trajetória do quadricóptero, perante um obstáculo, quando em movimento.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{img/missao2.png}
+	\caption{Missão 2: Veículo em movimento com obstáculo a frente. Um desvio à direita (esquerda) e um desvio à esquerda (direita)}
+	\label{fig:missao2}
+\end{figure}  
+ 
+ \noindent\textbf{Missão 3: Realizar uma trajetória segura num ambiente com vários obstáculos} 
+  
+ Por fim, o quadricóptero será conduzido a uma velocidade de aproximadamente $1m/s$ por um trajeto completo, com diversos obstáculos em posições variadas, e ele deverá ser capaz de terminá-lo sem colisões. O objetivo desta missão é avaliar a eficácia e o benefício do método simulando a condução de um quadricóptero num ambiente complexo de difícil pilotagem. A Figura \ref{fig:missao3} ilustra o mapa do ambiente a ser utilizado com as setas indicando o início e o fim do trajeto.
+  
+  
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[scale=0.4]{img/missao3.png}
+ 	\caption{Missão 3: Trajeto completo num ambiente com obstáculos}
+ 	\label{fig:missao3}
+ \end{figure}  
+  
 \newpage
 
 \section{Conclusão}
 \label{sec:conclusao}
+
+O advento da utilização dos VANT's, mais especificamente os quadricópteros, em ambientes restritos, trazem a tona a necessidade de controlar o desvio de obstáculo de forma automática. Este é um tema que tem merecido atenção na área de robótica e nossa proposta visa explorá-lo com medições de sensores em tempo real, auxiliando o controle do veículo. Acreditamos que essa é uma proposta válida que terá ampla aplicação na área de defesa e será futuramente utilizada como o módulo de desvio de obstáculos da plataforma VANT-IME que está em fase de concepção no Laboratório de Robótica do IME.
 
 \newpage
 

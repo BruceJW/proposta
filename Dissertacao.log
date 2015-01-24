@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  21 JAN 2015 19:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  24 JAN 2015 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -563,46 +563,68 @@ Package pdftex.def Info: img/fluxo.png used on input line 386.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] <img/cronograma.pdf, id=97, 845.1575pt x 469.755pt>
-File: img/cronograma.pdf Graphic file (type pdf)
+[21] <img/cronograma.png, id=97, 859.21pt x 774.895pt>
+File: img/cronograma.png Graphic file (type png)
 
-<use img/cronograma.pdf>
-Package pdftex.def Info: img/cronograma.pdf used on input line 399.
-(pdftex.def)             Requested size: 338.057pt x 187.89867pt.
+<use img/cronograma.png>
+Package pdftex.def Info: img/cronograma.png used on input line 399.
+(pdftex.def)             Requested size: 343.67792pt x 309.95251pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <./img/fluxo.png>] [23 <./img/cronograma.pdf>] [24] [25] (./Dissertacao.bbl
-[26] [27] [28] [29]) [30]
-Underfull \hbox (badness 10000) in paragraph at lines 448--455
+[22 <./img/fluxo.png>] [23 <./img/cronograma.png>]
+<img/missao1.png, id=106, 240.9pt x 240.9pt>
+File: img/missao1.png Graphic file (type png)
+ <use img/missao1.png>
+Package pdftex.def Info: img/missao1.png used on input line 421.
+(pdftex.def)             Requested size: 120.44969pt x 120.44969pt.
+
+<img/missao2.png, id=107, 501.875pt x 301.125pt>
+File: img/missao2.png Graphic file (type png)
+ <use img/missao2.png>
+Package pdftex.def Info: img/missao2.png used on input line 432.
+(pdftex.def)             Requested size: 250.93687pt x 150.56212pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24 <./img/missao1.png>] <img/missao3.png, id=112, 411.5375pt x 301.125pt>
+File: img/missao3.png Graphic file (type png)
+
+<use img/missao3.png>
+Package pdftex.def Info: img/missao3.png used on input line 444.
+(pdftex.def)             Requested size: 164.61208pt x 120.44786pt.
+ [25 <./img/missao2.png> <./img/missao3.png>] [26]
+(./Dissertacao.bbl [27] [28] [29] [30]) [31]
+Underfull \hbox (badness 10000) in paragraph at lines 485--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--455
+Underfull \hbox (badness 10000) in paragraph at lines 485--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--455
+Underfull \hbox (badness 10000) in paragraph at lines 485--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--455
+Underfull \hbox (badness 10000) in paragraph at lines 485--492
 
  []
 
-[31] (./Dissertacao.aux) ) 
+[32] (./Dissertacao.aux) ) 
 Here is how much of TeX's memory you used:
- 2880 strings out of 493117
- 38179 string characters out of 6135434
- 107350 words of memory out of 5000000
- 6285 multiletter control sequences out of 15000+600000
+ 2898 strings out of 493117
+ 38488 string characters out of 6135434
+ 107380 words of memory out of 5000000
+ 6300 multiletter control sequences out of 15000+600000
  9836 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,23p,1273b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,23p,1273b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
@@ -613,10 +635,10 @@ ts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmti12.pfb>
-Output written on Dissertacao.pdf (31 pages, 1506863 bytes).
+Output written on Dissertacao.pdf (32 pages, 1251999 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 171 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
