@@ -133,6 +133,7 @@ Al ́em do trabalho de implementac ̧ ̃ao e valida ̧ca ̃o do software da ECS,
   Organization             = {IEEE},
   Pages                    = {2724--2731},
   Abstract                 = {Quadrotors are well-suited for indoor flight because of their ability to hover and maneuver in confined spaces. However, remote operation of these vehicles is challenging because of the loss sensory perception. This paper presents methods for using force feedback exerted by the command input device on the hand of the pilot to assist in avoiding collisions while navigating in a 3D indoor environment. Three algorithms for calculating the feedback forces are presented and tested in simulation-based user studies. The force feedback and control system is demonstrated by piloting a physical quadrotor in an indoor environment.},
+  File                     = {:refs/collision avoidance/05641798.pdf:PDF},
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.01.18}
 }
@@ -213,8 +214,6 @@ The trajectory from start to goal can be computed by searching a tree of feasibl
   Author                   = {Gageik, Nils and M{\"u}ller, Thilo and Montenegro, Sergio},
   Journal                  = {University Of Wurzburg, Aerospace Information Technology (Germany) Wurzburg September},
   Year                     = {2012},
-
-  __markedentry            = {[bsgiovanini:]},
   Abstract                 = {A simple approach for obstacle detection and collision avoidance of an autonomous flying quadrocopter using low-cost ultrasonic sensors and simple data fusion is presented here. The approach has been implemented and tested in a self-developed quadrocopter (Figure 1) and its evaluation shows the general realizability as well as the drawbacks of this approach. The presented approach is intended to be used as part of the AQopterI8 project at the department of Aerospace Information Technology (University of Würzburg), which aims to develop an autonomous flying quadrocopter for indoor application},
   File                     = {:refs/collision avoidance/Gageik_Mueller_Montenegro_2012_OBSTACLE_DETECTION_AND_COLLISION_AVOIDANCE_USING_ULTRASONIC_DISTANCE_SENSORS_FOR_AN_AUTONOMOUS_QUADROCOPTER.pdf:PDF},
   Owner                    = {bsgiovanini},
@@ -245,6 +244,22 @@ The trajectory from start to goal can be computed by searching a tree of feasibl
   Owner                    = {bsgiovanini},
   Publisher                = {IEEE},
   Timestamp                = {2015.01.12}
+}
+
+@Article{Hanafi2013,
+  Title                    = {Simple GUI Wireless Controller of Quadcopter},
+  Author                   = {Hanafi, Dirman and Qetkeaw, Mongkhun and Ghazali, Rozaimi and Than, Mohd Nor Mohd and Utomo, Wahyu Mulyo and Omar, Rosli},
+  Journal                  = {Int'l J. of Communications, Network and System Sciences},
+  Year                     = {2013},
+  Pages                    = {52},
+  Volume                   = {6},
+
+  __markedentry            = {[bsgiovanini:6]},
+  Abstract                 = {This paper presents the development of remotely operated Quadcopter system. The Quadcopter is controlled through a graphical user interface (GUI) where the communication between GUI and Quadcopter is constructed by using wireless communication system. The Quadcopter balancing condition is sensed by FY90 controller and IMU 5DOF sensor. For smooth landing, Quadcopter is equipped with ultrasonic sensor. All signals from sensors are processed by Arduino Uno microcontroller board and output from the Arduino Uno microcontroller board is implemented to control Quadcopter propellers. The GUI is designed using Visual Basic 2008 Express as interfacing communication between the Proportional, Integral and Derivative (PID) controller and the Quadcopter system. The experiment shows that the Quadcopter system can hover while maintain it balancing and the stability is guaranteed. Moreover, the developed system is able to cope with load disturbance up to 250 g during the hover position. Maximum operated time of Quadcopter is six minutes using 2200 mAh Lipo battery and operate time can be increased by using largest battery capacity},
+  File                     = {:refs/quadcopter/IJCNS_2013012916540708.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Publisher                = {Scientific Research Publishing},
+  Timestamp                = {2015.01.25}
 }
 
 @InProceedings{Hoffmann2004,
@@ -356,7 +371,7 @@ Matlab e Simulink},
   Year                     = {2008},
   Pages                    = {1233--1237},
 
-  __markedentry            = {[bsgiovanini:6]},
+  __markedentry            = {[bsgiovanini:]},
   Abstract                 = {This paper proposes a new adaptive neural network control to stabilize a quadrotor helicopter against modeling error and considerable wind disturbance. The new method is compared to both deadzone and e-modification adaptive techniques and through simulation demonstrates a clear improvement in terms of achieving a desired attitude and reducing weight drift.},
   File                     = {:refs/quadcopter/04564736.pdf:PDF},
   Owner                    = {bsgiovanini},
@@ -540,13 +555,31 @@ This paper addresses the development of an integrated navigation system based on
   Timestamp                = {2015.01.12}
 }
 
+@Manual{ardrone,
+  Title                    = {AR.Drone Developer Guide},
+
+  File                     = {:refs/quadcopter/parrot/ARDrone_Developer_Guide.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.25}
+}
+
+@Other{quadblog,
+  Title                    = {Quadcopter (x-mode build log)},
+  Date-added               = {2015-01-11 10:36:41 +0000},
+  Date-modified            = {2015-01-11 10:37:51 +0000},
+  LastChecked              = {25/01/2015},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.25},
+  Url                      = {http://multicopter.forestblue.nl/quadcopter_build_log.html}
+}
+
 @comment{jabref-meta: groupsversion:3;}
 
 @comment{jabref-meta: groupstree:
 0 AllEntriesGroup:;
 1 ExplicitGroup:Flight Control\;0\;Adalberto2009\;Altug2002\;Angonese2
-013\;Gibiansky2010\;Kingdom\;Liang\;Mian2008\;Nicol2008\;Ogata2003\;Pa
-ixao2011\;ParraMunoz2013\;Salih2010\;Zhang2014\;;
+013\;Gibiansky2010\;Hanafi2013\;Kingdom\;Liang\;Mian2008\;Nicol2008\;O
+gata2003\;Paixao2011\;ParraMunoz2013\;Salih2010\;Zhang2014\;;
 1 ExplicitGroup:Collision avoidance\;0\;Becker2012\;Becker2012a\;Berg2
 012\;Borenstein1989\;Bouktir2008\;Brandt2010\;Claes2012\;Fiorini1998\;
 Fox1997\;Fraichard2004\;Gageik2012\;Israelsen\;Khatib1990\;Nieuwenhuis
@@ -557,6 +590,6 @@ ffmann2004\;Liang\;Lopes\;Mian2008\;ParraMunoz2013\;Pradel2007\;Robert
 s2007\;Salih2010\;Santana2014\;Shen2013\;Shen2013a\;Wendel2006\;Zhang2
 014\;;
 1 ExplicitGroup:Parrot\;0\;Bristeau2011\;Lopes\;ParraMunoz2013\;Santan
-a2014\;;
+a2014\;ardrone\;;
 }
 

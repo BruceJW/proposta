@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{ardrone}
+{\em AR.Drone Developer Guide}.
+
+\bibitem{quadblog}
+Quadcopter (x-mode build log).
+
 \bibitem{Achtelik2009}
 M.~Achtelik, A.~Bachrach, R.~He, S.~Prentice, and N.~Roy.
 \newblock Autonomous navigation and exploration of a quadrotor helicopter in
