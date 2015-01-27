@@ -46,7 +46,7 @@
 
 \begin{small}
 Data de Apresentação no PGED:\\
-Rio de Janeiro, XX de mestal do ano tal
+Rio de Janeiro, XX de fevereiro de 2015
 \end{small}
 
 \end{center}
@@ -55,7 +55,7 @@ Rio de Janeiro, XX de mestal do ano tal
 %Título
 \newpage
 \begin{large}
-\section{Título da Dissertação}
+\section*{Título da Dissertação}
 \textbf{Título da Tese:}\\
 \textbf{Titulo de sua tese}\\
 
@@ -178,11 +178,9 @@ Giroscópios fornecem a medida da velocidade angular. Este dado é utilizado par
 
 \subsection{Controle PID e quadricópteros}
 
-\noindent\textbf{Controle PID}
-
 Um controle PID é um método comum para controlar robôs e a sua utilidade está na aplicabilidade geral na maioria dos sistemas de controle, principalmente quando o modelo matemático de planta é complexo e não conhecido \cite{Ogata2003}. É um sistema de controle fechado que reage a mudanças no ambiente, que são captadas por sensores, e se baseia na constante sintonia das entradas para obter a saída esperada \cite{Kingdom}.  
 
-O algoritmo de cálculo do controle PID envolve três parâmetros constantes: o valor proporcional (P), o valor integral (I) e o valor derivativo (D).
+O algoritmo de cálculo do controle PID envolve três parâmetros constantes: o valor proporcional (P), o valor integral (I) e o valor derivativo (D) e serão descritos a seguir:
 
 \begin{itemize}
 \item
@@ -193,7 +191,7 @@ Valor integral - É o acúmulo dos erros passados no tempo (t). Por exemplo, se 
 Valor derivativo - É a mudança do erro no tempo (t). Por exemplo, se o erro era C e, depois do tempo t, passou a ser D, o valor derivativo D é $(C-D)/t$. Normalmente, o contador de tempo da microcontroladora é utilizado para medir esse tempo. Além disso, D é utilizado para predizer mudanças futuras baseando-se na taxa mudança atual.
 \end{itemize}
 
-A soma ponderada desses três termos é usada para ajustar o processo através de um elemento de controle, como uma válvula ou como o controle da quantidade de energia aplicada no sistema. O peso é atribuído através de uma constante K denominada ganho e tem o papel de ajustar os valores P, I e D. Ou seja, cada termo P, I e D possui o seu ganho associado e a equação básica de controle é dada pela equação \ref{eq:equacaoPID}
+A soma ponderada desses três termos é usada para ajustar o processo através de um elemento de controle, como uma válvula ou como o controle da quantidade de energia aplicada no sistema. O peso é atribuído através de uma constante K denominada ganho e tem o papel de ajustar os valores P, I e D. Ou seja, cada termo P, I e D possui o seu ganho associado e a equação básica de controle é dada pela fórmula \ref{eq:equacaoPID}. 
 
 \begin{equation}
 	\centering
@@ -245,7 +243,7 @@ Geralmente, segundo \cite{Liang}, existem ao todo três controles PID's, um para
 
 \newpage
 
-\section{O Problema: Segurança em voo para quadricoptero}
+\section{O Problema: Segurança em voo para quadricóptero}
 \label{sec:prob}
 
 O problema a ser tratado consiste em evitar que o quadricóptero se choque durante sua navegação através de um método que estima continuamente a trajetória futura do veículo, dada sua dinâmica, seu estado atual e o \textit{input} de controle. Para isso, variações no controle são realizadas baseadas em estimativas futuras de colisão. A formulação matemática do problema é descrita a seguir.
@@ -329,19 +327,19 @@ A seguir estão detalhadas as etapas e quais serão os passos necessários para 
 \noindent\textbf{Comandos e Controle} 
 \begin{itemize}
 	\item
-	Estudar o SDK de controle da plataforma Parrot Ar Drone 2.  
+	Estudar o SDK de controle da plataforma de voo.  
 \end{itemize}
 
 \noindent\textbf{Sensores IMU} 
 \begin{itemize}
 	\item
-	Verificar como obter os dados da IMU da plataforma Parrot Ar Drone 2 através de sua SDK.
+	Verificar como obter os dados da IMU da plataforma de voo através de sua SDK.
 \end{itemize}
 
 \noindent\textbf{Fusão e Filtragem da IMU} 
 \begin{itemize}
 	\item
-	Estudar a utilização dos dados já filtrados pela plataforma Parrot Ar Drone 2.  
+	Estudar a utilização dos dados já filtrados pela plataforma de voo.  
 \end{itemize}
 
 \noindent\textbf{Detecção de Obstáculos} 
@@ -355,13 +353,13 @@ A seguir estão detalhadas as etapas e quais serão os passos necessários para 
 	\item
 	Estudar e implementar o método para controle de colisão janela dinâmica (ou obstáculos de velocidade) que será utilizado para detecção de colisão com os obstáculos mapeados. 
 	\item
-	Estudar a dinâmica de voo da plataforma Parrot Ar Drone 2 e implementar a extrapolação de sua posição em um dado período de tempo.  
+	Estudar a dinâmica de voo da plataforma de voo e implementar a extrapolação de sua posição em um dado período de tempo.  
 \end{itemize}
 
 \noindent\textbf{Controle de Atitude} 
 \begin{itemize}
 	\item
-	Verificar o padrão de troca de comandos entre os comandos de controle e a controladora de voo para implementação através da SDK.  
+	Verificar o padrão de troca de comandos entre os comandos de controle e a controladora de voo para a implementação através da SDK.  
 \end{itemize}
 
 \subsection{Componentes necessários}
@@ -404,24 +402,24 @@ Para facilitar a compreensão do projeto, optou-se por dividir o projeto em mód
 
 \newpage
 
-\section{Viabilidade da Proposta}
+\section{Viabilidade da proposta}
 \label{sec:viabilidade}
 
-A viabilidade desta proposta depende da disponibilização dos itens necessários para implementação e testes do método. A partir dos componentes e software necessários descritos nas seções \ref{subsec:hardware} e \ref{subsec:software}, foi feito um levantamento dos itens já disponíveis em laboratório para teste e os que necessitam ser adquiridos. A seguir está a listagem dos itens envolvidos e seu status de disponibilidade.
+A viabilidade desta proposta depende da obtenção dos itens necessários para implementação e testes do método. A partir dos componentes e software necessários descritos nas seções \ref{subsec:hardware} e \ref{subsec:software}, foi feito um levantamento dos itens já disponíveis para teste e os que necessitam ser adquiridos. A seguir está a listagem dos itens e suas disponibilidades no Laboratório de Robótica do IME.
 
 \begin{itemize}
 	\item
-	Plataforma de voo: O laboratório de Robótica do IME dispõe de quatro quadricópteros para teste, com aproximadamente 45cm de diâmetro, com capacidade de carga suficiente para embarcar um mini computador e sensores ultrassônicos.
+	Plataforma de voo:  O laboratório dispõe de quatro quadricópteros para teste, com aproximadamente 45cm de diâmetro, com capacidade de carga suficiente para embarcar um mini computador e sensores ultrassônicos.
 	\item
-	Minicomputador: Estão disponíveis dois minicomputadores Raspberry PI modelo B com processador de 700MHz, 512MB de memória, duas saídas USB e portas Ethernet para rede para testes no mesmo laboratório.
+	Minicomputador: Estão disponíveis dois minicomputadores Raspberry PI modelo B com processador de 700MHz, 512MB de memória, duas saídas USB e portas de rede Ethernet para testes.
 	\item
-	Sensores ultrassônicos: O laboratório de Robótica do IME dispõe de sensores ultrassônicos modelo XXXXX que serão testados inicialmente e terão sua capacidade avaliada. Caso haja a necessidade de aquisição, são itens de baixo custo e facilmente encontrados no mercado brasileiro.
+	Sensores ultrassônicos: Inicialmente, serão utilizados sensores ultrassônicos modelo XXXXX já adquiridos que terão suas capacidades avaliadas. Caso haja a necessidade de aquisição, são itens de baixo custo e facilmente encontrados no mercado brasileiro.
 	\item
-	MatLab Simulink: Será usado o Matlab R2013a com Simulink, versão para estudante que possui todas as ferramentas necessárias para simulação do problema. 
+	MatLab Simulink: Usaremos o Matlab R2013a com Simulink, versão para estudante que possui todas as ferramentas necessárias para simulação do problema. 
 
 \end{itemize}
 
-Conforme a listagem acima, estão disponíveis os itens necessários para o começo dos trabalhos e realização dos primeiros testes, o que atesta a viabilidade desta proposta.
+A princípio, estes itens serão suficientes para o inicio dos trabalhos e atestam a viabilidade da proposta. Outra alternativa, que poderá ser avaliada, é a utilização de um sensor de varredura a laser em miniatura Hokuyo-URG. Este está em fase de aquisição pelo laboratório e poderia substituir os sensores ultrassônicos, caso apresente um melhor desempenho.
 
 \newpage
 
@@ -468,7 +466,7 @@ Conforme a listagem acima, estão disponíveis os itens necessários para o come
 \section{Conclusão}
 \label{sec:conclusao}
 
-O advento da utilização dos VANT's, mais especificamente os quadricópteros, em ambientes restritos, trazem a tona a necessidade de controlar o desvio de obstáculo de forma automática. Este é um tema que tem merecido atenção na área de robótica e nossa proposta visa explorá-lo com medições de sensores em tempo real, auxiliando o controle do veículo. Com esse enfoque, acreditamos que esta é uma proposta válida e que terá ampla aplicação na área de defesa. Além disso, será construída uma solução que futuramente será utilizada como o módulo de desvio de obstáculos da plataforma VANT-IME, que está em fase de concepção no Laboratório de Robótica do IME.
+O advento da utilização dos VANT's, mais especificamente os quadricópteros, em ambientes restritos, trazem a tona a necessidade de controlar o desvio de obstáculo de forma automática. Este é um tema que tem merecido atenção na área de robótica e nossa proposta visa explorá-lo com medições de sensores em tempo real, auxiliando o controle do veículo. Com esse enfoque, nossa proposta é viável e poderá ser utilizada em uma variedade de aplicações na área de defesa.  Além disso, a solução que será construída terá o papel de módulo de desvio de obstáculos da plataforma VANT-IME, que está em fase de concepção no Laboratório de Robótica do IME.
 
 \newpage
 
