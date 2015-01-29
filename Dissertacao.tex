@@ -75,6 +75,14 @@ Mecatrônica e Sistemas de Armas\\
 %Desenvolvimento do Texto
 \newpage
 
+\abstract
+
+A utilização de veículos aéreos para missões em ambientes fechados e restritos, tanto militares quanto civis, vem aumentando e os desafios envolvidos em seu controle estão atraindo as comunidades científica e industrial. Com isso, o desvio de obstáculos de forma automática ganha importância nesse cenário, dada a dificuldade de controle e o risco de colisão envolvido no manuseio destes veículos. Este trabalho propõe uma abordagem para controle do desvio de obstáculos de um quadricóptero de forma automática permitindo que sua operação mantenha o foco na missão global e evitar, assim, possíveis acidentes. 
+O método consiste em evitar colisões estimando constantemente sua trajetória com base na dinâmica, estado atual, controle corrente e sensores ultrassônicos de distância. A validação desta proposta será realizada em ambiente simulado \textit{hardware-in-the-loop} e posteriormente, será embarcada em um quadricóptero para voo em campo.
+
+ 
+\newpage
+
 \section{Introdução}
 
 A utilização de robôs voadores tanto em aplicações militares quanto civis vem aumentando e os desafios envolvidos em seu desenvolvimento estão atraindo as comunidades científica e industrial. Graças a isso, os veículos aéreos não tripulados (VANTs) têm se tornado cada vez mais populares. Tarefas como monitoramento de áreas alagadas, resgates em regiões de difícil acesso e inspeção de equipamentos perigosos, são aplicações que tornam os VANT's cada vez mais presentes no nosso cotidiano.
@@ -383,7 +391,7 @@ Inicialmente, o trabalho será desenvolvido em um ambiente simulado MATLAB Simul
 
 \subsection{Estratégia de implementação}
 
-A implementação da solução consiste basicamente em duas fases do cronograma desta proposta que será ilustrado na seção \ref{sec:crono}: Fase de Simulação e Fase de testes com a Plataforma. Baseado nas etapas descritas na seção \ref{subsec:etapas} e nos itens de hardware e software descritos nas seções \ref{subsec:hardware} e \ref{subsec:software}, a estratégia de implementação pode ser visualizada na Figura \ref{fig:Fluxo}. Em paralelo, o ambiente para simulação será montado enquanto as aquisições necessárias serão realizadas. Após, a implementação da solução será executada de forma incremental, com o primeiro ciclo utilizando apenas um sensor ultrassônico para validação dos algoritmos de detecção de obstáculo e identificação de colisão. Em seguida, serão adicionado outros sensores na solução em um segundo ciclo. Por fim, a plataforma então será utilizada, para realização de testes em campo e o embarque da solução completa.
+A implementação da solução consiste basicamente em duas fases do cronograma desta proposta que será ilustrado na seção \ref{sec:crono}: Fase de Simulação e Fase de testes com a Plataforma. Baseado nas etapas descritas na seção \ref{subsec:etapas} e nos itens de hardware e software descritos nas seções \ref{subsec:hardware} e \ref{subsec:software}, a estratégia de implementação pode ser visualizada na Figura \ref{fig:Fluxo}. Em paralelo, o ambiente para simulação \textit{hardware-in-the-loop} será montado enquanto as aquisições necessárias serão realizadas. Após, a implementação da solução será executada de forma incremental, com o primeiro ciclo utilizando apenas um sensor ultrassônico para validação dos algoritmos de detecção de obstáculo e identificação de colisão. Em seguida, serão adicionado outros sensores na solução em um segundo ciclo. Por fim, a plataforma então será utilizada, para realização de testes em campo e o embarque da solução completa.
   
 \begin{figure}[h]
 	\centering
