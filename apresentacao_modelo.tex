@@ -1,0 +1,460 @@
+\documentclass[t]{beamer}
+
+\usepackage{amsmath}
+\usepackage[english,brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{url,color, colortbl}
+\usepackage{subfigure}
+\usepackage{makeidx} 
+\usepackage{subfloat}
+\usepackage{float}
+\usepackage{listings}  
+\usepackage{wrapfig} 
+\usepackage{verbatim}  
+\usepackage{caption} 
+\usepackage{algorithm,algorithmic}
+\usepackage[round]{natbib}
+\usepackage{beamerthemesplit}
+\usepackage{xcolor}
+
+\definecolor{cl-programado}{rgb}{1,0.6,0}
+\definecolor{cl-realizado}{rgb}{0,0.7,0.32}
+\definecolor{cl-atrasado}{rgb}{0.75,0,0}
+\definecolor{cl-cabecalho}{rgb}{0.3,0.5,0.75}
+\definecolor{cl-impar}{rgb}{0.81, 0.85, 0.91}
+\definecolor{cl-par}{rgb}{0.91, 0.93, 0.87} 
+ 
+%\newcommand{\newblock}{}
+%\usepackage[portugues,algoruled,longend]{algorithm2e}  
+%-----   Themes ------%
+ \usetheme{Madrid}
+% \usetheme{Warsaw}
+% \usetheme{Boadilla}
+% \usetheme{CambridgeUS}
+% \usetheme{Montpellier}
+% \usetheme{Hannover}
+% \usetheme{Dresden}
+
+% \definecolor{verdeescuro}{rgb}{0.539,0.601,0.42}
+\definecolor{cor}{rgb}{0.0,0.0,0.5}  
+%\definecolor{verde}{rgb}{0.55,0.78,0.25} 
+% ------------------------------------------------------------------ %
+% Deixando o tema mais verde. Comente a linha abaixo se não gostar %
+\setbeamercolor{structure}{fg=cor}
+% ------------------------------------------------------------------ %
+% Deixando o verde mais claro para combinar com o logo do IFET
+% Descomente as linhas abaixo
+% \setbeamercolor{structure}{fg=verde}
+% \setbeamercolor{title}{fg=black,bg=verde!80!black}
+% \setbeamercolor{frametitle}{fg=black,bg=verde!25}
+% \setbeamercolor{block body}{fg=black,bg=verde!15}
+% \setbeamercolor{block title}{fg=white,bg=verdeescuro}
+% ------------------------------------------------------------------ %
+\linespread{1}
+\beamertemplatenavigationsymbolsempty
+
+\title[Proposta]{HRI-SLAM Localização e Mapemento Simultaneos de um robô de serviços domésticos em um cenário desestruturado considerando a presença de humanos}
+%\subtitle{Redes Multimídia}
+
+\author[Alberto Angonese]{Alberto Torres Angonese^{1,2}
+\\   
+\vspace{1cm}
+Paulo F.F. Rosa^1\\
+(Orientador)
+%\\\footnotesize{angonesealberto@gmail.com, rpaulo@ime.eb.br}}
+% \\ Eduardo Krempser  
+% \\\footnotesize{krempser@lncc.br}}
+}
+\institute[IME/FAETERJ]{
+	\inst{1}%
+		Instituto Militar de Engenharia - IME\\
+		Laboratório de Robótica e Inteligência Computacional\\ 
+		Programa de Pós-graduação em Engenharia de Defesa \\ 		
+	\and		
+	\inst{2}%
+		Faeterj - Petrópolis\\
+		Laboratório de Sistemas Inteligentes e Robótica - SIRLab
+}
+
+
+% ----- Logo IFSC --------% 
+%\pgftranslateto{\pgfpoint{0cm}{3cm}}
+%\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+%\logo{\pgfuseimage{logo}}
+
+
+
+\date{Dezembro / 2014}
+
+\begin{document}
+
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+% ------------ Inicio do documento ---------------%
+%\section*{Sumário}
+\begin{frame}
+	\frametitle{Sumário}  
+	\tableofcontents
+\end{frame}
+% -------------------------------------------------%
+\section{Introdução}
+\label{introducao}
+\begin{frame}[allowframebreaks]
+ 	\pgfdeclareimage[width=1.0cm]{logo}{figs/branco.png}
+	\frametitle{\insertsection}
+	\begin{itemize}
+	    \item \textbf{Robocup@HOME}
+	    \begin{itemize}
+		  \item Estimular o desenvolvimento de robôs de serviço doméstico.
+		\end{itemize}
+	    \vspace{1cm}
+		\item \textbf{Desafios / Tarefas (LARC 2014)} 
+		\begin{itemize}
+		  \item Poster Session
+		  \item Robot Zoo
+			\item Voice Recognition 
+			\item \textbf{Object Recognition}
+			\item \textbf{Follow-me}
+			\item Final Challenge
+		\end{itemize}
+	\framebreak
+		\vspace{1cm}
+		\item \textbf{Cenário}
+		\begin{itemize}
+		  \item Casa (sala e cozinha)
+		\end{itemize}
+			\begin{figure}[!b]
+				\centering
+				\includegraphics[keepaspectratio = true,
+				width=0.7\textwidth]{figs/Arenaathome.png}
+				\label{fig:obr2013}
+				\caption{Arena}
+			\end{figure}
+			
+	\framebreak
+		\vspace{2cm}
+		\item \textbf{Habilidades do Robô}
+		\vspace{1cm}
+		\begin{itemize}
+		  \item Navegação autônoma em ambiente dinâmico
+		  \vspace{1cm}
+		  \item Reconhecimento de objetos / pessoas
+		  \vspace{1cm}
+		  \item Reconhecimento de voz
+		\end{itemize}
+	
+	\framebreak
+		\vspace{1cm}
+		\item \textbf{Robôs : Larc 2014}
+			\begin{figure}[!b]
+				\centering
+				\includegraphics[keepaspectratio = true,
+				width=0.5\textwidth]{figs/larc2014-robos-at-home.jpg}
+				\caption{Robôs LARC 2014}
+			\end{figure}
+
+	\framebreak
+		\vspace{1cm}
+		\item \textbf{Robôs : Robocup@home}
+			\begin{figure}[!b]
+				\centering
+				\includegraphics[keepaspectratio = true,
+				width=0.9\textwidth]{figs/Robosathomemunidial.jpg}
+				\caption{Robôs Robocup@home}
+			\end{figure}		
+			
+		\end{itemize}	
+\end{frame}
+% -------------------------------------------------%
+
+\section{Problema I: Object Recognition}
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{\insertsection}	
+	\begin{itemize}
+	  \vspace{1cm}
+	  \item \textbf{Localizar os objetos na arena}
+	  \vspace{1cm}
+	  \item \textbf{Navegar até os objetos}
+	  \vspace{1cm}
+	  \item \textbf{Reconhecer os objetos}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{Proposta de Título}	
+	\vspace{2cm}
+	\begin{block}{Titulo}
+		Localização e Navegação Autonomas de um Robô de Serviços Domésticos com
+	Base na Otimização da Assinatura Digital de Objetos
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{Objetivo}	
+	Com base na otimização da assinadura digital de objetos característicos,
+	identificar os cômodos (sala ou cozinha) para agilizar o processo de navegação e localização
+	dos objetos solicitados.
+\end{frame}
+%--------------------------------------------------%
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{Problema específico}
+	\textbf{Extrair a assinadura digital dos objetos característicos.}
+	\begin{itemize}
+	  \vspace{1cm}
+	  \item Utililizar Point Clouds (kinect) - PCL
+	  \vspace{1cm}
+	  \item ISS - Intrinsic Shape Signatures (\cite{ISS})
+	  \begin{itemize}
+	    \item Otimizar o vetor de características invariantes utilizando DE
+	    (Diferencial Evolution - \cite{priceDE})
+	   \end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{Problema específico}
+	\textbf{Extrair a assinadura digital dos objetos característicos.}
+	\begin{itemize}
+	  \vspace{1cm}
+	  \item Utililizar Point Clouds (kinect) - PCL
+	  \vspace{1cm}
+	  \item ISS - Intrinsic Shape Signatures (\cite{ISS})
+	  \begin{itemize}
+	    \item Otimizar o vetor de características invariantes utilizando DE
+	    (Diferencial Evolution - \cite{priceDE})
+	    \item Desenvolver o método ODS (Optimized Digital Signature)
+	   \end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{ODS - Optimized Digital Signature}	
+	\begin{figure}[!b]
+		\centering
+		\includegraphics[keepaspectratio = true,
+		width=0.5\textwidth]{figs/Fluxograma_Geral.png}
+		\caption{Visão Geral em relação ao SLAM (Vidal)}
+	\end{figure}	
+\end{frame}
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{ODS - Optimized Digital Signature}	
+	\begin{figure}[!b]
+		\centering
+		\includegraphics[keepaspectratio = true,
+		width=0.7\textwidth]{figs/Fluxograma_Aplicacao.png}
+		\caption{Contribuição em relação ao SLAM (Vidal)}
+	\end{figure}	
+\end{frame}
+
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{Cronograma}	
+\begin{tiny}
+\begin{table}[!htb]
+   \centering   % tabela centralizada
+    \caption{Cronograma de atividades }
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+	%\hline \rowcolor{cl-cabecalho} \rowfont{\color{white}}
+	\hline \rowcolor{cl-cabecalho}
+	 \textbf{Atividade} & 
+	\textbf{Dez/2014} & \textbf{2015/1} & \textbf{2015/2} & \textbf{2015/3} &
+	\textbf{2016/1} & \textbf{2016/2} & \textbf{2016/3} \\
+
+	\hline \rowcolor{cl-impar}
+	Revisão Bibliográfica  &\cellcolor{cl-realizado} &\cellcolor{cl-programado}
+	&\cellcolor{cl-programado} &\cellcolor{cl-programado} &
+	\cellcolor{cl-programado} & \cellcolor{cl-programado}  &
+	\cellcolor{cl-programado} \\
+
+	\hline \rowcolor{cl-par}
+	Instalação Aprendizagem do ROS & \cellcolor{cl-realizado} &
+	\cellcolor{cl-programado} & \cellcolor{cl-programado}  & \cellcolor{cl-programado}&
+	\cellcolor{cl-programado} & \cellcolor{cl-programado} &
+	\cellcolor{cl-programado}	\\
+
+	\hline \rowcolor{cl-impar}
+	Kinect + PCL + ROS & \cellcolor{cl-programado} & \cellcolor{cl-programado} &
+	\cellcolor{cl-programado} & & & &
+	\\
+	\hline \rowcolor{cl-par}
+	Montagem do Robô & & \cellcolor{cl-programado} &
+	\cellcolor{cl-programado} & & & &
+	\\
+
+	\hline \rowcolor{cl-impar}
+	ROS - Implantação do SLAM & & \cellcolor{cl-programado} &
+	\cellcolor{cl-programado} & & & &
+	\\
+
+	\hline \rowcolor{cl-par}
+	Extração Assinatura Digital & & \cellcolor{cl-programado} &
+	\cellcolor{cl-programado} & & & &
+	\\
+
+	\hline \rowcolor{cl-impar}
+	Otimização (Evolução Diferencial) & & \cellcolor{cl-programado} &
+	\cellcolor{cl-programado} & & & &
+	\\
+
+
+	\hline \rowcolor{cl-par}
+	ROS - Implantação nó ODS & & & \cellcolor{cl-programado} &
+	\cellcolor{cl-programado}& \cellcolor{cl-programado}& &
+	\\
+
+	\hline \rowcolor{cl-impar}
+	Navegação e Localização por Wayp & & & \cellcolor{cl-programado} &
+	\cellcolor{cl-programado}& \cellcolor{cl-programado}& &
+	\\
+
+	\hline \rowcolor{cl-par}
+	Artigos - Periódicos &  &  & \cellcolor{cl-programado}  &\cellcolor{cl-programado} 
+	& \cellcolor{cl-programado} & \cellcolor{cl-programado} & \cellcolor{cl-programado}   \\
+
+
+	\hline \rowcolor{cl-impar}
+	Redação da Tese & &  & &  &
+	\cellcolor{cl-programado} & \cellcolor{cl-programado} &
+	\cellcolor{cl-programado}\\
+
+	\hline \rowcolor{cl-par}
+	Testes e Correções &  & \cellcolor{cl-programado} & \cellcolor{cl-programado}  &
+	\cellcolor{cl-programado} & \cellcolor{cl-programado} & \cellcolor{cl-programado} & \cellcolor{cl-programado} \\
+
+	\hline \rowcolor{cl-impar}
+	Defesa &  &  & &  &  & & \cellcolor{cl-programado} \\
+
+	\hline
+\end{tabular}
+\end{table}	
+\end{tiny}
+\end{frame}
+
+\section{Viabilidade}
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{\insertsection}
+	  \begin{itemize}
+	    \vspace{2cm}
+	    \item 1 Pioneer 3DS
+	    \item 1 kinect 
+	    \item (Laser / ultrason) 
+	    \item Softwares Open Source
+	    \begin{itemize}
+	      \item - ROS: Robotic Operanting System
+	      \item - PCL: Point Cloud Library
+	     \end{itemize}
+	  \end{itemize}
+\end{frame}
+% -------------------------------------------------%
+% -------------------------------------------------%
+\section{Referências}
+%\setbeamertemplate{bibliography item}[text]
+\begin{frame}[allowframebreaks]{Bibliography}
+	\frametitle{\insertsection}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/branco.png}
+	\bibliographystyle{decsci}
+	\begin{small}
+		\bibliography{referencias}
+	\end{small}
+\end{frame}
+
+\section{Problema II: Folow me}
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{\insertsection}	
+	\begin{itemize}
+	  \vspace{1cm}
+	  \item \textbf{Reconhecimento de um operador (humado)}
+	  \vspace{1cm}
+	  \item \textbf{Traking do operador}
+
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{Proposta de Título : Problema II}	
+	\vspace{2cm}
+	\begin{block}{Titulo}
+		Navegação pervasiva autonoma de um robô de serviços domésticos em um cenário
+		desestruturado considerando a presença de humanos
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{Objetivo}	
+	\vspace{2cm}
+	Realizar um planejamento de movimentação baseado na interação humano-robô
+	em um ambiente desestruturado de uma casa, com base em técnicas de detecção de
+	humanos e predição de sua `` intenção'' de movimentação.
+\end{frame}
+%--------------------------------------------------%
+
+\begin{frame}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
+	\frametitle{Problema específico}
+	\textbf{Mapear situações de movimentação.}
+	\begin{itemize}
+	  \vspace{1cm}
+	  \item Pedestres cruzando o caminho do robô
+	  \vspace{1cm}
+	  \item Pedestre caminhando em direção ao robô (sentidos inversos)
+      \vspace{1cm}
+	  \item Pedestre caminhando na mesma direção que o robô (mesmo sentido)
+	\end{itemize}
+\end{frame}
+
+% -------------------------------------------------%
+\begin{frame}[b]
+	\frametitle{}
+  	\pgfdeclareimage[width=1.0cm]{logo}{figs/branco.png}
+  	\centering{\textbf{Perguntas?}
+  	\\
+  	\vspace{0.5cm} \footnotesize{ angonesealberto@gmail.com} \\
+	}
+	\vspace{2cm}
+	\hfill
+	\includegraphics[height=1.0cm,keepaspectratio]{figs/ime.jpg}\hfill
+	\includegraphics[height=1.0cm,keepaspectratio]{figs/lab-logo.png}\hfill
+	\includegraphics[height=1.0cm,keepaspectratio]{figs/Logo_CPTI_FAETERJ.png}\hfill
+	\includegraphics[height=0.5cm,keepaspectratio]{figs/FAPERJ_Logo.png}\hfill
+	\\
+% 	\vspace{1cm}
+% 	\hfill
+% 	\centering{
+% 	\includegraphics[height=0.6cm,keepaspectratio]{figs/cnpq_vale.png}\hfill
+	
+	
+	
+	
+	% \includegraphics[height=0.95cm,keepaspectratio]{figs/IFTO_LOGO_paraiso.png}\hfill \includegraphics[height=0.95cm,keepaspectratio]{figs/logo_faperj_cor.jpg}\hfill
+%	\includegraphics[height=0.95cm,keepaspectratio]{figs/logo_capes.pdf}\hfill
+%	\includegraphics[height=0.95cm,keepaspectratio]{figs/logo_cnpq.jpg}	
+\end{frame}
+
+
+
+
+% -------------------------------------------------%
+\end{document}

@@ -1,0 +1,20 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{6}
+\contentsline {subsection}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{6}
+\contentsline {subsection}{\numberline {1.2}Objetivo}{7}
+\contentsline {subsection}{\numberline {1.3}Estrutura da Proposta}{7}
+\contentsline {section}{\numberline {2}Revis\IeC {\~a}o de Literatura}{8}
+\contentsline {section}{\numberline {3}T\IeC {\'o}picos Tutoriais}{10}
+\contentsline {subsection}{\numberline {3.1}O Quadric\IeC {\'o}ptero}{10}
+\contentsline {subsection}{\numberline {3.2}Sistemas Embarcados de Navega\IeC {\c c}\IeC {\~a}o}{13}
+\contentsline {subsection}{\numberline {3.3}Controle PID e quadric\IeC {\'o}pteros}{16}
+\contentsline {section}{\numberline {4}O Problema: Seguran\IeC {\c c}a em voo para quadric\IeC {\'o}ptero}{19}
+\contentsline {section}{\numberline {5}Metodologia}{21}
+\contentsline {subsection}{\numberline {5.1}Etapas}{21}
+\contentsline {subsection}{\numberline {5.2}Componentes necess\IeC {\'a}rios}{23}
+\contentsline {subsection}{\numberline {5.3}Software necess\IeC {\'a}rio}{24}
+\contentsline {subsection}{\numberline {5.4}Estrat\IeC {\'e}gia de implementa\IeC {\c c}\IeC {\~a}o}{24}
+\contentsline {section}{\numberline {6}Cronograma}{25}
+\contentsline {section}{\numberline {7}Viabilidade da proposta}{26}
+\contentsline {section}{\numberline {8}Resultados Esperados}{28}
+\contentsline {section}{\numberline {9}Conclus\IeC {\~a}o}{30}

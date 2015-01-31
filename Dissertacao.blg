@@ -4,56 +4,56 @@ The top-level auxiliary file: Dissertacao.aux
 The style file: abbrv.bst
 Database file #1: Dissertacao.bib
 Warning--entry type for "Kingdom" isn't style-file defined
---line 313 of file Dissertacao.bib
+--line 323 of file Dissertacao.bib
 Warning--entry type for "Liang" isn't style-file defined
---line 325 of file Dissertacao.bib
+--line 335 of file Dissertacao.bib
 Warning--entry type for "quadblog" isn't style-file defined
---line 566 of file Dissertacao.bib
+--line 574 of file Dissertacao.bib
 Warning--to sort, need author, organization, or key in ardrone
 Warning--to sort, need author or key in quadblog
 Warning--there's a number but no series in Achtelik2009
 Warning--empty journal in Gibiansky2010
 Warning--empty journal in Israelsen
 Warning--empty year in Israelsen
-You've used 34 entries,
+You've used 35 entries,
             2118 wiz_defined-function locations,
-            709 strings with 10283 characters,
-and the built_in function-call counts, 12878 in all, are:
-= -- 1280
-> -- 628
+            714 strings with 10399 characters,
+and the built_in function-call counts, 13082 in all, are:
+= -- 1300
+> -- 635
 < -- 16
-+ -- 254
-- -- 214
-* -- 884
-:= -- 2036
-add.period$ -- 108
-call.type$ -- 34
-change.case$ -- 207
++ -- 257
+- -- 216
+* -- 892
+:= -- 2075
+add.period$ -- 111
+call.type$ -- 35
+change.case$ -- 211
 chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 500
-empty$ -- 1010
-format.name$ -- 214
-if$ -- 2770
+cite$ -- 41
+duplicate$ -- 510
+empty$ -- 1027
+format.name$ -- 216
+if$ -- 2811
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 29
-newline$ -- 166
-num.names$ -- 64
-pop$ -- 261
+int.to.str$ -- 35
+missing$ -- 30
+newline$ -- 171
+num.names$ -- 66
+pop$ -- 265
 preamble$ -- 1
-purify$ -- 175
+purify$ -- 178
 quote$ -- 0
-skip$ -- 366
+skip$ -- 373
 stack$ -- 0
-substring$ -- 765
-swap$ -- 150
+substring$ -- 770
+swap$ -- 151
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 134
+type$ -- 138
 warning$ -- 6
-while$ -- 118
-width$ -- 36
-write$ -- 362
+while$ -- 120
+width$ -- 37
+write$ -- 372
 (There were 9 warnings)

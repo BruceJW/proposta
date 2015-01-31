@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  29 JAN 2015 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  31 JAN 2015 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -112,6 +112,13 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2014/03/24 3.9k The Babel package
@@ -347,18 +354,18 @@ Now handling font encoding U ...
 (./Dissertacao.aux)
 \openout1 = `Dissertacao.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -424,230 +431,246 @@ e
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 59--61
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--67
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--70
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 
  []
 
+[2] [3] (./Dissertacao.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--74
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `Dissertacao.toc'.
+
+ [4]
+(./Dissertacao.lof
+Overfull \hbox (2.51196pt too wide) in paragraph at lines 13--13
+ [][] []\OT1/cmr/m/n/10.95 Miss~ao 2: Ve^^S^^Pculo em mo-vi-mento com obst^^Sac
+ulo a frente. 
  []
 
-[2] [3] [4] [5]
-Overfull \hbox (4.03273pt too wide) in paragraph at lines 117--118
+)
+\tf@lof=\write4
+\openout4 = `Dissertacao.lof'.
+
+ [5] [6] [7]
+Overfull \hbox (4.03273pt too wide) in paragraph at lines 122--123
 []\OT1/cmr/m/n/10.95 Quando se fala es-pe-ci-fi-ca-mente so-bre des-vio de obst
 ^^Saculos em tempo
  []
 
-[6] [7] <img/parrot_drone.jpg, id=30, 722.7pt x 381.425pt>
+[8] [9] <img/parrot_drone.jpg, id=38, 722.7pt x 381.425pt>
 File: img/parrot_drone.jpg Graphic file (type jpg)
 
 <use img/parrot_drone.jpg>
-Package pdftex.def Info: img/parrot_drone.jpg used on input line 137.
+Package pdftex.def Info: img/parrot_drone.jpg used on input line 142.
 (pdftex.def)             Requested size: 289.07487pt x 152.56729pt.
- [8 <./img/parrot_drone.jpg>]
-<img/diagrama_quadricoptero.png, id=34, 702.625pt x 401.5pt>
+ [10 <./img/parrot_drone.jpg>]
+<img/diagrama_quadricoptero.png, id=42, 702.625pt x 401.5pt>
 File: img/diagrama_quadricoptero.png Graphic file (type png)
 
 <use img/diagrama_quadricoptero.png>
-Package pdftex.def Info: img/diagrama_quadricoptero.png used on input line 152.
+Package pdftex.def Info: img/diagrama_quadricoptero.png used on input line 157.
 
-(pdftex.def)             Requested size: 351.31163pt x 200.7495pt.
+(pdftex.def)             Requested size: 386.44493pt x 220.82567pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9] [10 <./img/diagrama_quadricoptero.png>]
-<img/imuStrap.png, id=45, 662.475pt x 243.91125pt>
+[11] [12 <./img/diagrama_quadricoptero.png>]
+<img/imuStrap.png, id=53, 662.475pt x 243.91125pt>
 File: img/imuStrap.png Graphic file (type png)
  <use img/imuStrap.png>
-Package pdftex.def Info: img/imuStrap.png used on input line 167.
+Package pdftex.def Info: img/imuStrap.png used on input line 172.
 (pdftex.def)             Requested size: 397.48807pt x 146.34787pt.
 
-Overfull \hbox (7.48807pt too wide) in paragraph at lines 167--168
+Overfull \hbox (7.48807pt too wide) in paragraph at lines 172--173
  [][] 
  []
 
-[11 <./img/imuStrap.png>]
-<img/imu_VANTIME.png, id=50, 821.0675pt x 620.3175pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13] <img/imu_VANTIME.png, id=58, 821.0675pt x 620.3175pt>
 File: img/imu_VANTIME.png Graphic file (type png)
 
 <use img/imu_VANTIME.png>
-Package pdftex.def Info: img/imu_VANTIME.png used on input line 178.
+Package pdftex.def Info: img/imu_VANTIME.png used on input line 183.
 (pdftex.def)             Requested size: 410.53275pt x 310.15799pt.
 
-Overfull \hbox (20.53275pt too wide) in paragraph at lines 178--179
+Overfull \hbox (20.53275pt too wide) in paragraph at lines 183--184
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12] [13 <./img/imu_VANTIME.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 199.
+[14 <./img/imuStrap.png>] [15 <./img/imu_VANTIME.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 204.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 199.
- [14]
-<img/ganho_PID.png, id=64, 483.8075pt x 384.43625pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 204.
+ [16]
+<img/ganho_PID.png, id=71, 483.8075pt x 384.43625pt>
 File: img/ganho_PID.png Graphic file (type png)
  <use img/ganho_PID.png>
-Package pdftex.def Info: img/ganho_PID.png used on input line 218.
+Package pdftex.def Info: img/ganho_PID.png used on input line 223.
 (pdftex.def)             Requested size: 241.90315pt x 192.21765pt.
 
-[15 <./img/ganho_PID.png>]
-<img/PID_quad_geral.png, id=70, 605.26125pt x 339.2675pt>
+[17 <./img/ganho_PID.png>]
+<img/PID_quad_geral.png, id=77, 605.26125pt x 339.2675pt>
 File: img/PID_quad_geral.png Graphic file (type png)
 
 <use img/PID_quad_geral.png>
-Package pdftex.def Info: img/PID_quad_geral.png used on input line 229.
+Package pdftex.def Info: img/PID_quad_geral.png used on input line 234.
 (pdftex.def)             Requested size: 302.62987pt x 169.63333pt.
 
-<img/PID_quad_axis.png, id=71, 501.875pt x 190.7125pt>
+<img/PID_quad_axis.png, id=78, 501.875pt x 190.7125pt>
 File: img/PID_quad_axis.png Graphic file (type png)
 
 <use img/PID_quad_axis.png>
-Package pdftex.def Info: img/PID_quad_axis.png used on input line 249.
+Package pdftex.def Info: img/PID_quad_axis.png used on input line 254.
 (pdftex.def)             Requested size: 401.50053pt x 152.57019pt.
 
-Overfull \hbox (11.50053pt too wide) in paragraph at lines 249--250
+Overfull \hbox (11.50053pt too wide) in paragraph at lines 254--255
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[16 <./img/PID_quad_geral.png>]
-Overfull \hbox (3.28705pt too wide) in paragraph at lines 258--258
+[18 <./img/PID_quad_geral.png>]
+Overfull \hbox (3.28705pt too wide) in paragraph at lines 263--263
 []\OT1/cmr/bx/n/17.28 O Pro-blema: Se-gu-ran^^Xca em voo para
  []
 
-[17 <./img/PID_quad_axis.png>] [18]
-<img/etapasMetodo.png, id=84, 827.09pt x 498.86375pt>
+[19 <./img/PID_quad_axis.png>] [20]
+<img/etapasMetodo.png, id=92, 827.09pt x 498.86375pt>
 File: img/etapasMetodo.png Graphic file (type png)
 
 <use img/etapasMetodo.png>
-Package pdftex.def Info: img/etapasMetodo.png used on input line 320.
+Package pdftex.def Info: img/etapasMetodo.png used on input line 325.
 (pdftex.def)             Requested size: 330.83012pt x 199.54196pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19] [20 <./img/etapasMetodo.png>] [21]
-<img/fluxo.png, id=96, 582.175pt x 542.025pt>
+[21] [22 <./img/etapasMetodo.png>] [23]
+<img/fluxo.png, id=103, 582.175pt x 542.025pt>
 File: img/fluxo.png Graphic file (type png)
  <use img/fluxo.png>
-Package pdftex.def Info: img/fluxo.png used on input line 397.
+Package pdftex.def Info: img/fluxo.png used on input line 402.
 (pdftex.def)             Requested size: 291.08679pt x 271.01183pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22] <img/cronograma.png, id=100, 859.21pt x 774.895pt>
+[24] <img/cronograma.png, id=107, 859.21pt x 774.895pt>
 File: img/cronograma.png Graphic file (type png)
 
 <use img/cronograma.png>
-Package pdftex.def Info: img/cronograma.png used on input line 410.
+Package pdftex.def Info: img/cronograma.png used on input line 415.
 (pdftex.def)             Requested size: 343.67792pt x 309.95251pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23 <./img/fluxo.png>]
-Overfull \hbox (1.38527pt too wide) in paragraph at lines 420--421
+[25 <./img/fluxo.png>]
+Overfull \hbox (1.38527pt too wide) in paragraph at lines 425--426
 \OT1/cmr/m/n/10.95 A vi-a-bi-li-dade desta pro-posta de-pende da ob-ten^^Xc~ao 
 dos itens ne-cess^^Sarios
  []
 
 
-Overfull \hbox (3.78368pt too wide) in paragraph at lines 424--426
+Overfull \hbox (3.78368pt too wide) in paragraph at lines 429--431
 []\OT1/cmr/m/n/10.95 Plataforma de voo: O la-bo-rat^^Sorio disp~oe de qua-tro q
 ua-dric^^Sopteros
  []
 
-[24 <./img/cronograma.png>]
-Overfull \hbox (4.36281pt too wide) in paragraph at lines 426--428
-[]\OT1/cmr/m/n/10.95 Minicomputador: Est~ao dis-pon^^S^^Pveis dois mi-ni-com-pu
--ta-do-res Rasp-
- []
-
-
-Overfull \hbox (1.35147pt too wide) in paragraph at lines 430--431
+[26 <./img/cronograma.png>]
+Overfull \hbox (1.35147pt too wide) in paragraph at lines 435--436
 \OT1/cmr/m/n/10.95 vers~ao para es-tu-dante que pos-sui to-das as fer-ra-men-ta
 s ne-cess^^Sarias
  []
 
-[25] <img/missao1.png, id=113, 240.9pt x 240.9pt>
+[27] <img/missao1.png, id=120, 240.9pt x 240.9pt>
 File: img/missao1.png Graphic file (type png)
  <use img/missao1.png>
-Package pdftex.def Info: img/missao1.png used on input line 448.
+Package pdftex.def Info: img/missao1.png used on input line 453.
 (pdftex.def)             Requested size: 120.44969pt x 120.44969pt.
 
-[26 <./img/missao1.png>] <img/missao2.png, id=118, 501.875pt x 301.125pt>
+[28 <./img/missao1.png>] <img/missao2.png, id=125, 501.875pt x 301.125pt>
 File: img/missao2.png Graphic file (type png)
 
 <use img/missao2.png>
-Package pdftex.def Info: img/missao2.png used on input line 459.
+Package pdftex.def Info: img/missao2.png used on input line 464.
 (pdftex.def)             Requested size: 250.93687pt x 150.56212pt.
- <img/missao3.png, id=119, 411.5375pt x 301.125pt>
+ <img/missao3.png, id=126, 411.5375pt x 301.125pt>
 File: img/missao3.png Graphic file (type png)
 
 <use img/missao3.png>
-Package pdftex.def Info: img/missao3.png used on input line 471.
+Package pdftex.def Info: img/missao3.png used on input line 476.
 (pdftex.def)             Requested size: 164.61208pt x 120.44786pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27 <./img/missao2.png>] [28 <./img/missao3.png>] (./Dissertacao.bbl [29]
-[30] [31]) [32]
-Underfull \hbox (badness 10000) in paragraph at lines 512--519
+[29 <./img/missao2.png>] [30 <./img/missao3.png>] (./Dissertacao.bbl [31]
+[32] [33] [34]) [35]
+Underfull \hbox (badness 10000) in paragraph at lines 517--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--519
+Underfull \hbox (badness 10000) in paragraph at lines 517--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--519
+Underfull \hbox (badness 10000) in paragraph at lines 517--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--519
+Underfull \hbox (badness 10000) in paragraph at lines 517--524
 
  []
 
-[33] (./Dissertacao.aux) ) 
+[36] (./Dissertacao.aux) ) 
 Here is how much of TeX's memory you used:
- 2900 strings out of 493117
- 38500 string characters out of 6135434
- 107391 words of memory out of 5000000
- 6302 multiletter control sequences out of 15000+600000
- 10983 words of font info for 39 fonts, out of 8000000 for 9000
+ 2983 strings out of 493117
+ 39763 string characters out of 6135434
+ 107875 words of memory out of 5000000
+ 6365 multiletter control sequences out of 15000+600000
+ 12626 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,23p,1255b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,24p,1420b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
@@ -659,11 +682,12 @@ ts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb>
-Output written on Dissertacao.pdf (33 pages, 1162176 bytes).
+ti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on Dissertacao.pdf (36 pages, 1241978 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 194 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

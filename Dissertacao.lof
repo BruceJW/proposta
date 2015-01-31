@@ -1,0 +1,14 @@
+\select@language {brazil}
+\contentsline {figure}{\numberline {1}{\ignorespaces Plataforma Parrot Ardrone 2.0. Fonte \cite {ardrone}}}{10}
+\contentsline {figure}{\numberline {2}{\ignorespaces Estrutura e orienta\IeC {\c c}\IeC {\~a}o dos motores (a), as for\IeC {\c c}as e momentos atuando no quadric\IeC {\'o}ptero (b) e os movimentos gerados a partir das varia\IeC {\c c}\IeC {\~o}es de velocidades dos motores (c). Fontes \cite {quadblog}, \cite {Mian2008} e \cite {Domingues2009}.}}{12}
+\contentsline {figure}{\numberline {3}{\ignorespaces Estrutura do Sistema de Navega\IeC {\c c}\IeC {\~a}o acoplada ao ve\IeC {\'\i }culo (esquerda) e os movimentos gerados no quadric\IeC {\'o}ptero (direita). Fonte \cite {Adalberto2009}}}{14}
+\contentsline {figure}{\numberline {4}{\ignorespaces Gr\IeC {\'a}fico das medi\IeC {\c c}\IeC {\~o}es dos sensores inerciais da IMU do VANT-IME. Fonte \cite {Paixao2011}}}{15}
+\contentsline {figure}{\numberline {5}{\ignorespaces Desempenho do sistema para diferentes ganhos $K_p$, $K_i$ e $K_d$. Fonte \cite {Kingdom}}}{17}
+\contentsline {figure}{\numberline {6}{\ignorespaces Controle PID de um quadric\IeC {\'o}ptero. Fonte \cite {Liang}}}{18}
+\contentsline {figure}{\numberline {7}{\ignorespaces Controle PID por eixo. Fonte \cite {Liang}}}{19}
+\contentsline {figure}{\numberline {8}{\ignorespaces Etapas do m\IeC {\'e}todo}}{22}
+\contentsline {figure}{\numberline {9}{\ignorespaces Estrat\IeC {\'e}gia de implementa\IeC {\c c}\IeC {\~a}o}}{25}
+\contentsline {figure}{\numberline {10}{\ignorespaces Cronograma f\IeC {\'\i }sico.}}{26}
+\contentsline {figure}{\numberline {11}{\ignorespaces Miss\IeC {\~a}o 1. Ve\IeC {\'\i }culo cercado e estabilizado}}{28}
+\contentsline {figure}{\numberline {12}{\ignorespaces Miss\IeC {\~a}o 2: Ve\IeC {\'\i }culo em movimento com obst\IeC {\'a}culo a frente. Um desvio \IeC {\`a} direita (esquerda) e um desvio \IeC {\`a} esquerda (direita)}}{29}
+\contentsline {figure}{\numberline {13}{\ignorespaces Miss\IeC {\~a}o 3: Trajeto completo num ambiente com obst\IeC {\'a}culos}}{30}
