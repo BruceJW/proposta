@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: apresentacao.aux
+The style file: abbrv.bst
+Database file #1: Dissertacao.bib
+Warning--entry type for "Kingdom" isn't style-file defined
+--line 323 of file Dissertacao.bib
+Warning--entry type for "Liang" isn't style-file defined
+--line 335 of file Dissertacao.bib
+Warning--entry type for "quadblog" isn't style-file defined
+--line 574 of file Dissertacao.bib
+Warning--to sort, need author, organization, or key in ardrone
+Warning--to sort, need author or key in quadblog
+You've used 9 entries,
+            2118 wiz_defined-function locations,
+            547 strings with 4857 characters,
+and the built_in function-call counts, 2369 in all, are:
+= -- 232
+> -- 84
+< -- 1
++ -- 36
+- -- 26
+* -- 134
+:= -- 376
+add.period$ -- 22
+call.type$ -- 9
+change.case$ -- 39
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 94
+empty$ -- 218
+format.name$ -- 26
+if$ -- 509
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 4
+newline$ -- 42
+num.names$ -- 14
+pop$ -- 53
+preamble$ -- 1
+purify$ -- 31
+quote$ -- 0
+skip$ -- 85
+stack$ -- 0
+substring$ -- 142
+swap$ -- 20
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 36
+warning$ -- 2
+while$ -- 21
+width$ -- 10
+write$ -- 81
+(There were 5 warnings)

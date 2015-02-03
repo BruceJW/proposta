@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+
+\bibitem{ardrone}
+{\em AR.Drone Developer Guide}.
+
+\bibitem{quadblog}
+Quadcopter (x-mode build log).
+
+\bibitem{Paixao2011}
+R.~A. da~Paixao, P.~F.~F. Rosa, and J.~M.~M. Neto.
+\newblock An attitude heading and reference system: basic concepts and
+  prototype.
+\newblock In {\em Industrial Electronics (ISIE), 2011 IEEE International
+  Symposium on}, pages 2225--2230. IEEE, 2011.
+
+\bibitem{Domingues2009}
+J.~M.~B. Domingues.
+\newblock Quadrotor prototype.
+\newblock {\em Uneversidade Tecnica deLisboa. Dissertacio}, 2009.
+
+\bibitem{Adalberto2009}
+J.~A.~F. JUNIOR.
+\newblock SimulaÇÃo e implementaÇÃo em tempo real de sistemas de
+  navegaÇÃo inercial integrados ins/gps.
+\newblock Master's thesis, IME, 2009.
+
+\bibitem{Kingdom}
+R.~Kingdom.
+\newblock Pid controller tutorial for robots.
+
+\bibitem{Liang}
+O.~Liang.
+\newblock Quadcopter pid explained and tuning.
+
+\bibitem{Mian2008}
+A.~A. Mian and W.~Daobo.
+\newblock Modeling and backstepping-based nonlinear control strategy for a 6
+  dof quadrotor helicopter.
+\newblock {\em Chinese Journal of Aeronautics}, 21(3):261--268, 2008.
+
+\bibitem{Salih2010}
+A.~L. Salih, M.~Moghavvemi, H.~A. Mohamed, and K.~S. Gaeid.
+\newblock Flight pid controller design for a uav quadrotor.
+\newblock {\em Scientific Research and Essays}, 5(23):3660--3667, 2010.
+
+\end{thebibliography}

@@ -1,8 +1,9 @@
-\documentclass[t]{beamer}
+% !TEX encoding = UTF-8 Unicode
+\documentclass{beamer}
 
 \usepackage{amsmath}
 \usepackage[english,brazil]{babel}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{url,color, colortbl}
 \usepackage{subfigure}
@@ -14,7 +15,6 @@
 \usepackage{verbatim}  
 \usepackage{caption} 
 \usepackage{algorithm,algorithmic}
-\usepackage[round]{natbib}
 \usepackage{beamerthemesplit}
 \usepackage{xcolor}
 
@@ -40,7 +40,7 @@
 \definecolor{cor}{rgb}{0.0,0.0,0.5}  
 %\definecolor{verde}{rgb}{0.55,0.78,0.25} 
 % ------------------------------------------------------------------ %
-% Deixando o tema mais verde. Comente a linha abaixo se não gostar %
+% Deixando o tema mais verde. Comente a linha abaixo se nï¿½o gostar %
 \setbeamercolor{structure}{fg=cor}
 % ------------------------------------------------------------------ %
 % Deixando o verde mais claro para combinar com o logo do IFET
@@ -54,27 +54,23 @@
 \linespread{1}
 \beamertemplatenavigationsymbolsempty
 
-\title[Proposta]{HRI-SLAM Localização e Mapemento Simultaneos de um robô de serviços domésticos em um cenário desestruturado considerando a presença de humanos}
-%\subtitle{Redes Multimídia}
+\title[Proposta]{Sistemas de Defesa: Uma abordagem para desvios de obstÃ¡culos no auxÃ­lio do controle de um quadricÃ³ptero em tempo real}
 
-\author[Alberto Angonese]{Alberto Torres Angonese^{1,2}
+\author[Bruno Giovanini]{Bruno da Silva Giovanini
 \\   
 \vspace{1cm}
-Paulo F.F. Rosa^1\\
+$\mbox{Paulo F.F. Rosa}^1$\\
 (Orientador)
 %\\\footnotesize{angonesealberto@gmail.com, rpaulo@ime.eb.br}}
 % \\ Eduardo Krempser  
 % \\\footnotesize{krempser@lncc.br}}
 }
-\institute[IME/FAETERJ]{
-	\inst{1}%
+\institute[IME]{
+	\inst{1}
 		Instituto Militar de Engenharia - IME\\
-		Laboratório de Robótica e Inteligência Computacional\\ 
-		Programa de Pós-graduação em Engenharia de Defesa \\ 		
-	\and		
-	\inst{2}%
-		Faeterj - Petrópolis\\
-		Laboratório de Sistemas Inteligentes e Robótica - SIRLab
+		LaboratÃ³rio de RobÃ³tica e InteligÃªncia Computacional\\ 
+		Programa de PÃ³s-graduaÃ§Ã£o em Engenharia de Defesa \\ 		
+	
 }
 
 
@@ -85,345 +81,296 @@ Paulo F.F. Rosa^1\\
 
 
 
-\date{Dezembro / 2014}
+\date{\today}
 
 \begin{document}
 
 
 \begin{frame}
- 	
+ \titlepage	
 \end{frame}
 
 % ------------ Inicio do documento ---------------%
-%\section*{Sumário}
+%\section*{Sumï¿½rio}
 \begin{frame}
-	\frametitle{Sumário}  
+	\frametitle{SumÃ¡rio}  
 	\tableofcontents
 \end{frame}
 % -------------------------------------------------%
-\section{Introdução}
+\section{IntroduÃ§Ã£o}
 \label{introducao}
 \begin{frame}[allowframebreaks]
- 	\pgfdeclareimage[width=1.0cm]{logo}{figs/branco.png}
+ 	\pgfdeclareimage[width=1.0cm]{logo}{img/ime.png}
 	\frametitle{\insertsection}
 	\begin{itemize}
-	    \item \textbf{Robocup@HOME}
-	    \begin{itemize}
-		  \item Estimular o desenvolvimento de robôs de serviço doméstico.
-		\end{itemize}
+	    \item \textbf{Crescente utilizaÃ§Ã£o para missÃµes civis e militares}
+	     \vspace{1cm}
+	    \item \textbf{Voos em ambientes fechados e restritos}
+	     \vspace{1cm}
+	    \item \textbf{Risco de colisÃ£o com equipamentos crÃ­ticos e sensÃ­veis}
 	    \vspace{1cm}
-		\item \textbf{Desafios / Tarefas (LARC 2014)} 
-		\begin{itemize}
-		  \item Poster Session
-		  \item Robot Zoo
-			\item Voice Recognition 
-			\item \textbf{Object Recognition}
-			\item \textbf{Follow-me}
-			\item Final Challenge
-		\end{itemize}
+	    \item \textbf{DifÃ­cil controle e manuseio}
+	    
+	    
 	\framebreak
-		\vspace{1cm}
-		\item \textbf{Cenário}
-		\begin{itemize}
-		  \item Casa (sala e cozinha)
-		\end{itemize}
-			\begin{figure}[!b]
-				\centering
-				\includegraphics[keepaspectratio = true,
-				width=0.7\textwidth]{figs/Arenaathome.png}
-				\label{fig:obr2013}
-				\caption{Arena}
-			\end{figure}
+		\vspace{2cm}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.7\textwidth]{img/filmagem_drone.jpg}
+			\label{fig:obr2013}
+			\caption{Filmagem \textit{indoor}}
+		\end{figure}
 			
 	\framebreak
 		\vspace{2cm}
-		\item \textbf{Habilidades do Robô}
-		\vspace{1cm}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.7\textwidth]{img/Inspection-Drone.jpg}
+			\label{fig:obr2013}
+			\caption{InspeÃ§Ã£o de equipamentos sensÃ­veis}
+		\end{figure}
+			
+	\end{itemize}	
+\end{frame}
+
+\subsection{Objetivo}
+\label{objetivo}
+\begin{frame}
+	\frametitle{Objetivo}	
+	
+	\begin{itemize}
+		\item Evitar colisÃµes de um quadricÃ³ptero, estimando constantemente a trajetÃ³ria futura do veÃ­culo, com base na sua dinÃ¢mica, seu estado atual, o \textit{input} de controle corrente e a distÃ¢ncia para os obstÃ¡culos, medida atravÃ©s de sensores ultrassÃ´nicos embarcados
+		 
+		 \vspace{1cm}
+		 
+		 \item Maior seguranÃ§a no voo desta plataforma em ambientes restritos
+	\end{itemize} 
+	 	
+\end{frame}
+
+% -------------------------------------------------%
+
+\section{TÃ³picos tutorias}
+
+\subsection{O quadricÃ³ptero}
+\begin{frame}
+  	
+	\frametitle{O quadricÃ³ptero - A Plataforma}
+	
+	\begin{itemize}
+	
+	\item VeÃ­culo voador com quatro rotores com decolagem e aterrissagem vertical \cite{Salih2010}
+		
+	\begin{figure}
+		\centering
+		\includegraphics[keepaspectratio = true,
+		width=0.7\textwidth]{img/parrot_drone.jpg}
+		\caption{Plataforma Parrot Ardrone 2.0. Fonte \cite{ardrone}}
+		\label{fig:quad}
+	\end{figure}
+		
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	
+	\frametitle{O quadricÃ³ptero - DinÃ¢mica de Voo}
+	
+	\begin{itemize}
+		
+		\item Seis graus de liberdade com quatro atuadores
+		
+		\vspace{2cm}
+		
+		\item Mantem estabilidade com 4 motores independentes e controle eletrÃ´nico
+		
+	\framebreak	
+		
+		\begin{figure}
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.6\textwidth]{img/diagrama_quadricoptero.png}
+			\caption{Estrutura e orientaÃ§Ã£o dos motores (a), as forÃ§as e momentos atuando no quadricÃ³ptero (b) e os movimentos gerados a partir das variaÃ§Ãµes de velocidades dos motores (c). Fontes \cite{quadblog}, \cite{Mian2008} e \cite{Domingues2009}.}
+			\label{fig:diag quad}
+		\end{figure}
+	
+	\end{itemize}	
+	
+\end{frame}	 
+
+\subsection{Sistemas embarcados para navegaÃ§Ã£o}
+\begin{frame}
+	
+	\frametitle{Sistemas embarcados para navegaÃ§Ã£o}
+	
+	\begin{itemize}
+
+	\item ObtenÃ§Ã£o de informaÃ§Ãµes sobre a posiÃ§Ã£o, velocidade e atitude de um veÃ­culo com relaÃ§Ã£o a um dado referencial
+	
+	\vspace{1cm}
+	
+	\item Fornecidas por sensores inerciais: acelerÃ´metros e giroscÃ³pios
+	
+	\vspace{1cm}
+	
+	\item MagnetÃ´metros incluÃ­dos melhoram a medida da atitude do veiculo	
+	
+	\end{itemize}
+	
+\end{frame}	
+\begin{frame}[allowframebreaks]
+	\frametitle{IMU}
+	
+	\begin{itemize}
+		
+		\item Componente eletrÃ´nico onde estÃ£o montados os sensores. 
+		
+		\item TrÃªs acelerÃ´metros: aceleraÃ§Ã£o linear (x,y,z)
+		
+		\item TrÃªs giroscÃ³pios: velocidade angular ($\phi$,$\theta$,$\psi$)
+	
+	    \vspace{1cm}
+	
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.7\textwidth]{img/imuStrap.png}
+			\caption{Estrutura do Sistema de NavegaÃ§Ã£o acoplada ao veÃ­culo (esquerda) e os movimentos gerados no quadricÃ³ptero (direita). Fonte \cite{Adalberto2009}}
+			\label{fig:imuStrap}
+		\end{figure}
+		
+	\framebreak
+	
+		\begin{figure}
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.65\textwidth]{img/imu_VANTIME.png}
+			\caption{GrÃ¡fico das mediÃ§Ãµes dos sensores inerciais da IMU do VANT-IME. Fonte \cite{Paixao2011}}
+			\label{fig:imuVANTIME}
+		\end{figure}
+	
+	\end{itemize}
+\end{frame}	
+
+\subsection{Controle PID e quadricÃ³pteros}
+\begin{frame}[allowframebreaks]
+	
+	\frametitle{Controle PID}
+	\begin{itemize}
+	
+		\item MÃ©todo comum para controle de robÃ´s
+		
+		\item Controle fechado que reage a mudanÃ§as no ambiente captadas por sensores
+		
+		\item TrÃªs parÃ¢metros constantes: Proporcional (P), Integral (I) e Derivativo (D)
+		
+	\framebreak
+	
+		\item Proporcional (P)
+			\begin{itemize}
+				\item Ã‰ tipicamente o erro. 
+				\item FÃ³rmula: $A - B$, onde $A$ Ã© a posiÃ§Ã£o atual e $B$ Ã© onde deveria estar 	
+			\end{itemize}
+			
+		\item Integral (I)
 		\begin{itemize}
-		  \item Navegação autônoma em ambiente dinâmico
-		  \vspace{1cm}
-		  \item Reconhecimento de objetos / pessoas
-		  \vspace{1cm}
-		  \item Reconhecimento de voz
-		\end{itemize}
+			\item Ã‰ o acÃºmulo dos erros passados no tempo. 
+			\item FÃ³rmula: $A/t_1 + B/t_2 + C/t_3$, sendo $A$ o erro em $t_1$, $B$ em $t_2$ e $C$ em $t_3$ 	
+		\end{itemize}	
+		
+		\item Derivativo (D)
+		\begin{itemize}
+			\item Ã‰ a mudanÃ§a do erro no tempo. 
+			\item FÃ³rmula: $(A-B)/t$, sendo $A$ o erro inicial e $B$ o erro depois do tempo $t$ 	
+		\end{itemize}	
+		
+	\framebreak
+	
+		\item Cada parÃ¢metro tem seu ganho $K$ associado
+		
+		\vspace{2pt}
+		
+		\item Soma ponderada: $P*K_p + I*K_i + D*K_d$
+		
+		\vspace{1cm}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.4\textwidth]{img/ganho_PID.png}
+			\caption{Desempenho do sistema para diferentes ganhos $K_p$, $K_i$ e $K_d$. Fonte \cite{Kingdom}}
+			\label{fig:ganhoPID}
+		\end{figure}	
+	
+	\end{itemize}
+	
+\end{frame}	
+
+\begin{frame}[allowframebreaks]
+	
+	\frametitle{PID para quadricÃ³pteros}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio = true,
+		width=0.8\textwidth]{img/PID_quad_geral.png}
+		\caption{Controle PID de um quadricÃ³ptero. Fonte \cite{Liang}}
+		\label{fig:PIDquad}
+	\end{figure}
 	
 	\framebreak
-		\vspace{1cm}
-		\item \textbf{Robôs : Larc 2014}
-			\begin{figure}[!b]
-				\centering
-				\includegraphics[keepaspectratio = true,
-				width=0.5\textwidth]{figs/larc2014-robos-at-home.jpg}
-				\caption{Robôs LARC 2014}
-			\end{figure}
-
-	\framebreak
-		\vspace{1cm}
-		\item \textbf{Robôs : Robocup@home}
-			\begin{figure}[!b]
-				\centering
-				\includegraphics[keepaspectratio = true,
-				width=0.9\textwidth]{figs/Robosathomemunidial.jpg}
-				\caption{Robôs Robocup@home}
-			\end{figure}		
-			
-		\end{itemize}	
-\end{frame}
-% -------------------------------------------------%
-
-\section{Problema I: Object Recognition}
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{\insertsection}	
-	\begin{itemize}
-	  \vspace{1cm}
-	  \item \textbf{Localizar os objetos na arena}
-	  \vspace{1cm}
-	  \item \textbf{Navegar até os objetos}
-	  \vspace{1cm}
-	  \item \textbf{Reconhecer os objetos}
-	\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{Proposta de Título}	
-	\vspace{2cm}
-	\begin{block}{Titulo}
-		Localização e Navegação Autonomas de um Robô de Serviços Domésticos com
-	Base na Otimização da Assinatura Digital de Objetos
-	\end{block}
-
-\end{frame}
-
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{Objetivo}	
-	Com base na otimização da assinadura digital de objetos característicos,
-	identificar os cômodos (sala ou cozinha) para agilizar o processo de navegação e localização
-	dos objetos solicitados.
-\end{frame}
-%--------------------------------------------------%
-
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{Problema específico}
-	\textbf{Extrair a assinadura digital dos objetos característicos.}
-	\begin{itemize}
-	  \vspace{1cm}
-	  \item Utililizar Point Clouds (kinect) - PCL
-	  \vspace{1cm}
-	  \item ISS - Intrinsic Shape Signatures (\cite{ISS})
-	  \begin{itemize}
-	    \item Otimizar o vetor de características invariantes utilizando DE
-	    (Diferencial Evolution - \cite{priceDE})
-	   \end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{Problema específico}
-	\textbf{Extrair a assinadura digital dos objetos característicos.}
-	\begin{itemize}
-	  \vspace{1cm}
-	  \item Utililizar Point Clouds (kinect) - PCL
-	  \vspace{1cm}
-	  \item ISS - Intrinsic Shape Signatures (\cite{ISS})
-	  \begin{itemize}
-	    \item Otimizar o vetor de características invariantes utilizando DE
-	    (Diferencial Evolution - \cite{priceDE})
-	    \item Desenvolver o método ODS (Optimized Digital Signature)
-	   \end{itemize}
-	\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{ODS - Optimized Digital Signature}	
-	\begin{figure}[!b]
+	
+	\begin{figure}[h]
 		\centering
 		\includegraphics[keepaspectratio = true,
-		width=0.5\textwidth]{figs/Fluxograma_Geral.png}
-		\caption{Visão Geral em relação ao SLAM (Vidal)}
-	\end{figure}	
-\end{frame}
+		width=0.7\textwidth]{img/PID_quad_axis.png}
+		\caption{Controle PID por eixo. Fonte \cite{Liang}}
+		\label{fig:PIDaxis}
+	\end{figure}
+	
+	
+\end{frame}	
 
+
+\section{O Problema: SeguranÃ§a em voo para quadricÃ³ptero}
 \begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{ODS - Optimized Digital Signature}	
-	\begin{figure}[!b]
-		\centering
-		\includegraphics[keepaspectratio = true,
-		width=0.7\textwidth]{figs/Fluxograma_Aplicacao.png}
-		\caption{Contribuição em relação ao SLAM (Vidal)}
-	\end{figure}	
+	\frametitle{O Problema: SeguranÃ§a em voo para quadricÃ³ptero}
+	
+	\begin{itemize}
+		
+		\item AuxÃ­liar o controle da plataforma com base na dinÃ¢mica, estado  atual, controle corrente e distÃ¢ncia para obstÃ¡culos
+		
+		\item Definir uma pequena variaÃ§Ã£o de controle $\Delta\mathbf{u} \in \mathcal{U}$ para evitar colisÃ£o. Onde $\mathcal{U} \subset \mathbb{R}^{n}$ o espaÃ§o do \textit{input} de controle
+		
+		\begin{equation}
+		\begin{aligned}
+		\text{min: }& \Delta\mathbf{u} \\
+		\text{Sujeito a: }& \forall t \in [0,\tau], \mathcal{R}(\mathbf{g}(\mathbf{x}, \mathbf{u}+\Delta\mathbf{u}, t)) \cap \mathcal{O} = \emptyset
+		\end{aligned}
+		\label{eq:equacaoProb}
+		\end{equation}
+		
+	\end{itemize}	 
 \end{frame}
 
 
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{Cronograma}	
-\begin{tiny}
-\begin{table}[!htb]
-   \centering   % tabela centralizada
-    \caption{Cronograma de atividades }
-\begin{tabular}{|l|l|l|l|l|l|l|l|}
-	%\hline \rowcolor{cl-cabecalho} \rowfont{\color{white}}
-	\hline \rowcolor{cl-cabecalho}
-	 \textbf{Atividade} & 
-	\textbf{Dez/2014} & \textbf{2015/1} & \textbf{2015/2} & \textbf{2015/3} &
-	\textbf{2016/1} & \textbf{2016/2} & \textbf{2016/3} \\
-
-	\hline \rowcolor{cl-impar}
-	Revisão Bibliográfica  &\cellcolor{cl-realizado} &\cellcolor{cl-programado}
-	&\cellcolor{cl-programado} &\cellcolor{cl-programado} &
-	\cellcolor{cl-programado} & \cellcolor{cl-programado}  &
-	\cellcolor{cl-programado} \\
-
-	\hline \rowcolor{cl-par}
-	Instalação Aprendizagem do ROS & \cellcolor{cl-realizado} &
-	\cellcolor{cl-programado} & \cellcolor{cl-programado}  & \cellcolor{cl-programado}&
-	\cellcolor{cl-programado} & \cellcolor{cl-programado} &
-	\cellcolor{cl-programado}	\\
-
-	\hline \rowcolor{cl-impar}
-	Kinect + PCL + ROS & \cellcolor{cl-programado} & \cellcolor{cl-programado} &
-	\cellcolor{cl-programado} & & & &
-	\\
-	\hline \rowcolor{cl-par}
-	Montagem do Robô & & \cellcolor{cl-programado} &
-	\cellcolor{cl-programado} & & & &
-	\\
-
-	\hline \rowcolor{cl-impar}
-	ROS - Implantação do SLAM & & \cellcolor{cl-programado} &
-	\cellcolor{cl-programado} & & & &
-	\\
-
-	\hline \rowcolor{cl-par}
-	Extração Assinatura Digital & & \cellcolor{cl-programado} &
-	\cellcolor{cl-programado} & & & &
-	\\
-
-	\hline \rowcolor{cl-impar}
-	Otimização (Evolução Diferencial) & & \cellcolor{cl-programado} &
-	\cellcolor{cl-programado} & & & &
-	\\
-
-
-	\hline \rowcolor{cl-par}
-	ROS - Implantação nó ODS & & & \cellcolor{cl-programado} &
-	\cellcolor{cl-programado}& \cellcolor{cl-programado}& &
-	\\
-
-	\hline \rowcolor{cl-impar}
-	Navegação e Localização por Wayp & & & \cellcolor{cl-programado} &
-	\cellcolor{cl-programado}& \cellcolor{cl-programado}& &
-	\\
-
-	\hline \rowcolor{cl-par}
-	Artigos - Periódicos &  &  & \cellcolor{cl-programado}  &\cellcolor{cl-programado} 
-	& \cellcolor{cl-programado} & \cellcolor{cl-programado} & \cellcolor{cl-programado}   \\
-
-
-	\hline \rowcolor{cl-impar}
-	Redação da Tese & &  & &  &
-	\cellcolor{cl-programado} & \cellcolor{cl-programado} &
-	\cellcolor{cl-programado}\\
-
-	\hline \rowcolor{cl-par}
-	Testes e Correções &  & \cellcolor{cl-programado} & \cellcolor{cl-programado}  &
-	\cellcolor{cl-programado} & \cellcolor{cl-programado} & \cellcolor{cl-programado} & \cellcolor{cl-programado} \\
-
-	\hline \rowcolor{cl-impar}
-	Defesa &  &  & &  &  & & \cellcolor{cl-programado} \\
-
-	\hline
-\end{tabular}
-\end{table}	
-\end{tiny}
-\end{frame}
-
-\section{Viabilidade}
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{\insertsection}
-	  \begin{itemize}
-	    \vspace{2cm}
-	    \item 1 Pioneer 3DS
-	    \item 1 kinect 
-	    \item (Laser / ultrason) 
-	    \item Softwares Open Source
-	    \begin{itemize}
-	      \item - ROS: Robotic Operanting System
-	      \item - PCL: Point Cloud Library
-	     \end{itemize}
-	  \end{itemize}
-\end{frame}
 % -------------------------------------------------%
 % -------------------------------------------------%
-\section{Referências}
+\section{ReferÃªncias}
 %\setbeamertemplate{bibliography item}[text]
 \begin{frame}[allowframebreaks]{Bibliography}
 	\frametitle{\insertsection}
   	\pgfdeclareimage[width=1.0cm]{logo}{figs/branco.png}
-	\bibliographystyle{decsci}
+	\bibliographystyle{abbrv}
 	\begin{small}
-		\bibliography{referencias}
+		\bibliography{Dissertacao}
 	\end{small}
 \end{frame}
 
-\section{Problema II: Folow me}
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{\insertsection}	
-	\begin{itemize}
-	  \vspace{1cm}
-	  \item \textbf{Reconhecimento de um operador (humado)}
-	  \vspace{1cm}
-	  \item \textbf{Traking do operador}
-
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{Proposta de Título : Problema II}	
-	\vspace{2cm}
-	\begin{block}{Titulo}
-		Navegação pervasiva autonoma de um robô de serviços domésticos em um cenário
-		desestruturado considerando a presença de humanos
-	\end{block}
-
-\end{frame}
-
-
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{Objetivo}	
-	\vspace{2cm}
-	Realizar um planejamento de movimentação baseado na interação humano-robô
-	em um ambiente desestruturado de uma casa, com base em técnicas de detecção de
-	humanos e predição de sua `` intenção'' de movimentação.
-\end{frame}
-%--------------------------------------------------%
-
-\begin{frame}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-	\frametitle{Problema específico}
-	\textbf{Mapear situações de movimentação.}
-	\begin{itemize}
-	  \vspace{1cm}
-	  \item Pedestres cruzando o caminho do robô
-	  \vspace{1cm}
-	  \item Pedestre caminhando em direção ao robô (sentidos inversos)
-      \vspace{1cm}
-	  \item Pedestre caminhando na mesma direção que o robô (mesmo sentido)
-	\end{itemize}
-\end{frame}
 
 % -------------------------------------------------%
 \begin{frame}[b]
@@ -452,7 +399,6 @@ Paulo F.F. Rosa^1\\
 %	\includegraphics[height=0.95cm,keepaspectratio]{figs/logo_capes.pdf}\hfill
 %	\includegraphics[height=0.95cm,keepaspectratio]{figs/logo_cnpq.jpg}	
 \end{frame}
-
 
 
 

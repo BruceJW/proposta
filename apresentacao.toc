@@ -1,7 +1,10 @@
 \beamer@endinputifotherversion {3.33pt}
 \select@language {brazil}
-\beamer@sectionintoc {1}{Introdu\c c\~ao}{3}{0}{1}
-\beamer@sectionintoc {2}{Problema I: Object Recognition}{8}{0}{2}
-\beamer@sectionintoc {3}{Viabilidade}{16}{0}{3}
-\beamer@sectionintoc {4}{Refer\^encias}{17}{0}{4}
-\beamer@sectionintoc {5}{Problema II: Folow me}{18}{0}{5}
+\beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Objetivo}{6}{0}{1}
+\beamer@sectionintoc {2}{T\IeC {\'o}picos tutorias}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{O quadric\IeC {\'o}ptero}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Sistemas embarcados para navega\IeC {\c c}\IeC {\~a}o}{10}{0}{2}
+\beamer@subsectionintoc {2}{3}{Controle PID e quadric\IeC {\'o}pteros}{13}{0}{2}
+\beamer@sectionintoc {3}{O Problema: Seguran\IeC {\c c}a em voo para quadric\IeC {\'o}ptero}{18}{0}{3}
+\beamer@sectionintoc {4}{Refer\IeC {\^e}ncias}{19}{0}{4}

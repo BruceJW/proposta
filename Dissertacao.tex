@@ -115,7 +115,7 @@ A continuidade desta proposta está estruturada como segue. Inicialmente é disc
 
 Nos últimos anos, veículos aéreos não tripulados receberam uma maior atenção da comunidade de robótica. Muitos autores focaram na modelagem e no controle destes veículos \cite{Ye2006},  com especial destaque para os quadricópteros \cite{Altug2002}. Nesse contexto, estudos abrangentes sobre a configuração da plataforma, metodologias de modelagem, modelagem compreensiva não linear, os efeitos aerodinâmicos, identificação e simulação de um quadricóptero foram realizados \cite{Zhang2014} \cite{Gibiansky2010}. Por ser considerado um sistema complexo não linear, técnicas para controle de quadricópteros são também amplamente estudadas. \cite{Salih2010} desenvolveu um controle PID para um quadricóptero para obter estabilidade em voo. Por outro lado, \cite{Nicol2008}, propôs uma rede neural adaptativa para estabilizar o quadricóptero levando em consideração erros de modelagem e distúrbios do vento.
 
-A partir de um modelo conhecido, diversas são as aplicações em estudo. Para a maioria, como navegação autônoma, tarefas multiagentes e desvio de obstáculos, a estimação do estado do veículo é considerado um grande desafio \cite{Achtelik2009}. Quando se trata de ambientes \textit{indoors}, a visão computacional, que utiliza-se de câmeras e processamento de imagem para estimação, é uma das linhas de pesquisa sobre o problema \cite{Shen2013} \cite{Blosch2010} \cite{Shen2013a}. Outra linha utiliza-se de sensores estereoceptivos para tal tarefa, como ultra-som \cite{Roberts2007} e laser \cite{Grzonka2012}. Já para ambientes \textit{outdoors}, torna-se possível a utilização do Sistema de Posicionamento Global (GPS) e alguns trabalhos que utilizam essa tecnologia foram desenvolvidos, como  \cite{Hoffmann2004} e \cite{Wendel2006}.
+A partir de um modelo conhecido, diversas são as aplicações em estudo. Para a maioria, como navegação autônoma, tarefas multiagentes e desvio de obstáculos, a estimação do estado do veículo é considerado um grande desafio \cite{Achtelik2009}. Quando se trata de ambientes \textit{indoors}, a visão computacional, que utiliza-se de câmeras e processamento de imagem para estimação, é uma das linhas de pesquisa sobre o problema \cite{Shen2013} \cite{Blosch2010} \cite{Shen2013a}. Outra linha utiliza-se de sensores estereoceptivos para tal tarefa, como ultrassom \cite{Roberts2007} e laser \cite{Grzonka2012}. Já para ambientes \textit{outdoors}, torna-se possível a utilização do Sistema de Posicionamento Global (GPS) e alguns trabalhos que utilizam essa tecnologia foram desenvolvidos, como  \cite{Hoffmann2004} e \cite{Wendel2006}.
 
 %A plataforma Parrot Ar.Drone, 
 
@@ -150,7 +150,7 @@ O objetivo da dinâmica de voo é manter a estabilidade do eixo central do quadr
 
 O quadricóptero é um sistema não linear, fortemente acoplado com seis graus de liberdade, onde três são movimentos lineares (x,y,z) e os outros três angulares ($\phi$,$\theta$,$\psi$). Porém, possui apenas quatro atuadores, sendo considerado então um sistema \textit{underactuated}, com dois movimentos lineares (x,y) dependentes dos movimentos angulares ($\phi$,$\theta$). As forças e momentos atuando no quadricóptero são produzidos pelas hélices ligadas aos rotores. Dois rotores rodam no sentido horário e dois no sentido anti-horário dispostos de forma à balancear o torque total do sistema \cite{Mian2008}. A Figura \ref{fig:diag quad}a mostra a disposição dos motores e suas orientações de funcionamento. Já a Figura \ref{fig:diag quad}b  mostra o diagrama do corpo e os eixos do quadricóptero.
 
-Na Figura \ref{fig:diag quad}b, \textit{l} representa a distância entre cada rotor e o centro, $\phi$, $\theta$ e $\psi$ representam os ângulos de Euler em relação aos eixos x, y e z, chamados de rolagem, afagem e guinada, respectivamente. $T_i$ (i = 1, 2, 3, 4) é a força de empuxo produzida por cada hélice e cada seta circular ao redor de $T_i$ indica o sentido de rotação daquele rotor. O referencial inercial é denotado por E(X,Y,Z) e o referencial do corpo do quadricóptero é denotado por B(x,y,z). 
+Na Figura \ref{fig:diag quad}b, \textit{l} representa a distância entre cada rotor e o centro, $\phi$, $\theta$ e $\psi$ representam os ângulos de Euler em relação aos eixos x, y e z, chamados de rolagem, afagem e guinada, respectivamente. $T_i$ (i = 1, 2, 3, 4) é a força de empuxo produzida por cada hélice e cada seta circular ao redor de $T_i$ indica o sentido de rotação daquele rotor. O referencial inercial é denotado por $E(X,Y,Z)$ e o referencial do corpo do quadricóptero é denotado por $B(x,y,z)$. 
 
 \begin{figure}[h]
 	\centering
@@ -159,7 +159,7 @@ Na Figura \ref{fig:diag quad}b, \textit{l} representa a distância entre cada ro
 	\label{fig:diag quad}
 \end{figure}
 
-A Figura \ref{fig:diag quad}c ilustra os movimentos gerados a partir das variações das velocidades dos motores. O aumento ou a diminuição da velocidade dos quatro rotores na mesma proporção irá gerar um movimento vertical (movimentos $a$ e $b$). Quando os motores do par (1,3) operam independentemente e o par (2, 4) mantém a mesma velocidade, o ângulo de inclinação do par (1,3), em relação ao eixo $y$ (afagem), poderá ser controlado e, indiretamente, executará um movimento ao longo do eixo $x$ (movimentos $c$ e $d$). Da mesma forma, a operação independente do par de motores (2,4), enquanto (1,3) com velocidade constante, poderá controlar o ângulo de rolagem em relação ao eixo $x$ e um controle indireto do movimento ao longo do eixo $y$ também será realizado (movimentos $e$ e $f$). E, por fim, se ambos os pares possuírem velocidades diferentes, o ângulo de guinada, em relação ao eixo $z$, poderá ser controlado (movimentos $g$ e $h$). Dessa forma, o quadricóptero apresenta seis graus de liberdade e pode ser mover com agilidade em $\mathbb{R}^3$. 
+A Figura \ref{fig:diag quad}c ilustra os movimentos gerados a partir das variações das velocidades dos motores. O aumento ou a diminuição da velocidade dos quatro rotores na mesma proporção irá gerar um movimento vertical (movimentos $a$ e $b$). Quando os motores do par (1,3) operam independentemente e o par (2,4) mantém a mesma velocidade, o ângulo de inclinação do par (1,3), em relação ao eixo $y$ (afagem), poderá ser controlado e, indiretamente, executará um movimento ao longo do eixo $x$ (movimentos $c$ e $d$). Da mesma forma, a operação independente do par de motores (2,4), enquanto (1,3) com velocidade constante, poderá controlar o ângulo de rolagem em relação ao eixo $x$ e um controle indireto do movimento ao longo do eixo $y$ também será realizado (movimentos $e$ e $f$). E, por fim, se ambos os pares possuírem velocidades diferentes, o ângulo de guinada, em relação ao eixo $z$, poderá ser controlado (movimentos $g$ e $h$). Dessa forma, o quadricóptero apresenta seis graus de liberdade e pode ser mover com agilidade em $\mathbb{R}^3$. 
 
 \subsection{Sistemas Embarcados de Navegação}
 
@@ -195,7 +195,7 @@ Giroscópios fornecem a medida da velocidade angular. Este dado é utilizado par
 
 \label{subsec:PID}
 
-Um controle PID é um método comum para controlar robôs e a sua utilidade está na aplicabilidade geral na maioria dos sistemas de controle, principalmente quando o modelo matemático de planta é complexo e não conhecido \cite{Ogata2003}. É um sistema de controle fechado que reage a mudanças no ambiente, que são captadas por sensores, e se baseia na constante sintonia das entradas para obter a saída esperada \cite{Kingdom}.  
+Um controle PID é um método comum para controlar robôs e a sua utilidade está na aplicabilidade geral na maioria dos sistemas de controle, principalmente quando o modelo matemático de planta é complexo e não conhecido \cite{Ogata2003}. É um sistema de controle fechado que reage à mudanças no ambiente, que são captadas por sensores, e se baseia na constante sintonia das entradas para obter a saída esperada \cite{Kingdom}.  
 
 O algoritmo de cálculo do controle PID envolve três parâmetros constantes: o valor proporcional (P), o valor integral (I) e o valor derivativo (D) e serão descritos a seguir:
 
@@ -203,12 +203,12 @@ O algoritmo de cálculo do controle PID envolve três parâmetros constantes: o 
 \item
 Valor proporcional - É tipicamente o erro. Ele é usualmente a distância que o robô deve viajar, ou a temperatura que se queira alcançar. Se o robô está na posição A, mas quer estar na posição B, então o valor proporcional P é $A - B$.
 \item
-Valor integral - É o acúmulo dos erros passados no tempo (t). Por exemplo, se o robô está continuamente fora da média por uma certa quantidade de tempo, o valor I irá tratar isso. Supondo que em $t_1$ o erro era A, em $t_2$ o erro era B e em $t_3$ o erro era C. o valor integral I seria $A/t_1 + B/t_2 + C/t_3$.
+Valor integral - É o acúmulo dos erros passados no tempo $t$. Por exemplo, se o robô está continuamente fora da média por uma certa quantidade de tempo, o valor $I$ irá tratar isso. Supondo que em $t_1$ o erro era $A$, em $t_2$ o erro era $B$ e em $t_3$ o erro era $C$. o valor integral I seria $A/t_1 + B/t_2 + C/t_3$.
 \item
-Valor derivativo - É a mudança do erro no tempo (t). Por exemplo, se o erro era C e, depois do tempo t, passou a ser D, o valor derivativo D é $(C-D)/t$. Normalmente, o contador de tempo da microcontroladora é utilizado para medir esse tempo. Além disso, D é utilizado para predizer mudanças futuras baseando-se na taxa de mudança atual.
+Valor derivativo - É a mudança do erro no tempo $t$. Por exemplo, se o erro era $A$ e, depois do tempo $t$, passou a ser $B$, o valor derivativo $D$ é $(A-B)/t$. Normalmente, o contador de tempo da microcontroladora é utilizado para medir esse tempo. Além disso, $D$ é utilizado para predizer mudanças futuras baseando-se na taxa de mudança atual.
 \end{itemize}
 
-A soma ponderada desses três termos é usada para ajustar o processo através de um elemento de controle, como uma válvula ou como o controle da quantidade de energia aplicada ao sistema. O peso é atribuído através de uma constante K denominada ganho e tem o papel de ajustar os valores P, I e D. Ou seja, cada termo P, I e D possui o seu ganho associado e a equação básica de controle é dada pela fórmula \ref{eq:equacaoPID}. 
+A soma ponderada desses três termos é usada para ajustar o processo através de um elemento de controle, como uma válvula ou como o controle da quantidade de energia aplicada ao sistema. O peso é atribuído através de uma constante $K$ denominada ganho e tem o papel de ajustar os valores $P$, $I$ e $D$. Ou seja, cada termo $P$, $I$ e $D$ possui o seu ganho associado e a equação básica de controle é dada pela fórmula \ref{eq:equacaoPID}. 
 
 \begin{equation}
 	\centering
@@ -270,7 +270,7 @@ O problema a ser tratado consiste em evitar que o quadricóptero se choque, dura
 
 \noindent\textbf{Formulação do Problema}
 
-Considerando um quadricóptero como um robô com uma dinâmica não linear genérica em um espaço arbitrário, $\mathcal{X} \subset R^{n}$ sendo seu espaço de estados e $\mathcal{U} \subset R^{n}$ o espaço do \textit{input} de controle. Em tempo contínuo, a dinâmica do robô é uma função em $\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$ e é dada pela relação \ref{eq:equacaoDinProb}:
+Considerando um quadricóptero como um robô com uma dinâmica não linear genérica em um espaço arbitrário, $\mathcal{X} \subset R^{n}$ sendo seu espaço de estados e $\mathcal{U} \subset \mathbb{R}^{n}$ o espaço do \textit{input} de controle. Em tempo contínuo, a dinâmica do robô é uma função em $\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$ e é dada pela relação \ref{eq:equacaoDinProb}:
 
 \begin{equation}
 \centering
@@ -385,7 +385,7 @@ Em seguida, as etapas e uma breve descrição dos passos necessários para galg�
 
 Para realização deste trabalho, é necessária a utilização de uma plataforma de voo (quadricóptero) que aceite \textit{input} de controle gerado por computador, através de uma interface de comunicação, e que possua SDK de código aberto para facilitar o desenvolvimento de algoritmos para seu controle.
 
-Embarcado na plataforma, além dos sensores ultrassônicos, será necessário um minicomputador. Ele será responsável por colher e filtrar os dados dos sensores ultrassônicos, rodar o algoritmo para detecção de obstáculos, obter os comandos de controle, identificar possíveis colisões e enviar comando para o controle de atitude. Para isso, será utilizado o \textit{computer on module} Raspberry PI. 
+Embarcado na plataforma, além dos sensores ultrassônicos, será necessário um \textit{computer on module}. Ele será responsável por colher e filtrar os dados dos sensores ultrassônicos, rodar o algoritmo para detecção de obstáculos, obter os comandos de controle, identificar possíveis colisões e enviar comando para o controle de atitude. Para isso, será utilizado o \textit{computer on module} Raspberry PI. 
 
 \subsection{Software necessário}
 
