@@ -8,57 +8,106 @@
 \headcommand {\beamer@subsectionpages {1}{2}}
 \headcommand {\slideentry {1}{0}{3}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\slideentry {1}{0}{3}{3/4}{}{0}}
-\headcommand {\beamer@framepages {3}{4}}
-\headcommand {\slideentry {1}{0}{3}{3/5}{}{0}}
-\headcommand {\beamer@framepages {3}{5}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{6}{Objetivo}}\headcommand {\beamer@subsectionpages {3}{5}}
-\headcommand {\slideentry {1}{1}{1}{6/6}{Objetivo}{0}}
-\headcommand {\beamer@framepages {6}{6}}
-\headcommand {\sectionentry {2}{T\IeC {\'o}picos tutorias}{7}{T\IeC {\'o}picos tutorias}{0}}
-\headcommand {\beamer@sectionpages {3}{6}}
-\headcommand {\beamer@subsectionpages {6}{6}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{7}{O quadric\IeC {\'o}ptero}}\headcommand {\beamer@subsectionpages {7}{6}}
-\headcommand {\slideentry {2}{1}{1}{7/7}{O quadric\IeC {\'o}ptero}{0}}
+\headcommand {\slideentry {1}{0}{4}{4/4}{}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {1}{0}{4}{4/5}{}{0}}
+\headcommand {\beamer@framepages {4}{5}}
+\headcommand {\slideentry {1}{0}{4}{4/6}{}{0}}
+\headcommand {\beamer@framepages {4}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{7}{Objetivo}}\headcommand {\beamer@subsectionpages {3}{6}}
+\headcommand {\slideentry {1}{1}{1}{7/7}{Objetivo}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {2}{1}{2}{8/8}{O quadric\IeC {\'o}ptero}{0}}
+\headcommand {\sectionentry {2}{T\IeC {\'o}picos tutorias}{8}{T\IeC {\'o}picos tutorias}{0}}
+\headcommand {\beamer@sectionpages {3}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\slideentry {2}{0}{2}{8/8}{}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {2}{1}{2}{8/9}{O quadric\IeC {\'o}ptero}{0}}
-\headcommand {\beamer@framepages {8}{9}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{10}{Sistemas embarcados para navega\IeC {\c c}\IeC {\~a}o}}\headcommand {\beamer@subsectionpages {7}{9}}
-\headcommand {\slideentry {2}{2}{1}{10/10}{Sistemas embarcados para navega\IeC {\c c}\IeC {\~a}o}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{9}{O quadric\IeC {\'o}ptero}}\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\slideentry {2}{1}{1}{9/9}{O quadric\IeC {\'o}ptero}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {2}{1}{2}{10/10}{O quadric\IeC {\'o}ptero}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {2}{2}{2}{11/11}{Sistemas embarcados para navega\IeC {\c c}\IeC {\~a}o}{0}}
-\headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {2}{2}{2}{11/12}{Sistemas embarcados para navega\IeC {\c c}\IeC {\~a}o}{0}}
-\headcommand {\beamer@framepages {11}{12}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{13}{Controle PID e quadric\IeC {\'o}pteros}}\headcommand {\beamer@subsectionpages {10}{12}}
-\headcommand {\slideentry {2}{3}{1}{13/13}{Controle PID e quadric\IeC {\'o}pteros}{0}}
+\headcommand {\slideentry {2}{1}{2}{10/11}{O quadric\IeC {\'o}ptero}{0}}
+\headcommand {\beamer@framepages {10}{11}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{12}{Sistemas embarcados para navega\IeC {\c c}\IeC {\~a}o}}\headcommand {\beamer@subsectionpages {9}{11}}
+\headcommand {\slideentry {2}{2}{1}{12/12}{Sistemas embarcados para navega\IeC {\c c}\IeC {\~a}o}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {2}{2}{2}{13/13}{Sistemas embarcados para navega\IeC {\c c}\IeC {\~a}o}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {2}{3}{1}{13/14}{Controle PID e quadric\IeC {\'o}pteros}{0}}
+\headcommand {\slideentry {2}{2}{2}{13/14}{Sistemas embarcados para navega\IeC {\c c}\IeC {\~a}o}{0}}
 \headcommand {\beamer@framepages {13}{14}}
-\headcommand {\slideentry {2}{3}{1}{13/15}{Controle PID e quadric\IeC {\'o}pteros}{0}}
-\headcommand {\beamer@framepages {13}{15}}
-\headcommand {\slideentry {2}{3}{2}{16/16}{Controle PID e quadric\IeC {\'o}pteros}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {2}{3}{2}{16/17}{Controle PID e quadric\IeC {\'o}pteros}{0}}
-\headcommand {\beamer@framepages {16}{17}}
-\headcommand {\sectionentry {3}{O Problema: Seguran\IeC {\c c}a em voo para quadric\IeC {\'o}ptero}{18}{O Problema: Seguran\IeC {\c c}a em voo para quadric\IeC {\'o}ptero}{0}}
-\headcommand {\beamer@sectionpages {7}{17}}
-\headcommand {\beamer@subsectionpages {13}{17}}
-\headcommand {\slideentry {3}{0}{3}{18/18}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{15}{Controle PID e quadric\IeC {\'o}pteros}}\headcommand {\beamer@subsectionpages {12}{14}}
+\headcommand {\slideentry {2}{3}{1}{15/15}{Controle PID e quadric\IeC {\'o}pteros}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {2}{3}{1}{15/16}{Controle PID e quadric\IeC {\'o}pteros}{0}}
+\headcommand {\beamer@framepages {15}{16}}
+\headcommand {\slideentry {2}{3}{1}{15/17}{Controle PID e quadric\IeC {\'o}pteros}{0}}
+\headcommand {\beamer@framepages {15}{17}}
+\headcommand {\slideentry {2}{3}{2}{18/18}{Controle PID e quadric\IeC {\'o}pteros}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\sectionentry {4}{Refer\IeC {\^e}ncias}{19}{Refer\IeC {\^e}ncias}{0}}
-\headcommand {\beamer@sectionpages {18}{18}}
-\headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\slideentry {4}{0}{4}{19/19}{}{0}}
-\headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {4}{0}{4}{19/20}{}{0}}
-\headcommand {\beamer@framepages {19}{20}}
-\headcommand {\slideentry {4}{0}{5}{21/21}{}{0}}
+\headcommand {\slideentry {2}{3}{2}{18/19}{Controle PID e quadric\IeC {\'o}pteros}{0}}
+\headcommand {\beamer@framepages {18}{19}}
+\headcommand {\sectionentry {3}{O Problema: Seguran\IeC {\c c}a em voo para quadric\IeC {\'o}ptero}{20}{O Problema: Seguran\IeC {\c c}a em voo para quadric\IeC {\'o}ptero}{0}}
+\headcommand {\beamer@sectionpages {8}{19}}
+\headcommand {\beamer@subsectionpages {15}{19}}
+\headcommand {\slideentry {3}{0}{3}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {3}{0}{4}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@partpages {1}{21}}
-\headcommand {\beamer@subsectionpages {19}{21}}
-\headcommand {\beamer@sectionpages {19}{21}}
-\headcommand {\beamer@documentpages {21}}
-\headcommand {\def \inserttotalframenumber {21}}
+\headcommand {\slideentry {3}{0}{4}{21/22}{}{0}}
+\headcommand {\beamer@framepages {21}{22}}
+\headcommand {\sectionentry {4}{Metodologia}{23}{Metodologia}{0}}
+\headcommand {\beamer@sectionpages {20}{22}}
+\headcommand {\beamer@subsectionpages {20}{22}}
+\headcommand {\slideentry {4}{0}{5}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {4}{0}{6}{24/24}{}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {4}{0}{6}{24/25}{}{0}}
+\headcommand {\beamer@framepages {24}{25}}
+\headcommand {\slideentry {4}{0}{6}{24/26}{}{0}}
+\headcommand {\beamer@framepages {24}{26}}
+\headcommand {\sectionentry {5}{Cronograma}{27}{Cronograma}{0}}
+\headcommand {\beamer@sectionpages {23}{26}}
+\headcommand {\beamer@subsectionpages {23}{26}}
+\headcommand {\slideentry {5}{0}{7}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\slideentry {5}{0}{8}{28/28}{}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\sectionentry {6}{Viabilidade da proposta}{29}{Viabilidade da proposta}{0}}
+\headcommand {\beamer@sectionpages {27}{28}}
+\headcommand {\beamer@subsectionpages {27}{28}}
+\headcommand {\slideentry {6}{0}{9}{29/29}{}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {6}{0}{10}{30/30}{}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\sectionentry {7}{Resultados esperados}{31}{Resultados esperados}{0}}
+\headcommand {\beamer@sectionpages {29}{30}}
+\headcommand {\beamer@subsectionpages {29}{30}}
+\headcommand {\slideentry {7}{0}{11}{31/31}{}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {7}{0}{12}{32/32}{}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\sectionentry {8}{Conclus\IeC {\~a}o}{33}{Conclus\IeC {\~a}o}{0}}
+\headcommand {\beamer@sectionpages {31}{32}}
+\headcommand {\beamer@subsectionpages {31}{32}}
+\headcommand {\slideentry {8}{0}{13}{33/33}{}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\slideentry {8}{0}{14}{34/34}{}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\sectionentry {9}{Refer\IeC {\^e}ncias}{35}{Refer\IeC {\^e}ncias}{0}}
+\headcommand {\beamer@sectionpages {33}{34}}
+\headcommand {\beamer@subsectionpages {33}{34}}
+\headcommand {\slideentry {9}{0}{15}{35/35}{}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {9}{0}{16}{36/36}{}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {9}{0}{16}{36/37}{}{0}}
+\headcommand {\beamer@framepages {36}{37}}
+\headcommand {\slideentry {9}{0}{17}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@partpages {1}{38}}
+\headcommand {\beamer@subsectionpages {35}{38}}
+\headcommand {\beamer@sectionpages {35}{38}}
+\headcommand {\beamer@documentpages {38}}
+\headcommand {\def \inserttotalframenumber {38}}

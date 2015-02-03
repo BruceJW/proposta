@@ -1,12 +1,18 @@
-\beamer@slide {introducao}{3}
-\beamer@slide {fig:obr2013}{3}
-\beamer@slide {fig:obr2013}{3}
-\beamer@slide {objetivo}{6}
-\beamer@slide {fig:quad}{7}
-\beamer@slide {fig:diag quad}{8}
-\beamer@slide {fig:imuStrap}{11}
-\beamer@slide {fig:imuVANTIME}{11}
-\beamer@slide {fig:ganhoPID}{13}
-\beamer@slide {fig:PIDquad}{16}
-\beamer@slide {fig:PIDaxis}{16}
-\beamer@slide {eq:equacaoProb}{18}
+\beamer@slide {fig:obr2013}{4}
+\beamer@slide {fig:obr2013}{4}
+\beamer@slide {fig:quad}{9}
+\beamer@slide {fig:diag quad}{10}
+\beamer@slide {fig:imuStrap}{13}
+\beamer@slide {fig:imuVANTIME}{13}
+\beamer@slide {fig:ganhoPID}{15}
+\beamer@slide {fig:PIDquad}{18}
+\beamer@slide {fig:PIDaxis}{18}
+\beamer@slide {eq:equacaoDinProb}{21}
+\beamer@slide {eq:equacaoPosProb}{21}
+\beamer@slide {eq:equacaoProb}{21}
+\beamer@slide {fig:etapasMetodo}{24}
+\beamer@slide {fig:Fluxo}{24}
+\beamer@slide {fig:cronograma}{28}
+\beamer@slide {fig:missao1}{32}
+\beamer@slide {fig:missao2}{32}
+\beamer@slide {fig:missao3}{32}

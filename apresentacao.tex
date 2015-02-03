@@ -28,10 +28,10 @@
 %\newcommand{\newblock}{}
 %\usepackage[portugues,algoruled,longend]{algorithm2e}  
 %-----   Themes ------%
- \usetheme{Madrid}
+% \usetheme{Madrid}
 % \usetheme{Warsaw}
 % \usetheme{Boadilla}
-% \usetheme{CambridgeUS}
+ \usetheme{CambridgeUS}
 % \usetheme{Montpellier}
 % \usetheme{Hannover}
 % \usetheme{Dresden}
@@ -40,7 +40,7 @@
 \definecolor{cor}{rgb}{0.0,0.0,0.5}  
 %\definecolor{verde}{rgb}{0.55,0.78,0.25} 
 % ------------------------------------------------------------------ %
-% Deixando o tema mais verde. Comente a linha abaixo se n�o gostar %
+% Deixando o tema mais verde. Comente a linha abaixo se nao gostar %
 \setbeamercolor{structure}{fg=cor}
 % ------------------------------------------------------------------ %
 % Deixando o verde mais claro para combinar com o logo do IFET
@@ -74,13 +74,6 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 }
 
 
-% ----- Logo IFSC --------% 
-%\pgftranslateto{\pgfpoint{0cm}{3cm}}
-%\pgfdeclareimage[width=1.0cm]{logo}{figs/lab-logo.png}
-%\logo{\pgfuseimage{logo}}
-
-
-
 \date{\today}
 
 \begin{document}
@@ -98,18 +91,24 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 \end{frame}
 % -------------------------------------------------%
 \section{Introdução}
-\label{introducao}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+
 \begin{frame}[allowframebreaks]
  	\pgfdeclareimage[width=1.0cm]{logo}{img/ime.png}
 	\frametitle{\insertsection}
 	\begin{itemize}
-	    \item \textbf{Crescente utilização para missões civis e militares}
+	    \item Crescente utilização para missões civis e militares
 	     \vspace{1cm}
-	    \item \textbf{Voos em ambientes fechados e restritos}
+	    \item Voos em ambientes fechados e restritos
 	     \vspace{1cm}
-	    \item \textbf{Risco de colisão com equipamentos críticos e sensíveis}
+	    \item Risco de colisão com equipamentos críticos e sensíveis
 	    \vspace{1cm}
-	    \item \textbf{Difícil controle e manuseio}
+	    \item Difícil controle e manuseio
 	    
 	    
 	\framebreak
@@ -137,8 +136,8 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	\end{itemize}	
 \end{frame}
 
-\subsection{Objetivo}
-\label{objetivo}
+\subsection*{Objetivo}
+
 \begin{frame}
 	\frametitle{Objetivo}	
 	
@@ -156,7 +155,12 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 
 \section{Tópicos tutorias}
 
-\subsection{O quadricóptero}
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\subsection*{O quadricóptero}
 \begin{frame}
   	
 	\frametitle{O quadricóptero - A Plataforma}
@@ -203,7 +207,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	
 \end{frame}	 
 
-\subsection{Sistemas embarcados para navegação}
+\subsection*{Sistemas embarcados para navegação}
 \begin{frame}
 	
 	\frametitle{Sistemas embarcados para navegação}
@@ -234,12 +238,12 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		
 		\item Três giroscópios: velocidade angular ($\phi$,$\theta$,$\psi$)
 	
-	    \vspace{1cm}
+	    \vspace{0.5cm}
 	
 		\begin{figure}[h]
 			\centering
 			\includegraphics[keepaspectratio = true,
-			width=0.7\textwidth]{img/imuStrap.png}
+			width=0.65\textwidth]{img/imuStrap.png}
 			\caption{Estrutura do Sistema de Navegação acoplada ao veículo (esquerda) e os movimentos gerados no quadricóptero (direita). Fonte \cite{Adalberto2009}}
 			\label{fig:imuStrap}
 		\end{figure}
@@ -249,7 +253,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		\begin{figure}
 			\centering
 			\includegraphics[keepaspectratio = true,
-			width=0.65\textwidth]{img/imu_VANTIME.png}
+			width=0.63\textwidth]{img/imu_VANTIME.png}
 			\caption{Gráfico das medições dos sensores inerciais da IMU do VANT-IME. Fonte \cite{Paixao2011}}
 			\label{fig:imuVANTIME}
 		\end{figure}
@@ -257,7 +261,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	\end{itemize}
 \end{frame}	
 
-\subsection{Controle PID e quadricópteros}
+\subsection*{Controle PID e quadricópteros}
 \begin{frame}[allowframebreaks]
 	
 	\frametitle{Controle PID}
@@ -297,7 +301,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		
 		\item Soma ponderada: $P*K_p + I*K_i + D*K_d$
 		
-		\vspace{1cm}
+		\vspace{0.6cm}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[keepaspectratio = true,
@@ -337,14 +341,44 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 
 
 \section{O Problema: Segurança em voo para quadricóptero}
+
 \begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}[allowframebreaks]
 	\frametitle{O Problema: Segurança em voo para quadricóptero}
 	
 	\begin{itemize}
 		
 		\item Auxíliar o controle da plataforma com base na dinâmica, estado  atual, controle corrente e distância para obstáculos
 		
-		\item Definir uma pequena variação de controle $\Delta\mathbf{u} \in \mathcal{U}$ para evitar colisão. Onde $\mathcal{U} \subset \mathbb{R}^{n}$ o espaço do \textit{input} de controle
+		\item Dado $\mathcal{X} \subset \mathbb{R}^{n}$ o espaço de estados do robô, $\mathcal{U} \subset \mathbb{R}^{n}$ o espaço do \textit{input} de controle, $t$ o tempo, $\mathbf{x}(t)$ o estado do robô no tempo $t$ e $\mathbf{u}(t)$ o \textit{input} de operação no tempo $t$.A dinâmica do robô é uma função em $\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$ e é dada pela relação \ref{eq:equacaoDinProb}:
+		
+		\begin{equation}
+		\centering
+		\dot{\mathbf{x}} = \mathbf{f}(\mathbf{x}(t),\mathbf{u}(t),t)  
+		\label{eq:equacaoDinProb}
+		\end{equation}
+		
+		\item Com $\mathbf{x_0} = \mathbf{x}(0)$ e uma constante de \textit{input} de operação $\mathbf{u}$, o estado do robô será:
+		
+		\begin{equation}
+		\centering
+		\mathbf{x} = \mathbf{g}(\mathbf{x},\mathbf{u},t)  
+		\label{eq:equacaoPosProb}
+		\end{equation}
+		
+		onde $\mathbf{g} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathcal{X}$ é a solução da equação diferencial \ref{eq:equacaoDinProb}				
+		
+	\framebreak
+	
+		\item Obstáculos restringem as posições possíveis do robô
+		
+		\item Sendo $\mathcal{O} \subset \mathbb{R}^3$, a subárea do espaço $\mathbb{R}^n$ de movimentos possíveis do robô ocupadas por obstáculos e as regiões escondidas por eles quando vistas robô e $\mathcal{R}(x)$, a subárea ocupada pelo robô no estado $x \in \mathcal{X}$
+			
+		\item O Problema: Definir a menor variação de controle $\Delta\mathbf{u} \in \mathcal{U}$ necessária para evitar colisão na janela de tempo $t \in [0,\tau]$, onde $\tau$ é um horizonte de tempo já definido:
 		
 		\begin{equation}
 		\begin{aligned}
@@ -354,50 +388,239 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		\label{eq:equacaoProb}
 		\end{equation}
 		
+		
 	\end{itemize}	 
 \end{frame}
+
+
+\section{Metodologia}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	
+	\frametitle{Metodologia}
+	
+	\begin{itemize}
+	
+		\item Divisão em etapas
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.7\textwidth]{img/etapasMetodo.png}
+			\caption{Etapas do método}
+			\label{fig:etapasMetodo}
+		\end{figure}
+		
+	\framebreak
+	
+		\item Componentes necessários
+		\begin{itemize}	
+			
+			\item Plataforma de voo (quadricóptero) com interface de comunicação e SDK código aberto
+			
+			\item Sensores ultrassônicos
+			
+			\item \textit{Conputer on module} para embarque na plataforma: Raspberry PI
+				
+		\end{itemize}
+		
+		\item Software necessário
+		\begin{itemize}	
+			
+			\item Matlab com pacote Simulink
+			
+			\item Kit de desenvolvimento para quadricópteros do Matlab Simulink
+			
+			\item Raspberry Pi Support from MATLAB
+			
+		\end{itemize}
+	
+	\framebreak	
+		
+		\item Estratégia de implementação
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.5\textwidth]{img/fluxo.png}
+			\caption{Estratégia de implementação}
+			\label{fig:Fluxo}
+		\end{figure}
+			
+	\end{itemize}	 
+	
+\end{frame}
+
+
+\section{Cronograma}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Cronograma}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio = true,
+		width=0.63\textwidth]{img/cronograma.png}
+		\caption{Cronograma físico.}
+		\label{fig:cronograma}
+	\end{figure}
+	
+\end{frame}	
+
+\section{Viabilidade da proposta}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Viabilidade da proposta}
+	
+	\begin{itemize}	
+		
+		\item  Quatro quadricópteros com 45cm de diâmetro
+		
+		\item Dois Raspberry PI modelo B com processador de 700MHz, 512MB de memória
+		
+		\item Sensores ultrassónicos
+		
+		\item Matlab R2013a com Simulink
+		
+	\end{itemize}	
+	
+	
+\end{frame}	
+
+\section{Resultados esperados}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Resultados esperados}
+	
+	\begin{itemize}	
+		
+		\item  Foram elaboradas três missões
+	\end{itemize}	
+		\begin{columns}[T] % contents are top vertically aligned
+			\begin{column}[T]{3cm} % each column can also be its own environment
+				\begin{figure}
+					\centering
+					\includegraphics[keepaspectratio = true,
+					width=1.0\textwidth]{img/missao1.png}
+					\caption{Missão 1. Veículo cercado e estabilizado}
+					\label{fig:missao1}
+				\end{figure}
+			\end{column}
+			\begin{column}[T]{3cm} % alternative top-align that's better for graphics
+				\begin{figure}
+					\centering
+					\includegraphics[keepaspectratio = true,
+					width=1.1\textwidth]{img/missao2.png}
+					\caption{Missão 2: Veículo em movimento com obstáculo a frente. Desvio pelos lados}
+					\label{fig:missao2}
+				\end{figure}
+			\end{column}
+			\begin{column}[T]{3cm} % alternative top-align that's better for graphics
+				\begin{figure}
+					\centering
+					\includegraphics[keepaspectratio = true,
+					width=1.0\textwidth]{img/missao3.png}
+					\caption{Missão 3: Trajeto completo num ambiente com obstáculos}
+					\label{fig:missao3}
+				\end{figure}
+			\end{column}
+		\end{columns}
+			
+			
+\end{frame}	
+
+
+\section{Conclusão}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Conclusão}
+	
+	\begin{itemize}	
+		
+		\item  Enfoque em um tema surgente e relevante
+		
+		\item Inúmeras aplicações na área de defesa
+		
+		\item Construção do módulo de desvio de obstáculos da plataforma VANT-IME 
+		
+		
+	\end{itemize}	
+	
+	
+\end{frame}	
 
 
 % -------------------------------------------------%
 % -------------------------------------------------%
 \section{Referências}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
 %\setbeamertemplate{bibliography item}[text]
 \begin{frame}[allowframebreaks]{Bibliography}
 	\frametitle{\insertsection}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/branco.png}
 	\bibliographystyle{abbrv}
-	\begin{small}
-		\bibliography{Dissertacao}
-	\end{small}
+	\footnotesize\bibliography{Dissertacao}
 \end{frame}
 
 
 % -------------------------------------------------%
 \begin{frame}[b]
 	\frametitle{}
-  	\pgfdeclareimage[width=1.0cm]{logo}{figs/branco.png}
+	
+	
   	\centering{\textbf{Perguntas?}
   	\\
-  	\vspace{0.5cm} \footnotesize{ angonesealberto@gmail.com} \\
+  	\vspace{0.5cm} \footnotesize{ bsgiovanini@gmail.com} \\
 	}
 	\vspace{2cm}
 	\hfill
-	\includegraphics[height=1.0cm,keepaspectratio]{figs/ime.jpg}\hfill
-	\includegraphics[height=1.0cm,keepaspectratio]{figs/lab-logo.png}\hfill
-	\includegraphics[height=1.0cm,keepaspectratio]{figs/Logo_CPTI_FAETERJ.png}\hfill
-	\includegraphics[height=0.5cm,keepaspectratio]{figs/FAPERJ_Logo.png}\hfill
-	\\
-% 	\vspace{1cm}
-% 	\hfill
-% 	\centering{
-% 	\includegraphics[height=0.6cm,keepaspectratio]{figs/cnpq_vale.png}\hfill
+	\begin{columns}[T]
+		\begin{column}[T]{3cm}	
 	
+			\includegraphics[height=1.0cm,keepaspectratio]{img/ime.jpg}\centering
+		\end{column}
+		\begin{column}[T]{3cm}
 	
+			\includegraphics[height=1.0cm,keepaspectratio]{img/lab-logo.png}\centering
 	
+		\end{column}
+	\end{columns}
+		
 	
-	% \includegraphics[height=0.95cm,keepaspectratio]{figs/IFTO_LOGO_paraiso.png}\hfill \includegraphics[height=0.95cm,keepaspectratio]{figs/logo_faperj_cor.jpg}\hfill
-%	\includegraphics[height=0.95cm,keepaspectratio]{figs/logo_capes.pdf}\hfill
-%	\includegraphics[height=0.95cm,keepaspectratio]{figs/logo_cnpq.jpg}	
+
 \end{frame}
 
 
