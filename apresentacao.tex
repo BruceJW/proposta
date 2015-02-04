@@ -25,6 +25,7 @@
 \definecolor{cl-impar}{rgb}{0.81, 0.85, 0.91}
 \definecolor{cl-par}{rgb}{0.91, 0.93, 0.87} 
  
+ 
 %\newcommand{\newblock}{}
 %\usepackage[portugues,algoruled,longend]{algorithm2e}  
 %-----   Themes ------%
@@ -79,6 +80,8 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 \begin{document}
 
 
+
+
 \begin{frame}
  \titlepage	
 \end{frame}
@@ -103,11 +106,11 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	\frametitle{\insertsection}
 	\begin{itemize}
 	    \item Crescente utilização para missões civis e militares
-	     \vspace{1cm}
+	     
 	    \item Voos em ambientes fechados e restritos
-	     \vspace{1cm}
+	     
 	    \item Risco de colisão com equipamentos críticos e sensíveis
-	    \vspace{1cm}
+	    
 	    \item Difícil controle e manuseio
 	    
 	    
@@ -144,7 +147,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	\begin{itemize}
 		\item Evitar colisões de um quadricóptero, estimando constantemente a trajetória futura do veículo, com base na sua dinâmica, seu estado atual, o \textit{input} de controle corrente e a distância para os obstáculos, medida através de sensores ultrassônicos embarcados
 		 
-		 \vspace{1cm}
+		
 		 
 		 \item Maior segurança no voo desta plataforma em ambientes restritos
 	\end{itemize} 
@@ -187,11 +190,13 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	
 	\begin{itemize}
 		
-		\item Seis graus de liberdade com quatro atuadores
-		
-		\vspace{2cm}
-		
-		\item Mantem estabilidade com 4 motores independentes e controle eletrônico
+		\item Seis graus de liberdade e quatro atuadores
+				
+		\item Três são movimentos lineares ($x$,$y$,$z$) e três são angulares ($\phi$,$\theta$,$\psi$)
+						
+		\item  Sistema \textit{underactuated}, movimentos (x,y) dependentes dos movimentos ($\phi$,$\theta$)
+				
+		\item Objetivo é manter a estabilidade do eixo central controlando quatro motores independentes eletronicamente
 		
 	\framebreak	
 		
@@ -214,13 +219,9 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	
 	\begin{itemize}
 
-	\item Obtenção de informações sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial
-	
-	\vspace{1cm}
+	\item Obtenção de informações sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial	
 	
 	\item Fornecidas por sensores inerciais: acelerômetros e giroscópios
-	
-	\vspace{1cm}
 	
 	\item Magnetômetros incluídos melhoram a medida da atitude do veiculo	
 	
@@ -296,8 +297,6 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	\framebreak
 	
 		\item Cada parâmetro tem seu ganho $K$ associado
-		
-		\vspace{2pt}
 		
 		\item Soma ponderada: $P*K_p + I*K_i + D*K_d$
 		
@@ -581,12 +580,12 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 
 % -------------------------------------------------%
 % -------------------------------------------------%
-\section{Referências}
+\section*{Referências}
 
-\begin{frame}
-	\frametitle{Sumário}
-	\tableofcontents[currentsection]
-\end{frame}
+%\begin{frame}
+%	\frametitle{Sumário}
+%	\tableofcontents[currentsection]
+%\end{frame}
 
 %\setbeamertemplate{bibliography item}[text]
 \begin{frame}[allowframebreaks]{Bibliography}
@@ -597,11 +596,14 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 
 
 % -------------------------------------------------%
+
+
+\section*{Obrigado}
 \begin{frame}[b]
 	\frametitle{}
 	
 	
-  	\centering{\textbf{Perguntas?}
+  	\centering{\textbf{Obrigado}
   	\\
   	\vspace{0.5cm} \footnotesize{ bsgiovanini@gmail.com} \\
 	}
