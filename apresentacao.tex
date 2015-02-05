@@ -93,6 +93,31 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	\tableofcontents
 \end{frame}
 % -------------------------------------------------%
+
+
+
+
+
+\section{Objetivo}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	\frametitle{Objetivo}	
+	
+	\begin{itemize}
+		\item Construir uma abordagem para evitar colisões de um quadricóptero, estimando constantemente a trajetória futura do veículo, com base na sua dinâmica, estado atual, \textit{input} de controle corrente e na distância para obstáculos medida por sensores ultrassônicos embarcados, proporcionando uma maior segurança no voo desta plataforma em ambientes restritos e sensíveis
+		
+		
+		\item Construir uma abordagem para evitar colisões de um quadricóptero utilizando estimativas de sua trajetória futura e distâncias para obstáculos, proporcionando uma maior segurança de voo em ambientes restritos e sensíveis
+		
+	\end{itemize} 
+	
+\end{frame}
+
 \section{Introdução}
 
 \begin{frame}
@@ -100,6 +125,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	\tableofcontents[currentsection]
 \end{frame}
 
+\subsection*{Motivação}
 
 \begin{frame}[allowframebreaks]
  	\pgfdeclareimage[width=1.0cm]{logo}{img/ime.png}
@@ -139,20 +165,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	\end{itemize}	
 \end{frame}
 
-\subsection*{Objetivo}
 
-\begin{frame}
-	\frametitle{Objetivo}	
-	
-	\begin{itemize}
-		\item Evitar colisões de um quadricóptero, estimando constantemente a trajetória futura do veículo, com base na sua dinâmica, seu estado atual, o \textit{input} de controle corrente e a distância para os obstáculos, medida através de sensores ultrassônicos embarcados
-		 
-		
-		 
-		 \item Maior segurança no voo desta plataforma em ambientes restritos
-	\end{itemize} 
-	 	
-\end{frame}
 
 % -------------------------------------------------%
 
@@ -272,6 +285,8 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		
 		\item Controle fechado que reage a mudanças no ambiente captadas por sensores
 		
+		\item Reação a partir do erro medido
+		
 		\item Três parâmetros constantes: Proporcional (P), Integral (I) e Derivativo (D)
 		
 	\framebreak
@@ -298,7 +313,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	
 		\item Cada parâmetro tem seu ganho $K$ associado
 		
-		\item Soma ponderada: $P*K_p + I*K_i + D*K_d$
+		\item $ \mbox{Variável medida} = P*K_p + I*K_i + D*K_d$
 		
 		\vspace{0.6cm}
 		\begin{figure}[h]

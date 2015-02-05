@@ -16,5 +16,5 @@
 \contentsline {subsection}{\numberline {5.4}Estrat\IeC {\'e}gia de implementa\IeC {\c c}\IeC {\~a}o}{24}
 \contentsline {section}{\numberline {6}Cronograma}{25}
 \contentsline {section}{\numberline {7}Viabilidade da proposta}{26}
-\contentsline {section}{\numberline {8}Resultados Esperados}{28}
+\contentsline {section}{\numberline {8}Resultados esperados}{28}
 \contentsline {section}{\numberline {9}Conclus\IeC {\~a}o}{30}
