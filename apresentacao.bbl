@@ -1,60 +1,61 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{}
 
-\bibitem{ardrone}
-{\em AR.Drone Developer Guide}.
-
-\bibitem{quadblog}
-Quadcopter (x-mode build log).
-
-\bibitem{Basit2014}
-A.~Basit, W.~S. Qureshi, M.~N. Dailey, and T.~Krajn{\'\i}k.
+\bibitem[Basit et~al., 2014]{Basit2014}
+Basit, A., Qureshi, W.~S., Dailey, M.~N., and Krajn{\'\i}k, T. (2014).
 \newblock Joint localization of pursuit quadcopters and target using monocular
   cues.
-\newblock {\em Journal of Intelligent \& Robotic Systems}, pages 1--18, 2014.
+\newblock {\em Journal of Intelligent \& Robotic Systems}, pages 1--18.
 
-\bibitem{Paixao2011}
-R.~A. da~Paixao, P.~F.~F. Rosa, and J.~M.~M. Neto.
-\newblock An attitude heading and reference system: basic concepts and
-  prototype.
-\newblock In {\em Industrial Electronics (ISIE), 2011 IEEE International
-  Symposium on}, pages 2225--2230. IEEE, 2011.
-
-\bibitem{Domingues2009}
-J.~M.~B. Domingues.
+\bibitem[Domingues, 2009]{Domingues2009}
+Domingues, J. M.~B. (2009).
 \newblock Quadrotor prototype.
-\newblock {\em Uneversidade Tecnica deLisboa. Dissertacio}, 2009.
+\newblock {\em Uneversidade Tecnica deLisboa. Dissertacio}.
 
-\bibitem{Adalberto2009}
-J.~A.~F. JUNIOR.
+\bibitem[Figueiredo and Jota, 2004]{Figueiredo2004}
+Figueiredo, L.~C. and Jota, F.~G. (2004).
+\newblock Introdução ao controle de sistemas não-holonômicos.
+\newblock {\em Sba: Controle \& Automação Sociedade Brasileira de
+  Automatica}, 15(3):243--268.
+
+\bibitem[JUNIOR, 2009]{Adalberto2009}
+JUNIOR, J. A.~F. (2009).
 \newblock Simulação e implementação em tempo real de sistemas de
   navegação inercial integrados ins/gps.
-\newblock Master's thesis, IME, 2009.
+\newblock Master's thesis, IME.
 
-\bibitem{Kingdom}
-R.~Kingdom.
+\bibitem[Kingdom, 2013]{Kingdom}
+Kingdom, R. (2013).
 \newblock Pid controller tutorial for robots.
 
-\bibitem{Liang}
-O.~Liang.
+\bibitem[Liang, 2014]{Liang}
+Liang, O. (2014).
 \newblock Quadcopter pid explained and tuning.
 
-\bibitem{Mian2008}
-A.~A. Mian and W.~Daobo.
+\bibitem[Mian and Daobo, 2008]{Mian2008}
+Mian, A.~A. and Daobo, W. (2008).
 \newblock Modeling and backstepping-based nonlinear control strategy for a 6
   dof quadrotor helicopter.
-\newblock {\em Chinese Journal of Aeronautics}, 21(3):261--268, 2008.
+\newblock {\em Chinese Journal of Aeronautics}, 21(3):261--268.
 
-\bibitem{Salih2010}
-A.~L. Salih, M.~Moghavvemi, H.~A. Mohamed, and K.~S. Gaeid.
+\bibitem[multicopter.forestblue.nl, 2012]{quadblog}
+multicopter.forestblue.nl (2012).
+\newblock Quadcopter (x-mode build log).
+
+\bibitem[Salih et~al., 2010]{Salih2010}
+Salih, A.~L., Moghavvemi, M., Mohamed, H.~A., and Gaeid, K.~S. (2010).
 \newblock Flight pid controller design for a uav quadrotor.
-\newblock {\em Scientific Research and Essays}, 5(23):3660--3667, 2010.
+\newblock {\em Scientific Research and Essays}, 5(23):3660--3667.
 
-\bibitem{Saranrittichai2013}
-P.~Saranrittichai, N.~Niparnan, and A.~Sudsang.
+\bibitem[Saranrittichai et~al., 2013]{Saranrittichai2013}
+Saranrittichai, P., Niparnan, N., and Sudsang, A. (2013).
 \newblock Robust local obstacle avoidance for mobile robot based on dynamic
   window approach.
 \newblock In {\em Electrical Engineering/Electronics, Computer,
   Telecommunications and Information Technology (ECTI-CON), 2013 10th
-  International Conference on}, pages 1--4. IEEE, 2013.
+  International Conference on}, pages 1--4. IEEE.
+
+\bibitem[Stephane, 2014]{ardrone}
+Stephane, Nicolas~Brulez, F.~D. (2014).
+\newblock {\em AR.Drone Developer Guide}.
 
 \end{thebibliography}

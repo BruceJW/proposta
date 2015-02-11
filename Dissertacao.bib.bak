@@ -51,7 +51,7 @@ Al ́em do trabalho de implementac ̧ ̃ao e valida ̧ca ̃o do software da ECS,
   Year                     = {2014},
   Pages                    = {1--18},
 
-  __markedentry            = {[bsgiovanini:6]},
+  __markedentry            = {[bsgiovanini:]},
   File                     = {:refs/quadcopter/parrot/art%3A10.1007%2Fs10846-014-0081-2.pdf:PDF},
   Owner                    = {bsgiovanini},
   Publisher                = {Springer},
@@ -192,11 +192,25 @@ Al ́em do trabalho de implementac ̧ ̃ao e valida ̧ca ̃o do software da ECS,
   Author                   = {Domingues, Jorge Miguel Brito},
   Journal                  = {Uneversidade Tecnica deLisboa. Dissertacio},
   Year                     = {2009},
-
-  __markedentry            = {[bsgiovanini:]},
   File                     = {:refs/quadcopter/EXTENDED ABSTRACT.pdf:PDF},
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.01.31}
+}
+
+@Article{Figueiredo2004,
+  Title                    = {Introdução ao controle de sistemas não-holonômicos},
+  Author                   = {Figueiredo, Luiz C and Jota, Fabio G},
+  Journal                  = {Sba: Controle \& Automação Sociedade Brasileira de Automatica},
+  Year                     = {2004},
+  Number                   = {3},
+  Pages                    = {243--268},
+  Volume                   = {15},
+
+  __markedentry            = {[bsgiovanini:6]},
+  File                     = {:refs/quadcopter/a02v15n3.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Publisher                = {SciELO Brasil},
+  Timestamp                = {2015.02.11}
 }
 
 @Article{Fiorini1998,
@@ -370,7 +384,8 @@ The trajectory from start to goal can be computed by searching a tree of feasibl
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.01.12},
   Url                      = {http://blog.oscarliang.net/quadcopter-pid-explained-tuning/},
-  Urldate                  = {http://blog.oscarliang.net/quadcopter-pid-explained-tuning/}
+  Urldate                  = {http://blog.oscarliang.net/quadcopter-pid-explained-tuning/},
+  Year                     = {2014}
 }
 
 @Article{Lopes,
@@ -402,6 +417,18 @@ Utiliza um simulador também já desenvolvido (modelou os sensores lá)
 Modelagem matemática pronta para controle (PID e Backstepping)
 Matlab e Simulink},
   Timestamp                = {2015.01.12}
+}
+
+@Other{quadblog,
+  Title                    = {Quadcopter (x-mode build log)},
+  Author                   = {multicopter.forestblue.nl},
+  Date-added               = {2015-01-11 10:36:41 +0000},
+  Date-modified            = {2015-01-11 10:37:51 +0000},
+  LastChecked              = {25/01/2015},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.25},
+  Url                      = {http://multicopter.forestblue.nl/quadcopter_build_log.html},
+  Year                     = {2012}
 }
 
 @InProceedings{Nicol2008,
@@ -561,6 +588,16 @@ A parte final do trabalho é fundamentada na análise estocástica do sistema em
   Timestamp                = {2015.01.18}
 }
 
+@Manual{ardrone,
+  Title                    = {AR.Drone Developer Guide},
+  Author                   = {Stephane,Nicolas Brulez,Frederic DHaeyer},
+  Year                     = {2014},
+
+  File                     = {:refs/quadcopter/parrot/ARDrone_Developer_Guide.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.01.25}
+}
+
 @Article{Wendel2006,
   Title                    = {An integrated GPS/MEMS-IMU navigation system for an autonomous helicopter},
   Author                   = {Wendel, Jan and Meister, Oliver and Schlaile, Christian and Trommer, Gert F},
@@ -606,31 +643,14 @@ This paper addresses the development of an integrated navigation system based on
   Timestamp                = {2015.01.12}
 }
 
-@Manual{ardrone,
-  Title                    = {AR.Drone Developer Guide},
-
-  File                     = {:refs/quadcopter/parrot/ARDrone_Developer_Guide.pdf:PDF},
-  Owner                    = {bsgiovanini},
-  Timestamp                = {2015.01.25}
-}
-
-@Other{quadblog,
-  Title                    = {Quadcopter (x-mode build log)},
-  Date-added               = {2015-01-11 10:36:41 +0000},
-  Date-modified            = {2015-01-11 10:37:51 +0000},
-  LastChecked              = {25/01/2015},
-  Owner                    = {bsgiovanini},
-  Timestamp                = {2015.01.25},
-  Url                      = {http://multicopter.forestblue.nl/quadcopter_build_log.html}
-}
-
 @comment{jabref-meta: groupsversion:3;}
 
 @comment{jabref-meta: groupstree:
 0 AllEntriesGroup:;
 1 ExplicitGroup:Flight Control\;0\;Adalberto2009\;Altug2002\;Angonese2
-013\;Gibiansky2010\;Hanafi2013\;Kingdom\;Liang\;Mian2008\;Nicol2008\;O
-gata2003\;Paixao2011\;ParraMunoz2013\;Salih2010\;Zhang2014\;;
+013\;Figueiredo2004\;Gibiansky2010\;Hanafi2013\;Kingdom\;Liang\;Mian20
+08\;Nicol2008\;Ogata2003\;Paixao2011\;ParraMunoz2013\;Salih2010\;Zhang
+2014\;;
 1 ExplicitGroup:Collision avoidance\;0\;Becker2012\;Becker2012a\;Berg2
 012\;Borenstein1989\;Bouktir2008\;Brandt2010\;Claes2012\;Fiorini1998\;
 Fox1997\;Fraichard2004\;Gageik2012\;Israelsen\;Khatib1990\;Nieuwenhuis
@@ -639,7 +659,7 @@ en2013\;Saranrittichai2013\;;
 Blosch2010\;Bouktir2008\;Bristeau2011\;Domingues2009\;Gibiansky2010\;G
 rzonka2012\;Hoffmann2004\;Liang\;Lopes\;Mian2008\;ParraMunoz2013\;Prad
 el2007\;Roberts2007\;Salih2010\;Santana2014\;Shen2013\;Shen2013a\;Wend
-el2006\;Zhang2014\;;
+el2006\;Zhang2014\;quadblog\;;
 1 ExplicitGroup:Parrot\;0\;Basit2014\;Bristeau2011\;Lopes\;ParraMunoz2
 013\;Santana2014\;ardrone\;;
 }

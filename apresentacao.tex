@@ -108,13 +108,9 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 \begin{frame}
 	\frametitle{Objetivo}	
 	
-	\begin{itemize}
-		\item Construir uma abordagem para evitar colisões de um quadricóptero, estimando constantemente a trajetória futura do veículo, com base na sua dinâmica, estado atual, \textit{input} de controle corrente e na distância para obstáculos medida por sensores ultrassônicos embarcados, proporcionando uma maior segurança no voo desta plataforma em ambientes restritos e sensíveis
+	\begin{itemize}	
 		
-		
-		\item Construir uma abordagem para evitar colisões de um quadricóptero utilizando estimativas de sua trajetória futura e distâncias para obstáculos, proporcionando uma maior segurança de voo em ambientes restritos e sensíveis
-		
-		\item Construir uma abordagem para evitar colisões de um quadricóptero utilizando estimativas de sua trajetória futura e distâncias para obstáculos, criando desvios, se necessário, e proporcionando uma maior segurança de voo em ambientes restritos e sensíveis
+		\item Evitar colisões de um quadricóptero utilizando estimativas de sua trajetória futura e distâncias para obstáculos, criando desvios, se necessário, e proporcionando uma maior segurança de voo em ambientes restritos e sensíveis
 		
 	\end{itemize} 
 	
@@ -209,18 +205,44 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 				
 		\item Três são movimentos lineares ($x$,$y$,$z$) e três são angulares ($\phi$,$\theta$,$\psi$)
 						
-		\item  Sistema \textit{underactuated}, movimentos (x,y) dependentes dos movimentos ($\phi$,$\theta$)
+		\item  Sistema não-holonômico (subatuado), movimentos (x,y) dependentes dos movimentos
+	    ($\phi$,$\theta$) \cite{Figueiredo2004}
 				
 		\item Objetivo é manter a estabilidade do eixo central controlando quatro motores independentes eletronicamente
 		
 	\framebreak	
 		
+		
 		\begin{figure}
 			\centering
 			\includegraphics[keepaspectratio = true,
-			width=0.6\textwidth]{img/diagrama_quadricoptero.png}
-			\caption{Estrutura e orientação dos motores (a), as forças e momentos atuando no quadricóptero (b) e os movimentos gerados a partir das variações de velocidades dos motores (c). Fontes \cite{quadblog}, \cite{Mian2008} e \cite{Domingues2009}.}
+			width=0.4\textwidth]{img/quadschema.jpg}
+			\caption{Estrutura e orientação dos motores. Fonte \cite{quadblog}}
 			\label{fig:diag quad}
+		\end{figure}
+		
+		
+	\framebreak
+	
+		
+		\begin{figure}
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.6\textwidth]{img/diagrama_quadricoptero_old.png}
+			\caption{As forças e momentos atuando no quadricóptero. Fonte \cite{Mian2008}}
+			\label{fig:diag quad2}
+		\end{figure}
+		
+	
+	\framebreak
+	
+		
+		\begin{figure}
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.6\textwidth]{img/motores.jpeg}
+			\caption{Os movimentos gerados a partir das variações de velocidades dos motores. Fonte \cite{Domingues2009}}
+			\label{fig:diag quad3}
 		\end{figure}
 	
 	\end{itemize}	
@@ -492,7 +514,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		\item Método da Janela dinâmica \cite{Saranrittichai2013}	
 		
 		
-		\item Determinar $\Delta\mathbf{u}$  e seguros no espaço de estados $\mathcal{U}$ em $t \in [0,\tau]$
+		\item Determinar $\Delta\mathbf{u}$  possíveis e seguros no espaço de estados $\mathcal{U}$ em $t \in [0,\tau]$
 		
 		\item Otimização: $\text{min } \Delta\mathbf{u}$
 			
@@ -651,7 +673,9 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	
 	\begin{itemize}	
 		
-		\item  Enfoque em um tema surgente e relevante
+		\item  Um tema importante e recorrente para estudo do domínio de controle em \textit{Cyber-Physical Systems}(CPS) 
+		
+		%;é um sistema de colaboração entre sistemas robóticos com capacidade de comunicação e interação entre si para atuar sobre um ambiente físico.
 		
 		\item Inúmeras aplicações na área de defesa
 		
@@ -676,7 +700,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 %\setbeamertemplate{bibliography item}[text]
 \begin{frame}[allowframebreaks]{Bibliography}
 	\frametitle{\insertsection}
-	\bibliographystyle{abbrv}
+	\bibliographystyle{apalike}
 	\footnotesize\bibliography{Dissertacao}
 \end{frame}
 
