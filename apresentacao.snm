@@ -3,7 +3,6 @@
 \beamer@slide {fig:quad}{10}
 \beamer@slide {fig:diag quad}{11}
 \beamer@slide {fig:imuStrap}{14}
-\beamer@slide {fig:imuVANTIME}{14}
 \beamer@slide {fig:ganhoPID}{16}
 \beamer@slide {fig:PIDquad}{19}
 \beamer@slide {fig:PIDaxis}{19}
@@ -11,8 +10,9 @@
 \beamer@slide {eq:equacaoPosProb}{22}
 \beamer@slide {eq:equacaoProb}{22}
 \beamer@slide {fig:etapasMetodo}{25}
+\beamer@slide {eq:equacaoProb}{25}
 \beamer@slide {fig:Fluxo}{25}
-\beamer@slide {fig:cronograma}{29}
-\beamer@slide {fig:missao1}{33}
-\beamer@slide {fig:missao2}{33}
-\beamer@slide {fig:missao3}{33}
+\beamer@slide {fig:cronograma}{31}
+\beamer@slide {fig:missao1}{35}
+\beamer@slide {fig:missao2}{35}
+\beamer@slide {fig:missao3}{35}

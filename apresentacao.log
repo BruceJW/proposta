@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  5 FEB 2015 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  10 FEB 2015 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1147,6 +1147,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 LaTeX Warning: Label `fig:obr2013' multiply defined.
 
+
+LaTeX Warning: Label `eq:equacaoProb' multiply defined.
+
 )
 \openout1 = `apresentacao.aux'.
 
@@ -1373,24 +1376,24 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ]
 
 Package pgf Warning: File "img/ime.png" not found when defining image "logo". T
-ried all extensions in ".pdf:.jpg:.jpeg:.png:" on input line 166.
+ried all extensions in ".pdf:.jpg:.jpeg:.png:" on input line 168.
 
 
 Package pgf Warning: Missing height for image "logo" ("img/ime.png") in draft m
-ode. Using 1cm instead on input line 166.
+ode. Using 1cm instead on input line 168.
 
 <img/filmagem_drone.jpg, id=136, 1445.4pt x 963.6pt>
 File: img/filmagem_drone.jpg Graphic file (type jpg)
 
 <use img/filmagem_drone.jpg>
-Package pdftex.def Info: img/filmagem_drone.jpg used on input line 166.
+Package pdftex.def Info: img/filmagem_drone.jpg used on input line 168.
 (pdftex.def)             Requested size: 239.60567pt x 159.737pt.
 
 <img/Inspection-Drone.jpg, id=137, 331.2375pt x 195.73125pt>
 File: img/Inspection-Drone.jpg Graphic file (type jpg)
 
 <use img/Inspection-Drone.jpg>
-Package pdftex.def Info: img/Inspection-Drone.jpg used on input line 166.
+Package pdftex.def Info: img/Inspection-Drone.jpg used on input line 168.
 (pdftex.def)             Requested size: 239.60567pt x 141.58344pt.
  [6
 
@@ -1405,14 +1408,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{fig:obr2013})
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.166 \end{frame}
+l.168 \end{frame}
                   <./img/Inspection-Drone.jpg>] (./apresentacao.toc) [9
 
 ]
 <img/parrot_drone.jpg, id=185, 722.7pt x 381.425pt>
 File: img/parrot_drone.jpg Graphic file (type jpg)
  <use img/parrot_drone.jpg>
-Package pdftex.def Info: img/parrot_drone.jpg used on input line 198.
+Package pdftex.def Info: img/parrot_drone.jpg used on input line 200.
 (pdftex.def)             Requested size: 239.60567pt x 126.45845pt.
 
 [10
@@ -1422,7 +1425,7 @@ Package pdftex.def Info: img/parrot_drone.jpg used on input line 198.
 File: img/diagrama_quadricoptero.png Graphic file (type png)
 
 <use img/diagrama_quadricoptero.png>
-Package pdftex.def Info: img/diagrama_quadricoptero.png used on input line 226.
+Package pdftex.def Info: img/diagrama_quadricoptero.png used on input line 228.
 
 (pdftex.def)             Requested size: 205.37926pt x 117.3571pt.
  [11
@@ -1436,26 +1439,20 @@ Package pdftex.def Info: img/diagrama_quadricoptero.png used on input line 226.
 File: img/imuStrap.png Graphic file (type png)
 
 <use img/imuStrap.png>
-Package pdftex.def Info: img/imuStrap.png used on input line 276.
+Package pdftex.def Info: img/imuStrap.png used on input line 267.
 (pdftex.def)             Requested size: 222.48985pt x 81.9164pt.
- <img/imu_VANTIME.png, id=244, 821.0675pt x 620.3175pt>
-File: img/imu_VANTIME.png Graphic file (type png)
-
-<use img/imu_VANTIME.png>
-Package pdftex.def Info: img/imu_VANTIME.png used on input line 276.
-(pdftex.def)             Requested size: 215.6477pt x 162.91623pt.
  [14
 
  <./img/imuStrap.png>] [15
 
-
- <./img/imu_VANTIME.png>] <img/ganho_PID.png, id=271, 483.8075pt x 384.43625pt>
+]
+<img/ganho_PID.png, id=265, 483.8075pt x 384.43625pt>
 File: img/ganho_PID.png Graphic file (type png)
-
-<use img/ganho_PID.png>
-Package pdftex.def Info: img/ganho_PID.png used on input line 329.
+ <use img/ganho_PID.png>
+Package pdftex.def Info: img/ganho_PID.png used on input line 337.
 (pdftex.def)             Requested size: 136.91603pt x 108.79115pt.
- [16
+
+[16
 
 ] [17
 
@@ -1464,18 +1461,18 @@ Package pdftex.def Info: img/ganho_PID.png used on input line 329.
 
 
  <./img/ganho_PID.png>]
-<img/PID_quad_geral.png, id=305, 605.26125pt x 339.2675pt>
+<img/PID_quad_geral.png, id=299, 605.26125pt x 339.2675pt>
 File: img/PID_quad_geral.png Graphic file (type png)
 
 <use img/PID_quad_geral.png>
-Package pdftex.def Info: img/PID_quad_geral.png used on input line 354.
+Package pdftex.def Info: img/PID_quad_geral.png used on input line 362.
 (pdftex.def)             Requested size: 273.83728pt x 153.49207pt.
 
-<img/PID_quad_axis.png, id=308, 501.875pt x 190.7125pt>
+<img/PID_quad_axis.png, id=302, 501.875pt x 190.7125pt>
 File: img/PID_quad_axis.png Graphic file (type png)
 
 <use img/PID_quad_axis.png>
-Package pdftex.def Info: img/PID_quad_axis.png used on input line 354.
+Package pdftex.def Info: img/PID_quad_axis.png used on input line 362.
 (pdftex.def)             Requested size: 239.60567pt x 91.05206pt.
  [19
 
@@ -1492,17 +1489,22 @@ Package pdftex.def Info: img/PID_quad_axis.png used on input line 354.
 ] (./apresentacao.toc) [24
 
 ]
-<img/etapasMetodo.png, id=383, 827.09pt x 498.86375pt>
+<img/etapasMetodo.png, id=376, 827.09pt x 498.86375pt>
 File: img/etapasMetodo.png Graphic file (type png)
 
 <use img/etapasMetodo.png>
-Package pdftex.def Info: img/etapasMetodo.png used on input line 471.
+Package pdftex.def Info: img/etapasMetodo.png used on input line 542.
 (pdftex.def)             Requested size: 239.60567pt x 144.51454pt.
- <img/fluxo.png, id=384, 582.175pt x 542.025pt>
+pdfTeX warning (ext4): destination with the same identifier (name{eq:equacaoPro
+b}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.542 \end{frame}
+                  <img/fluxo.png, id=379, 582.175pt x 542.025pt>
 File: img/fluxo.png Graphic file (type png)
 
 <use img/fluxo.png>
-Package pdftex.def Info: img/fluxo.png used on input line 471.
+Package pdftex.def Info: img/fluxo.png used on input line 542.
 (pdftex.def)             Requested size: 171.14764pt x 159.34184pt.
  [25
 
@@ -1512,76 +1514,84 @@ Package pdftex.def Info: img/fluxo.png used on input line 471.
 ] [27
 
 
- <./img/fluxo.png>]
-(./apresentacao.toc) [28
+] [28
 
-] <img/cronograma.png, id=427, 859.21pt x 774.895pt>
+
+] [29
+
+
+ <./img/fluxo.png>] (./apresentacao.toc) [30
+
+]
+<img/cronograma.png, id=438, 859.21pt x 774.895pt>
 File: img/cronograma.png Graphic file (type png)
-
-<use img/cronograma.png>
-Package pdftex.def Info: img/cronograma.png used on input line 493.
+ <use img/cronograma.png>
+Package pdftex.def Info: img/cronograma.png used on input line 564.
 (pdftex.def)             Requested size: 215.6477pt x 194.48pt.
 
-Overfull \vbox (15.09262pt too high) detected at line 493
+Overfull \vbox (15.09262pt too high) detected at line 564
  []
 
-[29
+[31
 
- <./img/cronograma.png>] (./apresentacao.toc) [30
+ <./img/cronograma.png>] (./apresentacao.toc) [32
 
-] [31
+] [33
 
-] (./apresentacao.toc) [32
+] (./apresentacao.toc) [34
 
-] <img/missao1.png, id=475, 240.9pt x 240.9pt>
+] <img/missao1.png, id=486, 240.9pt x 240.9pt>
 File: img/missao1.png Graphic file (type png)
  <use img/missao1.png>
-Package pdftex.def Info: img/missao1.png used on input line 567.
+Package pdftex.def Info: img/missao1.png used on input line 638.
 (pdftex.def)             Requested size: 85.35826pt x 85.3565pt.
 
-<img/missao2.png, id=476, 501.875pt x 301.125pt>
+<img/missao2.png, id=487, 501.875pt x 301.125pt>
 File: img/missao2.png Graphic file (type png)
  <use img/missao2.png>
-Package pdftex.def Info: img/missao2.png used on input line 567.
+Package pdftex.def Info: img/missao2.png used on input line 638.
 (pdftex.def)             Requested size: 93.8946pt x 56.33673pt.
 
-Overfull \hbox (8.53635pt too wide) in paragraph at lines 567--567
+Overfull \hbox (8.53635pt too wide) in paragraph at lines 638--638
  [] 
  []
 
-<img/missao3.png, id=477, 411.5375pt x 301.125pt>
+<img/missao3.png, id=488, 411.5375pt x 301.125pt>
 File: img/missao3.png Graphic file (type png)
  <use img/missao3.png>
-Package pdftex.def Info: img/missao3.png used on input line 567.
+Package pdftex.def Info: img/missao3.png used on input line 638.
 (pdftex.def)             Requested size: 85.35826pt x 62.45699pt.
 
-[33
+[35
 
  <./img/missao1.png> <./img/missao2.png> <./img/missao3.png>]
-(./apresentacao.toc) [34
+(./apresentacao.toc) [36
 
-] [35
+] [37
 
-] (./apresentacao.bbl) [36
+] (./apresentacao.bbl) [38
 
  </usr/local/texlive/2014/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf
->] [37
+>] [39
+
+
+] [40
 
 
 ]
-<img/ime.jpg, id=541, 196.735pt x 257.96375pt>
+<img/ime.jpg, id=561, 196.735pt x 257.96375pt>
 File: img/ime.jpg Graphic file (type jpg)
  <use img/ime.jpg>
-Package pdftex.def Info: img/ime.jpg used on input line 641.
+Package pdftex.def Info: img/ime.jpg used on input line 712.
 (pdftex.def)             Requested size: 21.69794pt x 28.45274pt.
 
-<img/lab-logo.png, id=542, 670.00313pt x 360.59718pt>
+<img/lab-logo.png, id=562, 670.00313pt x 360.59718pt>
 File: img/lab-logo.png Graphic file (type png)
  <use img/lab-logo.png>
-Package pdftex.def Info: img/lab-logo.png used on input line 641.
+Package pdftex.def Info: img/lab-logo.png used on input line 712.
 (pdftex.def)             Requested size: 52.86525pt x 28.45274pt.
 
-[38
+[41
 
  <./img/ime.jpg> <./img/lab-logo.png>]
 \tf@nav=\write6
@@ -1593,11 +1603,11 @@ Package pdftex.def Info: img/lab-logo.png used on input line 641.
 \tf@snm=\write8
 \openout8 = `apresentacao.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 646.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 646.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 717.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 717.
  (./apresentacao.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 646.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 646.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 717.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 717.
 Package rerunfilecheck Info: File `apresentacao.out' has not changed.
 (rerunfilecheck)             Checksum: 54B024B0865FFFFD962F8B1F2DEDD68D;487.
 
@@ -1608,16 +1618,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 646.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 717.
  ) 
 Here is how much of TeX's memory you used:
- 20757 strings out of 493117
- 386206 string characters out of 6135434
- 465142 words of memory out of 5000000
- 23558 multiletter control sequences out of 15000+600000
- 16435 words of font info for 59 fonts, out of 8000000 for 9000
+ 20770 strings out of 493117
+ 386337 string characters out of 6135434
+ 470057 words of memory out of 5000000
+ 23565 multiletter control sequences out of 15000+600000
+ 17023 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,17n,62p,482b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,62p,406b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
@@ -1629,10 +1639,10 @@ r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on apresentacao.pdf (38 pages, 1674622 bytes).
+Output written on apresentacao.pdf (41 pages, 1501955 bytes).
 PDF statistics:
- 617 PDF objects out of 1000 (max. 8388607)
- 505 compressed objects within 6 object streams
- 118 named destinations out of 1000 (max. 500000)
- 242 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 638 PDF objects out of 1000 (max. 8388607)
+ 526 compressed objects within 6 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 

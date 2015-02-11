@@ -1,10 +1,16 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{ardrone}
 {\em AR.Drone Developer Guide}.
 
 \bibitem{quadblog}
 Quadcopter (x-mode build log).
+
+\bibitem{Basit2014}
+A.~Basit, W.~S. Qureshi, M.~N. Dailey, and T.~Krajn{\'\i}k.
+\newblock Joint localization of pursuit quadcopters and target using monocular
+  cues.
+\newblock {\em Journal of Intelligent \& Robotic Systems}, pages 1--18, 2014.
 
 \bibitem{Paixao2011}
 R.~A. da~Paixao, P.~F.~F. Rosa, and J.~M.~M. Neto.
@@ -42,5 +48,13 @@ A.~A. Mian and W.~Daobo.
 A.~L. Salih, M.~Moghavvemi, H.~A. Mohamed, and K.~S. Gaeid.
 \newblock Flight pid controller design for a uav quadrotor.
 \newblock {\em Scientific Research and Essays}, 5(23):3660--3667, 2010.
+
+\bibitem{Saranrittichai2013}
+P.~Saranrittichai, N.~Niparnan, and A.~Sudsang.
+\newblock Robust local obstacle avoidance for mobile robot based on dynamic
+  window approach.
+\newblock In {\em Electrical Engineering/Electronics, Computer,
+  Telecommunications and Information Technology (ECTI-CON), 2013 10th
+  International Conference on}, pages 1--4. IEEE, 2013.
 
 \end{thebibliography}
