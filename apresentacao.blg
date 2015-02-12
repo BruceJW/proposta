@@ -3,15 +3,15 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: apresentacao.aux
 The style file: apalike.bst
 Database file #1: Dissertacao.bib
+Warning--entry type for "rocopter" isn't style-file defined
+--line 5 of file Dissertacao.bib
 Warning--entry type for "Kingdom" isn't style-file defined
---line 366 of file Dissertacao.bib
+--line 376 of file Dissertacao.bib
 Warning--entry type for "Liang" isn't style-file defined
---line 379 of file Dissertacao.bib
-Warning--entry type for "quadblog" isn't style-file defined
---line 423 of file Dissertacao.bib
+--line 389 of file Dissertacao.bib
 You've used 11 entries,
             1935 wiz_defined-function locations,
-            541 strings with 5404 characters,
+            540 strings with 5383 characters,
 and the built_in function-call counts, 3760 in all, are:
 = -- 377
 > -- 132

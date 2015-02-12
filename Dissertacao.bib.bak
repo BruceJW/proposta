@@ -2,6 +2,15 @@
 % Encoding: UTF8
 
 
+@Other{rocopter,
+  Title                    = {ro 4 copter Starters Guide},
+  Author                   = {ro 4 copter},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.02.11},
+  Url                      = {https://code.google.com/p/ro-4-copter/wiki/StartersGuide},
+  Year                     = {2013}
+}
+
 @InProceedings{Achtelik2009,
   Title                    = {Autonomous navigation and exploration of a quadrotor helicopter in GPS-denied indoor environments},
   Author                   = {Achtelik, Markus and Bachrach, Abraham and He, Ruijie and Prentice, Samuel and Roy, Nicholas},
@@ -192,6 +201,7 @@ Al ́em do trabalho de implementac ̧ ̃ao e valida ̧ca ̃o do software da ECS,
   Author                   = {Domingues, Jorge Miguel Brito},
   Journal                  = {Uneversidade Tecnica deLisboa. Dissertacio},
   Year                     = {2009},
+
   File                     = {:refs/quadcopter/EXTENDED ABSTRACT.pdf:PDF},
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.01.31}
@@ -372,7 +382,8 @@ The trajectory from start to goal can be computed by searching a tree of feasibl
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.01.12},
   Url                      = {http://robot-kingdom.com/pid-controller-tutorial-for-robots/},
-  Urldate                  = {http://robot-kingdom.com/pid-controller-tutorial-for-robots/}
+  Urldate                  = {http://robot-kingdom.com/pid-controller-tutorial-for-robots/},
+  Year                     = {2013}
 }
 
 @Other{Liang,
@@ -659,7 +670,7 @@ en2013\;Saranrittichai2013\;;
 Blosch2010\;Bouktir2008\;Bristeau2011\;Domingues2009\;Gibiansky2010\;G
 rzonka2012\;Hoffmann2004\;Liang\;Lopes\;Mian2008\;ParraMunoz2013\;Prad
 el2007\;Roberts2007\;Salih2010\;Santana2014\;Shen2013\;Shen2013a\;Wend
-el2006\;Zhang2014\;quadblog\;;
+el2006\;Zhang2014\;quadblog\;rocopter\;;
 1 ExplicitGroup:Parrot\;0\;Basit2014\;Bristeau2011\;Lopes\;ParraMunoz2
 013\;Santana2014\;ardrone\;;
 }

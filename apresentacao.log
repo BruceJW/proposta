@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  11 FEB 2015 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  11 FEB 2015 22:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1421,11 +1421,12 @@ Package pdftex.def Info: img/parrot_drone.jpg used on input line 196.
 [10
 
  <./img/parrot_drone.jpg>]
-<img/quadschema.jpg, id=201, 391.4625pt x 391.4625pt>
-File: img/quadschema.jpg Graphic file (type jpg)
- <use img/quadschema.jpg>
-Package pdftex.def Info: img/quadschema.jpg used on input line 250.
-(pdftex.def)             Requested size: 136.91603pt x 136.91835pt.
+<img/propellerdirections.png, id=201, 552.0625pt x 552.0625pt>
+File: img/propellerdirections.png Graphic file (type png)
+
+<use img/propellerdirections.png>
+Package pdftex.def Info: img/propellerdirections.png used on input line 250.
+(pdftex.def)             Requested size: 136.91603pt x 136.91176pt.
 
 <img/diagrama_quadricoptero_old.png, id=205, 315.1775pt x 209.78375pt>
 File: img/diagrama_quadricoptero_old.png Graphic file (type png)
@@ -1435,22 +1436,21 @@ Package pdftex.def Info: img/diagrama_quadricoptero_old.png used on input line
 250.
 (pdftex.def)             Requested size: 205.37926pt x 136.70352pt.
 
-<img/motores.jpeg, id=208, 293.095pt x 172.645pt>
+<img/motores.jpeg, id=208, 299.1175pt x 185.69376pt>
 File: img/motores.jpeg Graphic file (type jpg)
  <use img/motores.jpeg>
 Package pdftex.def Info: img/motores.jpeg used on input line 250.
-(pdftex.def)             Requested size: 205.37926pt x 120.97447pt.
+(pdftex.def)             Requested size: 205.37926pt x 127.50262pt.
 
 [11
 
 ] [12
 
 
- <./img/quadschema.jpg>] [13
+ <./img/propellerdirections.png>] [13
 
 
- <./img/diagrama_quadricoptero_old.png>]
-[14
+ <./img/diagrama_quadricoptero_old.png>] [14
 
 
  <./img/motores.jpeg>] [15
@@ -1640,8 +1640,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 741.
  ) 
 Here is how much of TeX's memory you used:
  20792 strings out of 493117
- 386708 string characters out of 6135434
- 470296 words of memory out of 5000000
+ 386753 string characters out of 6135434
+ 470292 words of memory out of 5000000
  23579 multiletter control sequences out of 15000+600000
  17023 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1657,7 +1657,7 @@ r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on apresentacao.pdf (43 pages, 1493620 bytes).
+Output written on apresentacao.pdf (43 pages, 1379330 bytes).
 PDF statistics:
  663 PDF objects out of 1000 (max. 8388607)
  545 compressed objects within 6 object streams
