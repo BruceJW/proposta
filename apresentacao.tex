@@ -298,7 +298,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		
 		\item Mesmos sensores da IMU (com magnetrômetro)
 		
-		\item Unidade de processamento para cálculo da velocidade angular e atitude
+		\item Unidade de processamento para cálculo da velocidade linear e atitude
 		
 		\item Fornece (${ \dot { x }  }\quad { \dot { y }  }\quad { \dot { z }  }\quad { \phi  }\quad { \theta  }\quad { \psi  }$)
 	 
@@ -336,7 +336,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		\item Derivativo (D)
 		\begin{itemize}
 			\item É a mudança do erro no tempo. 
-			\item Fórmula: $(A-B)/t$, sendo $A$ o erro inicial e $B$ o erro depois do tempo $t$ 	
+			\item Fórmula: $(A-B)/\Delta t$, sendo $A$ o erro inicial e $B$ o erro depois do intervalo $\Delta t$ 	
 		\end{itemize}	
 		
 	\framebreak
@@ -396,7 +396,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	
 	\begin{itemize}
 		
-		\item Auxíliar o controle da plataforma com base na dinâmica, estado  atual, controle corrente e distância para obstáculos
+		\item Auxíliar o controle da plataforma com base na dinâmica, estado  atual, operação corrente e a distância para obstáculos
 		
 		\item Dinâmica do robô ($\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$):
 		
@@ -483,7 +483,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	\item Estimação da trajetória futura (Integração Numérica em $t$)
 	
 		
-		\item Espaço de estados com $\Delta t$ pequeno. Fonte \cite{Basit2014}
+		\item Espaço de estados em $\Delta t$. Fonte \cite{Basit2014}
 		
 		\begin{equation}
 		\begin{aligned}
@@ -532,7 +532,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 			
 			\item Sensores ultrassônicos
 			
-			\item \textit{Conputer on module} para embarque na plataforma: Raspberry PI
+			\item \textit{Computer-on-module} para embarque na plataforma: Raspberry PI
 				
 		\end{itemize}
 		
@@ -558,8 +558,18 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 			\caption{Estratégia de implementação}
 			\label{fig:Fluxo}
 		\end{figure}
+		
+		\framebreak	
+		
+		\item Validação da simulação \textit{hardware-in-the-loop}
+		
+		\item Validação embarcada na plataforma
+		
 			
-	\end{itemize}	 
+			
+	\end{itemize}
+	
+		 
 	
 \end{frame}
 

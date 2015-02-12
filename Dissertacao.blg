@@ -3,57 +3,48 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Dissertacao.aux
 The style file: abbrv.bst
 Database file #1: Dissertacao.bib
-Warning--entry type for "Kingdom" isn't style-file defined
---line 338 of file Dissertacao.bib
-Warning--entry type for "Liang" isn't style-file defined
---line 350 of file Dissertacao.bib
-Warning--entry type for "quadblog" isn't style-file defined
---line 603 of file Dissertacao.bib
-Warning--to sort, need author, organization, or key in ardrone
-Warning--to sort, need author or key in quadblog
-Warning--there's a number but no series in Achtelik2009
 Warning--empty journal in Gibiansky2010
 Warning--empty journal in Israelsen
 Warning--empty year in Israelsen
 You've used 35 entries,
             2118 wiz_defined-function locations,
-            714 strings with 10399 characters,
-and the built_in function-call counts, 13082 in all, are:
-= -- 1300
-> -- 635
-< -- 16
-+ -- 257
-- -- 216
-* -- 892
-:= -- 2075
-add.period$ -- 111
+            728 strings with 11132 characters,
+and the built_in function-call counts, 13508 in all, are:
+= -- 1356
+> -- 653
+< -- 15
++ -- 263
+- -- 222
+* -- 900
+:= -- 2144
+add.period$ -- 122
 call.type$ -- 35
-change.case$ -- 211
+change.case$ -- 215
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 510
-empty$ -- 1027
-format.name$ -- 216
-if$ -- 2811
+cite$ -- 38
+duplicate$ -- 516
+empty$ -- 1058
+format.name$ -- 222
+if$ -- 2917
 int.to.chr$ -- 0
 int.to.str$ -- 35
 missing$ -- 30
-newline$ -- 171
-num.names$ -- 66
-pop$ -- 265
+newline$ -- 182
+num.names$ -- 70
+pop$ -- 281
 preamble$ -- 1
-purify$ -- 178
+purify$ -- 181
 quote$ -- 0
-skip$ -- 373
+skip$ -- 375
 stack$ -- 0
-substring$ -- 770
-swap$ -- 151
-text.length$ -- 16
+substring$ -- 802
+swap$ -- 160
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 138
-warning$ -- 6
-while$ -- 120
+warning$ -- 3
+while$ -- 127
 width$ -- 37
-write$ -- 372
-(There were 9 warnings)
+write$ -- 395
+(There were 3 warnings)

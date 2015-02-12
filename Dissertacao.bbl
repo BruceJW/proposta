@@ -1,16 +1,10 @@
 \begin{thebibliography}{10}
 
-\bibitem{ardrone}
-{\em AR.Drone Developer Guide}.
-
-\bibitem{quadblog}
-Quadcopter (x-mode build log).
-
 \bibitem{Achtelik2009}
 M.~Achtelik, A.~Bachrach, R.~He, S.~Prentice, and N.~Roy.
 \newblock Autonomous navigation and exploration of a quadrotor helicopter in
-  gps-denied indoor environments.
-\newblock In {\em First Symposium on Indoor Flight}, number 2009, 2009.
+  {GPS}-denied indoor environments.
+\newblock In {\em First Symposium on Indoor Flight}, 2009.
 
 \bibitem{Altug2002}
 E.~Altug, J.~P. Ostrowski, and R.~Mahony.
@@ -19,20 +13,22 @@ E.~Altug, J.~P. Ostrowski, and R.~Mahony.
   International Conference on}, volume~1, pages 72--77. IEEE, 2002.
 
 \bibitem{Angonese2013}
-A.~T. ANGONESE.
-\newblock Estação de controle em solo com funcionalidades de voo múltiplo.
-\newblock Master's thesis, IME, 2013.
+A.~T. Angonese and P.~Ferreira~Rosa.
+\newblock Ground control station for multiple uavs flight simulation.
+\newblock In {\em Robotics Symposium and Competition (LARS/LARC), 2013 Latin
+  American}, pages 136--141. IEEE, 2013.
 
 \bibitem{Becker2012}
 M.~Becker, R.~C.~B. Sampaio, S.~Bouabdallah, V.~d. Perrot, and R.~Siegwart.
-\newblock In-flight collision avoidance controller based only on os4 embedded
+\newblock In-flight collision avoidance controller based only on {OS}4 embedded
   sensors.
 \newblock {\em Journal of the Brazilian Society of Mechanical Sciences and
   Engineering}, 34(3):294--307, 2012.
 
 \bibitem{Blosch2010}
 M.~Blosch, S.~Weiss, D.~Scaramuzza, and R.~Siegwart.
-\newblock Vision based mav navigation in unknown and unstructured environments.
+\newblock Vision based {MAV} navigation in unknown and unstructured
+  environments.
 \newblock In {\em Robotics and automation (ICRA), 2010 IEEE international
   conference on}, pages 21--28. IEEE, 2010.
 
@@ -64,7 +60,7 @@ R.~A. da~Paixao, P.~F.~F. Rosa, and J.~M.~M. Neto.
 \bibitem{Domingues2009}
 J.~M.~B. Domingues.
 \newblock Quadrotor prototype.
-\newblock {\em Uneversidade Tecnica deLisboa. Dissertacio}, 2009.
+\newblock {\em Universidade Tecnica de Lisboa. Dissertação}, 2009.
 
 \bibitem{Fiorini1998}
 P.~Fiorini and Z.~Shiller.
@@ -106,24 +102,35 @@ J.~Israelsen, M.~Beall, D.~Bareiss, D.~Stuart, E.~Keeney, and J.~van~den Berg.
   aerial vehicles.
 
 \bibitem{Adalberto2009}
-J.~A.~F. JUNIOR.
+J.~Junior.
 \newblock Simulação e implementação em tempo real de sistemas de
-  navegação inercial integrados ins/gps.
-\newblock Master's thesis, IME, 2009.
+  navegação inercial integrados {INS}/{GPS}.
+\newblock http://pged.ime.eb.br/teses/mestrado/tese\_msc\_2009\_adalberto.pdf,
+  2009.
 
 \bibitem{Kingdom}
 R.~Kingdom.
-\newblock Pid controller tutorial for robots.
+\newblock {PID} controller tutorial for robots.
+\newblock http://robot-kingdom.com/pid-controller-tutorial-for-robots/, 2013.
+\newblock Acessado em 12/01/2015.
 
 \bibitem{Liang}
 O.~Liang.
-\newblock Quadcopter pid explained and tuning.
+\newblock Quadcopter {PID} explained and tuning.
+\newblock http://blog.oscarliang.net/quadcopter-pid-explained-tuning/, 2014.
+\newblock Acessado em 12/01/2015.
 
 \bibitem{Mian2008}
 A.~A. Mian and W.~Daobo.
 \newblock Modeling and backstepping-based nonlinear control strategy for a 6
-  dof quadrotor helicopter.
+  {DOF} quadrotor helicopter.
 \newblock {\em Chinese Journal of Aeronautics}, 21(3):261--268, 2008.
+
+\bibitem{quadblog}
+multicopter.forestblue.nl.
+\newblock Quadcopter (x-mode build log).
+\newblock http://multicopter.forestblue.nl/quadcopter\_build\_log.html, 2012.
+\newblock Acessado em 25/02/2015.
 
 \bibitem{Nicol2008}
 C.~Nicol, C.~Macnab, and A.~Ramirez-Serrano.
@@ -151,7 +158,7 @@ J.~Roberts, T.~Stirling, J.-C. Zufferey, and D.~Floreano.
 
 \bibitem{Salih2010}
 A.~L. Salih, M.~Moghavvemi, H.~A. Mohamed, and K.~S. Gaeid.
-\newblock Flight pid controller design for a uav quadrotor.
+\newblock Flight {PID} controller design for a {UAV} quadrotor.
 \newblock {\em Scientific Research and Essays}, 5(23):3660--3667, 2010.
 
 \bibitem{Saranrittichai2013}
@@ -170,34 +177,42 @@ S.~Shen, Y.~Mulgaonkar, N.~Michael, and V.~Kumar.
 
 \bibitem{Shen2013a}
 S.~Shen, Y.~Mulgaonkar, N.~Michael, and V.~Kumar.
-\newblock Vision-based state estimation for autonomous rotorcraft mavs in
+\newblock Vision-based state estimation for autonomous rotorcraft {MAV}s in
   complex environments.
 \newblock In {\em Robotics and Automation (ICRA), 2013 IEEE International
   Conference on}, pages 1758--1764. IEEE, 2013.
 
+\bibitem{ardrone}
+F.~D. Stephane, Nicolas~Brulez.
+\newblock Ar.drone developer guide.
+\newblock
+  http://ardrone2.parrot.com/media/uploads/support\_ardrone\_1/ar.drone\_user-guide\_uk.pdf,
+  2014.
+\newblock Acessado em 25/01/2015.
+
 \bibitem{Berg2012}
 J.~van~den Berg, D.~Wilkie, S.~J. Guy, M.~Niethammer, and D.~Manocha.
-\newblock Lqg-obstacles: Feedback control with collision avoidance for mobile
+\newblock {LQG}-obstacles: Feedback control with collision avoidance for mobile
   robots with motion and sensing uncertainty.
 \newblock In {\em Robotics and Automation (ICRA), 2012 IEEE International
   Conference on}, pages 346--353. IEEE, 2012.
 
 \bibitem{Wendel2006}
 J.~Wendel, O.~Meister, C.~Schlaile, and G.~F. Trommer.
-\newblock An integrated gps/mems-imu navigation system for an autonomous
+\newblock An integrated {GPS}/{MEMS}-{IMU} navigation system for an autonomous
   helicopter.
 \newblock {\em Aerospace Science and Technology}, 10(6):527--533, 2006.
 
 \bibitem{Ye2006}
 Z.~Ye, P.~Bhattacharya, H.~Mohamadian, H.~Majlesein, and Y.~Ye.
-\newblock Equational dynamic modeling and adaptive control of uav.
+\newblock Equational dynamic modeling and adaptive control of {UAV}.
 \newblock In {\em System of Systems Engineering, 2006 IEEE/SMC International
   Conference on}, pages 5--pp. IEEE, 2006.
 
 \bibitem{Zhang2014}
 X.~Zhang, X.~Li, K.~Wang, and Y.~Lu.
 \newblock A survey of modelling and identification of quadrotor robot.
-\newblock In {\em Abstract and Applied Analysis}, volume 2014. Hindawi
-  Publishing Corporation, 2014.
+\newblock http://downloads.hindawi.com/journals/aaa/2014/320526.pdf, 2014.
+\newblock Acessado em 12/02/2015.
 
 \end{thebibliography}

@@ -5,43 +5,39 @@ The style file: apalike.bst
 Database file #1: Dissertacao.bib
 Warning--entry type for "rocopter" isn't style-file defined
 --line 5 of file Dissertacao.bib
-Warning--entry type for "Kingdom" isn't style-file defined
---line 376 of file Dissertacao.bib
-Warning--entry type for "Liang" isn't style-file defined
---line 389 of file Dissertacao.bib
 You've used 11 entries,
             1935 wiz_defined-function locations,
-            540 strings with 5383 characters,
+            542 strings with 5490 characters,
 and the built_in function-call counts, 3760 in all, are:
-= -- 377
+= -- 382
 > -- 132
 < -- 10
 + -- 42
 - -- 42
-* -- 291
-:= -- 676
-add.period$ -- 30
+* -- 289
+:= -- 680
+add.period$ -- 32
 call.type$ -- 11
-change.case$ -- 75
+change.case$ -- 76
 chr.to.int$ -- 11
 cite$ -- 11
-duplicate$ -- 151
-empty$ -- 261
+duplicate$ -- 148
+empty$ -- 256
 format.name$ -- 57
 if$ -- 726
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 6
-newline$ -- 54
+newline$ -- 56
 num.names$ -- 33
-pop$ -- 62
+pop$ -- 58
 preamble$ -- 1
 purify$ -- 76
 quote$ -- 0
-skip$ -- 123
+skip$ -- 121
 stack$ -- 0
 substring$ -- 248
-swap$ -- 18
+swap$ -- 16
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
@@ -49,5 +45,5 @@ type$ -- 66
 warning$ -- 0
 while$ -- 34
 width$ -- 0
-write$ -- 133
-(There were 3 warnings)
+write$ -- 137
+(There was 1 warning)
