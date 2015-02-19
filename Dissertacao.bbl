@@ -14,7 +14,7 @@ E.~Altug, J.~P. Ostrowski, and R.~Mahony.
 
 \bibitem{Angonese2013}
 A.~T. Angonese and P.~Ferreira~Rosa.
-\newblock Ground control station for multiple uavs flight simulation.
+\newblock Ground control station for multiple {UAV}s flight simulation.
 \newblock In {\em Robotics Symposium and Competition (LARS/LARC), 2013 Latin
   American}, pages 136--141. IEEE, 2013.
 
@@ -60,7 +60,10 @@ R.~A. da~Paixao, P.~F.~F. Rosa, and J.~M.~M. Neto.
 \bibitem{Domingues2009}
 J.~M.~B. Domingues.
 \newblock Quadrotor prototype.
-\newblock {\em Universidade Tecnica de Lisboa. Dissertação}, 2009.
+\newblock
+  https://fenix.tecnico.ulisboa.pt/downloadFile/395139421058/Tese\_de\_Mestrado.pdf,
+  2009.
+\newblock Acessado em 19/02/2015.
 
 \bibitem{Fiorini1998}
 P.~Fiorini and Z.~Shiller.
@@ -81,7 +84,10 @@ T.~Fraichard and H.~Asama.
 \bibitem{Gibiansky2010}
 A.~Gibiansky.
 \newblock Quadcopter dynamics, simulation, and control.
-\newblock 2010.
+\newblock
+  http://andrew.gibiansky.com/downloads/pdf/Quadcopter%20Dynamics,%20Simulation,%20and%20Control.pdf,
+  2010.
+\newblock Acessado em 19/02/2014.
 
 \bibitem{Grzonka2012}
 S.~Grzonka, G.~Grisetti, and W.~Burgard.

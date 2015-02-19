@@ -3,48 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Dissertacao.aux
 The style file: abbrv.bst
 Database file #1: Dissertacao.bib
-Warning--empty journal in Gibiansky2010
 Warning--empty journal in Israelsen
 Warning--empty year in Israelsen
 You've used 35 entries,
             2118 wiz_defined-function locations,
-            728 strings with 11132 characters,
-and the built_in function-call counts, 13508 in all, are:
-= -- 1356
+            732 strings with 11357 characters,
+and the built_in function-call counts, 13535 in all, are:
+= -- 1361
 > -- 653
 < -- 15
 + -- 263
 - -- 222
-* -- 900
-:= -- 2144
-add.period$ -- 122
+* -- 896
+:= -- 2141
+add.period$ -- 124
 call.type$ -- 35
 change.case$ -- 215
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 516
-empty$ -- 1058
+cite$ -- 37
+duplicate$ -- 510
+empty$ -- 1068
 format.name$ -- 222
-if$ -- 2917
+if$ -- 2932
 int.to.chr$ -- 0
 int.to.str$ -- 35
-missing$ -- 30
-newline$ -- 182
+missing$ -- 28
+newline$ -- 184
 num.names$ -- 70
-pop$ -- 281
+pop$ -- 287
 preamble$ -- 1
 purify$ -- 181
 quote$ -- 0
-skip$ -- 375
+skip$ -- 373
 stack$ -- 0
 substring$ -- 802
-swap$ -- 160
+swap$ -- 161
 text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 138
-warning$ -- 3
+warning$ -- 2
 while$ -- 127
 width$ -- 37
-write$ -- 395
-(There were 3 warnings)
+write$ -- 400
+(There were 2 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  12 FEB 2015 17:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  19 FEB 2015 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -639,66 +639,81 @@ Package pdftex.def Info: img/missao3.png used on input line 478.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [30 <./img/missao2.png>] [31 <./img/missao3.png>] (./Dissertacao.bbl [32]
+Underfull \hbox (badness 10000) in paragraph at lines 61--67
+[]\OT1/cmr/m/n/10.95 J. M. B. Do-min-gues.  Qua-dro-tor pro-totype.
+ []
+
+
+Overfull \hbox (92.34302pt too wide) in paragraph at lines 61--67
+\OT1/cmr/m/n/10.95 https://fenix.tecnico.ulisboa.pt/downloadFile/395139421058/T
+ese[]de[]Mestrado.pdf,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--91
+\OT1/cmr/m/n/10.95 http://andrew.gibiansky.com/downloads/pdf/Quadcopter2010.
+ []
+
 [33]
-Underfull \hbox (badness 3333) in paragraph at lines 105--110
+Underfull \hbox (badness 3333) in paragraph at lines 111--116
 []\OT1/cmr/m/n/10.95 J. Ju-nior.  Si-mula^^Xc~ao e im-ple-menta^^Xc~ao em tempo
  real
  []
 
 
-Underfull \hbox (badness 6380) in paragraph at lines 105--110
+Underfull \hbox (badness 6380) in paragraph at lines 111--116
 \OT1/cmr/m/n/10.95 de sis-te-mas de na-vega^^Xc~ao iner-cial in-te-gra-dos INS/
 GPS.
  []
 
 
-Overfull \hbox (16.56285pt too wide) in paragraph at lines 105--110
+Overfull \hbox (16.56285pt too wide) in paragraph at lines 111--116
 \OT1/cmr/m/n/10.95 http://pged.ime.eb.br/teses/mestrado/tese[]msc[]2009[]adalbe
 rto.pdf,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--122
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
 []\OT1/cmr/m/n/10.95 O. Li-ang.  Quad-cop-ter PID ex-plai-ned and tu-ning.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--122
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
 \OT1/cmr/m/n/10.95 http://blog.oscarliang.net/quadcopter-pid-explained-tuning/,
 
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 130--134
+Underfull \hbox (badness 2376) in paragraph at lines 136--140
 []\OT1/cmr/m/n/10.95 multicopter.forestblue.nl.  Quad-cop-ter (x-mode build log
 ).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--134
+Underfull \hbox (badness 10000) in paragraph at lines 136--140
 \OT1/cmr/m/n/10.95 http://multicopter.forestblue.nl/quadcopter[]build[]log.html
 ,
  []
 
 [34]
-Overfull \hbox (64.10417pt too wide) in paragraph at lines 186--192
+Overfull \hbox (64.10417pt too wide) in paragraph at lines 192--198
 \OT1/cmr/m/n/10.95 http://ardrone2.parrot.com/media/uploads/support[]ardrone[]1
 /ar.drone[]user-
  []
 
 [35]
-Underfull \hbox (badness 5607) in paragraph at lines 213--217
+Underfull \hbox (badness 5607) in paragraph at lines 219--223
 []\OT1/cmr/m/n/10.95 X. Zhang, X. Li, K. Wang, and Y. Lu.  A sur-
  []
 
 
-Underfull \hbox (badness 4765) in paragraph at lines 213--217
+Underfull \hbox (badness 4765) in paragraph at lines 219--223
 \OT1/cmr/m/n/10.95 vey of mo-del-ling and iden-ti-fi-ca-tion of qua-dro-tor ro-
 bot.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--217
+Underfull \hbox (badness 10000) in paragraph at lines 219--223
 \OT1/cmr/m/n/10.95 http://downloads.hindawi.com/journals/aaa/2014/320526.pdf,
  []
 
@@ -729,7 +744,7 @@ m/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on Dissertacao.pdf (37 pages, 1241078 bytes).
+Output written on Dissertacao.pdf (37 pages, 1240672 bytes).
 PDF statistics:
  200 PDF objects out of 1000 (max. 8388607)
  122 compressed objects within 2 object streams
