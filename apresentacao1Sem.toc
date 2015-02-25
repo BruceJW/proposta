@@ -3,7 +3,7 @@
 \beamer@sectionintoc {1}{Objetivo}{3}{0}{1}
 \beamer@sectionintoc {2}{Introdu\IeC {\c c}\IeC {\~a}o}{5}{0}{2}
 \beamer@sectionintoc {3}{O Problema: Seguran\IeC {\c c}a em voo para quadric\IeC {\'o}ptero}{9}{0}{3}
-\beamer@sectionintoc {4}{\IeC {\'A}reas de estudo envolvidas}{12}{0}{4}
+\beamer@sectionintoc {4}{\IeC {\'A}reas de enfoque para estudo}{12}{0}{4}
 \beamer@sectionintoc {5}{Metodologia}{14}{0}{5}
 \beamer@sectionintoc {6}{Cronograma}{18}{0}{6}
 \beamer@sectionintoc {7}{Viabilidade da proposta}{20}{0}{7}

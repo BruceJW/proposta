@@ -18,7 +18,13 @@
 \usepackage{beamerthemesplit}
 \usepackage{xcolor}
 
-
+\definecolor{cl-programado}{rgb}{1,0.6,0}
+\definecolor{cl-realizado}{rgb}{0,0.7,0.32}
+\definecolor{cl-atrasado}{rgb}{0.75,0,0}
+\definecolor{cl-cabecalho}{rgb}{0.3,0.5,0.75}
+\definecolor{cl-impar}{rgb}{0.81, 0.85, 0.91}
+\definecolor{cl-par}{rgb}{0.91, 0.93, 0.87} 
+ 
  
 %\newcommand{\newblock}{}
 %\usepackage[portugues,algoruled,longend]{algorithm2e}  
@@ -49,27 +55,11 @@
 \setbeamercolor{palette secondary}{fg=verdeescuro2, bg=gray!20!white}
 \setbeamercolor{palette tertiary}{fg=black, bg=verdeescuro}
 \makeatother
-% Set Color ==============================
-
-% \definecolor{verdeescuro}{rgb}{0.539,0.601,0.42}
-
-%\definecolor{verde}{rgb}{0.55,0.78,0.25} 
-% ------------------------------------------------------------------ %
-% Deixando o tema mais verde. Comente a linha abaixo se nao gostar %
-
-% ------------------------------------------------------------------ %
-% Deixando o verde mais claro para combinar com o logo do IFET
-% Descomente as linhas abaixo
-% \setbeamercolor{structure}{fg=verde}
-% \setbeamercolor{title}{fg=black,bg=verde!80!black}
-% \setbeamercolor{frametitle}{fg=black,bg=verde!25}
-% \setbeamercolor{block body}{fg=black,bg=verde!15}
-% \setbeamercolor{block title}{fg=white,bg=verdeescuro}
 % ------------------------------------------------------------------ %
 \linespread{1}
 \beamertemplatenavigationsymbolsempty
 
-\title[Dissertação]{Sistemas de Defesa: Uma abordagem para desvios de obstáculos no auxílio do controle de um quadricóptero em tempo real}
+\title[Proposta]{Sistemas de Defesa: Uma abordagem para desvios de obstáculos no auxílio do controle de um quadricóptero em tempo real}
 
 \author[Bruno Giovanini]{Bruno da Silva Giovanini
 \\   
@@ -181,150 +171,50 @@ Paulo F.F. Rosa\\
 
 % -------------------------------------------------%
 
-\section{O Problema: Segurança em voo para quadricóptero}
+\section{Tópicos tutorias}
 
 \begin{frame}
 	\frametitle{Sumário}
 	\tableofcontents[currentsection]
+\end{frame}
+
+\subsection*{O quadricóptero}
+\begin{frame}
+  	
+	\frametitle{O quadricóptero - A Plataforma}
+	
+	\begin{itemize}
+	
+	\item Veículo voador com quatro rotores com decolagem e aterrissagem vertical \cite{Salih2010}
+		
+	\begin{figure}
+		\centering
+		\includegraphics[keepaspectratio = true,
+		width=0.7\textwidth]{img/parrot_drone.jpg}
+		\caption{Plataforma Parrot Ardrone 2.0. Fonte \cite{ardrone}}
+		\label{fig:quad}
+	\end{figure}
+		
+	\end{itemize}
+	
 \end{frame}
 
 \begin{frame}[allowframebreaks]
-	\frametitle{O Problema: Segurança em voo para quadricóptero}
+	
+	\frametitle{O quadricóptero - Dinâmica de Voo}
 	
 	\begin{itemize}
 		
-		\item Auxíliar o controle da plataforma com base na dinâmica e estado  atual do veículo, sua operação corrente e a distância para obstáculos
+		\item Objetivo é manter a estabilidade do eixo central controlando quatro motores independentes eletronicamente
 		
-		\item Dinâmica do robô ($\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$):
-		
-		\begin{equation}
-		\centering
-		\dot{\mathbf{x}} = \mathbf{f}(\mathbf{x}(t),\mathbf{u}(t),t)  
-		\label{eq:equacaoDinProb}
-		\end{equation}
-		
-		
-		Dado $\mathbf{x}(t)$ o estado do robô no tempo $t$ e $\mathbf{u}(t)$ o \textit{input} de operação no tempo $t$.
+		\item Seis graus de liberdade e quatro atuadores
+				
+		\item Três são variações lineares ($x$,$y$,$z$) e três são angulares ($\phi$,$\theta$,$\psi$)
+						
+		\item  Sistema subatuado, dimensão do espaço de configurações ($x$,$y$,$z$,$\phi$,$\theta$,$\psi$) excede o espaço do controle ($u_1$,$u_2$,$u_3$,$u_4$) 
+				
 		
 		
-		%	A dinâmica do robô é uma função em $\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$ e é dada pela relação \ref{eq:equacaoDinProb}:
-		
-		\item Estado do robô ($\mathbf{g} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathcal{X}$ é a solução da equação diferencial \ref{eq:equacaoDinProb}):
-		
-		\begin{equation}
-		\centering
-		\mathbf{x} = \mathbf{g}(\mathbf{x},\mathbf{u},t)  
-		\label{eq:equacaoPosProb}
-		\end{equation}
-		
-		Dado $\mathbf{x_0} = \mathbf{x}(0)$ e $\mathbf{u}$ a constante de \textit{input} de operação				
-		
-		\framebreak
-		
-		%\item Obstáculos restringem as posições possíveis do robô
-		
-		\item O Problema: Definir a menor variação de controle $\Delta\mathbf{u} \in \mathcal{U}$ necessária para evitar colisão em $t \in [0,\tau]$, onde $\tau$ é um horizonte de tempo já definido:
-		
-		\begin{equation}
-		\begin{aligned}
-		\text{min: }& \Delta\mathbf{u} \\
-		\text{Sujeito a: }& \forall t \in [0,\tau], \mathcal{R}(\mathbf{g}(\mathbf{x}, \mathbf{u}+\Delta\mathbf{u}, t)) \cap \mathcal{O} = \emptyset
-		\end{aligned}
-		\label{eq:equacaoProb}
-		\end{equation}
-		
-		Dado $\mathcal{O} \subset \mathbb{R}^3$, a subárea do espaço $\mathbb{R}^n$ ocupadas por obstáculos escondidas quando vistas pelo robô e $\mathcal{R}(x)$, a subárea ocupada pelo robô no estado $x \in \mathcal{X}$
-		
-		
-		
-	\end{itemize}	 
-\end{frame}
-
-\section{Áreas de enfoque para estudo}
-
-\begin{frame}
-	\frametitle{Sumário}
-	\tableofcontents[currentsection]
-\end{frame}
-
-\begin{frame}
-	
-	\frametitle{Áreas de enfoque para estudo}
-	
-	\begin{itemize}
-		
-		\item Dinâmica do quadricóptero para estimação da trajetória futura		
-		
-		\item Trabalho dos dados de navegação fornecidos pelo \textit{Attitude Heading Refence System} (AHRS) embarcado na plataforma
-%		   \begin{itemize}
-%		   	
-%		   	\item Fornece (${ \dot { x }  }\quad { \dot { y }  }\quad { \dot { z }  }\quad { \phi  }\quad { \theta  }\quad { \psi  }$)
-%		   \end{itemize}
-		
-		\item Tratamento da imprecisão das medidas de distância dos sensores ultrassônicos 
-		
-		\item Controle PID para correção da estimativa de posicionamento
-%		\begin{itemize}
-%			\item Avaliar a utilização dos sensores ultrassônicos
-%		\end{itemize}	
-		
-		\item Algoritmo para detecção de colisão
-		
-%			\begin{itemize}
-%				\item Método das janelas dinâmicas \cite{Saranrittichai2013}
-%			\end{itemize}
-%		
-		
-	\end{itemize}	
-
-\end{frame}	
-
-%\section{Tópicos tutorias}
-%
-%\begin{frame}
-%	\frametitle{Sumário}
-%	\tableofcontents[currentsection]
-%\end{frame}
-%
-%\subsection*{O quadricóptero}
-%\begin{frame}
-%  	
-%	\frametitle{O quadricóptero - A Plataforma}
-%	
-%	\begin{itemize}
-%	
-%	\item Veículo voador com quatro rotores com decolagem e aterrissagem vertical \cite{Salih2010}
-%		
-%	\begin{figure}ß
-%		\centering
-%		\includegraphics[keepaspectratio = true,
-%		width=0.7\textwidth]{img/parrot_drone.jpg}
-%		\caption{Plataforma Parrot Ardrone 2.0. Fonte \cite{ardrone}}
-%		\label{fig:quad}
-%	\end{figure}
-%		
-%	\end{itemize}
-%	
-%\end{frame}
-%
-%\begin{frame}[allowframebreaks]
-%	
-%	\frametitle{O quadricóptero - Dinâmica de Voo}
-%	
-%	\begin{itemize}
-%		
-%		\item Objetivo é manter a estabilidade do eixo central controlando quatro motores independentes eletronicamente
-%		
-%		\item Seis graus de liberdade e quatro atuadores
-%		
-%		\item Três variações lineares ($x$,$y$,$z$) e três angulares ($\phi$,$\theta$,$\psi$)
-%		
-%		\item Sistema sub-atuado, espaço de configuração ($x$,$y$,$z$, $\phi$,$\theta$,$\psi$) excede o espaço de controle ($u_1$,$u_2$,$u_3$,$u_4$)				
-%								
-%		%\item  Sistema não-holonômico (subatuado), espaço de configuração excede  (x,y) dependentes dos movimentos($\phi$,$\theta$) \cite{Figueiredo2004}
-%				
-%		
-%		
 %	\framebreak	
 %		
 %		
@@ -359,120 +249,120 @@ Paulo F.F. Rosa\\
 %			\caption{Os movimentos gerados a partir das variações de velocidades dos motores. Fonte \cite{Domingues2009}}
 %			\label{fig:diag quad3}
 %		\end{figure}
-%	
-%	\end{itemize}	
-%	
-%\end{frame}	 
-%
-%\subsection*{Sistemas embarcados para navegação}
-%\begin{frame}
-%	
-%	\frametitle{Sistemas embarcados para navegação}
-%	
-%	\begin{itemize}
-%
-%	\item Obtenção de informações sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial	
-%	
-%	\item Fornecidas por sensores inerciais: acelerômetros e giroscópios (ou girômetros)
-%	
-%	\item Magnetômetros incluídos melhoram a medida da atitude do veiculo	
-%	
-%	\end{itemize}
-%	
-%\end{frame}	
-%\begin{frame}
-%	\frametitle{IMU}
-%	
-%	\begin{itemize}
-%		
-%		\item Componente eletrônico onde estão montados os sensores. 
-%		
-%		\item Três acelerômetros: aceleração linear (x,y,z)
-%		
-%		\item Três giroscópios: taxa de variação dos ângulos ($\phi$,$\theta$,$\psi$)
-%	
-%	    \vspace{0.5cm}
-%	
-%		\begin{figure}[h]
-%			\centering
-%			\includegraphics[keepaspectratio = true,
-%			width=0.65\textwidth]{img/imuStrap.png}
-%			\caption{Estrutura do Sistema de Navegação acoplada ao veículo (esquerda) e os movimentos gerados no quadricóptero (direita). Fonte \cite{Adalberto2009}}
-%			\label{fig:imuStrap}
-%		\end{figure}
-%	\end{itemize}
-%\end{frame}
-%
-%\begin{frame}	
-%	
-%	\frametitle{AHRS}	
-%		
-%	\begin{itemize}
-%		
-%		\item \textit{Attitude Heading Reference System}
-%		
-%		\item Mesmos sensores da IMU (com magnetrômetro)
-%		
-%		\item Unidade de processamento para cálculo da velocidade linear e atitude
-%		
-%		\item Fornece (${ \dot { x }  }\quad { \dot { y }  }\quad { \dot { z }  }\quad { \phi  }\quad { \theta  }\quad { \psi  }$)
-%	 
-%	\end{itemize}
-%\end{frame}	
-%
-%\subsection*{Controle PID e quadricópteros}
-%\begin{frame}[allowframebreaks]
-%	
-%	\frametitle{Controle PID}
-%	\begin{itemize}
-%	
-%		\item Método de controle adaptativo comum para controle de robôs
-%		
-%		\item Controle fechado que reage a mudanças no ambiente captadas por sensores
-%		
-%		\item Reação a partir do erro medido
-%		
-%		\item Três parâmetros constantes: Proporcional (P), Integral (I) e Derivativo (D)
-%		
-%	\framebreak
-%	
-%		\item Proporcional (P)
-%			\begin{itemize}
-%				\item É tipicamente o erro. 
-%				\item Fórmula: $A - B$, onde $A$ é a posição atual e $B$ é onde deveria estar 	
-%			\end{itemize}
-%			
-%		\item Integral (I)
-%		\begin{itemize}
-%			\item É o acúmulo dos erros passados no tempo. 
-%			\item Fórmula: $A/t_1 + B/t_2 + C/t_3$, sendo $A$ o erro em $t_1$, $B$ em $t_2$ e $C$ em $t_3$ 	
-%		\end{itemize}	
-%		
-%		\item Derivativo (D)
-%		\begin{itemize}
-%			\item É a mudança do erro no tempo. 
-%			\item Fórmula: $(A-B)/\Delta t$, sendo $A$ o erro inicial e $B$ o erro depois do intervalo $\Delta t$ 	
-%		\end{itemize}	
-%		
-%	\framebreak
-%	
-%		\item Cada parâmetro tem seu ganho $K$ associado
-%		
-%		\item $ \mbox{Valor medido} = P*K_p + I*K_i + D*K_d$
-%		
-%		\vspace{0.6cm}
-%		\begin{figure}[h]
-%			\centering
-%			\includegraphics[keepaspectratio = true,
-%			width=0.4\textwidth]{img/ganho_PID.png}
-%			\caption{Desempenho do sistema para diferentes ganhos $K_p$, $K_i$ e $K_d$. Fonte \cite{Kingdom}}
-%			\label{fig:ganhoPID}
-%		\end{figure}	
-%	
-%	\end{itemize}
-%	
-%\end{frame}	
-%
+	
+	\end{itemize}	
+	
+\end{frame}	 
+
+\subsection*{Sistemas embarcados para navegação}
+\begin{frame}
+	
+	\frametitle{Sistemas embarcados para navegação}
+	
+	\begin{itemize}
+
+	\item Obtenção de informações sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial	
+	
+	\item Fornecidas por sensores inerciais: acelerômetros e giroscópios (ou girômetros)
+	
+	\item Magnetômetros incluídos melhoram a medida da atitude do veiculo	
+	
+	\end{itemize}
+	
+\end{frame}	
+\begin{frame}
+	\frametitle{IMU}
+	
+	\begin{itemize}
+		
+		\item Componente eletrônico onde estão montados os sensores. 
+		
+		\item Três acelerômetros: aceleração linear (x,y,z)
+		
+		\item Três giroscópios (ou girômetros): taxa de variação dos ângulos ($\phi$,$\theta$,$\psi$)
+	
+	    \vspace{0.5cm}
+	
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.65\textwidth]{img/imuStrap.png}
+			\caption{Estrutura do Sistema de Navegação acoplada ao veículo (esquerda) e os movimentos gerados no quadricóptero (direita). Fonte \cite{Adalberto2009}}
+			\label{fig:imuStrap}
+		\end{figure}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}	
+	
+	\frametitle{AHRS}	
+		
+	\begin{itemize}
+		
+		\item \textit{Attitude Heading Reference System}
+		
+		\item Mesmos sensores da IMU (com magnetrômetro)
+		
+		\item Unidade de processamento para cálculo da velocidade linear e atitude
+		
+		\item Fornece (${ \dot { x }  }\quad { \dot { y }  }\quad { \dot { z }  }\quad { \phi  }\quad { \theta  }\quad { \psi  }$)
+	 
+	\end{itemize}
+\end{frame}	
+
+\subsection*{Controle PID e quadricópteros}
+\begin{frame}[allowframebreaks]
+	
+	\frametitle{Controle PID}
+	\begin{itemize}
+	
+		\item Método de controle adaptativo comum para controle de robôs
+		
+		\item Controle fechado que reage a mudanças no ambiente captadas por sensores
+		
+		\item Reação a partir do erro medido
+		
+		\item Três parâmetros constantes: Proporcional (P), Integral (I) e Derivativo (D)
+		
+	\framebreak
+	
+		\item Proporcional (P)
+			\begin{itemize}
+				\item É tipicamente o erro. 
+				\item Fórmula: $A - B$, onde $A$ é a posição atual e $B$ é onde deveria estar 	
+			\end{itemize}
+			
+		\item Integral (I)
+		\begin{itemize}
+			\item É o acúmulo dos erros passados no tempo. 
+			\item Fórmula: $A/t_1 + B/t_2 + C/t_3$, sendo $A$ o erro em $t_1$, $B$ em $t_2$ e $C$ em $t_3$ 	
+		\end{itemize}	
+		
+		\item Derivativo (D)
+		\begin{itemize}
+			\item É a mudança do erro no tempo. 
+			\item Fórmula: $(A-B)/\Delta t$, sendo $A$ o erro inicial e $B$ o erro depois do intervalo $\Delta t$ 	
+		\end{itemize}	
+		
+	\framebreak
+	
+		\item Cada parâmetro tem seu ganho $K$ associado
+		
+		\item $ \mbox{Valor medido} = P*K_p + I*K_i + D*K_d$
+		
+		\vspace{0.6cm}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.4\textwidth]{img/ganho_PID.png}
+			\caption{Desempenho do sistema para diferentes ganhos $K_p$, $K_i$ e $K_d$. Fonte \cite{Kingdom}}
+			\label{fig:ganhoPID}
+		\end{figure}	
+	
+	\end{itemize}
+	
+\end{frame}	
+
 %\begin{frame}[allowframebreaks]
 %	
 %	\frametitle{PID para quadricópteros}
@@ -499,7 +389,64 @@ Paulo F.F. Rosa\\
 %\end{frame}	
 
 
+\section{O Problema: Segurança em voo para quadricóptero}
 
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{O Problema: Segurança em voo para quadricóptero}
+	
+	\begin{itemize}
+		
+		\item Auxíliar o controle da plataforma com base na dinâmica, estado  atual, operação corrente e a distância para obstáculos
+		
+		\item Dinâmica do robô ($\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$):
+		
+		\begin{equation}
+		\centering
+		\dot{\mathbf{x}} = \mathbf{f}(\mathbf{x}(t),\mathbf{u}(t),t)  
+		\label{eq:equacaoDinProb}
+		\end{equation}
+		
+		
+		Dado $\mathbf{x}(t)$ o estado do robô no tempo $t$ e $\mathbf{u}(t)$ o \textit{input} de operação no tempo $t$.
+		
+		
+	%	A dinâmica do robô é uma função em $\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$ e é dada pela relação \ref{eq:equacaoDinProb}:
+		
+		\item Estado do robô ($\mathbf{g} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathcal{X}$ é a solução da equação diferencial \ref{eq:equacaoDinProb}):
+		
+		\begin{equation}
+		\centering
+		\mathbf{x} = \mathbf{g}(\mathbf{x},\mathbf{u},t)  
+		\label{eq:equacaoPosProb}
+		\end{equation}
+	
+		Dado $\mathbf{x_0} = \mathbf{x}(0)$ e $\mathbf{u}$ a constante de \textit{input} de operação				
+		
+	\framebreak
+	
+		%\item Obstáculos restringem as posições possíveis do robô
+		
+		\item O Problema: Definir a menor variação de controle $\Delta\mathbf{u} \in \mathcal{U}$ necessária para evitar colisão em $t \in [0,\tau]$, onde $\tau$ é um horizonte de tempo já definido:
+		
+		\begin{equation}
+		\begin{aligned}
+		\text{min: }& \Delta\mathbf{u} \\
+		\text{Sujeito a: }& \forall t \in [0,\tau], \mathcal{R}(\mathbf{g}(\mathbf{x}, \mathbf{u}+\Delta\mathbf{u}, t)) \cap \mathcal{O} = \emptyset
+		\end{aligned}
+		\label{eq:equacaoProb}
+		\end{equation}
+		
+		Dado $\mathcal{O} \subset \mathbb{R}^3$, a subárea do espaço $\mathbb{R}^n$ ocupadas por obstáculos escondidas quando vistas pelo robô e $\mathcal{R}(x)$, a subárea ocupada pelo robô no estado $x \in \mathcal{X}$
+			
+		
+		
+	\end{itemize}	 
+\end{frame}
 
 
 \section{Metodologia}
@@ -529,57 +476,57 @@ Paulo F.F. Rosa\\
 		
 	\framebreak
 	
-%	\item Evitar colisão
+	\item Evitar colisão
 	
-%	\begin{itemize}
-%		
-%		\item Dados da AHRS: $d_{ t }=\quad { \left[ { \dot { x }  }_{ t }\quad { \dot { y }  }_{ t }\quad { \dot { z }  }_{ t }\quad { \phi  }_{ t }\quad { \theta  }_{ t }\quad { \psi  }_{ t } \right]  }^{ T }$
-%		
-%		\item Dados do Controle: ${ u }_{ t }=\quad { \left[ \mathbf{{ \delta \phi  }_{ t }\quad { \delta \theta  }_{ t }\quad { \delta \psi  }_{ t }\quad { \delta h }_{ t }} \right]  }^{ T }$	
-%			
-%	
-%	\item Estimação da trajetória futura (Integração Numérica em $t$)
-%	
-%		
-%		\item Espaço de estados em $\Delta t$. Fonte \cite{Basit2014}
-%		
-%		\begin{equation}
-%		\begin{aligned}
-%		{ x }_{ t+1 } &=\quad { x }_{ t }+({ \dot { x }  }_{ t }{ \cos { \psi  }  }_{ t }-{ \dot { y }  }_{ t }{ \sin { \psi  }  }_{ t })\Delta t \\
-%		{ y }_{ t+1 } &=\quad y_{ t }+({ \dot { x }  }_{ t }{ \sin { \psi  }  }_{ t }+{ \dot { y }  }_{ t }{ \cos { \psi  }  }_{ t })\Delta t \\
-%		{ z }_{ t+1 } &=\quad { z }_{ t }+\delta { h }_{ t }\quad \\
-%		{ \phi  }_{ t+1 } &=\quad { \phi  }_{ t }+\delta { \phi  }_{ t }\quad \\
-%		{ \theta  }_{ t+1 } &=\quad { \theta  }_{ t }+\delta { \theta  }_{ t } \\
-%		{ \psi  }_{ t+1 } &=\quad \psi _{ t }+\delta { \psi  }_{ t } \\
-%		{ \dot { x }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 1 }}{ \phi  }_{ t } \\
-%		{ \dot { y }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 2 }}{ \theta  }_{ t } \\
-%		\Delta t &= \mbox{ Intervalo entre medidas obtidas através da plataforma}
-%		\end{aligned}
-%		\label{eq:equacaoProb}
-%		\end{equation}
-%		
-%	\end{itemize}	
-%	
-%	\framebreak
-%	
-%	\item Evitar colisão (cont.)
-%	
-%	\begin{itemize}
-%		
-%		\item Identificar rota em choque e desviar
-%		
-%		\item Utilização das distâncias medidas para os obstáculos
-%		
-%		\item Método da Janela dinâmica \cite{Saranrittichai2013}	
-%		
-%		
-%		\item Determinar $\Delta\mathbf{u}$  possíveis e seguros no espaço de estados $\mathcal{U}$ em $t \in [0,\tau]$
-%		
-%		\item Otimização: $\text{min } \Delta\mathbf{u}$
-%			
-%		
-%		
-%	\end{itemize}	
+	\begin{itemize}
+		
+		\item Dados da AHRS: $d_{ t }=\quad { \left[ { \dot { x }  }_{ t }\quad { \dot { y }  }_{ t }\quad { \dot { z }  }_{ t }\quad { \phi  }_{ t }\quad { \theta  }_{ t }\quad { \psi  }_{ t } \right]  }^{ T }$
+		
+		\item Dados do Controle: ${ u }_{ t }=\quad { \left[ \mathbf{{ \delta \phi  }_{ t }\quad { \delta \theta  }_{ t }\quad { \delta \psi  }_{ t }\quad { \delta h }_{ t }} \right]  }^{ T }$	
+			
+	
+	\item Estimação da trajetória futura (Integração Numérica em $t$)
+	
+		
+		\item Espaço de estados em $\Delta t$. Fonte \cite{Basit2014}
+		
+		\begin{equation}
+		\begin{aligned}
+		{ x }_{ t+1 } &=\quad { x }_{ t }+({ \dot { x }  }_{ t }{ \cos { \psi  }  }_{ t }-{ \dot { y }  }_{ t }{ \sin { \psi  }  }_{ t })\Delta t \\
+		{ y }_{ t+1 } &=\quad y_{ t }+({ \dot { x }  }_{ t }{ \sin { \psi  }  }_{ t }+{ \dot { y }  }_{ t }{ \cos { \psi  }  }_{ t })\Delta t \\
+		{ z }_{ t+1 } &=\quad { z }_{ t }+\delta { h }_{ t }\quad \\
+		{ \phi  }_{ t+1 } &=\quad { \phi  }_{ t }+\delta { \phi  }_{ t }\quad \\
+		{ \theta  }_{ t+1 } &=\quad { \theta  }_{ t }+\delta { \theta  }_{ t } \\
+		{ \psi  }_{ t+1 } &=\quad \psi _{ t }+\delta { \psi  }_{ t } \\
+		{ \dot { x }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 1 }}{ \phi  }_{ t } \\
+		{ \dot { y }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 2 }}{ \theta  }_{ t } \\
+		  \Delta t &= \mbox{ tempo entre medidas obtidas da plataforma}
+		\end{aligned}
+		\label{eq:equacaoProb}
+		\end{equation}
+		
+	\end{itemize}	
+	
+	\framebreak
+	
+	\item Evitar colisão (cont.)
+	
+	\begin{itemize}
+		
+		\item Identificar rota em choque e desviar
+		
+		\item Utilização das distâncias medidas para os obstáculos
+		
+		\item Método da Janela dinâmica \cite{Saranrittichai2013}	
+		
+		
+		\item Determinar $\Delta\mathbf{u}$  possíveis e seguros no espaço de estados $\mathcal{U}$ em $t \in [0,\tau]$
+		
+		\item Otimização: $\text{min } \Delta\mathbf{u}$
+			
+		
+		
+	\end{itemize}	
 	
 	
 	\framebreak
@@ -606,8 +553,8 @@ Paulo F.F. Rosa\\
 			
 		\end{itemize}
 	
-	\framebreak	
-		
+%	\framebreak	
+%		
 %		\item Estratégia de implementação
 %		
 %		\begin{figure}[h]
@@ -617,9 +564,10 @@ Paulo F.F. Rosa\\
 %			\caption{Estratégia de implementação}
 %			\label{fig:Fluxo}
 %		\end{figure}
-%		
-%		\framebreak	
-	
+		
+		\framebreak	
+		
+		\item Caracterização e tratamento da imprecisão das medidas de distância dos sensores ultrassônicos
 		
 		\item Validação da simulação \textit{hardware-in-the-loop}
 		
@@ -755,7 +703,7 @@ Paulo F.F. Rosa\\
 	\end{itemize}	
 	
 	
-\end{frame}	
+\end{frame}
 
 \section{Próximos Passos}
 
@@ -763,6 +711,7 @@ Paulo F.F. Rosa\\
 	\frametitle{Sumário}
 	\tableofcontents[currentsection]
 \end{frame}
+
 
 \begin{frame}
 	
@@ -792,7 +741,6 @@ Paulo F.F. Rosa\\
 	
 \end{frame}
 
-
 % -------------------------------------------------%
 % -------------------------------------------------%
 \section*{Referências}
@@ -811,6 +759,7 @@ Paulo F.F. Rosa\\
 
 
 % -------------------------------------------------%
+
 
 
 \section*{Obrigado}

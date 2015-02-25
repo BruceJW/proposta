@@ -1,0 +1,64 @@
+\begin{thebibliography}{}
+
+\bibitem[Basit et~al., 2014]{Basit2014}
+Basit, A., Qureshi, W.~S., Dailey, M.~N., and Krajn{\'\i}k, T. (2014).
+\newblock Joint localization of pursuit quadcopters and target using monocular
+  cues.
+\newblock {\em Journal of Intelligent \& Robotic Systems}, pages 1--18.
+
+\bibitem[Copter, 2013]{rocopter}
+Copter, R.~. (2013).
+\newblock Ro 4 copter starters guide.
+
+\bibitem[Domingues, 2009]{Domingues2009}
+Domingues, J. M.~B. (2009).
+\newblock Quadrotor prototype.
+\newblock
+  \url{https://fenix.tecnico.ulisboa.pt/downloadFile/395139421058/Tese\_de\_Mestrado.pdf}.
+\newblock Acessado em 19/02/2015.
+
+\bibitem[Junior, 2009]{Adalberto2009}
+Junior, J. (2009).
+\newblock Simulação e implementação em tempo real de sistemas de
+  navegação inercial integrados {INS}/{GPS}.
+\newblock http://pged.ime.eb.br/teses/mestrado/tese\_msc\_2009\_adalberto.pdf.
+
+\bibitem[Kingdom, 2013]{Kingdom}
+Kingdom, R. (2013).
+\newblock {PID} controller tutorial for robots.
+\newblock \url{http://robot-kingdom.com/pid-controller-tutorial-for-robots/}.
+\newblock Acessado em 12/01/2015.
+
+\bibitem[Liang, 2014]{Liang}
+Liang, O. (2014).
+\newblock Quadcopter {PID} explained and tuning.
+\newblock \url{http://blog.oscarliang.net/quadcopter-pid-explained-tuning/}.
+\newblock Acessado em 12/01/2015.
+
+\bibitem[Mian and Daobo, 2008]{Mian2008}
+Mian, A.~A. and Daobo, W. (2008).
+\newblock Modeling and backstepping-based nonlinear control strategy for a 6
+  {DOF} quadrotor helicopter.
+\newblock {\em Chinese Journal of Aeronautics}, 21(3):261--268.
+
+\bibitem[Salih et~al., 2010]{Salih2010}
+Salih, A.~L., Moghavvemi, M., Mohamed, H.~A., and Gaeid, K.~S. (2010).
+\newblock Flight {PID} controller design for a {UAV} quadrotor.
+\newblock {\em Scientific Research and Essays}, 5(23):3660--3667.
+
+\bibitem[Saranrittichai et~al., 2013]{Saranrittichai2013}
+Saranrittichai, P., Niparnan, N., and Sudsang, A. (2013).
+\newblock Robust local obstacle avoidance for mobile robot based on dynamic
+  window approach.
+\newblock In {\em Electrical Engineering/Electronics, Computer,
+  Telecommunications and Information Technology (ECTI-CON), 2013 10th
+  International Conference on}, pages 1--4. IEEE.
+
+\bibitem[Stephane, 2014]{ardrone}
+Stephane, Nicolas~Brulez, F.~D. (2014).
+\newblock Ar.drone developer guide.
+\newblock
+  \url{http://ardrone2.parrot.com/media/uploads/support\_ardrone\_1/ar.drone\_user-guide\_uk.pdf}.
+\newblock Acessado em 25/01/2015.
+
+\end{thebibliography}
