@@ -37,20 +37,24 @@
 % \usetheme{Hannover}
 % \usetheme{Dresden}
 
-% \definecolor{verdeescuro}{rgb}{0.539,0.601,0.42}
-\definecolor{cor}{rgb}{0.0,0.0,0.5}  
-%\definecolor{verde}{rgb}{0.55,0.78,0.25} 
-% ------------------------------------------------------------------ %
-% Deixando o tema mais verde. Comente a linha abaixo se nao gostar %
-\setbeamercolor{structure}{fg=cor}
-% ------------------------------------------------------------------ %
-% Deixando o verde mais claro para combinar com o logo do IFET
-% Descomente as linhas abaixo
-% \setbeamercolor{structure}{fg=verde}
-% \setbeamercolor{title}{fg=black,bg=verde!80!black}
-% \setbeamercolor{frametitle}{fg=black,bg=verde!25}
-% \setbeamercolor{block body}{fg=black,bg=verde!15}
-% \setbeamercolor{block title}{fg=white,bg=verdeescuro}
+\usepackage{xcolor}
+
+\definecolor{verdeescuro}{rgb}{0.539,0.601,0.42}
+\definecolor{verdeescuro2}{rgb}{0.2,0.2,0.0}
+
+\definecolor{gold}{HTML}{FDD017}
+\definecolor{deep sky blue}{HTML}{3BB9FF}
+\definecolor{light sky blue}{HTML}{82CAFA}
+
+\makeatletter
+
+\setbeamercolor{frametitle}{fg=verdeescuro2, bg=white}
+\setbeamercolor{title}{fg=verdeescuro2, bg=white}
+
+\setbeamercolor{palette primary}{fg=verdeescuro2, bg=gray!30!white}
+\setbeamercolor{palette secondary}{fg=verdeescuro2, bg=gray!20!white}
+\setbeamercolor{palette tertiary}{fg=black, bg=verdeescuro}
+\makeatother
 % ------------------------------------------------------------------ %
 \linespread{1}
 \beamertemplatenavigationsymbolsempty
@@ -201,14 +205,15 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 	
 	\begin{itemize}
 		
+		\item Objetivo é manter a estabilidade do eixo central controlando quatro motores independentes eletronicamente
+		
 		\item Seis graus de liberdade e quatro atuadores
 				
-		\item Três são movimentos lineares ($x$,$y$,$z$) e três são angulares ($\phi$,$\theta$,$\psi$)
+		\item Três são variações lineares ($x$,$y$,$z$) e três são angulares ($\phi$,$\theta$,$\psi$)
 						
-		\item  Sistema não-holonômico (subatuado), movimentos (x,y) dependentes dos movimentos
-	    ($\phi$,$\theta$) \cite{Figueiredo2004}
+		\item  Sistema subatuado, dimensão do espaço de configurações ($x$,$y$,$z$,$\phi$,$\theta$,$\psi$) excede o espaço do controle ($u_1$,$u_2$,$u_3$,$u_4$) 
 				
-		\item Objetivo é manter a estabilidade do eixo central controlando quatro motores independentes eletronicamente
+		
 		
 	\framebreak	
 		
@@ -258,7 +263,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 
 	\item Obtenção de informações sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial	
 	
-	\item Fornecidas por sensores inerciais: acelerômetros e giroscópios
+	\item Fornecidas por sensores inerciais: acelerômetros e giroscópios (ou girômetros)
 	
 	\item Magnetômetros incluídos melhoram a medida da atitude do veiculo	
 	
@@ -274,7 +279,7 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		
 		\item Três acelerômetros: aceleração linear (x,y,z)
 		
-		\item Três giroscópios: velocidade angular ($\phi$,$\theta$,$\psi$)
+		\item Três giroscópios (ou girômetros): taxa de variação dos ângulos ($\phi$,$\theta$,$\psi$)
 	
 	    \vspace{0.5cm}
 	
@@ -494,7 +499,8 @@ $\mbox{Paulo F.F. Rosa}^1$\\
 		{ \theta  }_{ t+1 } &=\quad { \theta  }_{ t }+\delta { \theta  }_{ t } \\
 		{ \psi  }_{ t+1 } &=\quad \psi _{ t }+\delta { \psi  }_{ t } \\
 		{ \dot { x }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 1 }}{ \phi  }_{ t } \\
-		{ \dot { y }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 2 }}{ \theta  }_{ t }
+		{ \dot { y }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 2 }}{ \theta  }_{ t } \\
+		  \Delta t &= \mbox{ tempo entre medidas obtidas da plataforma}
 		\end{aligned}
 		\label{eq:equacaoProb}
 		\end{equation}

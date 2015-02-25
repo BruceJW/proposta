@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: artigoSSIV.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Dissertacao.bib
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in Israelsen
+Warning--empty year in Israelsen
+
+Done.
+You've used 35 entries,
+            4039 wiz_defined-function locations,
+            1044 strings with 15032 characters,
+and the built_in function-call counts, 26587 in all, are:
+= -- 2111
+> -- 644
+< -- 214
++ -- 347
+- -- 111
+* -- 1255
+:= -- 3919
+add.period$ -- 83
+call.type$ -- 35
+change.case$ -- 41
+chr.to.int$ -- 516
+cite$ -- 37
+duplicate$ -- 1898
+empty$ -- 2253
+format.name$ -- 139
+if$ -- 6161
+int.to.chr$ -- 0
+int.to.str$ -- 35
+missing$ -- 348
+newline$ -- 132
+num.names$ -- 35
+pop$ -- 850
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 2053
+stack$ -- 0
+substring$ -- 1250
+swap$ -- 1518
+text.length$ -- 42
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 35
+warning$ -- 2
+while$ -- 123
+width$ -- 37
+write$ -- 355
+(There were 2 warnings)

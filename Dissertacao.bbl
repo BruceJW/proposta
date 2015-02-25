@@ -61,7 +61,7 @@ R.~A. da~Paixao, P.~F.~F. Rosa, and J.~M.~M. Neto.
 J.~M.~B. Domingues.
 \newblock Quadrotor prototype.
 \newblock
-  https://fenix.tecnico.ulisboa.pt/downloadFile/395139421058/Tese\_de\_Mestrado.pdf,
+  \url{https://fenix.tecnico.ulisboa.pt/downloadFile/395139421058/Tese\_de\_Mestrado.pdf},
   2009.
 \newblock Acessado em 19/02/2015.
 
@@ -85,7 +85,7 @@ T.~Fraichard and H.~Asama.
 A.~Gibiansky.
 \newblock Quadcopter dynamics, simulation, and control.
 \newblock
-  http://andrew.gibiansky.com/downloads/pdf/Quadcopter%20Dynamics,%20Simulation,%20and%20Control.pdf,
+  \url{http://andrew.gibiansky.com/downloads/pdf/Quadcopter%20Dynamics,%20Simulation,%20and%20Control.pdf},
   2010.
 \newblock Acessado em 19/02/2014.
 
@@ -117,13 +117,15 @@ J.~Junior.
 \bibitem{Kingdom}
 R.~Kingdom.
 \newblock {PID} controller tutorial for robots.
-\newblock http://robot-kingdom.com/pid-controller-tutorial-for-robots/, 2013.
+\newblock \url{http://robot-kingdom.com/pid-controller-tutorial-for-robots/},
+  2013.
 \newblock Acessado em 12/01/2015.
 
 \bibitem{Liang}
 O.~Liang.
 \newblock Quadcopter {PID} explained and tuning.
-\newblock http://blog.oscarliang.net/quadcopter-pid-explained-tuning/, 2014.
+\newblock \url{http://blog.oscarliang.net/quadcopter-pid-explained-tuning/},
+  2014.
 \newblock Acessado em 12/01/2015.
 
 \bibitem{Mian2008}
@@ -135,7 +137,8 @@ A.~A. Mian and W.~Daobo.
 \bibitem{quadblog}
 multicopter.forestblue.nl.
 \newblock Quadcopter (x-mode build log).
-\newblock http://multicopter.forestblue.nl/quadcopter\_build\_log.html, 2012.
+\newblock \url{http://multicopter.forestblue.nl/quadcopter\_build\_log.html},
+  2012.
 \newblock Acessado em 25/02/2015.
 
 \bibitem{Nicol2008}
@@ -192,7 +195,7 @@ S.~Shen, Y.~Mulgaonkar, N.~Michael, and V.~Kumar.
 F.~D. Stephane, Nicolas~Brulez.
 \newblock Ar.drone developer guide.
 \newblock
-  http://ardrone2.parrot.com/media/uploads/support\_ardrone\_1/ar.drone\_user-guide\_uk.pdf,
+  \url{http://ardrone2.parrot.com/media/uploads/support\_ardrone\_1/ar.drone\_user-guide\_uk.pdf},
   2014.
 \newblock Acessado em 25/01/2015.
 
@@ -218,7 +221,8 @@ Z.~Ye, P.~Bhattacharya, H.~Mohamadian, H.~Majlesein, and Y.~Ye.
 \bibitem{Zhang2014}
 X.~Zhang, X.~Li, K.~Wang, and Y.~Lu.
 \newblock A survey of modelling and identification of quadrotor robot.
-\newblock http://downloads.hindawi.com/journals/aaa/2014/320526.pdf, 2014.
+\newblock \url{http://downloads.hindawi.com/journals/aaa/2014/320526.pdf},
+  2014.
 \newblock Acessado em 12/02/2015.
 
 \end{thebibliography}
