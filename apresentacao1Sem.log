@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  24 FEB 2015 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.7)  12 MAR 2015 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,11 +722,6 @@ LaTeX Info: Redefining \textlatin on input line 1428.
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/babel-portuges/portuges.ldf
-Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
-\l@brazil = a dialect from \language\l@portuges 
-Package babel Info: Making " an active character on input line 145.
 ))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2014/04/30 v1.2b Input encoding file
@@ -1133,6 +1128,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 (./apresentacao1Sem.aux
 
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \select@language{brazil}
+                             
+You may proceed, but expect unexpected results
+
+
 LaTeX Warning: Label `fig:obr2013' multiply defined.
 
 )
@@ -1318,7 +1327,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 (./apresentacao1Sem.nav)
-Overfull \vbox (4.68234pt too high) detected at line 101
+Overfull \vbox (6.05109pt too high) detected at line 101
  []
 
 
@@ -1332,14 +1341,58 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./apresentacao1Sem.toc) [2
+(./apresentacao1Sem.toc
 
-] (./apresentacao1Sem.toc) [3
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [2
+
+] (./apresentacao1Sem.toc
+
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [3
 
 ] [4
 
-]
-(./apresentacao1Sem.toc) [5
+] (./apresentacao1Sem.toc
+
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [5
 
 ]
 
@@ -1377,8 +1430,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{fig:obr2013})
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.178 \end{frame}
-                  <./img/Inspection-Drone.jpg>] (./apresentacao1Sem.toc)
-[9
+                  <./img/Inspection-Drone.jpg>] (./apresentacao1Sem.toc
+
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [9
 
 ]
 LaTeX Font Info:    Try loading font information for U+msa on input line 241.
@@ -1401,12 +1468,41 @@ thkerncmss.
 ] [11
 
 
-] (./apresentacao1Sem.toc) [12
+] (./apresentacao1Sem.toc
+
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [12
 
 ] [13
 
-] (./apresentacao1Sem.toc)
-[14
+] (./apresentacao1Sem.toc
+
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [14
 
 ] <img/etapasMetodo.png, id=256, 827.09pt x 498.86375pt>
 File: img/etapasMetodo.png Graphic file (type png)
@@ -1423,34 +1519,76 @@ Package pdftex.def Info: img/etapasMetodo.png used on input line 634.
 
 
 ]
-(./apresentacao1Sem.toc) [18
+(./apresentacao1Sem.toc
 
-]
-<img/cronograma.png, id=300, 859.21pt x 682.55pt>
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [18
+
+] <img/cronograma.png, id=300, 859.21pt x 682.55pt>
 File: img/cronograma.png Graphic file (type png)
- <use img/cronograma.png>
+
+<use img/cronograma.png>
 Package pdftex.def Info: img/cronograma.png used on input line 656.
 (pdftex.def)             Requested size: 215.6477pt x 171.30363pt.
+ [19
 
-[19
+ <./img/cronograma.png>] (./apresentacao1Sem.toc
 
- <./img/cronograma.png>] (./apresentacao1Sem.toc) [20
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [20
 
 ] [21
 
-]
-(./apresentacao1Sem.toc) [22
+] (./apresentacao1Sem.toc
+
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [22
 
 ] <img/missao1.png, id=350, 240.9pt x 240.9pt>
 File: img/missao1.png Graphic file (type png)
-
-<use img/missao1.png>
+ <use img/missao1.png>
 Package pdftex.def Info: img/missao1.png used on input line 730.
 (pdftex.def)             Requested size: 85.35826pt x 85.3565pt.
- <img/missao2.png, id=351, 501.875pt x 301.125pt>
-File: img/missao2.png Graphic file (type png)
 
-<use img/missao2.png>
+<img/missao2.png, id=351, 501.875pt x 301.125pt>
+File: img/missao2.png Graphic file (type png)
+ <use img/missao2.png>
 Package pdftex.def Info: img/missao2.png used on input line 730.
 (pdftex.def)             Requested size: 93.8946pt x 56.33673pt.
 
@@ -1467,38 +1605,63 @@ Package pdftex.def Info: img/missao3.png used on input line 730.
 [23
 
  <./img/missao1.png> <./img/missao2.png> <./img/missao3.png>]
-(./apresentacao1Sem.toc) [24
+(./apresentacao1Sem.toc
+
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [24
 
 ] [25
 
-] (./apresentacao1Sem.toc) [26
+] (./apresentacao1Sem.toc
+
+! Package babel Error: Unknown language `brazil'. Either you have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language {brazil}
+                             
+You may proceed, but expect unexpected results
+
+) [26
 
 ] [27
 
-]
-(./apresentacao1Sem.bbl) [28
+] (./apresentacao1Sem.bbl
 
- </usr/local/texlive/2014/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf
->] [29
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
+) [28
 
-] [30
-
-
-]
-<img/ime.jpg, id=465, 196.735pt x 257.96375pt>
+] <img/ime.jpg, id=423, 196.735pt x 257.96375pt>
 File: img/ime.jpg Graphic file (type jpg)
  <use img/ime.jpg>
 Package pdftex.def Info: img/ime.jpg used on input line 841.
 (pdftex.def)             Requested size: 21.69794pt x 28.45274pt.
 
-<img/lab-logo.png, id=466, 670.00313pt x 360.59718pt>
+<img/lab-logo.png, id=424, 670.00313pt x 360.59718pt>
 File: img/lab-logo.png Graphic file (type png)
  <use img/lab-logo.png>
 Package pdftex.def Info: img/lab-logo.png used on input line 841.
 (pdftex.def)             Requested size: 52.86525pt x 28.45274pt.
 
-[31
+[29
 
  <./img/ime.jpg> <./img/lab-logo.png>]
 \tf@nav=\write6
@@ -1528,13 +1691,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 846.
  ) 
 Here is how much of TeX's memory you used:
- 20687 strings out of 493117
- 385440 string characters out of 6135434
- 465456 words of memory out of 5000000
- 23512 multiletter control sequences out of 15000+600000
- 16394 words of font info for 59 fonts, out of 8000000 for 9000
+ 20553 strings out of 493117
+ 382435 string characters out of 6135434
+ 463840 words of memory out of 5000000
+ 23405 multiletter control sequences out of 15000+600000
+ 12889 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,17n,62p,396b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,62p,396b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
@@ -1543,14 +1706,12 @@ sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on apresentacao1Sem.pdf (31 pages, 842639 bytes).
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on apresentacao1Sem.pdf (29 pages, 805886 bytes).
 PDF statistics:
- 538 PDF objects out of 1000 (max. 8388607)
- 457 compressed objects within 5 object streams
- 95 named destinations out of 1000 (max. 500000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 414 compressed objects within 5 object streams
+ 81 named destinations out of 1000 (max. 500000)
  210 words of extra memory for PDF output out of 10000 (max. 10000000)
 

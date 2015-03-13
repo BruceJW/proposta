@@ -205,14 +205,13 @@ Paulo F.F. Rosa\\
 	
 	\begin{itemize}
 		
-		\item Objetivo é manter a estabilidade do eixo central controlando quatro motores independentes eletronicamente
 		
-		\item Seis graus de liberdade e quatro atuadores
 				
-		\item Três são variações lineares ($x$,$y$,$z$) e três são angulares ($\phi$,$\theta$,$\psi$)
+		\item Seis graus de liberdade: Três são variações lineares ($x$,$y$,$z$) e três são angulares ($\phi$,$\theta$,$\psi$)
 						
-		\item  Sistema subatuado, dimensão do espaço de configurações ($x$,$y$,$z$,$\phi$,$\theta$,$\psi$) excede o espaço do controle ($u_1$,$u_2$,$u_3$,$u_4$) 
-				
+		\item  Sistema sub-atuado (quatro atuadores), dimensão do espaço de configurações ($x$,$y$,$z$,$\phi$,$\theta$,$\psi$) excede o espaço do controle ($u_1$,$u_2$,$u_3$,$u_4$) 
+		
+		\item Objetivo é manter a estabilidade do eixo central controlando quatro motores independentes eletronicamente		
 		
 		
 %	\framebreak	
@@ -227,17 +226,17 @@ Paulo F.F. Rosa\\
 %		\end{figure}
 %		
 %		
-%	\framebreak
-%	
-%		
-%		\begin{figure}
-%			\centering
-%			\includegraphics[keepaspectratio = true,
-%			width=0.6\textwidth]{img/diagrama_quadricoptero_old.png}
-%			\caption{As forças e momentos atuando no quadricóptero. Fonte \cite{Mian2008}}
-%			\label{fig:diag quad2}
-%		\end{figure}
-%		
+	\framebreak
+	
+		
+		\begin{figure}
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.6\textwidth]{img/diagrama_quadricoptero_old.png}
+			\caption{Estrutura e movimentos da plataforma. Fonte \cite{Mian2008}}
+			\label{fig:diag quad2}
+		\end{figure}
+		
 %	
 %	\framebreak
 %	
@@ -263,7 +262,7 @@ Paulo F.F. Rosa\\
 
 	\item Obtenção de informações sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial	
 	
-	\item Fornecidas por sensores inerciais: acelerômetros e giroscópios (ou girômetros)
+	\item Fornecidas por sensores inerciais: acelerômetros e girômetros
 	
 	\item Magnetômetros incluídos melhoram a medida da atitude do veiculo	
 	
@@ -277,9 +276,9 @@ Paulo F.F. Rosa\\
 		
 		\item Componente eletrônico onde estão montados os sensores. 
 		
-		\item Três acelerômetros: aceleração linear (x,y,z)
+		\item Três acelerômetros: aceleração linear ($\ddot{x}$,$\ddot{y}$,$\ddot{z}$)
 		
-		\item Três giroscópios (ou girômetros): taxa de variação dos ângulos ($\phi$,$\theta$,$\psi$)
+		\item Três girômetros: variação angular em seu próprio eixo  ($\dot{\phi}$,$\dot{\theta}$,$\dot{\psi}$) \cite{crivella15}
 	
 	    \vspace{0.5cm}
 	
@@ -287,7 +286,7 @@ Paulo F.F. Rosa\\
 			\centering
 			\includegraphics[keepaspectratio = true,
 			width=0.65\textwidth]{img/imuStrap.png}
-			\caption{Estrutura do Sistema de Navegação acoplada ao veículo (esquerda) e os movimentos gerados no quadricóptero (direita). Fonte \cite{Adalberto2009}}
+			\caption{Estrutura do Sistema de Navegação acoplada ao veículo (esquerda) e os movimentos associados no quadricóptero (direita). Fonte \cite{Adalberto2009}}
 			\label{fig:imuStrap}
 		\end{figure}
 	\end{itemize}
@@ -474,60 +473,60 @@ Paulo F.F. Rosa\\
 			\label{fig:etapasMetodo}
 		\end{figure}
 		
-	\framebreak
+%	\framebreak
+%	
+%	\item Evitar colisão
+%	
+%	\begin{itemize}
+%		
+%		\item Dados da AHRS: $d_{ t }=\quad { \left[ { \dot { x }  }_{ t }\quad { \dot { y }  }_{ t }\quad { \dot { z }  }_{ t }\quad { \phi  }_{ t }\quad { \theta  }_{ t }\quad { \psi  }_{ t } \right]  }^{ T }$
+%		
+%		\item Dados do Controle: ${ u }_{ t }=\quad { \left[ \mathbf{{ \delta \phi  }_{ t }\quad { \delta \theta  }_{ t }\quad { \delta \psi  }_{ t }\quad { \delta h }_{ t }} \right]  }^{ T }$	
+%			
+%	
+%	\item Estimação da trajetória futura (Integração Numérica em $t$)
+%	
+%		
+%		\item Espaço de estados em $\Delta t$. Fonte \cite{Basit2014}
+%		
+%		\begin{equation}
+%		\begin{aligned}
+%		{ x }_{ t+1 } &=\quad { x }_{ t }+({ \dot { x }  }_{ t }{ \cos { \psi  }  }_{ t }-{ \dot { y }  }_{ t }{ \sin { \psi  }  }_{ t })\Delta t \\
+%		{ y }_{ t+1 } &=\quad y_{ t }+({ \dot { x }  }_{ t }{ \sin { \psi  }  }_{ t }+{ \dot { y }  }_{ t }{ \cos { \psi  }  }_{ t })\Delta t \\
+%		{ z }_{ t+1 } &=\quad { z }_{ t }+\delta { h }_{ t }\quad \\
+%		{ \phi  }_{ t+1 } &=\quad { \phi  }_{ t }+\delta { \phi  }_{ t }\quad \\
+%		{ \theta  }_{ t+1 } &=\quad { \theta  }_{ t }+\delta { \theta  }_{ t } \\
+%		{ \psi  }_{ t+1 } &=\quad \psi _{ t }+\delta { \psi  }_{ t } \\
+%		{ \dot { x }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 1 }}{ \phi  }_{ t } \\
+%		{ \dot { y }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 2 }}{ \theta  }_{ t } \\
+%		  \Delta t &= \mbox{ tempo entre medidas obtidas da plataforma}
+%		\end{aligned}
+%		\label{eq:equacaoProb}
+%		\end{equation}
+%		
+%	\end{itemize}	
 	
-	\item Evitar colisão
-	
-	\begin{itemize}
-		
-		\item Dados da AHRS: $d_{ t }=\quad { \left[ { \dot { x }  }_{ t }\quad { \dot { y }  }_{ t }\quad { \dot { z }  }_{ t }\quad { \phi  }_{ t }\quad { \theta  }_{ t }\quad { \psi  }_{ t } \right]  }^{ T }$
-		
-		\item Dados do Controle: ${ u }_{ t }=\quad { \left[ \mathbf{{ \delta \phi  }_{ t }\quad { \delta \theta  }_{ t }\quad { \delta \psi  }_{ t }\quad { \delta h }_{ t }} \right]  }^{ T }$	
-			
-	
-	\item Estimação da trajetória futura (Integração Numérica em $t$)
-	
-		
-		\item Espaço de estados em $\Delta t$. Fonte \cite{Basit2014}
-		
-		\begin{equation}
-		\begin{aligned}
-		{ x }_{ t+1 } &=\quad { x }_{ t }+({ \dot { x }  }_{ t }{ \cos { \psi  }  }_{ t }-{ \dot { y }  }_{ t }{ \sin { \psi  }  }_{ t })\Delta t \\
-		{ y }_{ t+1 } &=\quad y_{ t }+({ \dot { x }  }_{ t }{ \sin { \psi  }  }_{ t }+{ \dot { y }  }_{ t }{ \cos { \psi  }  }_{ t })\Delta t \\
-		{ z }_{ t+1 } &=\quad { z }_{ t }+\delta { h }_{ t }\quad \\
-		{ \phi  }_{ t+1 } &=\quad { \phi  }_{ t }+\delta { \phi  }_{ t }\quad \\
-		{ \theta  }_{ t+1 } &=\quad { \theta  }_{ t }+\delta { \theta  }_{ t } \\
-		{ \psi  }_{ t+1 } &=\quad \psi _{ t }+\delta { \psi  }_{ t } \\
-		{ \dot { x }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 1 }}{ \phi  }_{ t } \\
-		{ \dot { y }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 2 }}{ \theta  }_{ t } \\
-		  \Delta t &= \mbox{ tempo entre medidas obtidas da plataforma}
-		\end{aligned}
-		\label{eq:equacaoProb}
-		\end{equation}
-		
-	\end{itemize}	
-	
-	\framebreak
-	
-	\item Evitar colisão (cont.)
-	
-	\begin{itemize}
-		
-		\item Identificar rota em choque e desviar
-		
-		\item Utilização das distâncias medidas para os obstáculos
-		
-		\item Método da Janela dinâmica \cite{Saranrittichai2013}	
-		
-		
-		\item Determinar $\Delta\mathbf{u}$  possíveis e seguros no espaço de estados $\mathcal{U}$ em $t \in [0,\tau]$
-		
-		\item Otimização: $\text{min } \Delta\mathbf{u}$
-			
-		
-		
-	\end{itemize}	
-	
+%	\framebreak
+%	
+%	\item Evitar colisão (cont.)
+%	
+%	\begin{itemize}
+%		
+%		\item Identificar rota em choque e desviar
+%		
+%		\item Utilização das distâncias medidas para os obstáculos
+%		
+%		\item Método da Janela dinâmica \cite{Saranrittichai2013}	
+%		
+%		
+%		\item Determinar $\Delta\mathbf{u}$  possíveis e seguros no espaço de estados $\mathcal{U}$ em $t \in [0,\tau]$
+%		
+%		\item Otimização: $\text{min } \Delta\mathbf{u}$
+%			
+%		
+%		
+%	\end{itemize}	
+%	
 	
 	\framebreak
 	
@@ -569,7 +568,7 @@ Paulo F.F. Rosa\\
 		
 		\item Caracterização e tratamento da imprecisão das medidas de distância dos sensores ultrassônicos
 		
-		\item Validação da simulação \textit{hardware-in-the-loop}
+		\item Simulação e validação \textit{hardware-in-the-loop}
 		
 		\item Validação embarcada na plataforma
 		
@@ -705,7 +704,7 @@ Paulo F.F. Rosa\\
 	
 \end{frame}
 
-\section{Próximos Passos}
+\section{Andamento do Trabalho}
 
 \begin{frame}
 	\frametitle{Sumário}
@@ -715,7 +714,7 @@ Paulo F.F. Rosa\\
 
 \begin{frame}
 	
-	\frametitle{Próximos passos}
+	\frametitle{Andamento do Trabalho}
 	
 	\begin{itemize}	
 		

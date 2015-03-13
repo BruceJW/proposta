@@ -36,8 +36,6 @@
   Year                     = {2013},
   Organization             = {IEEE},
   Pages                    = {136--141},
-
-  __markedentry            = {[bsgiovanini:]},
   File                     = {:refs/imu/06693284.pdf:PDF},
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.02.12}
@@ -54,6 +52,18 @@
   Owner                    = {bsgiovanini},
   Publisher                = {Springer},
   Timestamp                = {2015.02.08}
+}
+
+@Book{Beard2012,
+  Title                    = {Small unmanned aircraft: Theory and practice},
+  Author                   = {Beard, Randal W and McLain, Timothy W},
+  Publisher                = {Princeton University Press},
+  Year                     = {2012},
+
+  __markedentry            = {[bsgiovanini:6]},
+  File                     = {:refs/books/Small Unmanned Aircraft - Theory and Practice.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.03.06}
 }
 
 @Article{Becker2012a,
@@ -357,8 +367,6 @@ The trajectory from start to goal can be computed by searching a tree of feasibl
   Author                   = {Junior, J},
   HowPublished             = {http://pged.ime.eb.br/teses/mestrado/tese\_msc\_2009\_adalberto.pdf},
   Year                     = {2009},
-
-  __markedentry            = {[bsgiovanini:6]},
   File                     = {:refs/imu/tese_msc_2009_adalberto.pdf:PDF},
   Owner                    = {bsgiovanini},
   School                   = {Tese de Mestrado apresentada ao Instituto Militar de Engenharia, Brasil, Rio de Janeiro},
@@ -486,6 +494,30 @@ Matlab e Simulink},
   Timestamp                = {2015.01.17}
 }
 
+@Book{Nonami2010,
+  Title                    = {Autonomous Flying Robots: Unmanned Aerial Vehicles and Micro Aerial Vehicles},
+  Author                   = {Nonami, Kenzo and Kendoul, Farid and Suzuki, Satoshi and Wang, Wei and Nakazawa, Daisuke},
+  Publisher                = {Springer Science \& Business Media},
+  Year                     = {2010},
+
+  __markedentry            = {[bsgiovanini:]},
+  File                     = {:refs/books/Kenzo Nonami, Farid Kendoul, Satoshi Suzuki, Wei Wang, Daisuke Nakazawa-Autonomous Flying Robots_ Unmanned Aerial Vehicles and Micro Aerial Vehicles (2010).pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.03.06}
+}
+
+@Book{O'Kane201310,
+  Title                    = {A Gentle Introduction to ROS},
+  Author                   = {Jason M. O'Kane},
+  Publisher                = {CreateSpace Independent Publishing Platform},
+  Year                     = {2013},
+  Month                    = {10},
+  File                     = {:refs/books/ros_begginer.pdf:PDF},
+  ISBN                     = {9781492143239},
+  Totalpages               = {162},
+  Url                      = {http://www.cse.sc.edu/~jokane/agitr/}
+}
+
 @Book{Ogata2003,
   Title                    = {Engenharia de controle moderno},
   Author                   = {Ogata, Katsuhiko and Maya, Paulo {\'A}lvaro and Leonardi, Fabrizio},
@@ -543,6 +575,17 @@ A parte final do trabalho é fundamentada na análise estocástica do sistema em
   File                     = {:refs/quadcopter/Roberts-MAV07.pdf:PDF},
   Owner                    = {bsgiovanini},
   Timestamp                = {2015.01.18}
+}
+
+@MastersThesis{crivella15,
+  Title                    = {Fusão de sensores para um {VANT} via suavização incremental baseada em grafos-fatores},
+  Author                   = {ANDERSON CRIVELLA DE CARVALHO RODRIGUES},
+  School                   = {Instituto Militar de Engenharia},
+  Year                     = {2015},
+
+  File                     = {:refs/imu/book.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.02.25}
 }
 
 @Article{Salih2010,
@@ -629,6 +672,19 @@ A parte final do trabalho é fundamentada na análise estocástica do sistema em
   Timestamp                = {2015.01.25}
 }
 
+@Misc{ROS,
+  Title                    = {{ROS} {I}ntroduction},
+
+  Author                   = {Dirk Thomas},
+  HowPublished             = {http://wiki.ros.org/ROS/Introduction},
+  Note                     = {Acessado 06/03/2015},
+  Year                     = {2014},
+
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.03.06},
+  Url                      = {http://wiki.ros.org/ROS/Introduction}
+}
+
 @Article{Wendel2006,
   Title                    = {An integrated {GPS}/{MEMS}-{IMU} navigation system for an autonomous helicopter},
   Author                   = {Wendel, Jan and Meister, Oliver and Schlaile, Christian and Trommer, Gert F},
@@ -691,10 +747,11 @@ Fox1997\;Fraichard2004\;Gageik2012\;Israelsen\;Khatib1990\;Nieuwenhuis
 en2013\;Saranrittichai2013\;;
 1 ExplicitGroup:Quadricoptero\;0\;Achtelik2009\;Altug2002\;Basit2014\;
 Blosch2010\;Bouktir2008\;Bristeau2011\;Domingues2009\;Gibiansky2010\;G
-rzonka2012\;Hoffmann2004\;Liang\;Lopes\;Mian2008\;ParraMunoz2013\;Prad
-el2007\;Roberts2007\;Salih2010\;Santana2014\;Shen2013\;Shen2013a\;Wend
-el2006\;Zhang2014\;quadblog\;rocopter\;;
+rzonka2012\;Hoffmann2004\;Liang\;Lopes\;Mian2008\;Nonami2010\;ParraMun
+oz2013\;Pradel2007\;Roberts2007\;Salih2010\;Santana2014\;Shen2013\;She
+n2013a\;Wendel2006\;Zhang2014\;quadblog\;rocopter\;;
 1 ExplicitGroup:Parrot\;0\;Basit2014\;Bristeau2011\;Lopes\;ParraMunoz2
 013\;Santana2014\;ardrone\;;
+1 ExplicitGroup:simulação\;0\;O'Kane201310\;ROS\;;
 }
 

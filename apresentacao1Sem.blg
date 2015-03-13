@@ -2,48 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: apresentacao1Sem.aux
 The style file: apalike.bst
+I found no \citation commands---while reading file apresentacao1Sem.aux
 Database file #1: Dissertacao.bib
-Warning--entry type for "rocopter" isn't style-file defined
---line 188 of file Dissertacao.bib
-You've used 10 entries,
+You've used 0 entries,
             1935 wiz_defined-function locations,
-            539 strings with 5709 characters,
-and the built_in function-call counts, 3361 in all, are:
-= -- 349
-> -- 119
-< -- 9
-+ -- 38
-- -- 38
-* -- 249
-:= -- 615
-add.period$ -- 34
-call.type$ -- 10
-change.case$ -- 69
-chr.to.int$ -- 10
-cite$ -- 10
-duplicate$ -- 130
-empty$ -- 219
-format.name$ -- 50
-if$ -- 648
+            471 strings with 3695 characters,
+and the built_in function-call counts, 17 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 4
-newline$ -- 56
-num.names$ -- 30
-pop$ -- 46
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 0
 quote$ -- 0
-skip$ -- 107
+skip$ -- 1
 stack$ -- 0
-substring$ -- 211
-swap$ -- 14
-text.length$ -- 2
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 0
 warning$ -- 0
-while$ -- 30
+while$ -- 0
 width$ -- 0
-write$ -- 133
-(There was 1 warning)
+write$ -- 2
+(There was 1 error message)
