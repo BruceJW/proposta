@@ -1,0 +1,846 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url,color, colortbl}
+\usepackage{subfigure}
+\usepackage{makeidx} 
+\usepackage{subfloat}
+\usepackage{float}
+\usepackage{listings}  
+\usepackage{wrapfig} 
+\usepackage{verbatim}  
+\usepackage{caption} 
+\usepackage{algorithm,algorithmic}
+\usepackage{beamerthemesplit}
+\usepackage{xcolor}
+
+
+ 
+%\newcommand{\newblock}{}
+%\usepackage[portugues,algoruled,longend]{algorithm2e}  
+%-----   Themes ------%
+% \usetheme{Madrid}
+% \usetheme{Warsaw}
+% \usetheme{Boadilla}
+ \usetheme{CambridgeUS}
+% \usetheme{Montpellier}
+% \usetheme{Hannover}
+% \usetheme{Dresden}
+
+\usepackage{xcolor}
+
+\definecolor{verdeescuro}{rgb}{0.539,0.601,0.42}
+\definecolor{verdeescuro2}{rgb}{0.2,0.2,0.0}
+
+\definecolor{gold}{HTML}{FDD017}
+\definecolor{deep sky blue}{HTML}{3BB9FF}
+\definecolor{light sky blue}{HTML}{82CAFA}
+
+\makeatletter
+
+\setbeamercolor{frametitle}{fg=verdeescuro2, bg=white}
+\setbeamercolor{title}{fg=verdeescuro2, bg=white}
+
+\setbeamercolor{palette primary}{fg=verdeescuro2, bg=gray!30!white}
+\setbeamercolor{palette secondary}{fg=verdeescuro2, bg=gray!20!white}
+\setbeamercolor{palette tertiary}{fg=black, bg=verdeescuro}
+\makeatother
+% Set Color ==============================
+
+% \definecolor{verdeescuro}{rgb}{0.539,0.601,0.42}
+
+%\definecolor{verde}{rgb}{0.55,0.78,0.25} 
+% ------------------------------------------------------------------ %
+% Deixando o tema mais verde. Comente a linha abaixo se nao gostar %
+
+% ------------------------------------------------------------------ %
+% Deixando o verde mais claro para combinar com o logo do IFET
+% Descomente as linhas abaixo
+% \setbeamercolor{structure}{fg=verde}
+% \setbeamercolor{title}{fg=black,bg=verde!80!black}
+% \setbeamercolor{frametitle}{fg=black,bg=verde!25}
+% \setbeamercolor{block body}{fg=black,bg=verde!15}
+% \setbeamercolor{block title}{fg=white,bg=verdeescuro}
+% ------------------------------------------------------------------ %
+\linespread{1}
+\beamertemplatenavigationsymbolsempty
+
+\title[Dissertação]{Sistemas de Defesa: Uma abordagem para desvios de obstáculos no auxílio do controle de um quadricóptero em tempo real}
+
+\author[Bruno Giovanini]{Bruno da Silva Giovanini
+\\   
+\vspace{1cm}
+Paulo F.F. Rosa\\
+(Orientador)
+%\\\footnotesize{angonesealberto@gmail.com, rpaulo@ime.eb.br}}
+% \\ Eduardo Krempser  
+% \\\footnotesize{krempser@lncc.br}}
+}
+\institute[IME]{
+	
+		Instituto Militar de Engenharia - IME\\
+		Laboratório de Robótica e Inteligência Computacional\\ 
+		Programa de Pós-graduação em Engenharia de Defesa \\ 		
+	
+}
+
+
+\date{\today}
+
+\begin{document}
+
+
+
+
+\begin{frame}
+ \titlepage	
+\end{frame}
+
+% ------------ Inicio do documento ---------------%
+%\section*{Sum�rio}
+\begin{frame}
+	\frametitle{Sumário}  
+	\tableofcontents
+\end{frame}
+% -------------------------------------------------%
+
+
+
+
+
+\section{Objetivo}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	\frametitle{Objetivo}	
+	
+	\begin{itemize}	
+		
+		\item Evitar colisões de um quadricóptero utilizando estimativas de sua trajetória futura e distâncias para obstáculos, criando desvios, se necessário, e proporcionando uma maior segurança de voo em ambientes restritos e sensíveis
+		
+	\end{itemize} 
+	
+\end{frame}
+
+\section{Introdução}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\subsection*{Motivação}
+
+\begin{frame}[allowframebreaks]
+ 	\pgfdeclareimage[width=1.0cm]{logo}{img/ime.png}
+	\frametitle{\insertsubsection}
+	\begin{itemize}
+	    \item Crescente utilização para missões civis e militares
+	     
+	    \item Voos em ambientes fechados e restritos
+	     
+	    \item Risco de colisão com equipamentos críticos e sensíveis
+	    
+	    \item Difícil controle e manuseio
+	    
+	    
+	\framebreak
+		\vspace{2cm}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.7\textwidth]{img/filmagem_drone.jpg}
+			\label{fig:obr2013}
+			\caption{Filmagem \textit{indoor}}
+		\end{figure}
+			
+	\framebreak
+		\vspace{2cm}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.7\textwidth]{img/Inspection-Drone.jpg}
+			\label{fig:obr2013}
+			\caption{Inspeção de equipamentos sensíveis}
+		\end{figure}
+			
+	\end{itemize}	
+\end{frame}
+
+
+
+% -------------------------------------------------%
+
+\section{O Problema: Segurança em voo para quadricóptero}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{O Problema: Segurança em voo para quadricóptero}
+	
+	\begin{itemize}
+		
+		\item Auxíliar o controle da plataforma com base na dinâmica e estado  atual do veículo, sua operação corrente e a distância para obstáculos
+		
+		\item Dinâmica do robô ($\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$):
+		
+		\begin{equation}
+		\centering
+		\dot{\mathbf{x}} = \mathbf{f}(\mathbf{x}(t),\mathbf{u}(t),t)  
+		\label{eq:equacaoDinProb}
+		\end{equation}
+		
+		
+		Dado $\mathbf{x}(t)$ o estado do robô no tempo $t$ e $\mathbf{u}(t)$ o \textit{input} de operação no tempo $t$.
+		
+		
+		%	A dinâmica do robô é uma função em $\mathbf{f} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathbb{R}^{n}$ e é dada pela relação \ref{eq:equacaoDinProb}:
+		
+		\item Estado do robô ($\mathbf{g} \in \mathcal{X} \times \mathcal{U} \times \mathbb{R} \rightarrow \mathcal{X}$ é a solução da equação diferencial \ref{eq:equacaoDinProb}):
+		
+		\begin{equation}
+		\centering
+		\mathbf{x} = \mathbf{g}(\mathbf{x},\mathbf{u},t)  
+		\label{eq:equacaoPosProb}
+		\end{equation}
+		
+		Dado $\mathbf{x_0} = \mathbf{x}(0)$ e $\mathbf{u}$ a constante de \textit{input} de operação				
+		
+		\framebreak
+		
+		%\item Obstáculos restringem as posições possíveis do robô
+		
+		\item O Problema: Definir a menor variação de controle $\Delta\mathbf{u} \in \mathcal{U}$ necessária para evitar colisão em $t \in [0,\tau]$, onde $\tau$ é um horizonte de tempo já definido:
+		
+		\begin{equation}
+		\begin{aligned}
+		\text{min: }& \Delta\mathbf{u} \\
+		\text{Sujeito a: }& \forall t \in [0,\tau], \mathcal{R}(\mathbf{g}(\mathbf{x}, \mathbf{u}+\Delta\mathbf{u}, t)) \cap \mathcal{O} = \emptyset
+		\end{aligned}
+		\label{eq:equacaoProb}
+		\end{equation}
+		
+		Dado $\mathcal{O} \subset \mathbb{R}^3$, a subárea do espaço $\mathbb{R}^n$ ocupadas por obstáculos escondidas quando vistas pelo robô e $\mathcal{R}(x)$, a subárea ocupada pelo robô no estado $x \in \mathcal{X}$
+		
+		
+		
+	\end{itemize}	 
+\end{frame}
+
+\section{Áreas de enfoque para estudo}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Áreas de enfoque para estudo}
+	
+	\begin{itemize}
+		
+		\item Dinâmica do quadricóptero para estimação da trajetória futura		
+		
+		\item Trabalho dos dados de navegação fornecidos pelo \textit{Attitude Heading Refence System} (AHRS) embarcado na plataforma
+%		   \begin{itemize}
+%		   	
+%		   	\item Fornece (${ \dot { x }  }\quad { \dot { y }  }\quad { \dot { z }  }\quad { \phi  }\quad { \theta  }\quad { \psi  }$)
+%		   \end{itemize}
+		
+		\item Tratamento da imprecisão das medidas de distância dos sensores ultrassônicos 
+		
+		\item Controle PID para correção da estimativa de posicionamento
+%		\begin{itemize}
+%			\item Avaliar a utilização dos sensores ultrassônicos
+%		\end{itemize}	
+		
+		\item Algoritmo para detecção de colisão
+		
+%			\begin{itemize}
+%				\item Método das janelas dinâmicas \cite{Saranrittichai2013}
+%			\end{itemize}
+%		
+		
+	\end{itemize}	
+
+\end{frame}	
+
+%\section{Tópicos tutorias}
+%
+%\begin{frame}
+%	\frametitle{Sumário}
+%	\tableofcontents[currentsection]
+%\end{frame}
+%
+%\subsection*{O quadricóptero}
+%\begin{frame}
+%  	
+%	\frametitle{O quadricóptero - A Plataforma}
+%	
+%	\begin{itemize}
+%	
+%	\item Veículo voador com quatro rotores com decolagem e aterrissagem vertical \cite{Salih2010}
+%		
+%	\begin{figure}ß
+%		\centering
+%		\includegraphics[keepaspectratio = true,
+%		width=0.7\textwidth]{img/parrot_drone.jpg}
+%		\caption{Plataforma Parrot Ardrone 2.0. Fonte \cite{ardrone}}
+%		\label{fig:quad}
+%	\end{figure}
+%		
+%	\end{itemize}
+%	
+%\end{frame}
+%
+%\begin{frame}[allowframebreaks]
+%	
+%	\frametitle{O quadricóptero - Dinâmica de Voo}
+%	
+%	\begin{itemize}
+%		
+%		\item Objetivo é manter a estabilidade do eixo central controlando quatro motores independentes eletronicamente
+%		
+%		\item Seis graus de liberdade e quatro atuadores
+%		
+%		\item Três variações lineares ($x$,$y$,$z$) e três angulares ($\phi$,$\theta$,$\psi$)
+%		
+%		\item Sistema sub-atuado, espaço de configuração ($x$,$y$,$z$, $\phi$,$\theta$,$\psi$) excede o espaço de controle ($u_1$,$u_2$,$u_3$,$u_4$)				
+%								
+%		%\item  Sistema não-holonômico (subatuado), espaço de configuração excede  (x,y) dependentes dos movimentos($\phi$,$\theta$) \cite{Figueiredo2004}
+%				
+%		
+%		
+%	\framebreak	
+%		
+%		
+%		\begin{figure}
+%			\centering
+%			\includegraphics[keepaspectratio = true,
+%			width=0.4\textwidth]{img/propellerdirections.png}
+%			\caption{Estrutura e orientação dos motores (em cruz). Fonte \cite{rocopter}}
+%			\label{fig:diag quad}
+%		\end{figure}
+%		
+%		
+%	\framebreak
+%	
+%		
+%		\begin{figure}
+%			\centering
+%			\includegraphics[keepaspectratio = true,
+%			width=0.6\textwidth]{img/diagrama_quadricoptero_old.png}
+%			\caption{As forças e momentos atuando no quadricóptero. Fonte \cite{Mian2008}}
+%			\label{fig:diag quad2}
+%		\end{figure}
+%		
+%	
+%	\framebreak
+%	
+%		
+%		\begin{figure}
+%			\centering
+%			\includegraphics[keepaspectratio = true,
+%			width=0.6\textwidth]{img/motores.jpeg}
+%			\caption{Os movimentos gerados a partir das variações de velocidades dos motores. Fonte \cite{Domingues2009}}
+%			\label{fig:diag quad3}
+%		\end{figure}
+%	
+%	\end{itemize}	
+%	
+%\end{frame}	 
+%
+%\subsection*{Sistemas embarcados para navegação}
+%\begin{frame}
+%	
+%	\frametitle{Sistemas embarcados para navegação}
+%	
+%	\begin{itemize}
+%
+%	\item Obtenção de informações sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial	
+%	
+%	\item Fornecidas por sensores inerciais: acelerômetros e giroscópios (ou girômetros)
+%	
+%	\item Magnetômetros incluídos melhoram a medida da atitude do veiculo	
+%	
+%	\end{itemize}
+%	
+%\end{frame}	
+%\begin{frame}
+%	\frametitle{IMU}
+%	
+%	\begin{itemize}
+%		
+%		\item Componente eletrônico onde estão montados os sensores. 
+%		
+%		\item Três acelerômetros: aceleração linear (x,y,z)
+%		
+%		\item Três giroscópios: taxa de variação dos ângulos ($\phi$,$\theta$,$\psi$)
+%	
+%	    \vspace{0.5cm}
+%	
+%		\begin{figure}[h]
+%			\centering
+%			\includegraphics[keepaspectratio = true,
+%			width=0.65\textwidth]{img/imuStrap.png}
+%			\caption{Estrutura do Sistema de Navegação acoplada ao veículo (esquerda) e os movimentos gerados no quadricóptero (direita). Fonte \cite{Adalberto2009}}
+%			\label{fig:imuStrap}
+%		\end{figure}
+%	\end{itemize}
+%\end{frame}
+%
+%\begin{frame}	
+%	
+%	\frametitle{AHRS}	
+%		
+%	\begin{itemize}
+%		
+%		\item \textit{Attitude Heading Reference System}
+%		
+%		\item Mesmos sensores da IMU (com magnetrômetro)
+%		
+%		\item Unidade de processamento para cálculo da velocidade linear e atitude
+%		
+%		\item Fornece (${ \dot { x }  }\quad { \dot { y }  }\quad { \dot { z }  }\quad { \phi  }\quad { \theta  }\quad { \psi  }$)
+%	 
+%	\end{itemize}
+%\end{frame}	
+%
+%\subsection*{Controle PID e quadricópteros}
+%\begin{frame}[allowframebreaks]
+%	
+%	\frametitle{Controle PID}
+%	\begin{itemize}
+%	
+%		\item Método de controle adaptativo comum para controle de robôs
+%		
+%		\item Controle fechado que reage a mudanças no ambiente captadas por sensores
+%		
+%		\item Reação a partir do erro medido
+%		
+%		\item Três parâmetros constantes: Proporcional (P), Integral (I) e Derivativo (D)
+%		
+%	\framebreak
+%	
+%		\item Proporcional (P)
+%			\begin{itemize}
+%				\item É tipicamente o erro. 
+%				\item Fórmula: $A - B$, onde $A$ é a posição atual e $B$ é onde deveria estar 	
+%			\end{itemize}
+%			
+%		\item Integral (I)
+%		\begin{itemize}
+%			\item É o acúmulo dos erros passados no tempo. 
+%			\item Fórmula: $A/t_1 + B/t_2 + C/t_3$, sendo $A$ o erro em $t_1$, $B$ em $t_2$ e $C$ em $t_3$ 	
+%		\end{itemize}	
+%		
+%		\item Derivativo (D)
+%		\begin{itemize}
+%			\item É a mudança do erro no tempo. 
+%			\item Fórmula: $(A-B)/\Delta t$, sendo $A$ o erro inicial e $B$ o erro depois do intervalo $\Delta t$ 	
+%		\end{itemize}	
+%		
+%	\framebreak
+%	
+%		\item Cada parâmetro tem seu ganho $K$ associado
+%		
+%		\item $ \mbox{Valor medido} = P*K_p + I*K_i + D*K_d$
+%		
+%		\vspace{0.6cm}
+%		\begin{figure}[h]
+%			\centering
+%			\includegraphics[keepaspectratio = true,
+%			width=0.4\textwidth]{img/ganho_PID.png}
+%			\caption{Desempenho do sistema para diferentes ganhos $K_p$, $K_i$ e $K_d$. Fonte \cite{Kingdom}}
+%			\label{fig:ganhoPID}
+%		\end{figure}	
+%	
+%	\end{itemize}
+%	
+%\end{frame}	
+%
+%\begin{frame}[allowframebreaks]
+%	
+%	\frametitle{PID para quadricópteros}
+%	
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[keepaspectratio = true,
+%		width=0.8\textwidth]{img/PID_quad_geral.png}
+%		\caption{Controle PID de um quadricóptero. Fonte \cite{Liang}}
+%		\label{fig:PIDquad}
+%	\end{figure}
+%	
+%	\framebreak
+%	
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[keepaspectratio = true,
+%		width=0.7\textwidth]{img/PID_quad_axis.png}
+%		\caption{Controle PID por eixo. Fonte \cite{Liang}}
+%		\label{fig:PIDaxis}
+%	\end{figure}
+%	
+%	
+%\end{frame}	
+
+
+
+
+
+\section{Metodologia}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	
+	\frametitle{Metodologia}
+	
+	\begin{itemize}
+		
+		
+	
+		\item Divisão em etapas
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[keepaspectratio = true,
+			width=0.7\textwidth]{img/etapasMetodo.png}
+			\caption{Etapas do método}
+			\label{fig:etapasMetodo}
+		\end{figure}
+		
+	\framebreak
+	
+%	\item Evitar colisão
+	
+%	\begin{itemize}
+%		
+%		\item Dados da AHRS: $d_{ t }=\quad { \left[ { \dot { x }  }_{ t }\quad { \dot { y }  }_{ t }\quad { \dot { z }  }_{ t }\quad { \phi  }_{ t }\quad { \theta  }_{ t }\quad { \psi  }_{ t } \right]  }^{ T }$
+%		
+%		\item Dados do Controle: ${ u }_{ t }=\quad { \left[ \mathbf{{ \delta \phi  }_{ t }\quad { \delta \theta  }_{ t }\quad { \delta \psi  }_{ t }\quad { \delta h }_{ t }} \right]  }^{ T }$	
+%			
+%	
+%	\item Estimação da trajetória futura (Integração Numérica em $t$)
+%	
+%		
+%		\item Espaço de estados em $\Delta t$. Fonte \cite{Basit2014}
+%		
+%		\begin{equation}
+%		\begin{aligned}
+%		{ x }_{ t+1 } &=\quad { x }_{ t }+({ \dot { x }  }_{ t }{ \cos { \psi  }  }_{ t }-{ \dot { y }  }_{ t }{ \sin { \psi  }  }_{ t })\Delta t \\
+%		{ y }_{ t+1 } &=\quad y_{ t }+({ \dot { x }  }_{ t }{ \sin { \psi  }  }_{ t }+{ \dot { y }  }_{ t }{ \cos { \psi  }  }_{ t })\Delta t \\
+%		{ z }_{ t+1 } &=\quad { z }_{ t }+\delta { h }_{ t }\quad \\
+%		{ \phi  }_{ t+1 } &=\quad { \phi  }_{ t }+\delta { \phi  }_{ t }\quad \\
+%		{ \theta  }_{ t+1 } &=\quad { \theta  }_{ t }+\delta { \theta  }_{ t } \\
+%		{ \psi  }_{ t+1 } &=\quad \psi _{ t }+\delta { \psi  }_{ t } \\
+%		{ \dot { x }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 1 }}{ \phi  }_{ t } \\
+%		{ \dot { y }  }_{ t+1 } &=\quad \mathbf{{ C }_{ 2 }}{ \theta  }_{ t } \\
+%		\Delta t &= \mbox{ Intervalo entre medidas obtidas através da plataforma}
+%		\end{aligned}
+%		\label{eq:equacaoProb}
+%		\end{equation}
+%		
+%	\end{itemize}	
+%	
+%	\framebreak
+%	
+%	\item Evitar colisão (cont.)
+%	
+%	\begin{itemize}
+%		
+%		\item Identificar rota em choque e desviar
+%		
+%		\item Utilização das distâncias medidas para os obstáculos
+%		
+%		\item Método da Janela dinâmica \cite{Saranrittichai2013}	
+%		
+%		
+%		\item Determinar $\Delta\mathbf{u}$  possíveis e seguros no espaço de estados $\mathcal{U}$ em $t \in [0,\tau]$
+%		
+%		\item Otimização: $\text{min } \Delta\mathbf{u}$
+%			
+%		
+%		
+%	\end{itemize}	
+	
+	
+	\framebreak
+	
+		\item Componentes necessários
+		\begin{itemize}	
+			
+			\item Plataforma de voo (quadricóptero) com interface de comunicação e SDK código aberto
+			
+			\item Sensores ultrassônicos
+			
+			\item \textit{Computer-on-module} para embarque na plataforma: Raspberry PI
+				
+		\end{itemize}
+		
+		\item Software necessário
+		\begin{itemize}	
+			
+			\item Matlab com pacote Simulink
+			
+			\item Kit de desenvolvimento para quadricópteros do Matlab Simulink
+			
+			\item Raspberry Pi Support from MATLAB
+			
+		\end{itemize}
+	
+	\framebreak	
+		
+%		\item Estratégia de implementação
+%		
+%		\begin{figure}[h]
+%			\centering
+%			\includegraphics[keepaspectratio = true,
+%			width=0.5\textwidth]{img/fluxo.png}
+%			\caption{Estratégia de implementação}
+%			\label{fig:Fluxo}
+%		\end{figure}
+%		
+%		\framebreak	
+	
+		
+		\item Validação da simulação \textit{hardware-in-the-loop}
+		
+		\item Validação embarcada na plataforma
+		
+			
+			
+	\end{itemize}
+	
+		 
+	
+\end{frame}
+
+
+\section{Cronograma}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Cronograma}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[keepaspectratio = true,
+		width=0.63\textwidth]{img/cronograma.png}
+		\caption{Cronograma físico.}
+		\label{fig:cronograma}
+	\end{figure}
+	
+\end{frame}	
+
+\section{Viabilidade da proposta}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Viabilidade da proposta}
+	
+	\begin{itemize}	
+		
+		\item  Quatro quadricópteros com 45cm de diâmetro
+		
+		\item Dois Raspberry PI modelo B com processador de 700MHz, 512MB de memória
+		
+		\item Sensores ultrassónicos
+		
+		\item Matlab R2013a com Simulink
+		
+	\end{itemize}	
+	
+	
+\end{frame}	
+
+\section{Resultados esperados}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Resultados esperados}
+	
+	\begin{itemize}	
+		
+		\item  Foram elaboradas três missões
+	\end{itemize}	
+		\begin{columns}[T] % contents are top vertically aligned
+			\begin{column}[T]{3cm} % each column can also be its own environment
+				\begin{figure}
+					\centering
+					\includegraphics[keepaspectratio = true,
+					width=1.0\textwidth]{img/missao1.png}
+					\caption{Missão 1. Veículo cercado e estabilizado}
+					\label{fig:missao1}
+				\end{figure}
+			\end{column}
+			\begin{column}[T]{3cm} % alternative top-align that's better for graphics
+				\begin{figure}
+					\centering
+					\includegraphics[keepaspectratio = true,
+					width=1.1\textwidth]{img/missao2.png}
+					\caption{Missão 2: Veículo em movimento com obstáculo a frente. Desvio pelos lados}
+					\label{fig:missao2}
+				\end{figure}
+			\end{column}
+			\begin{column}[T]{3cm} % alternative top-align that's better for graphics
+				\begin{figure}
+					\centering
+					\includegraphics[keepaspectratio = true,
+					width=1.0\textwidth]{img/missao3.png}
+					\caption{Missão 3: Trajeto completo num ambiente com obstáculos}
+					\label{fig:missao3}
+				\end{figure}
+			\end{column}
+		\end{columns}
+			
+			
+\end{frame}	
+
+
+\section{Conclusão}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Conclusão}
+	
+	\begin{itemize}	
+		
+		\item  Um tema importante e recorrente para estudo do domínio de controle em \textit{Cyber-Physical Systems}(CPS) 
+		
+		%;é um sistema de colaboração entre sistemas robóticos com capacidade de comunicação e interação entre si para atuar sobre um ambiente físico.
+		
+		\item Inúmeras aplicações na área de defesa
+		
+		\item Construção do módulo de desvio de obstáculos da plataforma VANT-IME 
+		
+		
+	\end{itemize}	
+	
+	
+\end{frame}	
+
+\section{Próximos Passos}
+
+\begin{frame}
+	\frametitle{Sumário}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Próximos passos}
+	
+	\begin{itemize}	
+		
+		\item Em andamento
+		
+		\begin{itemize}
+			\item Pesquisa bibliográfica sobre a dinâmica do quadricóptero
+		\end{itemize}
+		
+		
+		\item Próximos passos
+		
+		\begin{itemize}
+			\item Pesquisa bibliográfica sobre desvio de obstáculo
+			
+			\item Estruturação e primeiros testes do ambiente para simulação
+			
+			\item Validação dos componentes em laboratório 
+		\end{itemize}
+		
+	\end{itemize}	
+	
+	
+\end{frame}
+
+
+% -------------------------------------------------%
+% -------------------------------------------------%
+\section*{Referências}
+
+%\begin{frame}
+%	\frametitle{Sumário}
+%	\tableofcontents[currentsection]
+%\end{frame}
+
+%\setbeamertemplate{bibliography item}[text]
+\begin{frame}[allowframebreaks]{Bibliography}
+	\frametitle{\insertsection}
+	\bibliographystyle{apalike}
+	\footnotesize\bibliography{Dissertacao}
+\end{frame}
+
+
+% -------------------------------------------------%
+
+
+\section*{Obrigado}
+\begin{frame}[b]
+	\frametitle{}
+	
+	
+  	\centering{\textbf{Obrigado}
+  	\\
+  	\vspace{0.5cm} \footnotesize{ bsgiovanini@gmail.com} \\
+	}
+	\vspace{2cm}
+	\hfill
+	\begin{columns}[T]
+		\begin{column}[T]{3cm}	
+	
+			\includegraphics[height=1.0cm,keepaspectratio]{img/ime.jpg}\centering
+		\end{column}
+		\begin{column}[T]{3cm}
+	
+			\includegraphics[height=1.0cm,keepaspectratio]{img/lab-logo.png}\centering
+	
+		\end{column}
+	\end{columns}
+		
+	
+
+\end{frame}
+
+
+
+% -------------------------------------------------%
+\end{document}

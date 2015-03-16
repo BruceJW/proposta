@@ -545,6 +545,17 @@ A parte final do trabalho é fundamentada na análise estocástica do sistema em
   Timestamp                = {2015.01.18}
 }
 
+@MastersThesis{crivella15,
+  Title                    = {Fusão de sensores para um {VANT} via suavização incremental baseada em grafos-fatores},
+  Author                   = {ANDERSON CRIVELLA DE CARVALHO RODRIGUES},
+  School                   = {Instituto Militar de Engenharia},
+  Year                     = {2015},
+
+  File                     = {:refs/imu/book.pdf:PDF},
+  Owner                    = {bsgiovanini},
+  Timestamp                = {2015.02.25}
+}
+
 @Article{Salih2010,
   Title                    = {Flight {PID} controller design for a {UAV} quadrotor},
   Author                   = {Salih, Atheer L and Moghavvemi, M and Mohamed, Haider AF and Gaeid, Khalaf Sallom},

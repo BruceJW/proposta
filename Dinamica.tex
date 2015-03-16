@@ -1,0 +1,226 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+\author{Bruno Giovanini}
+\title{ROS}
+
+\linespread{1.5}
+
+
+\begin{document}
+%Capa
+\begin{large}
+
+
+\textbf{Dinâmica}
+
+\vspace{1.5cm}
+
+
+\end{large}
+
+
+
+\newpage
+
+
+\section{Introdução}
+
+Geralmente, pode ser dito que a dinâmica de um helicóptero é não linear, com o acoplamento de cada eixo. Porém, para voos de baixa velocidade, isto é, velocidades abaixo de 5 $m/s$, a dinâmica pode ser expressa por um conjunto de equações lineares de movimento como um sistema SISO (\textit{single input single output}). A dinâmica do helicóptero é dividida em vários componentes. Deriva-se o modelo para cada componente tanto pela relação geométrica quanto pela equação de movimento. Combinando todos os componentes, é possível extrair duas equações lineares de estado que descrevem os movimentos laterais e longitudinais do helicóptero. Os parâmetros do modelo são determinados por suas especificações \cite{Nonami2010}.
+
+É conhecido que o modelo de atitude de rolagem é o mesmo da afagem devido à simetria do quadricóptero. Portanto, a uma modelagem é desenvolvida da mesma forma para rolagem e afagem.
+
+Devido ao fato da atitude do quadricóptero ser controlada de acordo com a velocidade de rotação do motor, considera-se inicialmente uma expressão que relaciona a atitude e o torque gerado pela diferença da velocidade de rotação do motor no centro do veículo.
+
+\section{Modelo dinâmico de um quadricóptero}
+
+A modelagem do controle de um quadricóptero é um problema complexo e tipicamente requer a existência de um modelo matemático de sua dinâmica. Modelos extremamente complexos que incluem os atuadores e dinâmica dos rotores, aerodinâmica da fuselagem e vibração das hélices não são muito práticos para a maioria dos mecanismos avançados de controle em tempo real. O primeiro passo na direção da modelagem da dinâmica do quadricóptero é considerá-lo como um corpo rígido em tres dimensoes com seis graus de liberdade sujeito a uma força principal e três momentos. Adicionalmente são considerados insignificantes os efeitos dos momentos causados pelo corpo rígido sobre a dinâmica translacional e os efeitos do solo.  
+
+\subsection{Dinâmica de um corpo rígido}
+
+As equações fundamentais que regem o movimento de um corpo rígido partem do Teorema de Conservação do Momento Linear e do Teorema de Conservação do Momento Angular. O primeiro diz que se a força externa total atuando sobre um sistema de partículas é zero, o momento linear total do sistema, o corpo rígido, é conservado. Em outras palavras, a taxa de variação do momento linear é igual a força externa atuando sobre um sistema de partículas. Sua relação pode ser verificada na equação \ref{eq:ml}.
+
+\begin{equation}
+\centering
+{ \left(\frac { d\mathbf{P} }{ dt }\right)}_{inercial} = \quad{ \mathbf{F} }^{ (e) }
+\label{eq:ml}
+\end{equation}
+
+\noindent onde $\mathbf{P}$ é o momento linear e ${ \mathbf{F} }^{ (e) }$ denota a resultante das forças externas exercidas no sistema de partículas em um dado instante. Já o segundo diz que o momento angular total de um sistema de partículas se conserva se o torque externo total é nulo. Da mesma forma, a taxa de variação do momento angular é igual ao torque externo total atuando sobre um sistema de partículas em um dado instante. A Equação \ref{eq:ma} demonstra a relação quando considerado o referencial inercial fixo.
+
+\begin{equation}
+\centering
+{ \left( \frac { d\overrightarrow { L } }{ dt }  \right)  }_{ inercial }=\quad { N }^{ (e) }
+\label{eq:ma}
+\end{equation}
+
+\noindent onde $\mathbf{L}$ é o momento angular e ${ \mathbf{N} }^{ (e) }$ denota a resultante dos torques externos exercidos no sistema de partículas em um dado instante. 
+
+\subsection{Equações de movimento de Newton-Euler}
+
+O momento angular de um corpo girando em torno de um eixo fixo, em relação a esse eixo, pode ser calculado através do seu momento de inércia $I$ e sua velocidade angular $\omega$ como demonstrado na equação \ref{eq:ma2}.
+
+
+\begin{equation}
+\centering
+ \overrightarrow { L } =I\overrightarrow { \omega } 
+\label{eq:ma2}
+\end{equation}
+
+\noindent substituindo em \ref{eq:ma}, é obtido 
+
+\begin{equation}
+\centering
+{ \left( \frac { d(I\overrightarrow { \omega  } ) }{ dt }  \right)  }_{ inercial }=\quad { N }^{ (e) }
+\label{eq:ma3}
+\end{equation}
+
+Quando considerado o referencial inercial em \ref{eq:ma3}, o momento de inércia $I$ varia no tempo, visto que o corpo translada e rotaciona no tempo em relação ao referencial inercial. Porém, quando considera-se um referencial fixado ao corpo rígido, o momento de inércia é independente do tempo, o que torna as equações de movimento sustancialmente mais simples e a equação \ref{eq:ma3} passa a ser definida como:
+
+\begin{equation}
+\centering
+{ I\left( \frac { d\overrightarrow { \omega  }  }{ dt }  \right)  }_{ corpo }+\quad \overrightarrow { \omega  } \times I\overrightarrow { \omega  } \quad =\quad { N }^{ (e) }
+\label{eq:ma4}
+\end{equation}
+
+Além disso, quando escolhidos os eixos fixos do corpo como os eixos principais de inércia, o momento de inércia, representado por uma matriz $(I)_{3\times3}$, passa a ser uma matriz diagonal e, considerando as três componentes do sistema separadamente, as Equações de Euler são expressas por:
+
+
+\begin{equation}
+\begin{aligned}
+{ I }_{ xx }{ \dot { \omega  }  }_{ x }+{ \omega  }_{ y }I_{ zz }\omega _{ z }-\omega _{ z }I_{ yy }\omega _{ y }\quad =\quad { I }_{ xx }{ \dot { \omega  }  }_{ x } - (I_{ yy } - I_{ zz }){ \omega  }_{ y }{ \omega  }_{ z }\quad &=\quad N_{ x } \\
+{ I }_{ yy }{ \dot { \omega  }  }_{ y } - (I_{ zz } - I_{ xx }){ \omega  }_{ z }{ \omega  }_{ x }\quad &=\quad N_{ y }\\
+{ I }_{ zz }{ \dot { \omega  }  }_{ z } - (I_{ xx } - I_{ yy }){ \omega  }_{ x }{ \omega  }_{ y }\quad &=\quad N_{ z }
+\end{aligned}
+\label{eq:eulers}
+\end{equation}
+
+\noindent onde $I_1$, $I_2$ e $I_3$ são constantes. É possível observar que as Equações de Euler não são lineares devido aos termos produto $\omega_i\omega_j$. 
+
+Já o momento linear de um corpo se movimentando linearmente em relação ao eixo inercial referencial pode ser calculado através da equação \ref{eq:ml2}.
+
+\begin{equation}
+\centering
+\overrightarrow { P } = m\overrightarrow { v } 
+\label{eq:ml2}
+\end{equation}
+
+\noindent onde $m$ é a massa do corpo rígido e $v$ é a velocidade linear do corpo. Substituindo em \ref{eq:ml}, é obtido 
+
+\begin{equation}
+\centering
+\frac { d(m\overrightarrow { v } ) }{ dt } ={ \mathbf{F} }^{ (e) }
+\label{eq:ml3}
+\end{equation}
+
+\noindent  transformando-a para o sistemas de coordenadas do corpo rígido:
+
+\begin{equation}
+\centering
+m\left[ \frac { d\overrightarrow { v }  }{ dt } \quad +\quad \overrightarrow { \omega  } \times \overrightarrow { v }  \right] =\quad { \mathbf{F} }^{ (e) }
+\label{eq:ml3}
+\end{equation}
+
+\noindent A força translacional $\mathbf{F}^{(e)}$ combina as forças geradas pelos motores, gravidade e outras componentes de força do corpo rígido. Expandindo a equação \ref{eq:ml3} em suas componentes em conjunto com as equações de momento angular, todas em relaçao ao referencial do corpo rígido, obtemos o sistema com seis equações independentes de movimento expresso em \ref{eq:motion}.
+
+\begin{equation}
+\begin{aligned}
+	m\left[ { \dot { \upsilon  }  }_{ x } - { \omega  }_{ z }\upsilon_{ y } + { \omega  }_{ y }{ \upsilon  }_{ z } \right] \quad &=\quad { F }_{ x } \\ 
+	m\left[ { \dot { \upsilon  }  }_{ y } - { \omega  }_{ z }\upsilon_{ x } + { \omega  }_{ x }{ \upsilon  }_{ z } \right] \quad &=\quad { F }_{ y } \\
+	m\left[ { \dot { \upsilon  }  }_{ z } - { \omega  }_{ y }\upsilon_{ x } + { \omega  }_{ x }{ \upsilon  }_{ y } \right] \quad &=\quad { F }_{ z } \\ 
+	{ I }_{ xx }{ \dot { \omega  }  }_{ x } - (I_{ yy } - I_{ zz }){ \omega  }_{ y }{ \omega  }_{ z }\quad &=\quad N_{ x } \\
+	{ I }_{ yy }{ \dot { \omega  }  }_{ y } - (I_{ zz } - I_{ xx }){ \omega  }_{ z }{ \omega  }_{ x }\quad &=\quad N_{ y }\\
+	{ I }_{ zz }{ \dot { \omega  }  }_{ z } - (I_{ xx } - I_{ yy }){ \omega  }_{ x }{ \omega  }_{ y }\quad &=\quad N_{ z }
+\end{aligned}
+\label{eq:motion}
+\end{equation}
+
+\subsection{Forças e torques aerodinâmicos}
+
+Para quadricópteros, o mecanismo que gera forças e torques requeridos para controlar seu movimento é realizado por seus quadro motores e hélices. Estes produzem o impulso necessário de forma perpendicular ao plano de rotação dos motores. O impulso principal é gerado ao longo do eixo vertical do corpo e é usado para compensar a gravidade e controlar o movimento vertical do veículo. Os movimentos horizontais no plano ($x$,$y$) são controlados pelo direcionamento do vetor de impulso na direção apropriada, por consequência, resultando em componentes laterais de força. Os torques de controle são, assim, usados para controlar a orientação do corpo do veículo que controla o movimento horizontal.
+
+O quadricóptero pode ser caracterizado por três controles de torque $\tau = (\tau_\phi,\tau_\theta,\tau_\psi)^T$ e uma força principal $F^b = (0,0,u)^T$, onde $\tau_\phi$,$\tau_\theta$ e $\tau_\psi$ são torques de rolagem, afagem e guinada, respectivamente, no centro de massa e $u$ é o impulso total gerado pelos quatro motores controlados de forma independente. O conjunto de equações é ilustrado, em sua forma matricial, em \ref{eq:forca1} e representa  as forças e torques do sistema:
+
+\begin{equation}
+\centering
+\begin{bmatrix} 
+    0 \\ 0 \\ u \\ \tau _{ \phi  } \\ \tau _{ \theta  } \\ \tau _{ \psi  } 
+\end{bmatrix}   =
+\begin{bmatrix} 0 \\ 0 \\ { { f }_{ 1 }+{ f }_{ 2 }+{ f }_{ 3 }+{ f }_{ 4 } } \\ l({ f }_{ 2 }-{ f }_{ 4 }) \\ l({ f }_{ 1 }-{ f }_{ 3 }) \\ Q_1 + Q_3 - Q_2 - Q_4
+ \end{bmatrix}
+\label{eq:forca1}
+\end{equation}
+
+\noindent onde $l$ é a distância do motor ao centro de massa do veículo e $f_i$ e $Q_i$ $(i=1,2,3,4)$  são os impulsos e torques de rotação das hélices gerados cada motor, respectivamente. 
+
+O impulso $f_i$ e o torque $Q_i$ são geralmente assumidos por serem proporcionais ao quadrado da velocidade angular do motor $w_i$. De fato, as relações entre a velocidade do motor $w_i$ e o impulso $f_i$ e torque $Q_i$ gerados são  muito complexas \cite{McCormick1995}\cite{Prouty1995}. Portanto, o modelo algébrico para geração das forças e torques de controle são aqui descritas da seguinte forma: 
+
+\begin{equation}
+\centering
+\begin{pmatrix} 
+	u \\ \tau _{ \phi  } \\ \tau _{ \theta  } \\ \tau _{ \psi  } 
+\end{pmatrix}=
+\begin{pmatrix}
+	\rho  & \rho  & \rho  & \rho  \\ 
+	0 & -l\rho  & 0 & l\rho  \\ 
+	-l\rho  & 0 & l\rho  & 0 \\ 
+	\kappa  & -\kappa  & \kappa  & -\kappa 
+\end{pmatrix}
+\begin{pmatrix}
+	{ w }_{ 1 } \\ { w }_{ 2 } \\{ w }_{ 3 }\\ { w }_{ 4 }
+\end{pmatrix}
+\label{eq:forca2}
+\end{equation}
+
+\noindent onde $\rho$ e $\kappa$ são constantes positivas caracterizando a aerodinâmica das hélices. As expressões em \ref{eq:forca2} são aproximações válidas que são usadas para movimentos em baixa velocidade. 
+
+Substituindo em \ref{eq:motion}, temos como as componentes de forças resultantes do sistema a relação \ref{eq:forca3}. 
+
+\begin{equation}
+\centering
+\begin{pmatrix}
+	F_x \\ F_y \\ F_z \\ N_x \\ N_y \\ N_z 
+\end{pmatrix} = 
+\begin{pmatrix}
+mg\sin{\theta} \\ mg\sin{\phi} \\ u - mg\cos{\phi}\cos{\theta} \\ \tau_{\phi} \\ \tau_{\theta} \\ \tau_{\psi} 
+\end{pmatrix}
+\label{eq:forca3}
+\end{equation}
+
+\noindent onde $(mg\sin{\phi},mgsin{\theta},mg\cos{\phi}\cos{\theta})$ são as componentes $x$, $y$ e $z$ do peso do veículo, respectivamente. Por fim, o conjunto de equações que descrevem o movimento do quadricóptero em relação ao referencial do corpo do veículo, com base nas relações \ref{eq:motion} e \ref{eq:forca3} será:
+
+\begin{equation}
+\begin{aligned}
+	m\left[ { \dot { \upsilon  }  }_{ x } - { \omega  }_{ z }\upsilon_{ y } + { \omega  }_{ y }{ \upsilon  }_{ z } - g\sin{\theta} \right] \quad &=\quad 0 \\ 
+	m\left[ { \dot { \upsilon  }  }_{ y } - { \omega  }_{ z }\upsilon_{ x } + { \omega  }_{ x }{ \upsilon  }_{ z } - g\sin{\phi} \right] \quad &=\quad 0 \\
+	m\left[ { \dot { \upsilon  }  }_{ z } - { \omega  }_{ y }\upsilon_{ x } + { \omega  }_{ x }{ \upsilon  }_{ y } - g\cos{\phi}\cos{\theta} \right] \quad &=\quad u \\ 
+	{ I }_{ xx }{ \dot { \omega  }  }_{ x } - (I_{ yy } - I_{ zz }){ \omega  }_{ y }{ \omega  }_{ z }\quad &=\quad \tau_{\phi} \\
+	{ I }_{ yy }{ \dot { \omega  }  }_{ y } - (I_{ zz } - I_{ xx }){ \omega  }_{ z }{ \omega  }_{ x }\quad &=\quad \tau_{\theta}\\
+	{ I }_{ zz }{ \dot { \omega  }  }_{ z } - (I_{ xx } - I_{ yy }){ \omega  }_{ x }{ \omega  }_{ y }\quad &=\quad \tau_{\psi} 
+\end{aligned}
+\label{eq:forca4}
+\end{equation}
+
+Algumas forças e momentos como efeitos aerodinâmicos, dinâmica dos motores e efeitos giroscópicos são consideradas secundárias e são aqui deixadas de lado, pois:
+
+\begin{itemize}
+\item	Para quadricópteros (mini), forças secundárias e momentos de corpos pequenos são dominadas pelas forças principais e vetores de torque, resultando em um pequeno e limitado efeito sobre a dinâmica do veículo.
+\item A complexidade de um modelo depende essencialmente da expressão das forças e momentos aerodinâmicos.
+\end{itemize}
+
+
+
+\newpage
+
+\bibliographystyle{abbrv}
+\bibliography{Dissertacao} 
+
+\newpage
+
+\end{document}

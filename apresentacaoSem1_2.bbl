@@ -6,17 +6,6 @@ Basit, A., Qureshi, W.~S., Dailey, M.~N., and Krajn{\'\i}k, T. (2014).
   cues.
 \newblock {\em Journal of Intelligent \& Robotic Systems}, pages 1--18.
 
-\bibitem[Copter, 2013]{rocopter}
-Copter, R.~. (2013).
-\newblock Ro 4 copter starters guide.
-
-\bibitem[Domingues, 2009]{Domingues2009}
-Domingues, J. M.~B. (2009).
-\newblock Quadrotor prototype.
-\newblock
-  \url{https://fenix.tecnico.ulisboa.pt/downloadFile/395139421058/Tese\_de\_Mestrado.pdf}.
-\newblock Acessado em 19/02/2015.
-
 \bibitem[Junior, 2009]{Adalberto2009}
 Junior, J. (2009).
 \newblock Simulação e implementação em tempo real de sistemas de
@@ -29,17 +18,17 @@ Kingdom, R. (2013).
 \newblock \url{http://robot-kingdom.com/pid-controller-tutorial-for-robots/}.
 \newblock Acessado em 12/01/2015.
 
-\bibitem[Liang, 2014]{Liang}
-Liang, O. (2014).
-\newblock Quadcopter {PID} explained and tuning.
-\newblock \url{http://blog.oscarliang.net/quadcopter-pid-explained-tuning/}.
-\newblock Acessado em 12/01/2015.
-
 \bibitem[Mian and Daobo, 2008]{Mian2008}
 Mian, A.~A. and Daobo, W. (2008).
 \newblock Modeling and backstepping-based nonlinear control strategy for a 6
   {DOF} quadrotor helicopter.
 \newblock {\em Chinese Journal of Aeronautics}, 21(3):261--268.
+
+\bibitem[RODRIGUES, 2015]{crivella15}
+RODRIGUES, A. C. D.~C. (2015).
+\newblock Fusão de sensores para um {VANT} via suavização incremental
+  baseada em grafos-fatores.
+\newblock Master's thesis, Instituto Militar de Engenharia.
 
 \bibitem[Salih et~al., 2010]{Salih2010}
 Salih, A.~L., Moghavvemi, M., Mohamed, H.~A., and Gaeid, K.~S. (2010).
