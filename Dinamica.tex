@@ -63,7 +63,7 @@ Figura ????
 
 \subsubsection{Sistema de coordenadas veículo-1 $\mathcal{F}^{v1}$}
 
-A origem do sistema de coordenadas veículo-1 é idêntico à origem de $\mathcal{F}^v$. Porém, $k_{v1}$ é rotacionado positivamente na direção da regra da mão direita em relação a $k_v$ pelo ângulo de guinada $\psi$. Os demais eixos $i_{v1}$ e $j_{v1}$ apontam na mesma direção de $i_v$ e $j_v$. O sistema de coordenadas veículo-1 é mostrado na Figura ?????. 
+A origem do sistema de coordenadas veículo-1 é idêntico à origem de $\mathcal{F}^v$. Porém, $\mathcal{F}^{v1}$ é rotacionado positivamente na direção da regra da mão direita em relação a $k_v$ pelo ângulo de guinada $\psi$. Os demais eixos $i_{v1}$ e $j_{v1}$ apontam na mesma direção de $i_v$ e $j_v$. O sistema de coordenadas veículo-1 é mostrado na Figura ?????. 
 
 A transformação de $\mathcal{F}^{v}$ para $\mathcal{F}^{v1}$ é dada por:
 
@@ -81,42 +81,173 @@ A transformação de $\mathcal{F}^{v}$ para $\mathcal{F}^{v1}$ é dada por:
 \begin{pmatrix} 
 \cos { \psi  }  & \sin { \psi  } & 0 \\ -\sin { \psi  }  & \cos { \psi  } & 0  \\ 0  & 0 & 1 
 \end{pmatrix}
-\label{eq:coord1}
+\label{eq:rotguinada}
 \end{equation}
 
 \subsubsection{Sistema de coordenadas do veículo-2 $\mathcal{F}^{v2}$}
 
+A origem do sistema de coordenadas veículo-2 é novamente o centro de massa do veículo e é obtida através da rotação de $\mathcal{F}^{v2}$ em relação à $j_{v1}$ na direção da regra da mão direita pelo ângulo de afagem $\theta$. 
+
+A transformação de $\mathcal{F}^{v1}$ para $\mathcal{F}^{v2}$ é dada por:
+
+\begin{equation}
+\centering
+\mathbf{p}^{v2} = { R }_{ v1 }^{ v2 }(\theta)\mathbf{p}^{v1}
+\label{eq:coord2}
+\end{equation}
+
+\noindent onde
+
+\begin{equation}
+\centering
+{ R }_{ v1 }^{ v2 }(\theta) = 
+\begin{pmatrix} 
+	\cos {\theta}  & 0 & -\sin {\theta} \\
+	0  & 1 & 0 \\
+	\sin {\theta}  & 0 & \cos  {\theta}	 
+\end{pmatrix}
+\label{eq:rotafagem}
+\end{equation}
+
 \subsubsection{Sistema de coordenadas do corpo $\mathcal{F}^{b}$}
+
+O sistema de coordenadas do corpo é obtido pela rotação de $\mathcal{F}^{v2}$ na direção positiva da regra da mão direita em relação a $i_{v2}$ pelo ângulo de rolagem $\phi$. 
+
+A transformação de $\mathcal{F}^{v2}$ para $\mathcal{F}^{b}$ é dada por:
+
+\begin{equation}
+\centering
+\mathbf{p}^{b} = { R }_{ v2 }^{ b }(\phi)\mathbf{p}^{v2}
+\label{eq:coord3}
+\end{equation}
+
+\noindent onde
+
+\begin{equation}
+\centering
+{ R }_{ v2 }^{ b }(\phi) = 
+\begin{pmatrix} 
+	1  & 0 & 0 \\
+	0 & \cos {\phi}  &  \sin {\phi} \\
+	0 & -\sin {\phi}  & \cos {\phi}	 
+\end{pmatrix}
+\label{eq:rotrolagem}
+\end{equation}
+
+A transformação do sistema de coordenadas do veículo para o sistema de coordenadas do corpo é dada por:
+
+\begin{equation}
+\centering
+{ R }_{ v }^{ b }(\phi, \theta, \psi) = 
+{ R }_{ v2 }^{ b }(\phi){ R }_{ v1 }^{ v2 }(\theta){ R }_{ v }^{ v1 }(\psi)
+\label{eq:rot1}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+{ R }_{ v }^{ b }(\phi, \theta, \psi) &= 
+\begin{pmatrix} 
+	1  & 0 & 0 \\
+	0 & \cos {\phi}  &  \sin {\phi} \\
+	0 & -\sin {\phi}  & \cos {\phi}	 
+\end{pmatrix}
+\begin{pmatrix} 
+	\cos {\theta}  & 0 & -\sin {\theta} \\
+	0  & 1 & 0 \\
+	\sin {\theta}  & 0 & \cos  {\theta}	 
+\end{pmatrix}
+\begin{pmatrix} 
+	\cos { \psi  }  & \sin { \psi  } & 0 \\
+	 -\sin { \psi  }  & \cos { \psi  } & 0  \\ 
+	 0  & 0 & 1 
+\end{pmatrix} \\
+&=\begin{pmatrix} 
+{ c }_{ \theta  }{ c }_{ \psi  } & { c }_{ \theta  }s_{ \psi  } & -{ s }_{ \theta  } \\ { s }_{ \phi  }{ s }_{ \theta  }{ c }_{ \psi  }-{ c }_{ \phi  }{ s }_{ \psi  } & { s }_{ \phi  }{ s }_{ \theta  }{ s }_{ \psi  }+{ c }_{ \phi  }{ c }_{ \psi  } & { s }_{ \phi  }{ c }_{ \theta  } \\ { c }_{ \phi  }{ s }_{ \theta  }{ c }_{ \psi  }+{ s }_{ \phi  }{ s }_{ \psi  } & { c }_{ \phi  }{ s }_{ \theta  }{ s }_{ \psi  }-{ s }_{ \phi  }{ c }_{ \psi  } & { c }_{ \phi  }{ c }_{ \theta  } 
+\end{pmatrix} 
+\end{aligned}
+\label{eq:rot2}
+\end{equation}
+
+\noindent onde ${ c }_{ \phi  }\equiv \cos { \phi  } $ e ${ s }_{ \phi  }\equiv \sin { \phi  } $. Os ângulos $\phi$, $\theta$, e $\psi$ são comumente referidos como Ângulos de Euler. São bem utilizados por permitirem um significado intuitivo para representação da orientação de um corpo em três dimensões. A sequência de rotações $\psi$-$\theta$-$\phi$ é bem utilizada para aeronaves e apenas um de vários dos sistemas de Ângulos de Euler em uso. Ref. 
+
+Apesar de intuitivo, os Ângulos de Euler possuem uma singularidade matemática que causa instabilidades computacionais. Para a sequência $\psi$-$\theta$-$\phi$, existe uma singularidade quando o ângulo de afagem $\theta$ é $\pm90$ graus, caso em que o ângulo de guinada $\psi$ é não definido. Esta singularidade é definida como \textit{gimbal lock}. Uma alternativa comum para os Ângulos de Euler é o \textit{Quaternion}. Enquanto menos intuitivo, não possui singularidades matemáticas e é computacionalmente mais eficiente .Ref. Devido suas características, em voo comportado, a afagem do quadricóptero não chega a $\pm90$ graus e será aqui representada por Ângulos de Euler.
 
 \subsection{Cinemática}
 
-A velocidade translacional de um MAV é comumente expressada em termos dos componentes das velocidades ao longo de cada eixo do referencial fixado ao corpo do veículo. Já a posição translacional é usualmente medida e expressada no referencial inercial. Portanto, relacionar velocidade e posição translacionais requer diferenciação e uma transformação rotacional como mostrado na equação \ref{eq:cin1}.
-
+Cinemática é o estudo dos movimentos sem a preocupação com as suas causas. A velocidade translacional de um MAV é comumente expressada em termos dos componentes das velocidades ao longo de cada eixo do referencial fixado ao corpo do veículo. Já a posição translacional é usualmente medida e expressada no referencial inercial. Portanto, relacionar velocidade e posição translacionais requer diferenciação e uma transformação rotacional como mostrado na equação \ref{eq:cin1}, onde 
+${ R }_{ b }^{ v } = {({ R }_{ v }^{ b })}^{-1} = {({ R }_{ v }^{ b })}^T$.
 \begin{equation}
 \centering
 \frac { d }{ dt } 
 \begin{pmatrix} 
 	{ p }_{ x } \\ { p }_{ y } \\ { p }_{ z } 
 \end{pmatrix} = 
-{ R }_{ b }^{ v }\begin{pmatrix} { u } \\ { v } \\ { w } \end{pmatrix} =
-\begin{pmatrix} 
-	{ c }_{ \theta  }{ c }_{ \psi  } & { c }_{ \theta  }s_{ \psi  } & -{ s }_{ \theta  } \\ { s }_{ \phi  }{ s }_{ \theta  }{ c }_{ \psi  }-{ c }_{ \phi  }{ s }_{ \psi  } & { s }_{ \phi  }{ s }_{ \theta  }{ s }_{ \psi  }+{ c }_{ \phi  }{ c }_{ \psi  } & { s }_{ \phi  }{ c }_{ \theta  } \\ { c }_{ \phi  }{ s }_{ \theta  }{ c }_{ \psi  }+{ s }_{ \phi  }{ s }_{ \psi  } & { c }_{ \phi  }{ s }_{ \theta  }{ s }_{ \psi  }-{ s }_{ \phi  }{ c }_{ \psi  } & { c }_{ \phi  }{ c }_{ \theta  } 
-\end{pmatrix}
+{ R }_{ b }^{ v }
+\begin{pmatrix} { u } \\ { v } \\ { w }\end{pmatrix} = 
+\begin{pmatrix} { c }_{ \theta  }{ c }_{ \psi  } & { s }_{ \phi  }{ s }_{ \theta  }{ c }_{ \psi  }-{ c }_{ \phi  }{ s }_{ \psi  } & { c }_{ \phi  }{ s }_{ \theta  }{ c }_{ \psi  }+{ s }_{ \phi  }{ s }_{ \psi  } \\ { c }_{ \theta  }s_{ \psi  } & { s }_{ \phi  }{ s }_{ \theta  }{ s }_{ \psi  }+{ c }_{ \phi  }{ c }_{ \psi  } & { c }_{ \phi  }{ s }_{ \theta  }{ s }_{ \psi  }-{ s }_{ \phi  }{ c }_{ \psi  } \\ -{ s }_{ \theta  } & { s }_{ \phi  }{ c }_{ \theta  } & { c }_{ \phi  }{ c }_{ \theta  } \end{pmatrix}
 \begin{pmatrix}
 	{ u } \\ { v } \\ { w } 
 \end{pmatrix}
 \label{eq:cin1}
 \end{equation}
 
-\noindent onde $[p_x,p_y,p_z]^T$ é a posição translacional do veículo em relação ao referencial inercial, ${ R }_{ b }^{ i }$ é a matriz das transformações rotacionais dos ângulos $\psi$, $\theta$ e $\phi$, em sequência, do referencial fixo para o referencial inercial e $[u,v,w]^T$ é a velocidade translacional do corpo em relação ao seu eixo fixo.
+\noindent onde $[p_x,p_y,p_z]^T$ é a posição translacional do veículo em relação ao referencial do veículo e $[u,v,w]^T$ é a velocidade translacional do corpo em relação ao seu eixo fixo.
 
-Para se realizar o planejamento de trajetória e controle do veículo, normalmente, se faz necessária descrever a dinâmica em relação ao referencial inercial. O referencial inercial é um conjunto de eixos fixados na Terra que é usado como uma referência imutável enquanto o veículo, que possui um referencial fixo, se movimenta. A posição relativa entre tais referenciais varia com o tempo através de rotações e translações. As translações são traduzidas em somas vetoriais e as rotações necessitam de uma forma de representação da orientação do veículo no espaço 3D. Aqui são utilizados os Ângulos de Euler.
+O relacionamento entre as posições angulares $\phi$, $\theta$ e $\psi$ com as taxas angulares $\omega_x$, $\omega_y$ e $\omega_z$ também são complicadas pelo fato das posições serem definidas em diferentes sistemas de coordenadas. As taxas angulares são definidas no sistema de coordenadas do corpo do veículo $\mathcal{F}^{b}$. As posições angulares (Ângulos de Euler) são definidas em três diferentes sistemas de coordenadas: O ângulo de rolagem $\phi$ é a rotação em torno do eixo $i_{v2} = i_{b}$ do sistema $\mathcal{F}^{v2}$ para o sistema $\mathcal{F}^{b}$. O ângulo de afagem $\theta$ é a rotação de $\mathcal{F}^{v1}$ para $\mathcal{F}^{v2}$ em torno do eixo $j_{v1} = j_{v2}$ e o ângulo de guinada $\psi$ é a rotação de $\mathcal{F}^{v}$ para $\mathcal{F}^{v1}$ em torno do eixo $k_v = k_{v1}$.
 
-\subsubsection{Rep}
+As taxas angulares em relação ao sistema de coordenadas do corpo do veículo $\mathcal{F}^{b}$ pode ser expressada em termos de derivativas dos Ângulos de Euler, realizando-se as rotações apropriadas como segue:
 
-Os Ângulos de Euler possibilitam uma representação da orientação 3D de um objeto usando uma combinação de três rotações sobre os diferentes eixos. 
+\begin{equation}
+\begin{aligned}
+\begin{pmatrix} 
+	{ \omega }_{ x } \\ { \omega }_{ y } \\ { \omega}_{ z } 
+\end{pmatrix} &= 
+\begin{pmatrix} 
+	{\dot{\phi}} \\  0 \\ 0 
+\end{pmatrix} + 
+{ R }_{ v2 }^{ b }(\phi)
+\begin{pmatrix} 
+ 0 \\  {\dot{\theta}} \\ 0 
+\end{pmatrix} +
+{ R }_{ v2 }^{ b }(\phi){ R }_{ v1 }^{ v2 }(\theta)
+\begin{pmatrix} 
+0 \\  0 \\ {\dot{\psi}} 
+\end{pmatrix} \\
+\begin{pmatrix} 
+	{ \omega  }_{ x } \\ { \omega  }_{ y } \\ { \omega  }_{ z }
+\end{pmatrix} &= 
+\begin{pmatrix} 
+	1 & 0 & -\sin { \theta  }  \\ 
+	0 & \cos { \phi  }  & \sin { \phi \cos { \theta  }  }  \\ 
+	0 & -\sin { \phi  }  & \cos { \phi \cos { \theta  }  } 
+\end{pmatrix}
+\begin{pmatrix} 
+	{\dot {\phi}} \\ { \dot {\theta}} \\ { \dot { \psi}} 
+\end{pmatrix}
+\end{aligned}
+\label{eq:cin2}
+\end{equation}
+
+\noindent Invertendo a equação, obtém-se:
+\begin{equation}
+\begin{pmatrix} 
+	{\dot {\phi}} \\ { \dot {\theta}} \\ { \dot { \psi}} 
+\end{pmatrix} = 
+\begin{pmatrix} 
+	1 & \sin {\phi\tan{\theta}}& \cos{\phi\tan{\theta}}  \\ 
+	0 & \cos {\phi}  & -\sin{\phi}  \\ 
+	0 & \sin {\phi\sec{\theta}}  & \cos{\phi\sec{\theta}} 
+\end{pmatrix}
+\begin{pmatrix} 
+	{ \omega  }_{ x } \\ { \omega  }_{ y } \\ { \omega  }_{ z }
+\end{pmatrix} 
+\end{equation}
+
+\noindent que expressa a taxa de variação das três posições angulares em termo das posições $\phi$ e $\theta$ e das taxas angulares ${\omega}_{x}$, ${\omega}_{y}$ e ${\omega}_{z}$.
 
 \subsection{Dinâmica de um corpo rígido}
+
+ 
 
 As equações fundamentais que regem o movimento de um corpo rígido partem do Teorema de Conservação do Momento Linear e do Teorema de Conservação do Momento Angular. O primeiro diz que se a força externa total atuando sobre um sistema de partículas é zero, o momento linear total do sistema, o corpo rígido, é conservado. Em outras palavras, a taxa de variação do momento linear é igual a força externa atuando sobre um sistema de partículas. Sua relação pode ser verificada na equação \ref{eq:ml}.
 
