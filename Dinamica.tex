@@ -29,25 +29,15 @@
 
 \newpage
 
-
-\section{Introdução}
-
-Geralmente, pode ser dito que a dinâmica de um helicóptero é não linear, com o acoplamento de cada eixo. Porém, para voos de baixa velocidade, isto é, velocidades abaixo de 5 $m/s$, a dinâmica pode ser expressa por um conjunto de equações lineares de movimento como um sistema SISO (\textit{single input single output}). A dinâmica do helicóptero é dividida em vários componentes. Deriva-se o modelo para cada componente tanto pela relação geométrica quanto pela equação de movimento. Combinando todos os componentes, é possível extrair duas equações lineares de estado que descrevem os movimentos laterais e longitudinais do helicóptero. Os parâmetros do modelo são determinados por suas especificações \cite{Nonami2010}.
-
-É conhecido que o modelo de atitude de rolagem é o mesmo da afagem devido à simetria do quadricóptero. Portanto, a uma modelagem é desenvolvida da mesma forma para rolagem e afagem.
-
-Devido ao fato da atitude do quadricóptero ser controlada de acordo com a velocidade de rotação do motor, considera-se inicialmente uma expressão que relaciona a atitude e o torque gerado pela diferença da velocidade de rotação do motor no centro do veículo.
-
-
-
-
+	
 \section{Modelo dinâmico de um quadricóptero}
 
-A modelagem do controle de um quadricóptero é um problema complexo e tipicamente requer a existência de um modelo matemático de sua dinâmica. Modelos extremamente complexos que incluem os atuadores e dinâmica dos rotores, aerodinâmica da fuselagem e vibração das hélices não são muito práticos para a maioria dos mecanismos avançados de controle em tempo real. O primeiro passo na direção da modelagem da dinâmica do quadricóptero é considerá-lo como um corpo rígido em tres dimensoes com seis graus de liberdade sujeito a uma força principal e três momentos. Adicionalmente são considerados insignificantes os efeitos dos momentos causados pelo corpo rígido sobre a dinâmica translacional e os efeitos do solo. 
+ A modelagem do controle de um quadricóptero é um problema complexo e tipicamente requer a existência de um modelo matemático de sua dinâmica.
+ O primeiro passo, é definir as variáveis de estado que representam o sistema. Em seguida, derivar as equações não lineares que descrevem o movimento do veículo. 
 
 \subsection{Sistemas de Coordenadas}
 
-Para obter e entender o comportamento dinâmico de um quadricóptero, é necessário considerar os seguintes sistemas de coordenadas: inercial, veículo, veículo-1, veículo-2, corpo, estabilidade e vento. O sistema de coordenadas inerciais e do veículo são relacionadas por uma translação, enquanto as demais são relacionadas por rotações. Os ângulos definindo as orientações relativas aos sistemas de coordenadas do veículo, veículo-1, veículo-2 e corpo são os ângulos de rolagem, afagem e guinada, respectivamente, que descrevem a atitude do veículo. Estes ângulos são comumente chamados de Ângulos de Euler. A relação entre os demais sistemas de coordenadas são chamados ângulos de ataque e sideslip, que consideram a velocidade do ar em um ambiente com incidência de ventos, fato muito improvável em ambientes \textit{indoors} e considerado como ruído neste trabalho. 
+Para obter e entender o comportamento dinâmico de um quadricóptero, é necessário considerar os seguintes sistemas de coordenadas: inercial, veículo, veículo-1, veículo-2, corpo, estabilidade e vento, cada um com seus eixos ortogonais ($x$,$y$,$z$) e cada um com seus vetores unitários apontando na direção positiva $\vec{i}$, $\vec{j}$ e $\vec{k}$ correspondentes. O sistema de coordenadas inerciais e do veículo são relacionadas por uma translação, enquanto as demais são relacionadas por rotações. Os ângulos definindo as orientações relativas aos sistemas de coordenadas do veículo, veículo-1, veículo-2 e corpo são os ângulos de rolagem, afagem e guinada, respectivamente, que descrevem a atitude do veículo. Estes ângulos são comumente chamados de Ângulos de Euler. A relação entre os demais sistemas de coordenadas são chamados ângulos de ataque e sideslip, que consideram a velocidade do ar em um ambiente com incidência de ventos, fato muito improvável em ambientes \textit{indoors} e considerado como ruído neste trabalho. 
 
 \subsubsection{Sistema de coordenadas inerciais $\mathcal{F}^i$}
 
@@ -191,7 +181,7 @@ ${ R }_{ b }^{ v } = {({ R }_{ v }^{ b })}^{-1} = {({ R }_{ v }^{ b })}^T$.
 \label{eq:cin1}
 \end{equation}
 
-\noindent onde $[p_x,p_y,p_z]^T$ é a posição translacional do veículo em relação ao referencial do veículo e $[u,v,w]^T$ é a velocidade translacional do corpo em relação ao seu eixo fixo.
+\noindent onde $[p_x,p_y,p_z]^T$ é a posição translacional em relação ao referencial do veículo $\mathcal{F}^{v}$ e $[u,v,w]^T$ é a velocidade translacional em relação ao corpo $\mathcal{F}^{b}$.
 
 O relacionamento entre as posições angulares $\phi$, $\theta$ e $\psi$ com as taxas angulares $\omega_x$, $\omega_y$ e $\omega_z$ também são complicadas pelo fato das posições serem definidas em diferentes sistemas de coordenadas. As taxas angulares são definidas no sistema de coordenadas do corpo do veículo $\mathcal{F}^{b}$. As posições angulares (Ângulos de Euler) são definidas em três diferentes sistemas de coordenadas: O ângulo de rolagem $\phi$ é a rotação em torno do eixo $i_{v2} = i_{b}$ do sistema $\mathcal{F}^{v2}$ para o sistema $\mathcal{F}^{b}$. O ângulo de afagem $\theta$ é a rotação de $\mathcal{F}^{v1}$ para $\mathcal{F}^{v2}$ em torno do eixo $j_{v1} = j_{v2}$ e o ângulo de guinada $\psi$ é a rotação de $\mathcal{F}^{v}$ para $\mathcal{F}^{v1}$ em torno do eixo $k_v = k_{v1}$.
 
@@ -306,7 +296,7 @@ Além disso, quando escolhidos os eixos fixos do corpo como os eixos principais 
 \label{eq:eulers}
 \end{equation}
 
-\noindent onde $I_1$, $I_2$ e $I_3$ são constantes. É possível observar que as Equações de Euler não são lineares devido aos termos produto $\omega_i\omega_j$. 
+\noindent onde $I_{xx}$, $I_{yy}$ e $I_{zz}$ são constantes. É possível observar que as Equações de Euler não são lineares devido aos termos produto $\omega_i\omega_j$. 
 
 Já o momento linear de um corpo se movimentando linearmente em relação ao eixo inercial referencial pode ser calculado através da equação \ref{eq:ml2}.
 

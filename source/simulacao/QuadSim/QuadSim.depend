@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1427482376 source:/media/psf/Home/OneDrive/dissertacao/source/simulacao/QuadSim/main.cpp
+	<iostream>
+	<math.h>
+	<eigen3/Eigen/Dense>
+
